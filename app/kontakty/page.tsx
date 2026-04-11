@@ -1,5 +1,4 @@
 import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
 
 export const metadata = {
   title: "Контакты FilterFlow",
@@ -12,7 +11,6 @@ export default function KontaktyPage() {
       <Navigation />
 
       <main className="max-w-7xl mx-auto px-6 py-16">
-
         {/* Заголовок */}
         <h1 className="text-4xl font-bold mb-6">
           Контакты FilterFlow
@@ -24,7 +22,6 @@ export default function KontaktyPage() {
 
         {/* Контакты */}
         <div className="grid md:grid-cols-2 gap-10">
-
           <div>
             <h2 className="text-2xl font-bold mb-4">Телефон</h2>
             <a href="tel:+79514992576" className="text-teal-600 text-lg">
@@ -44,12 +41,8 @@ export default function KontaktyPage() {
             <h2 className="text-2xl font-bold mb-4">Форма (позже)</h2>
             <p>Здесь будет форма</p>
           </div>
-
         </div>
-
       </main>
-
-      <Footer />
     </>
   );
 }
