@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://filterflow.ru/sitemap.xml
+Sitemap: https://www.filterflow.ru/sitemap.xml
