@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.filterflow.ru"),
@@ -57,7 +58,10 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/images/logo.png" />
         <meta name="theme-color" content="#0f172a" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

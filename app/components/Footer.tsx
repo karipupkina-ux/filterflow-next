@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const productLinks = [
@@ -16,10 +17,10 @@ export default function Footer() {
 
   const extraProductLinks = [
     { href: "/bystrosemnye-homyty", label: "Быстросъёмные хомуты" },
-    { href: "/nestandartnye-meshki", label: "Нестандартные мешки" },
-    { href: "/meshki-dlya-ciklona", label: "Мешки для циклона" },
-    { href: "/poshiv-filtr-meshkov", label: "Пошив фильтр-мешков" },
-    { href: "/proizvodstvo-meshkov", label: "Производство мешков" },
+    { href: "/nestandartnye-meshki-dlya-filtracii", label: "Нестандартные мешки" },
+    { href: "/meshki-dlya-ciklonov-i-uvp", label: "Мешки для циклона" },
+    { href: "/nestandartnye-meshki-dlya-filtracii", label: "Пошив фильтр-мешков" },
+    { href: "/nestandartnye-meshki-dlya-filtracii", label: "Производство мешков" },
   ];
 
   const articleLinks = [
@@ -34,19 +35,20 @@ export default function Footer() {
     { href: "/o-kompanii", label: "О компании" },
     { href: "/portfolio", label: "Портфолио" },
     { href: "/kontakty", label: "Контакты" },
-    { href: "/karta-sayta", label: "Карта сайта" },
+    { href: "/sitemap.xml", label: "Карта сайта" },
   ];
 
   return (
     <footer className="bg-[#0E274B] text-white">
-      <div className="mx-auto max-w-[1360px] px-6 sm:px-8 lg:px-10 pt-14 md:pt-16">
-        <div className="grid grid-cols-1 gap-y-12 md:grid-cols-[320px_1fr_1fr_1fr] md:gap-x-14 lg:grid-cols-[360px_1fr_1fr_1fr] lg:gap-x-18">
-          {/* Левая колонка */}
+      <div className="mx-auto max-w-[1360px] px-6 pt-14 sm:px-8 md:pt-16 lg:px-10">
+        <div className="grid grid-cols-1 gap-y-12 md:grid-cols-[320px_1fr_1fr_1fr] md:gap-x-14 lg:grid-cols-[360px_1fr_1fr_1fr]">
           <div className="max-w-[320px]">
             <Link href="/" className="inline-flex items-center gap-4">
-              <img
-                src="/favicon.ico"
+              <Image
+                src="/images/logo.png"
                 alt="FilterFlow"
+                width={64}
+                height={64}
                 className="h-[64px] w-[64px] rounded-[14px] object-cover"
               />
               <span className="text-[30px] font-semibold tracking-[-0.02em] text-white">
@@ -113,7 +115,7 @@ export default function Footer() {
                 href="tel:+79514992576"
                 className="group flex items-center gap-3 text-[15px] text-white/88 transition-colors duration-200 hover:text-[#22C7BB]"
               >
-                <span className="flex h-[28px] w-[28px] items-center justify-center text-[#22C7BB] transition-colors duration-200 group-hover:text-[#22C7BB]">
+                <span className="flex h-[28px] w-[28px] items-center justify-center text-[#22C7BB]">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M21 16.92v2.5a1.5 1.5 0 0 1-1.64 1.5 17.84 17.84 0 0 1-7.78-2.77 17.58 17.58 0 0 1-5.4-5.4A17.84 17.84 0 0 1 3.4 4.97 1.5 1.5 0 0 1 4.89 3.33h2.5a1.5 1.5 0 0 1 1.5 1.29c.12.9.33 1.79.62 2.65a1.5 1.5 0 0 1-.34 1.55l-1.06 1.06a14 14 0 0 0 5.83 5.83L15 14.65a1.5 1.5 0 0 1 1.55-.34c.86.29 1.75.5 2.65.62A1.5 1.5 0 0 1 21 16.92Z"
@@ -124,16 +126,14 @@ export default function Footer() {
                     />
                   </svg>
                 </span>
-                <span className="transition-colors duration-200 group-hover:text-[#22C7BB]">
-                  +7 (951) 499-25-76
-                </span>
+                <span>+7 (951) 499-25-76</span>
               </a>
 
               <a
                 href="mailto:filterflow@mail.ru"
                 className="group flex items-center gap-3 text-[15px] text-white/88 transition-colors duration-200 hover:text-[#22C7BB]"
               >
-                <span className="flex h-[28px] w-[28px] items-center justify-center text-[#22C7BB] transition-colors duration-200 group-hover:text-[#22C7BB]">
+                <span className="flex h-[28px] w-[28px] items-center justify-center text-[#22C7BB]">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M4 6h16a2 2 0 0 1 2 2v.2l-10 6.25L2 8.2V8a2 2 0 0 1 2-2Z"
@@ -149,9 +149,7 @@ export default function Footer() {
                     />
                   </svg>
                 </span>
-                <span className="transition-colors duration-200 group-hover:text-[#22C7BB]">
-                  filterflow@mail.ru
-                </span>
+                <span>filterflow@mail.ru</span>
               </a>
 
               <div className="flex items-center gap-3 text-[15px] text-white/88">
@@ -172,7 +170,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Продукция */}
           <div className="md:pl-2 lg:pl-4">
             <h3 className="text-[18px] font-semibold uppercase tracking-[0.03em] text-white">
               ПРОДУКЦИЯ
@@ -192,7 +189,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Ещё продукты + Компания */}
           <div className="md:pl-2 lg:pl-4">
             <h3 className="text-[18px] font-semibold uppercase tracking-[0.03em] text-white">
               ЕЩЁ ПРОДУКТЫ
@@ -229,7 +225,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Статьи */}
           <div className="md:pl-2 lg:pl-4">
             <h3 className="text-[18px] font-semibold uppercase tracking-[0.03em] text-white">
               СТАТЬИ
@@ -250,7 +245,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Первая нижняя полоса */}
         <div className="mt-14 border-t border-white/10 pt-7">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex items-start gap-3">
@@ -297,14 +291,11 @@ export default function Footer() {
                   />
                 </svg>
               </span>
-              <span className="transition-colors duration-200 group-hover:text-[#22C7BB]">
-                filterflow@mail.ru
-              </span>
+              <span>filterflow@mail.ru</span>
             </a>
           </div>
         </div>
 
-        {/* Вторая нижняя полоса — тот самый низ */}
         <div className="mt-7 border-t border-white/10 py-6">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div className="text-[14px] text-white/42">
@@ -337,7 +328,7 @@ export default function Footer() {
                 Политика конфиденциальности
               </Link>
               <Link
-                href="/karta-sayta"
+                href="/sitemap.xml"
                 className="text-[14px] text-white/42 transition-colors duration-200 hover:text-[#22C7BB]"
               >
                 Карта сайта
