@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Запрещаем мусорные параметры (важно для SEO)
+Disallow: /*?*
+Disallow: /*utm*
+Disallow: /*gclid*
+Disallow: /*yclid*
+Disallow: /*fbclid*
+
+# Разрешаем важные ресурсы
+Allow: /_next/
+Allow: /images/
+
+# Указываем карту сайта
+Sitemap: https://filterflow.ru/sitemap.xml
