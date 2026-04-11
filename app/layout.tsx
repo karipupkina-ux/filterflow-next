@@ -8,8 +8,7 @@ const canonicalHome = absoluteCanonicalUrl("/");
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default:
-      "FilterFlow — мешки для аспирации и фильтровальные рукава",
+    default: "FilterFlow — мешки для аспирации и фильтровальные рукава",
     template: "%s | FilterFlow",
   },
   description:
@@ -31,9 +30,11 @@ export const metadata: Metadata = {
     shortcut: "/images/logo.png",
     apple: "/images/logo.png",
   },
+  verification: {
+    yandex: "23c47eef0576e1ca",
+  },
   openGraph: {
-    title:
-      "FilterFlow — мешки для аспирации и фильтровальные рукава",
+    title: "FilterFlow — мешки для аспирации и фильтровальные рукава",
     description:
       "Производство фильтровальных мешков для аспирации и рукавов, нестандартные решения под заказ. Подбор размеров, доставка по России.",
     url: canonicalHome,
@@ -51,8 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "FilterFlow — мешки для аспирации и фильтровальные рукава",
+    title: "FilterFlow — мешки для аспирации и фильтровальные рукава",
     description:
       "Производство фильтровальных мешков для аспирации и рукавов, нестандартные решения под заказ. Подбор размеров, доставка по России.",
     images: ["/images/logo.png"],
