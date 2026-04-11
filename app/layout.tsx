@@ -1,17 +1,30 @@
 import type { Metadata } from "next";
+import { SITE_URL, absoluteCanonicalUrl } from "@/lib/seo-metadata";
 import "./globals.css";
 import Footer from "./components/Footer";
 
+const canonicalHome = absoluteCanonicalUrl("/");
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.filterflow.ru"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "FilterFlow | Мешки для аспирации и фильтровальные рукава",
+    default:
+      "FilterFlow — мешки для аспирации и фильтровальные рукава",
     template: "%s | FilterFlow",
   },
   description:
-    "Производство мешков для аспирации, фильтровальных рукавов и нестандартных фильтровальных мешков под заказ. Доставка по России.",
+    "Производство фильтровальных мешков для аспирации и рукавов, нестандартные решения под заказ. Подбор размеров, доставка по России. Консультация инженера.",
+  keywords: [
+    "мешки для аспирации",
+    "фильтровальные рукава",
+    "фильтровальные мешки",
+    "стружкоотсос",
+    "циклон",
+    "УВП",
+    "FilterFlow",
+  ],
   alternates: {
-    canonical: "https://www.filterflow.ru",
+    canonical: canonicalHome,
   },
   icons: {
     icon: "/images/logo.png",
@@ -19,10 +32,11 @@ export const metadata: Metadata = {
     apple: "/images/logo.png",
   },
   openGraph: {
-    title: "FilterFlow | Мешки для аспирации и фильтровальные рукава",
+    title:
+      "FilterFlow — мешки для аспирации и фильтровальные рукава",
     description:
-      "Производство мешков для аспирации, фильтровальных рукавов и нестандартных фильтровальных мешков под заказ.",
-    url: "https://www.filterflow.ru",
+      "Производство фильтровальных мешков для аспирации и рукавов, нестандартные решения под заказ. Подбор размеров, доставка по России.",
+    url: canonicalHome,
     siteName: "FilterFlow",
     locale: "ru_RU",
     type: "website",
@@ -35,9 +49,21 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "FilterFlow — мешки для аспирации и фильтровальные рукава",
+    description:
+      "Производство фильтровальных мешков для аспирации и рукавов, нестандартные решения под заказ. Подбор размеров, доставка по России.",
+    images: ["/images/logo.png"],
+  },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 
@@ -53,9 +79,6 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
           rel="stylesheet"
         />
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
-        <link rel="shortcut icon" type="image/png" href="/images/logo.png" />
-        <link rel="apple-touch-icon" href="/images/logo.png" />
         <meta name="theme-color" content="#0f172a" />
       </head>
       <body>

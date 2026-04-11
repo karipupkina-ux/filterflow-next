@@ -1,9 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo-metadata";
 
-export const metadata = {
-  title: "Мешки для аспирации",
-  description: "Производство мешков для аспирации под заказ",
-};
+export const metadata: Metadata = pageMetadata({
+  title:
+    "Мешки для аспирации — верхние и нижние под размеры",
+  description:
+    "Мешки для аспирации от производителя FilterFlow: верхние и нижние, тканевые, под УВП и циклоны. Изготовление по размерам, контроль качества швов. Доставка по России.",
+  path: "/meshki-dlya-aspiracii",
+});
 
 const cards = [
   {

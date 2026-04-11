@@ -1,10 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo-metadata";
 
-export const metadata = {
-  title: "Мешки для опилок и стружки",
+export const metadata: Metadata = pageMetadata({
+  title:
+    "Мешки для опилок и стружки — аспирация и стружкоотсосы",
   description:
-    "Мешки для опилок и стружки для систем аспирации, стружкоотсосов и деревообрабатывающего оборудования",
-};
+    "Мешки для опилок и стружки: большой объём, усиленные швы, крепление под ваше оборудование. Для стружкоотсосов и деревообработки. Доставка по России от FilterFlow.",
+  path: "/meshki-dlya-opilok",
+});
 
 const productLinks = [
   { href: "/meshki-dlya-aspiracii", label: "Мешки для аспирации" },

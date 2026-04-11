@@ -1,12 +1,16 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo-metadata";
 
-export const metadata = {
-  title: "Быстросъёмные хомуты | FilterFlow",
+export const metadata: Metadata = pageMetadata({
+  title:
+    "Быстросъёмные хомуты для фильтров, мешков и рукавов",
   description:
-    "Быстросъёмные хомуты для фильтровальных мешков и рукавов. Производство под заказ, нержавеющая и оцинкованная сталь, доставка по России.",
-};
+    "Быстросъёмные хомуты для фильтровальных мешков и рукавов: нержавейка и оцинковка, под заказ. Надёжное крепление к патрубкам аспирации и УВП. Доставка по России.",
+  path: "/bystrosemnye-homyty",
+});
 
 const applicationItems = [
   "Крепление мешков к патрубкам аспирационных систем",

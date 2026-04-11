@@ -1,9 +1,13 @@
+import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo-metadata";
 import Navigation from "../components/Navigation";
 
-export const metadata = {
-  title: "Контакты FilterFlow",
-  description: "Свяжитесь с нами: телефон, email, мессенджеры",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Контакты производителя FilterFlow — телефон и email",
+  description:
+    "Контакты FilterFlow: телефон +7 951 499-25-76, email filterflow@mail.ru. Производство мешков для аспирации и рукавов. Связь в мессенджерах, заявка на сайте.",
+  path: "/kontakty",
+});
 
 export default function KontaktyPage() {
   return (

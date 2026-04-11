@@ -1,10 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo-metadata";
 
-export const metadata = {
-  title: "Мешки для стружкоотсоса",
+export const metadata: Metadata = pageMetadata({
+  title:
+    "Мешки для стружкоотсоса и деревообрабатывающих станков",
   description:
-    "Фильтровальные мешки для стружкоотсосов и деревообрабатывающих станков",
-};
+    "Фильтровальные мешки для стружкоотсосов и станков: точные размеры, прочная ткань, эффективная фильтрация стружки. Производство FilterFlow, доставка по России.",
+  path: "/meshki-dlya-struzhkootsosa",
+});
 
 const productLinks = [
   { href: "/meshki-dlya-aspiracii", label: "Мешки для аспирации" },

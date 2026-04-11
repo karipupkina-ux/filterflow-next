@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo-metadata";
 import Navigation from "../components/Navigation";
 import FloatingContacts from "../components/feature/FloatingContacts";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Политика конфиденциальности — обработка персональных данных",
+  description:
+    "Политика обработки персональных данных сайта FilterFlow: цели, сроки хранения, права субъектов и контакты оператора. Актуальная редакция для пользователей www.filterflow.ru.",
+  path: "/politika-konfidencialnosti",
+});
 
 export default function PolitikaKonfidencialnostiPage() {
   return (
@@ -56,12 +65,12 @@ export default function PolitikaKonfidencialnostiPage() {
                   порядок обработки и защиты персональных данных пользователей
                   сайта{" "}
                   <a
-                    href="https://filterflow.ru/"
+                    href="https://www.filterflow.ru/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-semibold text-[#0f172a] hover:underline"
                   >
-                    https://filterflow.ru/
+                    https://www.filterflow.ru/
                   </a>
                 </p>
 
@@ -239,12 +248,12 @@ export default function PolitikaKonfidencialnostiPage() {
                   настоящую Политику. Актуальная версия Политики всегда
                   размещается на сайте{" "}
                   <a
-                    href="https://filterflow.ru/"
+                    href="https://www.filterflow.ru/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-semibold text-[#0f172a] hover:underline"
                   >
-                    https://filterflow.ru/
+                    https://www.filterflow.ru/
                   </a>
                 </p>
               </div>
