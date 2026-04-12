@@ -342,7 +342,7 @@ export default function FiltracionnyeRukavaPage() {
               Главная
             </Link>
             <span className="text-[#a0aec0]">›</span>
-            <span className="text-[#475569]">Фильтрационные рукава</span>
+            <span className="text-[#475569]">Фильтровальные рукава</span>
           </div>
         </div>
       </header>
@@ -363,13 +363,14 @@ export default function FiltracionnyeRukavaPage() {
               </div>
 
               <h1 className="mb-5 text-[58px] font-bold leading-[1.02] tracking-[-0.03em] md:text-[66px]">
-                Фильтровальные рукава
+                Фильтровальные рукава для рукавных фильтров и аспирации
               </h1>
 
               <p className="max-w-[980px] text-[20px] leading-[1.6] text-white/95">
-                Промышленные фильтровальные рукава для систем аспирации,
-                очистки воздуха и пылеулавливания. Высокая эффективность
-                фильтрации и долгий срок службы.
+                Производим фильтровальные рукава для рукавных фильтров и
+                аспирационных установок: удержание пылевых частиц и очистка
+                промышленных газов. Пошив на заказ — высокая эффективность и
+                долгий срок службы.
               </p>
 
               <div className="mt-9 flex flex-wrap items-center justify-center gap-5">
@@ -430,12 +431,12 @@ export default function FiltracionnyeRukavaPage() {
             </div>
 
             <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.03em] text-[#10233f] md:text-[46px]">
-              Виды фильтровальных рукавов
+              Виды фильтровальных рукавов для промышленных систем
             </h2>
 
             <p className="mt-4 max-w-[720px] text-[16px] leading-[1.6] text-[#64748b]">
-              Широкий выбор рукавов для различных промышленных систем
-              фильтрации
+              Фильтрующие рукава и элементы для рукавных фильтров — под задачи
+              аспирации, пылеулавливания и очистки воздуха
             </p>
           </div>
 
@@ -471,12 +472,12 @@ export default function FiltracionnyeRukavaPage() {
                 </div>
 
                 <h3 className="text-[18px] font-bold leading-[1.3] text-[#10233f] transition-colors duration-200 group-hover:text-[#28c7bb]">
-                  Полиэстеровые рукава
+                  Полиэстеровые рукава (PES)
                 </h3>
 
                 <p className="mt-3 text-[15px] leading-[1.65] text-[#64748b]">
-                  Универсальные рукава для стандартных систем аспирации с
-                  температурой до 130°C.
+                  Универсальные фильтрующие рукава для аспирационных систем с
+                  температурой до 130&nbsp;°C.
                 </p>
 
                 <div className="mt-6 flex items-center gap-2 text-[15px] font-semibold text-[#28c7bb]">
@@ -640,11 +641,12 @@ export default function FiltracionnyeRukavaPage() {
             </div>
 
             <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.03em] text-[#10233f] md:text-[50px]">
-              Преимущества наших рукавов
+              Преимущества рукавных фильтров FilterFlow
             </h2>
 
             <p className="mt-4 max-w-[840px] text-[16px] leading-[1.65] text-[#64748b] md:text-[17px]">
-              Надёжность и эффективность, проверенные на промышленных объектах
+              Надёжность и эффективность фильтровальных материалов на реальных
+              производствах
             </p>
           </div>
 
@@ -808,11 +810,12 @@ export default function FiltracionnyeRukavaPage() {
             </div>
 
             <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.03em] text-[#10233f] md:text-[50px]">
-              Сферы применения
+              Сферы применения фильтровальных рукавов
             </h2>
 
             <p className="mt-4 max-w-[840px] text-[16px] leading-[1.65] text-[#64748b] md:text-[17px]">
-              Наши рукава используются в различных отраслях промышленности
+              Рукава для промышленных систем аспирации и фильтры для очистки
+              промышленных газов — в разных отраслях
             </p>
           </div>
 
@@ -984,11 +987,12 @@ export default function FiltracionnyeRukavaPage() {
             </div>
 
             <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.03em] text-[#10233f] md:text-[50px]">
-              Фильтровальные материалы
+              Фильтровальные материалы для рукавов
             </h2>
 
             <p className="mt-4 max-w-[820px] text-[16px] leading-[1.65] text-[#64748b] md:text-[17px]">
-              Подбираем оптимальный материал под ваши условия эксплуатации
+              Nomex, полиэстер (PES), стекловолоконные и другие ткани — под
+              температуру, пыль и агрессивную среду
             </p>
           </div>
 
@@ -1018,7 +1022,7 @@ export default function FiltracionnyeRukavaPage() {
                     ["Полипропилен (PP)", "99,2%", "До 90°C", "Химическая стойкость"],
                     ["Тефлон (PTFE)", "99,9%", "До 260°C", "Высокие температуры"],
                     ["Номекс (Nomex)", "99,7%", "До 200°C", "Металлургия"],
-                    ["Стекловолокно", "99,8%", "До 280°C", "Экстремальные условия"],
+                    ["Стекловолокно", "99,8%", "До 280°C", "Стекловолоконные фильтры, экстремальные условия"],
                     ["Смесовая ткань", "99,6%", "До 150°C", "Промышленные установки"],
                   ].map((row, index) => (
                     <tr
@@ -1068,9 +1072,9 @@ export default function FiltracionnyeRukavaPage() {
                 </h3>
 
                 <p className="mt-3 max-w-[1080px] text-[15px] leading-[1.85] text-[#4f647d]">
-                  Наши специалисты помогут подобрать оптимальный материал
-                  рукавов с учётом типа производства, температурного режима,
-                  химического состава пыли и других факторов.
+                  Подберём фильтровальные рукава Nomex, PES или стекловолокно с
+                  учётом температуры газов и абразива — в том числе для
+                  асфальтобетонных заводов (АБЗ) и линий с повышенной нагрузкой.
                 </p>
               </div>
             </div>
@@ -1087,11 +1091,12 @@ export default function FiltracionnyeRukavaPage() {
             </div>
 
             <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.03em] text-[#10233f] md:text-[50px]">
-              Часто задаваемые вопросы
+              Вопросы о фильтровальных рукавах и рукавных фильтрах
             </h2>
 
             <p className="mt-4 max-w-[760px] text-[16px] leading-[1.65] text-[#64748b] md:text-[17px]">
-              Ответы на популярные вопросы о фильтровальных рукавах
+              Материалы, срок службы и изготовление фильтровальных рукавов на
+              заказ
             </p>
           </div>
 
@@ -1101,7 +1106,7 @@ export default function FiltracionnyeRukavaPage() {
 
               return (
                 <div
-                  key={index}
+                  key={item.question}
                   className={`overflow-hidden rounded-[20px] border transition-all duration-300 ${
                     isOpen
                       ? "border-[#7be1d6] bg-[#eefaf8] shadow-[0_12px_28px_rgba(40,199,187,0.10)]"
@@ -1190,12 +1195,12 @@ export default function FiltracionnyeRukavaPage() {
           <div className="w-full bg-[linear-gradient(135deg,#27c7bb_0%,#1aa99f_100%)] px-6 py-16 text-white md:px-10 md:py-20">
             <div className="mx-auto max-w-[980px] text-center">
               <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.03em] md:text-[56px]">
-                Закажите фильтровальные рукава
+                Фильтровальные рукава на заказ
               </h2>
 
               <p className="mx-auto mt-6 max-w-[880px] text-[20px] leading-[1.65] text-white/95 md:text-[22px]">
-                Получите бесплатный расчёт количества рукавов и консультацию по
-                выбору оптимального материала
+                Расчёт количества рукавов для рукавных фильтров и подбор
+                фильтровальных материалов — бесплатная консультация
               </p>
 
               <div className="mt-10 flex flex-col items-center justify-center gap-4 md:flex-row">
@@ -1469,7 +1474,7 @@ export default function FiltracionnyeRukavaPage() {
               </div>
 
               <h2 className="max-w-[900px] text-[42px] font-bold leading-[1.1] tracking-[-0.03em] text-[#10233f] md:text-[50px]">
-                Полезные статьи о фильтрационных рукавах
+                Полезные статьи о фильтровальных рукавах
               </h2>
             </div>
 
@@ -1613,20 +1618,19 @@ export default function FiltracionnyeRukavaPage() {
         <div className="mx-auto max-w-[1280px] px-6">
           <div className="max-w-[1180px]">
             <h2 className="max-w-[1040px] text-[42px] font-bold leading-[1.14] tracking-[-0.03em] text-[#10233f] md:text-[58px]">
-              Фильтрационные рукава — производство и применение в промышленности
+              Фильтровальные рукава — производство и применение
             </h2>
 
             <div className="mt-8 space-y-6 text-[15px] leading-[1.9] text-[#334155] md:text-[16px]">
               <p>
                 <strong className="font-bold text-[#10233f]">
-                  Фильтрационные рукава
+                  Фильтровальные рукава
                 </strong>{" "}
-                — это цилиндрические фильтровальные элементы, которые
-                применяются в рукавных фильтрах для очистки промышленных газов и
-                воздуха от пыли, аэрозолей и мелкодисперсных частиц. Они
-                являются ключевым элементом систем пылеулавливания на
-                предприятиях деревообработки, металлургии, химической и пищевой
-                промышленности.
+                — цилиндрические элементы для рукавных фильтров: они удерживают
+                пыль и аэрозоли, участвуют в очистке промышленных газов и
+                воздуха на аспирационных линиях. Это базовая деталь систем
+                пылеулавливания на деревообработке, в металлургии, химии и
+                пищевой отрасли.
               </p>
 
               <p>
@@ -1643,7 +1647,7 @@ export default function FiltracionnyeRukavaPage() {
               </p>
 
               <div>
-                <p className="mb-4">Правильный выбор фильтрационного рукава зависит от:</p>
+                <p className="mb-4">Правильный выбор фильтровального рукава зависит от:</p>
 
                 <ul className="space-y-3 pl-6 text-[#334155]">
                   <li className="list-disc">
@@ -1679,12 +1683,12 @@ export default function FiltracionnyeRukavaPage() {
 
           <div className="mt-12 rounded-[28px] bg-[#f1f3f5] px-6 py-8 md:px-10 md:py-10">
             <h3 className="max-w-[980px] text-[34px] font-bold leading-[1.15] tracking-[-0.03em] text-[#10233f] md:text-[42px]">
-              Как выбрать фильтрационный рукав для вашей системы
+              Как выбрать фильтровальный рукав под вашу систему
             </h3>
 
             <div className="mt-7 space-y-6 text-[15px] leading-[1.9] text-[#334155] md:text-[16px]">
               <p>
-                Выбор материала фильтрационного рукава напрямую влияет на
+                Выбор материала фильтровального рукава напрямую влияет на
                 эффективность очистки воздуха и срок службы оборудования. Для
                 стандартных условий при температуре до 130°C и нейтральной пыли
                 оптимален <strong className="font-bold text-[#10233f]">полиэстер</strong>.
@@ -1704,8 +1708,8 @@ export default function FiltracionnyeRukavaPage() {
                   "Тип крепления — верхнее, нижнее, фланцевое или хомутовое соединение",
                   "Способ регенерации — импульсная продувка, механическое встряхивание или обратная продувка",
                   "Антистатические свойства — обязательны при работе с взрывоопасной пылью",
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-4">
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-4">
                     <span className="mt-[3px] flex h-[22px] w-[22px] shrink-0 items-center justify-center rounded-full bg-[#20b7aa] text-white">
                       <svg
                         viewBox="0 0 20 20"
@@ -1736,23 +1740,20 @@ export default function FiltracionnyeRukavaPage() {
 
           <div className="mt-14">
             <h3 className="max-w-[980px] text-[38px] font-bold leading-[1.12] tracking-[-0.03em] text-[#10233f] md:text-[56px]">
-              Области применения фильтровальных рукавов
+              Где применяют фильтрующие рукава
             </h3>
 
             <div className="mt-7 space-y-6 text-[15px] leading-[1.9] text-[#334155] md:text-[16px]">
               <p>
-                Наши <strong className="font-bold text-[#10233f]">фильтрационные рукава</strong>{" "}
-                применяются в <strong className="font-bold text-[#10233f]">рукавных фильтрах</strong>,{" "}
-                <strong className="font-bold text-[#10233f]">циклонных установках</strong> и{" "}
-                <strong className="font-bold text-[#10233f]">системах аспирации</strong> на
-                предприятиях деревообработки, металлургии, химической, пищевой
-                и фармацевтической промышленности. Мы производим{" "}
+                Изготавливаем{" "}
                 <strong className="font-bold text-[#10233f]">
-                  рукава для импульсной продувки
-                </strong>
-                , <strong className="font-bold text-[#10233f]">рукава с антистатической пропиткой</strong>,
-                а также <strong className="font-bold text-[#10233f]">термостойкие рукава</strong> для
-                высокотемпературных процессов.
+                  рукава для рукавных фильтров
+                </strong>{" "}
+                и узлов на циклонах и линиях аспирации — в том числе с
+                импульсной продувкой и антистатикой для взрывоопасных пылей.
+                Термостойкие варианты (Nomex, стекловолокно) подходят для
+                металлургии и горячих газов; для АБЗ и смежных процессов
+                подбираем состав с учётом температуры и абразива.
               </p>
 
               <p>
@@ -1768,7 +1769,7 @@ export default function FiltracionnyeRukavaPage() {
                 href="mailto:filterflow@mail.ru"
                 className="inline-flex h-[62px] items-center justify-center gap-3 rounded-full bg-[#149f95] px-9 text-[17px] font-semibold text-white transition-colors duration-200 hover:bg-[#118d84]"
               >
-                Заказать фильтрационные рукава
+                Заказать фильтровальные рукава
                 <span className="text-[22px] leading-none">→</span>
               </a>
             </div>
