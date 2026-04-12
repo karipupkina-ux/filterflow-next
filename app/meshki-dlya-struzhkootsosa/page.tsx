@@ -4,10 +4,11 @@ import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
   title:
-    "Мешки для стружкоотсоса и деревообрабатывающих станков",
+    "Мешки для стружкоотсоса — фильтр, накопитель, мешки для опилок и стружки",
   description:
-    "Фильтровальные мешки для стружкоотсосов и станков: точные размеры, прочная ткань, эффективная фильтрация стружки. Производство FilterFlow, доставка по России.",
+    "Мешок для стружкоотсоса и мешок-накопитель для деревообработки: тканевые мешки, верхний и нижний мешок, узлы УВП и аспирации опилок. Изготовление по размерам, доставка по России. FilterFlow.",
   path: "/meshki-dlya-struzhkootsosa",
+  openGraphTitle: "Мешки для стружкоотсоса | FilterFlow",
 });
 
 const productLinks = [
@@ -784,14 +785,19 @@ export default function Page() {
                 Для деревообработки
               </div>
 
-              <h1 className="mb-5 whitespace-nowrap text-[42px] font-bold leading-[1.08] tracking-[-0.03em] md:text-[56px]">
+              <h1 className="mb-5 max-w-[920px] text-[34px] font-bold leading-[1.12] tracking-[-0.03em] sm:text-[42px] md:text-[52px] md:leading-[1.08]">
                 Мешки для стружкоотсоса
+                <br className="max-md:hidden" />
+                <span className="max-md:block">
+                  — мешок-фильтр и накопитель
+                </span>
               </h1>
 
               <p className="max-w-[760px] text-[17px] leading-[1.7] text-white/92 md:text-[18px]">
-                Фильтровальные мешки для стружкоотсосов и деревообрабатывающих
-                станков. Надёжный сбор опилок и стружки с высокой степенью
-                фильтрации.
+                Мешок-фильтр и мешок для сбора стружки на стружкоотсосе — для
+                деревообработки и мебельного производства: тканевые мешки под
+                патрубок, сбор опилок и узлы в аспирации и на УВП. Пошив под размер
+                патрубка, заказ от одной штуки.
               </p>
 
               <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
@@ -901,9 +907,9 @@ export default function Page() {
               Типы мешков для стружкоотсоса
             </h2>
 
-            <p className="mt-4 max-w-[620px] text-[15px] leading-[1.65] text-[#64748b] md:text-[16px]">
-              Полный спектр решений для сбора стружки и опилок на
-              деревообрабатывающем производстве
+            <p className="mt-4 max-w-[720px] text-[15px] leading-[1.65] text-[#64748b] md:text-[16px]">
+              Верхний и нижний мешок, тканевые мешки для стружкоотсоса, узлы для
+              УВП — подберём под схему аспирации и модель бункера
             </p>
           </div>
 
@@ -994,12 +1000,12 @@ export default function Page() {
             </div>
 
             <h2 className="text-[28px] font-bold leading-[1.12] tracking-[-0.02em] text-[#10233f] md:text-[40px]">
-              Сферы применения
+              Мешки для деревообработки: сферы применения
             </h2>
 
-            <p className="mt-4 max-w-[700px] text-[15px] leading-[1.65] text-[#64748b] md:text-[16px]">
-              Наши мешки используются на различных деревообрабатывающих
-              производствах
+            <p className="mt-4 max-w-[760px] text-[15px] leading-[1.65] text-[#64748b] md:text-[16px]">
+              От мастерской до фабрики — мешки для сбора стружки и фильтрации в
+              аспирационных системах
             </p>
           </div>
 
@@ -1022,6 +1028,124 @@ export default function Page() {
                 </p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SEO: деревообработка, мебель, аспирация */}
+      <section className="bg-[#f8fafc] pb-14 pt-2 md:pb-16">
+        <div className="mx-auto max-w-[1280px] px-6">
+          <div className="rounded-[28px] border border-[#c5ebe4] bg-white px-8 py-9 shadow-[0_8px_28px_rgba(15,23,42,0.05)] md:px-11 md:py-11">
+            <h2 className="max-w-[960px] text-[26px] font-bold leading-[1.12] tracking-[-0.02em] text-[#10233f] md:text-[34px]">
+              Деревообработка, мебель и аспирация: как работает мешок для
+              стружкоотсоса
+            </h2>
+
+            <div className="mt-9 grid gap-8 lg:grid-cols-2">
+              <div>
+                <h3 className="mb-3 text-[17px] font-bold leading-snug text-[#10233f] md:text-[18px]">
+                  Деревообработка и мебельное производство
+                </h3>
+                <p className="text-[15px] leading-[1.75] text-[#64748b] md:text-[16px]">
+                  На станках и кромочниках мешки для деревообработки удерживают
+                  стружку и пыль: верхний мешок очищает воздух, нижний — крупную
+                  фракцию. В мебельном цехе такие же фильтры снижают запылённость
+                  линий раскроя и сборки.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-3 text-[17px] font-bold leading-snug text-[#10233f] md:text-[18px]">
+                  Удаление стружки и опилок
+                </h3>
+                <p className="text-[15px] leading-[1.75] text-[#64748b] md:text-[16px]">
+                  Мешок для опилок и мешок для сбора стружки чаще всего стоят в
+                  нижнем бункере: накопитель заполняется крупной фракцией, пока
+                  верхний фильтрующий мешок задерживает мелочь. Для чисто
+                  опилочных задач смотрите также{" "}
+                  <Link
+                    href="/meshki-dlya-opilok"
+                    className="font-semibold text-[#22bdb0] underline decoration-[#22bdb0]/35 underline-offset-2 hover:text-[#169d92]"
+                  >
+                    мешки для опилок
+                  </Link>
+                  .
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-3 text-[17px] font-bold leading-snug text-[#10233f] md:text-[18px]">
+                  Аспирационные системы и УВП
+                </h3>
+                <p className="text-[15px] leading-[1.75] text-[#64748b] md:text-[16px]">
+                  На линиях УВП и в общей аспирации мешки для сбора опилок
+                  подключают к патрубкам пылеудаления: важны диаметр горловины и
+                  устойчивость швов к вибрации. Тканевые мешки для стружкоотсоса
+                  подбирают по плотности и условиям среды.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-3 text-[17px] font-bold leading-snug text-[#10233f] md:text-[18px]">
+                  Верхний и нижний мешок
+                </h3>
+                <p className="text-[15px] leading-[1.75] text-[#64748b] md:text-[16px]">
+                  Верхний мешок — фильтровальный элемент, нижний — накопитель.
+                  Подробнее — в разделах{" "}
+                  <Link
+                    href="/verhnie-meshki"
+                    className="font-semibold text-[#22bdb0] underline decoration-[#22bdb0]/35 underline-offset-2 hover:text-[#169d92]"
+                  >
+                    верхние мешки
+                  </Link>{" "}
+                  и{" "}
+                  <Link
+                    href="/nizhnie-meshki"
+                    className="font-semibold text-[#22bdb0] underline decoration-[#22bdb0]/35 underline-offset-2 hover:text-[#169d92]"
+                  >
+                    нижние мешки
+                  </Link>
+                  .
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Купить / изготовление по размерам */}
+      <section className="bg-[#f8fafc] pb-14 md:pb-16">
+        <div className="mx-auto max-w-[1280px] px-6">
+          <h2 className="mx-auto mb-8 max-w-[900px] text-center text-[26px] font-bold leading-[1.12] tracking-[-0.02em] text-[#10233f] md:text-[32px]">
+            Купить мешки для стружкоотсоса и заказать по размерам
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-[24px] bg-[#28c4b7] px-8 py-8 text-white shadow-[0_12px_32px_rgba(40,196,183,0.22)] md:px-9 md:py-9">
+              <h3 className="text-[20px] font-bold leading-tight md:text-[22px]">
+                Купить и заказать
+              </h3>
+              <p className="mt-4 text-[15px] leading-[1.7] text-white/95 md:text-[16px]">
+                Заказать мешок для стружкоотсоса можно через WhatsApp, почту или
+                заявку внизу страницы: уточним диаметр, тип крепления и партию.
+              </p>
+              <a
+                href="https://wa.me/79514992576"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex h-[50px] items-center justify-center rounded-[14px] bg-white px-6 text-[15px] font-semibold text-[#128f88] transition hover:bg-[#f0fdfa]"
+              >
+                Написать в WhatsApp
+              </a>
+            </div>
+            <div className="rounded-[24px] border border-[#d7dee7] bg-white px-8 py-8 shadow-[0_8px_24px_rgba(15,23,42,0.05)] md:px-9 md:py-9">
+              <h3 className="text-[20px] font-bold leading-tight text-[#10233f] md:text-[22px]">
+                Изготовление по размерам
+              </h3>
+              <p className="mt-4 text-[15px] leading-[1.7] text-[#475569] md:text-[16px]">
+                Нестандартный мешок для стружкоотсоса шьём по чертежу или фото
+                патрубка — от одной штуки, срок согласуем по загрузке производства.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -1543,10 +1667,10 @@ export default function Page() {
                 </p>
 
                 <p>
-                  Наши мешки подходят для стружкоотсосов следующих
-                  производителей: Jet, Metabo, Makita, Bosch, Holzmann,
-                  Belmash, Корвет, Энкор и других. Если вашей модели нет в
-                  списке — изготовим мешок по вашим размерам.
+                  Подходят для распространённых стационарных и переносных
+                  стружкоотсосов; по марке оборудования или фото патрубка
+                  подберём посадку. Если модели нет в каталоге — изготовим мешок
+                  по вашим размерам.
                 </p>
 
                 <p>
