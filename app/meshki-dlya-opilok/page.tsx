@@ -4,10 +4,12 @@ import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
   title:
-    "Мешки для опилок и стружки — аспирация и стружкоотсосы",
+    "Мешки для опилок и стружки — мешок для стружкоотсоса, сбор опилок",
   description:
-    "Мешки для опилок и стружки: большой объём, усиленные швы, крепление под ваше оборудование. Для стружкоотсосов и деревообработки. Доставка по России от FilterFlow.",
+    "Мешки для опилок и сбора стружки: мешок для стружкоотсоса, мешок-накопитель. Деревообработка, мебельные цеха, пилорамы. Изготовление на заказ у производителя FilterFlow, доставка по России.",
   path: "/meshki-dlya-opilok",
+  openGraphTitle:
+    "Мешки для опилок и стружки — мешок для стружкоотсоса | FilterFlow",
 });
 
 const productLinks = [
@@ -62,7 +64,7 @@ const bagTypes = [
   {
     title: "Нижние мешки",
     description:
-      "Накопительные мешки для сбора крупной стружки и опилок большого объема.",
+      "Мешки для сбора стружки и опилок большого объёма — мешок-накопитель для стружкоотсоса.",
     link: "/nizhnie-meshki",
   },
   {
@@ -80,11 +82,16 @@ const workshops = [
   "Шлифовальные машины",
 ];
 
-const industry = [
-  "Мебельные фабрики",
-  "Лесопильные цеха",
-  "Производство паркета",
-  "Деревянные дома",
+const furnitureUse = [
+  "Сбор опилок и пыли на кромкооблицовочных и фрезерных линиях",
+  "Мешки для сбора стружки в зонах распила и обработки кромки",
+  "Мешок для стружкоотсоса в мебельных цехах — под размер патрубка",
+];
+
+const sawmillUse = [
+  "Мешки для опилок и щепы при распиле брёвен и многопильных станках",
+  "Мешок-накопитель для стружкоотсоса на выносных бункерах и аспирации",
+  "Мешок для сбора стружки на линиях оцилиндровки и брусования",
 ];
 
 const faqItems = [
@@ -147,7 +154,7 @@ const seoBullets = [
 
 const equipmentBullets = [
   {
-    strong: "Стружкоотсосы Jet, Metabo, Makita",
+    strong: "Ручные и стационарные стружкоотсосы",
     text: "стандартные размеры в наличии, нестандартные под заказ",
   },
   {
@@ -414,15 +421,16 @@ export default function Page() {
             <span className="text-[#475569]">Мешки для опилок</span>
           </div>
 
-          <h1 className="mb-6 text-[38px] font-bold leading-[1.12] tracking-[-0.03em] text-[#1f2937] md:text-[56px]">
-            Мешки для опилок и стружки
+          <h1 className="mb-6 max-w-[920px] text-[34px] font-bold leading-[1.12] tracking-[-0.03em] text-[#1f2937] md:text-[56px]">
+            Мешки для опилок и сбора стружки — для стружкоотсоса и
+            деревообработки
           </h1>
 
           <div className="grid gap-8 lg:grid-cols-[540px_minmax(0,1fr)] lg:items-start">
             <div className="overflow-hidden rounded-[18px] bg-[#f1f2f4]">
               <img
                 src="/images/catalog/nizhnie-meshki.webp"
-                alt="Мешки для опилок и стружки"
+                alt="Мешки для опилок и сбора стружки для стружкоотсоса"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -430,16 +438,20 @@ export default function Page() {
             <div className="pt-1">
               <p className="max-w-[640px] text-[17px] leading-[1.75] text-[#374151]">
                 <strong className="font-bold text-[#1f2937]">
-                  Мешки для опилок и стружки
+                  Мешок для опилок
                 </strong>{" "}
-                — это специализированные накопительные мешки для сбора древесных
-                отходов в столярных мастерских, мебельных производствах и
-                деревообрабатывающих предприятиях. Они устанавливаются в системы
-                аспирации и стружкоотсосы.
+                (накопитель) и{" "}
+                <strong className="font-bold text-[#1f2937]">
+                  мешок для сбора стружки
+                </strong>{" "}
+                ставят на стружкоотсосы и в аспирацию — для крупной фракции и
+                опилок, с усиленными швами. Подходят для столярки,
+                мебельных цехов и пилорам — по размерам горловины под ваше
+                оборудование.
               </p>
 
               <h2 className="mt-10 text-[28px] font-bold leading-[1.2] text-[#1f2937] md:text-[40px]">
-                Особенности мешков для опилок
+                Особенности: мешок для стружкоотсоса и сбора опилок
               </h2>
 
               <div className="mt-7 space-y-5">
@@ -474,7 +486,7 @@ export default function Page() {
       <section className="pb-14 pt-4 md:pb-16">
         <div className="mx-auto max-w-[1280px] px-6">
           <h2 className="mb-8 text-[34px] font-bold leading-[1.12] tracking-[-0.03em] text-[#0f213d] md:text-[54px]">
-            Виды мешков для опилок
+            Виды мешков для опилок: верхние, нижние и тканевые
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -503,14 +515,14 @@ export default function Page() {
       <section className="pb-20 pt-2">
         <div className="mx-auto max-w-[1280px] px-6">
           <h2 className="mb-8 text-[34px] font-bold leading-[1.12] tracking-[-0.03em] text-[#0f213d] md:text-[54px]">
-            Применение в деревообработке
+            Мешки для опилок в деревообработке, на мебельных фабриках и пилорамах
           </h2>
 
           <div className="rounded-[26px] bg-[#f2f4f7] px-9 py-10 md:px-10 md:py-11">
-            <div className="grid gap-10 md:grid-cols-2 md:gap-16">
+            <div className="grid gap-12 lg:grid-cols-3 lg:gap-10">
               <div>
                 <h3 className="mb-6 text-[22px] font-bold leading-[1.3] text-[#10233f] md:text-[26px]">
-                  Столярные мастерские
+                  Деревообработка и столярка
                 </h3>
 
                 <div className="space-y-5">
@@ -537,11 +549,38 @@ export default function Page() {
 
               <div>
                 <h3 className="mb-6 text-[22px] font-bold leading-[1.3] text-[#10233f] md:text-[26px]">
-                  Промышленные предприятия
+                  Мебельное производство
                 </h3>
 
                 <div className="space-y-5">
-                  {industry.map((item) => (
+                  {furnitureUse.map((item) => (
+                    <div key={item} className="flex items-start gap-4">
+                      <span className="mt-[7px] flex h-[10px] w-[10px] shrink-0 items-center justify-center text-[#ff6b2c]">
+                        <svg
+                          viewBox="0 0 12 12"
+                          className="h-[10px] w-[10px]"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path d="M3 1.5 8.5 6 3 10.5V1.5Z" />
+                        </svg>
+                      </span>
+
+                      <p className="text-[18px] leading-[1.6] text-[#374151]">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="mb-6 text-[22px] font-bold leading-[1.3] text-[#10233f] md:text-[26px]">
+                  Пилорамы и лесопиление
+                </h3>
+
+                <div className="space-y-5">
+                  {sawmillUse.map((item) => (
                     <div key={item} className="flex items-start gap-4">
                       <span className="mt-[7px] flex h-[10px] w-[10px] shrink-0 items-center justify-center text-[#ff6b2c]">
                         <svg
@@ -570,12 +609,13 @@ export default function Page() {
         <div className="mx-auto max-w-[1280px] px-6">
           <div className="rounded-[24px] bg-[#ff6b2c] px-7 py-7 text-white md:px-9 md:py-8">
             <h2 className="text-[28px] font-bold leading-[1.12] tracking-[-0.02em] md:text-[40px]">
-              Индивидуальное производство
+              Изготовление мешков для опилок на заказ
             </h2>
 
-            <p className="mt-4 max-w-[980px] whitespace-nowrap text-[17px] leading-[1.65] text-white/95 md:text-[18px]">
-              Изготавливаем мешки для опилок любых размеров и конфигураций под
-              ваше оборудование. Минимальный заказ — от 1 штуки.
+            <p className="mt-4 max-w-[980px] text-[17px] leading-[1.65] text-white/95 md:text-[18px]">
+              Пошив мешка для стружкоотсоса и мешков для сбора стружки под ваши
+              размеры и крепление. Минимальный заказ — от 1 штуки, срок — от 3
+              рабочих дней.
             </p>
 
             <div className="mt-7 grid gap-4 md:grid-cols-3 md:gap-5">
@@ -612,10 +652,44 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="pb-12 pt-0 md:pb-14">
+        <div className="mx-auto max-w-[1280px] px-6">
+          <div className="rounded-[26px] border border-[#e8ecf1] bg-white px-8 py-9 shadow-[0_6px_20px_rgba(15,23,42,0.05)] md:px-10 md:py-10">
+            <h2 className="text-[28px] font-bold leading-[1.12] tracking-[-0.02em] text-[#10233f] md:text-[38px]">
+              Купить мешки для опилок и заказать по размерам
+            </h2>
+
+            <p className="mt-5 max-w-[880px] text-[16px] leading-[1.75] text-[#4b5563] md:text-[17px]">
+              Заказать и купить мешки для опилок или мешок для сбора стружки у
+              производителя просто: пришлите диаметр горловины или фото патрубка
+              — подберём конфигурацию и рассчитаем стоимость. Прямые цены с цеха,
+              без наценки посредников.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="https://wa.me/79514992576"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-[52px] items-center justify-center rounded-[14px] bg-[#28c4b7] px-8 text-[16px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8]"
+              >
+                Заказать в WhatsApp
+              </a>
+              <a
+                href="mailto:filterflow@mail.ru?subject=Заказ%20мешков%20для%20опилок"
+                className="inline-flex h-[52px] items-center justify-center rounded-[14px] border border-[#e3e8ee] bg-[#f8fafc] px-8 text-[16px] font-semibold text-[#10233f] transition-colors duration-200 hover:border-[#28c4b7] hover:text-[#28c4b7]"
+              >
+                Запросить расчёт
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="pb-16 pt-0 md:pb-20">
         <div className="mx-auto max-w-[1280px] px-6">
           <h2 className="mb-8 text-[34px] font-bold leading-[1.12] tracking-[-0.03em] text-[#0f213d] md:text-[56px]">
-            Часто задаваемые вопросы
+            Вопросы о мешках для опилок
           </h2>
 
           <div className="space-y-5">
@@ -685,27 +759,25 @@ export default function Page() {
         <div className="mx-auto max-w-[1280px] px-6">
           <div className="space-y-7">
             <h2 className="text-[28px] font-bold leading-[1.12] tracking-[-0.02em] text-[#10233f] md:text-[40px]">
-              Мешки для опилок и стружки — всё о выборе и применении
+              Мешок для опилок и стружкоотсоса: выбор и применение
             </h2>
 
             <div className="space-y-6 text-[15px] leading-[1.75] text-[#374151] md:text-[16px]">
               <p>
-                <strong className="font-bold text-[#10233f]">
-                  Мешки для опилок и стружки
-                </strong>{" "}
-                — это специализированные накопительные и фильтровальные мешки,
-                которые устанавливаются в системы аспирации, стружкоотсосы и
-                циклонные установки для сбора древесных отходов. Они незаменимы
-                на деревообрабатывающих предприятиях, в столярных мастерских и
-                мебельных производствах.
+                Мешки для опилок и мешки для сбора стружки подключают к аспирации
+                и к нижнему бункеру стружкоотсоса — это мешок-накопитель для
+                стружкоотсоса либо отдельный мешок для стружкоотсоса по размеру
+                патрубка. На мебельном производстве и пилорамах важны объём и
+                прочность дна; в столярке — удобное снятие и крепление.
               </p>
 
               <p>
-                Правильно подобранный мешок для опилок обеспечивает эффективный
-                сбор отходов, поддерживает производительность системы аспирации и
-                создаёт безопасные условия труда. Мешки изготавливаются из
-                прочных тканей с усиленными швами, выдерживающих вес накопленных
-                опилок и стружки.
+                Правильно подобранный мешок для опилок держит нагрузку от веса
+                фракции, не рвёт швы и сохраняет тягу аспирации. Для{" "}
+                <strong className="font-bold text-[#10233f]">
+                  деревообработки
+                </strong>{" "}
+                мы подбираем ткань и диаметр горловины под ваш станок или бункер.
               </p>
 
               <div className="space-y-4">
@@ -743,7 +815,7 @@ export default function Page() {
         <div className="mx-auto max-w-[1280px] px-6">
           <div className="rounded-[28px] bg-[#f2f4f6] px-8 py-9 md:px-10 md:py-10">
             <h2 className="text-[28px] font-bold leading-[1.12] tracking-[-0.02em] text-[#10233f] md:text-[40px]">
-              Мешки для опилок для разных типов оборудования
+              Мешок для стружкоотсоса и циклона: типы оборудования
             </h2>
 
             <div className="mt-7 space-y-6 text-[15px] leading-[1.75] text-[#374151] md:text-[16px]">
