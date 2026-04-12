@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import Navigation from "../components/Navigation";
+import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import FloatingContacts from "../components/feature/FloatingContacts";
 
 function AdvantageIcon({ type }: { type: string }) {
@@ -931,7 +933,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <a
+            <Link
               href="/meshki-dlya-aspiracii"
               className="group rounded-[22px] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#f56600] hover:shadow-md"
             >
@@ -951,9 +953,9 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               <span className="inline-flex items-center gap-2 font-medium text-[#f56600]">
                 Подробнее <span>→</span>
               </span>
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/filtracionnye-rukava"
               className="group rounded-[22px] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#f56600] hover:shadow-md"
             >
@@ -973,9 +975,9 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               <span className="inline-flex items-center gap-2 font-medium text-[#f56600]">
                 Подробнее <span>→</span>
               </span>
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/meshki-dlya-struzhkootsosa"
               className="group rounded-[22px] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#f56600] hover:shadow-md"
             >
@@ -995,7 +997,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               <span className="inline-flex items-center gap-2 font-medium text-[#f56600]">
                 Подробнее <span>→</span>
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -1280,6 +1282,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         </div>
       </section>
 
+      <SeeAlsoLinks excludeHref="/meshki-dlya-ciklonov-i-uvp" />
       <FloatingContacts />
     </>
   );

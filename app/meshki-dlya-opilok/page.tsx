@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
@@ -120,13 +121,6 @@ const faqItems = [
     answer:
       "Регулярно опустошайте мешок, не допуская переполнения. Периодически (раз в 1-2 месяца) вытряхивайте или продувайте мешок для удаления мелкой пыли. Тканевые мешки можно стирать в тёплой воде. Проверяйте швы и крепления на износ.",
   },
-];
-
-const seeAlsoLinks = [
-  { href: "/meshki-dlya-struzhkootsosa", label: "Мешки для стружкоотсоса" },
-  { href: "/meshki-dlya-aspiracii", label: "Мешки для аспирации" },
-  { href: "/meshki-dlya-ciklonov-i-uvp", label: "Мешки для циклонов" },
-  { href: "/filtracionnye-rukava", label: "Фильтрационные рукава" },
 ];
 
 const seoBullets = [
@@ -728,33 +722,6 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="pb-20 pt-0 md:pb-24">
-        <div className="mx-auto max-w-[1280px] px-6">
-          <div className="rounded-[26px] bg-[#f2f4f7] px-8 py-9 md:px-10 md:py-10">
-            <h2 className="mb-7 text-[28px] font-bold leading-[1.15] text-[#10233f] md:text-[40px]">
-              Смотрите также
-            </h2>
-
-            <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-              {seeAlsoLinks.map((item) => (
-                <Link key={item.href} href={item.href} className="group block">
-                  <div className="flex min-h-[118px] h-full flex-col justify-between rounded-[18px] border border-[#e3e8ee] bg-white px-6 py-5 shadow-[0_4px_14px_rgba(15,23,42,0.04)] transition-all duration-200 hover:-translate-y-[2px] hover:border-[#ffd8c8] hover:shadow-[0_10px_24px_rgba(255,107,44,0.10)]">
-                    <span className="text-[17px] font-semibold leading-[1.4] text-[#10233f] transition-colors duration-200 group-hover:text-[#ff6b2c]">
-                      {item.label}
-                    </span>
-
-                    <div className="mt-4 flex items-center gap-2 text-[14px] font-medium text-[#ff6b2c]">
-                      <span>Подробнее</span>
-                      <span>→</span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="pb-10 pt-0 md:pb-12">
         <div className="mx-auto max-w-[1280px] px-6">
           <div className="space-y-7">
@@ -764,11 +731,23 @@ export default function Page() {
 
             <div className="space-y-6 text-[15px] leading-[1.75] text-[#374151] md:text-[16px]">
               <p>
-                Мешки для опилок и мешки для сбора стружки подключают к аспирации
+                Мешки для опилок и мешки для сбора стружки подключают к{" "}
+                <Link
+                  href="/meshki-dlya-aspiracii"
+                  className="font-semibold text-[#ff6b2c] underline-offset-2 hover:underline"
+                >
+                  аспирации
+                </Link>{" "}
                 и к нижнему бункеру стружкоотсоса — это мешок-накопитель для
-                стружкоотсоса либо отдельный мешок для стружкоотсоса по размеру
-                патрубка. На мебельном производстве и пилорамах важны объём и
-                прочность дна; в столярке — удобное снятие и крепление.
+                стружкоотсоса либо отдельный{" "}
+                <Link
+                  href="/meshki-dlya-struzhkootsosa"
+                  className="font-semibold text-[#ff6b2c] underline-offset-2 hover:underline"
+                >
+                  мешок для стружкоотсоса
+                </Link>{" "}
+                по размеру патрубка. На мебельном производстве и пилорамах важны
+                объём и прочность дна; в столярке — удобное снятие и крепление.
               </p>
 
               <p>
@@ -893,6 +872,8 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <SeeAlsoLinks />
 
       <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 xl:flex">
         <a

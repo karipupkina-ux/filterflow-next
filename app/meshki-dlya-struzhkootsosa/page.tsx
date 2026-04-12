@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
@@ -1694,6 +1695,8 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <SeeAlsoLinks />
 
       {/* Плавающие контакты */}
       <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 xl:flex">

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Navigation from "../components/Navigation";
+import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import FloatingContacts from "../components/feature/FloatingContacts";
 
 export default function TkanevyeMeshkiPage() {
@@ -413,45 +414,7 @@ export default function TkanevyeMeshkiPage() {
         </div>
       </section>
 
-      <section className="bg-white pb-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="rounded-[24px] border border-[#d9dee7] bg-[#f8f9fb] px-8 py-8 shadow-sm md:px-10 md:py-10">
-            <h2 className="mb-8 text-[24px] font-bold leading-tight text-[#0f2341] md:text-[28px]">
-              Смотрите также
-            </h2>
-
-            <div className="grid grid-cols-1 gap-y-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-8">
-              <a
-                href="/verhnie-meshki"
-                className="text-[16px] font-medium text-[#ff6b2c] transition hover:text-[#e4571a] hover:underline"
-              >
-                → Верхние мешки
-              </a>
-
-              <a
-                href="/nizhnie-meshki"
-                className="text-[16px] font-medium text-[#ff6b2c] transition hover:text-[#e4571a] hover:underline"
-              >
-                → Нижние мешки
-              </a>
-
-              <a
-                href="/filtracionnye-rukava"
-                className="text-[16px] font-medium text-[#ff6b2c] transition hover:text-[#e4571a] hover:underline"
-              >
-                → Фильтрационные рукава
-              </a>
-
-              <a
-                href="/meshki-dlya-ciklonov-i-uvp"
-                className="text-[16px] font-medium text-[#ff6b2c] transition hover:text-[#e4571a] hover:underline"
-              >
-                → Мешки для УВП
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SeeAlsoLinks />
 
       <section className="bg-[#ff6428] py-18 md:py-20">
         <div className="mx-auto max-w-7xl px-6">

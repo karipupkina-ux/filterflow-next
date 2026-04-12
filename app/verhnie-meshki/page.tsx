@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import Navigation from "../components/Navigation";
+import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import FloatingContacts from "../components/feature/FloatingContacts";
 
 type GuideRow = {
@@ -784,8 +786,14 @@ export default function VerhnieMeshkiPage() {
           </div>
 
           <p className="mx-auto mt-6 max-w-4xl text-[15px] leading-7 text-[#475569] md:text-[16px]">
-            Нижний слой в той же установке обычно собирает крупную стружку; для комплекта см. раздел
-            нижних мешков на сайте.
+            Нижний слой в той же установке обычно собирает крупную стружку; для комплекта см.{" "}
+            <Link
+              href="/nizhnie-meshki"
+              className="font-semibold text-[#ff6b2c] underline-offset-2 hover:underline"
+            >
+              нижние мешки для стружкоотсоса
+            </Link>
+            .
           </p>
 
           <div className="mt-7 grid grid-cols-1 gap-5 lg:grid-cols-2">
@@ -1040,7 +1048,7 @@ export default function VerhnieMeshkiPage() {
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
-            <a
+            <Link
               href="/nizhnie-meshki"
               className="group overflow-hidden rounded-[22px] border border-[#d9dee7] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#f4a261] hover:bg-gradient-to-br hover:from-[#fff8f2] hover:via-[#ffffff] hover:to-[#f6fbfa] hover:shadow-[0_18px_50px_rgba(15,35,65,0.08)]"
             >
@@ -1068,9 +1076,9 @@ export default function VerhnieMeshkiPage() {
                   </span>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/tkanevye-meshki"
               className="group overflow-hidden rounded-[22px] border border-[#d9dee7] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#f4a261] hover:bg-gradient-to-br hover:from-[#fff8f2] hover:via-[#ffffff] hover:to-[#f6fbfa] hover:shadow-[0_18px_50px_rgba(15,35,65,0.08)]"
             >
@@ -1098,9 +1106,9 @@ export default function VerhnieMeshkiPage() {
                   </span>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/meshki-dlya-struzhkootsosa"
               className="group overflow-hidden rounded-[22px] border border-[#d9dee7] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#f4a261] hover:bg-gradient-to-br hover:from-[#fff8f2] hover:via-[#ffffff] hover:to-[#f6fbfa] hover:shadow-[0_18px_50px_rgba(15,35,65,0.08)]"
             >
@@ -1128,7 +1136,7 @@ export default function VerhnieMeshkiPage() {
                   </span>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -1436,6 +1444,7 @@ export default function VerhnieMeshkiPage() {
         </div>
       </section>
 
+      <SeeAlsoLinks excludeHref="/verhnie-meshki" />
       <FloatingContacts />
     </>
   );

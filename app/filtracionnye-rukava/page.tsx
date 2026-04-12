@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import SeeAlsoLinks from "../components/SeeAlsoLinks";
 
 export default function FiltracionnyeRukavaPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -1776,6 +1777,8 @@ export default function FiltracionnyeRukavaPage() {
           </div>
         </div>
       </section>
+
+      <SeeAlsoLinks excludeHref="/filtracionnye-rukava" />
 
       {/* Плавающие контакты */}
       <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 xl:flex">

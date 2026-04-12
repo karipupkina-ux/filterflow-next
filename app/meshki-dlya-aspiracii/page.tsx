@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
@@ -1625,12 +1626,24 @@ export default function Page() {
               <p>
                 По конструкции различают верхние (тонкая фильтрация) и нижние
                 (сбор крупной фракции) мешки, а также тканевые варианты под
-                выбранную ткань и режим. Для мелкой древесной пыли подходят
-                мешки для аспирации опилок; на линиях со стружкоотсосами, в
-                блоках УВП и за циклонами — изделия по размерам патрубка и схеме
-                крепления. На крупных установках нередко стоят и другие фильтры
-                для аспирации, в том числе рукавный фильтр — поможем подобрать
-                сочетаемые по параметрам решения.
+                выбранную ткань и режим. Для мелкой древесной пыли подходят{" "}
+                <Link
+                  href="/meshki-dlya-opilok"
+                  className="font-semibold text-[#ff6b2c] underline-offset-2 hover:underline"
+                >
+                  мешки для аспирации опилок
+                </Link>
+                ; на линиях со стружкоотсосами, в{" "}
+                <Link
+                  href="/meshki-dlya-ciklonov-i-uvp"
+                  className="font-semibold text-[#ff6b2c] underline-offset-2 hover:underline"
+                >
+                  блоках УВП и за циклонами
+                </Link>{" "}
+                — изделия по размерам патрубка и схеме крепления. На крупных
+                установках нередко стоят и другие фильтры для аспирации, в том
+                числе рукавный фильтр — поможем подобрать сочетаемые по
+                параметрам решения.
               </p>
 
               <p>
@@ -1795,6 +1808,8 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <SeeAlsoLinks excludeHref="/meshki-dlya-aspiracii" />
     </>
   );
 }

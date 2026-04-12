@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import Navigation from "../components/Navigation";
+import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import Footer from "../components/Footer";
 import FloatingContacts from "../components/feature/FloatingContacts";
 
@@ -1253,6 +1254,8 @@ ${extraInfo || "Не указано"}
             </div>
           </div>
         </section>
+
+        <SeeAlsoLinks />
       </main>
     </>
   );

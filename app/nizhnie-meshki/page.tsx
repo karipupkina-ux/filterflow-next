@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import Navigation from "../components/Navigation";
+import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import FloatingContacts from "../components/feature/FloatingContacts";
 
 type GuideRow = {
@@ -422,8 +424,14 @@ export default function NizhnieMeshkiPage() {
 
             <p className="mt-6 max-w-4xl text-[15px] leading-7 text-[#475569] md:text-[16px]">
               Нижний слой — накопитель: он работает в паре с верхним фильтровальным мешком (мелкая пыль
-              задерживается сверху, крупная фракция оседает снизу). Нужны именно верхние фильтровальные
-              мешки — см. блок «Смотрите также» ниже.
+              задерживается сверху, крупная фракция оседает снизу). Нужны именно{" "}
+              <Link
+                href="/verhnie-meshki"
+                className="font-semibold text-[#ff6b2c] underline-offset-2 hover:underline"
+              >
+                верхние фильтровальные мешки для стружкоотсоса
+              </Link>{" "}
+              — см. раздел «Смотрите также» внизу страницы.
             </p>
 
             <div className="mt-7 grid grid-cols-1 gap-5 lg:grid-cols-2">
@@ -580,46 +588,6 @@ export default function NizhnieMeshkiPage() {
                   </div>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-white pb-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="rounded-[24px] border border-[#d9dee7] bg-[#f8f9fb] px-8 py-8 shadow-sm md:px-10 md:py-10">
-              <h2 className="mb-8 text-[24px] font-bold leading-tight text-[#0f2341] md:text-[28px]">
-                Смотрите также: верхние и другие мешки
-              </h2>
-
-              <div className="grid grid-cols-1 gap-y-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-8">
-                <a
-                  href="/verhnie-meshki"
-                  className="text-[16px] font-medium text-[#ff6b2c] transition hover:text-[#e4571a] hover:underline"
-                >
-                  → Верхние мешки для аспирации
-                </a>
-
-                <a
-                  href="/meshki-dlya-opilok"
-                  className="text-[16px] font-medium text-[#ff6b2c] transition hover:text-[#e4571a] hover:underline"
-                >
-                  → Мешки для опилок
-                </a>
-
-                <a
-                  href="/meshki-dlya-struzhkootsosa"
-                  className="text-[16px] font-medium text-[#ff6b2c] transition hover:text-[#e4571a] hover:underline"
-                >
-                  → Мешки для стружкоотсоса
-                </a>
-
-                <a
-                  href="/meshki-dlya-ciklonov-i-uvp"
-                  className="text-[16px] font-medium text-[#ff6b2c] transition hover:text-[#e4571a] hover:underline"
-                >
-                  → Мешки для циклонов
-                </a>
-              </div>
             </div>
           </div>
         </section>
@@ -957,6 +925,7 @@ export default function NizhnieMeshkiPage() {
         </section>
       </main>
 
+      <SeeAlsoLinks excludeHref="/nizhnie-meshki" />
       <FloatingContacts />
     </>
   );

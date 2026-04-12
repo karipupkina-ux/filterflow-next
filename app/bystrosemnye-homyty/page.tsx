@@ -1,4 +1,5 @@
 import Navigation from "../components/Navigation";
+import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import Footer from "../components/Footer";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -1300,6 +1301,8 @@ export default function Page() {
             </div>
           </div>
         </section>
+
+        <SeeAlsoLinks />
       </main>
 
       <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 xl:flex">
