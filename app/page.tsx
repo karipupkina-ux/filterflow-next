@@ -20,8 +20,7 @@ import FloatingContacts from "./components/feature/FloatingContacts";
 import CookieBanner from "./components/feature/CookieBanner";
 
 const HOME_TITLE =
-  "FilterFlow — мешки для аспирации, фильтровальные рукава и рукавные фильтры";
-
+  "Мешки для аспирации, фильтровальные рукава в наличии и под заказ";
 export const metadata: Metadata = {
   ...pageMetadata({
     title: HOME_TITLE,

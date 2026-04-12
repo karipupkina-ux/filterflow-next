@@ -316,7 +316,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               <h1 className="mb-7 text-[34px] font-bold leading-[1.05] text-[#0f172a] md:text-[56px]">
                 Мешки для циклонов
                 <br />
-                и УВП для аспирации
+                и УВП
               </h1>
 
               <p className="max-w-[620px] text-[18px] leading-8 text-[#475569] md:text-[19px]">
