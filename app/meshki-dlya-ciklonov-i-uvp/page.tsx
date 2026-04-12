@@ -253,7 +253,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
     {
       question: "Чем отличаются мешки для циклонов от мешков для УВП?",
       answer:
-        "Мешки для циклонов предназначены для циклонных установок с вихревой очисткой воздуха, а мешки для УВП используются в установках вентиляции и пылеулавливания с прямоточной фильтрацией. Они различаются конструкцией, размерами и способом крепления.",
+        "У циклона мешок стоит после сепарации крупной фракции и удерживает мелкую пыль; важны посадка на рукав и работа в вашем режиме потока. У УВП — большие расходы и рукавные фильтры, часто с регенерацией. Габариты подбирают по паспорту или замеру; для типовых линий КОНСАР и CONSAR смотрите соответствие размеров в карточке выше или пришлите фото узла.",
     },
     {
       question: "Как часто нужно менять фильтровальные мешки?",
@@ -314,15 +314,16 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               </div>
 
               <h1 className="mb-7 text-[34px] font-bold leading-[1.05] text-[#0f172a] md:text-[56px]">
-                Мешки для УВП и
+                Мешки для циклонов
                 <br />
-                циклонов
+                и УВП для аспирации
               </h1>
 
               <p className="max-w-[620px] text-[18px] leading-8 text-[#475569] md:text-[19px]">
-                Профессиональные фильтровальные мешки для установок вентиляции и
-                пылеулавливания. Высокая эффективность очистки воздуха в
-                промышленных условиях.
+                Производим фильтровальные мешки под циклонные и рукавные узлы, линии УВП и общие
+                системы пылеулавливания в цеху: задерживаем пылевые частицы в потоке и снижаем
+                запылённость воздуха. Шьём под ваши размеры и режим — от типовой установки до
+                отдельного циклона.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
@@ -348,7 +349,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               <div className="w-full max-w-[640px] overflow-hidden rounded-[22px] bg-[#efedf2]">
                 <img
                   src="/images/catalog/meshki-ciklonov-uvp.webp"
-                  alt="Мешки для УВП и циклонов"
+                  alt="Мешки для циклонов и УВП, фильтры для аспирационных установок"
                   className="h-auto w-full object-cover"
                 />
               </div>
@@ -361,10 +362,11 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
-              Типы фильтровальных мешков
+              Типы мешков для циклонов, УВП и аспирации
             </h2>
             <p className="mx-auto max-w-4xl text-[16px] leading-8 text-[#475569] md:text-[17px]">
-              Широкий ассортимент мешков для различных систем пылеулавливания и вентиляции
+              Фильтры для очистки воздуха от пыли — под циклоны, рукавные фильтры и
+              аспирационные установки с высокой запылённостью
             </p>
           </div>
 
@@ -381,8 +383,8 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 Мешки для циклонов
               </h3>
               <p className="mb-7 text-[16px] leading-8 text-[#475569]">
-                Фильтровальные мешки для циклонных установок с высокой
-                степенью очистки воздуха от пыли и стружки.
+                После сепарации крупной фракции мешок удерживает мелкую пыль на линии
+                пылеулавливания — важны посадка на рукав и устойчивость к потоку воздуха.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-4">
@@ -409,11 +411,12 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 />
               </div>
               <h3 className="mb-4 text-[22px] font-bold text-[#0f172a] md:text-[24px]">
-                Мешки для УВП
+                Мешки для УВП и аспирационных установок
               </h3>
               <p className="mb-7 text-[16px] leading-8 text-[#475569]">
-                Специализированные мешки для установок вентиляции и
-                пылеулавливания в промышленных цехах.
+                Рукавные и фильтровальные мешки для УВП на большие объёмы воздуха — в том числе
+                под типовые линейки вроде КОНСАР УВП-1200, УВП-2000 и CONSAR 2000, если совпадают
+                посадочные размеры; точный размер подбираем по замеру или чертежу.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-4">
@@ -500,10 +503,10 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
-              Преимущества наших мешков
+              Преимущества фильтров для циклонов и УВП
             </h2>
             <p className="mx-auto max-w-3xl text-[16px] leading-8 text-[#475569] md:text-[17px]">
-              Качественные фильтровальные мешки для эффективной работы вашего оборудования
+              Надёжные фильтровальные мешки для систем аспирации и пылеулавливания на производстве
             </p>
           </div>
 
@@ -587,10 +590,10 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
-              Сферы применения
+              Где применяют мешки для пылеулавливания
             </h2>
             <p className="mx-auto max-w-4xl text-[16px] leading-8 text-[#475569] md:text-[17px]">
-              Наши фильтровальные мешки используются в различных отраслях промышленности
+              Промышленная фильтрация воздуха на циклонах, УВП и общих линиях аспирации
             </p>
           </div>
 
@@ -674,16 +677,20 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-10 text-center">
             <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
-              Фильтровальные материалы
+              Материалы фильтров для аспирации и циклонов
             </h2>
             <p className="mx-auto max-w-4xl text-[16px] leading-8 text-[#475569] md:text-[17px]">
-              Подбираем оптимальный материал в зависимости от условий эксплуатации
+              Подбор ткани под температуру, абразив и требуемую фильтрацию пылевых частиц
             </p>
           </div>
 
           <div className="overflow-hidden rounded-[20px] border border-slate-200 bg-white shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full min-w-[980px] border-collapse">
+                <caption className="sr-only">
+                  Сравнение материалов фильтровальных мешков для циклонов, УВП и аспирационных
+                  установок: температура, эффективность удержания пыли, срок службы
+                </caption>
                 <thead>
                   <tr className="bg-[#f56600] text-white">
                     <th className="px-6 py-5 text-left text-[16px] font-semibold">Материал</th>
@@ -764,10 +771,10 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-9 text-center">
             <h2 className="mb-3 text-[24px] font-bold leading-[1.15] text-white md:text-[34px]">
-              Заказать расчёт стоимости
+              Купить мешки для циклонов и УВП — расчёт стоимости
             </h2>
             <p className="mx-auto max-w-3xl text-[14px] leading-7 text-white/90 md:text-[15px]">
-              Свяжитесь с нами для подбора оптимальных фильтровальных мешков и расчёта стоимости
+              Подберём фильтры для аспирации под вашу установку и рассчитаем стоимость
             </p>
           </div>
 
@@ -811,7 +818,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                   <textarea
                     value={equipment}
                     onChange={(e) => setEquipment(e.target.value)}
-                    placeholder="Например: УВП, циклон, рукавный фильтр, нужные размеры и условия эксплуатации"
+                    placeholder="Например: КОНСАР УВП-1200, CONSAR 2000, циклон — диаметр патрубка и м³/ч"
                     rows={4}
                     className="w-full rounded-[12px] border border-slate-200 bg-white px-4 py-4 text-[15px] leading-7 text-[#0f172a] outline-none transition placeholder:text-slate-400 focus:border-[#ff6428]"
                   />
@@ -1082,10 +1089,10 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         <div className="mx-auto max-w-5xl px-6">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
-              Часто задаваемые вопросы
+              Вопросы о мешках для циклонов и УВП
             </h2>
             <p className="mx-auto max-w-3xl text-[16px] leading-8 text-[#475569] md:text-[17px]">
-              Ответы на популярные вопросы о фильтровальных мешках
+              Подбор, срок службы и заказ фильтров для аспирации
             </p>
           </div>
 
@@ -1095,7 +1102,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
 
               return (
                 <div
-                  key={index}
+                  key={item.question}
                   className={`overflow-hidden rounded-[18px] border transition duration-300 ${
                     isOpen
                       ? "border-[#ead8bf] bg-[#f8efe4]"
@@ -1133,25 +1140,25 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-[1180px]">
             <h2 className="mb-8 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
-              Мешки для УВП и циклонов — производство и применение
+              Мешки для циклонов и УВП в системах аспирации
             </h2>
 
             <div className="space-y-7 text-[16px] leading-8 text-[#334155] md:text-[17px]">
               <p>
                 <strong className="font-semibold text-[#0f172a]">
-                  Мешки для УВП (установок вентиляции и пылеулавливания) и циклонов
+                  Мешки для УВП и циклонов
                 </strong>{" "}
-                — это фильтровальные элементы, обеспечивающие высокоэффективную
-                очистку воздуха от пыли, стружки и аэрозолей в промышленных
-                системах. Они применяются на деревообрабатывающих,
-                металлообрабатывающих, химических и пищевых предприятиях.
+                — фильтровальные элементы для аспирационных установок и линий
+                пылеулавливания: помогают очищать воздух от пыли и аэрозолей на
+                деревообработке, в металлообработке, на пищевых и химических объектах.
+                Это часть промышленной фильтрации, а не бытовой вентиляции.
               </p>
 
               <p>
-                Ключевое отличие мешков для УВП от стандартных аспирационных мешков —
-                увеличенная площадь фильтрации и усиленная конструкция, рассчитанная
-                на высокие объёмы воздушного потока. Мешки для циклонов дополнительно
-                выдерживают центробежные нагрузки при вихревом движении воздуха.
+                У мешков для УВП обычно большая фильтрующая площадь под высокий расход; мешки для
+                циклонов должны выдерживать условия после сепарации и работу в общей системе
+                аспирации. Конкретные размеры зависят от патрубка и камеры — их сверяют по паспорту
+                или замеру.
               </p>
 
               <div>
@@ -1201,7 +1208,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
 
               <div>
                 <h3 className="mb-4 text-[24px] font-bold leading-tight text-[#0f172a] md:text-[32px]">
-                  Как правильно подобрать мешки для УВП и циклонных установок
+                  Как подобрать мешки для УВП и циклонов
                 </h3>
 
                 <p className="mb-4">
@@ -1240,14 +1247,13 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
 
               <div>
                 <h3 className="mb-4 text-[24px] font-bold leading-tight text-[#0f172a] md:text-[32px]">
-                  Купить мешки для УВП и циклонов от производителя FilterFlow
+                  Купить мешки для систем аспирации у производителя
                 </h3>
 
                 <p className="mb-4">
-                  FilterFlow — производитель мешков для УВП и циклонных установок с
-                  собственным производством. Мы изготавливаем фильтровальные мешки для
-                  пылеулавливающих установок, рукавные фильтры для циклонов, а также
-                  нестандартные мешки по чертежам заказчика.
+                  FilterFlow шьёт фильтровальные мешки для циклонов и УВП, рукавные решения под
+                  аспирационные установки и нестандартные задачи по чертежу. Заказ от одной штуки
+                  или партии — уточним размеры и сроки изготовления.
                 </p>
 
                 <p>
