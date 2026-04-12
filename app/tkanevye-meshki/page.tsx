@@ -74,27 +74,26 @@ export default function TkanevyeMeshkiPage() {
           </div>
 
           <h1 className="mb-8 text-[34px] font-bold leading-[1.08] text-[#0f172a] md:text-[42px]">
-            Тканевые мешки для аспирации
+            Тканевые мешки для аспирации и стружкоотсоса
           </h1>
 
           <div className="grid items-start gap-10 lg:grid-cols-[1.02fr_0.98fr]">
             <div className="overflow-hidden rounded-[24px] bg-[#eef2f5] shadow-sm">
               <img
                 src="/images/catalog/tkanevie-meshki.webp"
-                alt="Тканевые мешки для аспирации"
+                alt="Фильтровальные мешки тканевые для аспирации"
                 className="h-auto w-full object-cover"
               />
             </div>
 
             <div>
               <p className="text-[18px] leading-8 text-[#334155]">
-                <strong className="text-[#0f172a]">
-                  Тканевые мешки для аспирации
-                </strong>{" "}
-                изготавливаются из высококачественных синтетических материалов —
-                полиэстера, полипропилена и иглопробивного фильтра. Они обеспечивают
-                эффективную фильтрацию воздуха и длительный срок службы в системах
-                пылеудаления.
+                Тканевые мешки для аспирации и стружкоотсоса шьём из полиэстера,
+                полипропилена и иглопробивного полотна — многоразовые
+                фильтровальные решения со стиркой и длительным ресурсом. Для
+                деревообработки обычно берут полиэстер 500–550 г/м²; для горячих
+                аэрозолей подбирают термостойкие ткани, в том числе на основе
+                Nomex.
               </p>
 
               <h2 className="mt-10 mb-6 text-[28px] font-bold leading-tight text-[#0f172a] md:text-[32px]">
@@ -154,9 +153,16 @@ export default function TkanevyeMeshkiPage() {
 
       <section className="bg-[#f8fafc] pb-20">
         <div className="mx-auto max-w-7xl px-6">
-          <h2 className="mb-10 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[34px]">
+          <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[34px]">
             Материалы тканевых мешков
           </h2>
+          <p className="mb-10 max-w-[820px] text-[16px] leading-7 text-[#475569] md:text-[17px]">
+            Для тканевых фильтровальных мешков подбираем полотно по температуре,
+            влажности и абразиву пыли: от стандартного{" "}
+            <span className="font-semibold text-[#0f172a]">полиэстера</span> до
+            мета-арамидных тканей (в т.ч. аналоги Nomex) и комбинированных
+            решений под ТЗ.
+          </p>
 
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
             <div className="rounded-[20px] border border-slate-200 bg-white p-6 shadow-sm">
@@ -208,6 +214,42 @@ export default function TkanevyeMeshkiPage() {
                 <li>• Эффективность: 99,9%</li>
                 <li>• Размер пор: 1-5 мкм</li>
               </ul>
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-[20px] border border-slate-200 bg-[#f1f5f9] px-6 py-6 md:px-8 md:py-7">
+            <p className="text-[15px] leading-7 text-[#475569] md:text-[16px]">
+              <span className="font-semibold text-[#0f172a]">
+                Высокие температуры и искры:
+              </span>{" "}
+              если стандартного полиэстера недостаточно, используют термостойкие
+              ткани на основе мета-арамида (в отрасли часто ориентируются на Nomex)
+              или смесевые материалы — под конкретный класс температуры и химию
+              среды.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f8fafc] pb-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="rounded-[24px] bg-[#f4f6f8] px-8 py-10 md:px-10 md:py-12">
+              <h2 className="mb-6 text-[26px] font-bold leading-tight text-[#0f172a] md:text-[32px]">
+              Чем тканевые фильтровальные мешки отличаются от других решений
+            </h2>
+            <div className="max-w-[920px] space-y-5 text-[16px] leading-8 text-[#334155] md:text-[17px]">
+              <p>
+                В отличие от одноразовых бумажных или нетканых вставок, тканевый
+                мешок рассчитан на снятие, чистку и повторную установку: плотное
+                полотно держит нагрузку на швах при пульсации и не рассыпается при
+                встряхивании, как однослойная картонная гильза.
+              </p>
+              <p>
+                Рукавные фильтры из полиэстера чаще стоят в рукавных установках;
+                тканевый мешок удобнее как накопитель на стружкоотсосе или в узле
+                аспирации — форму и крепление подгоняют под патрубок и бункер, а
+                не под цилиндр рукавного фильтра.
+              </p>
             </div>
           </div>
         </div>
@@ -463,7 +505,7 @@ export default function TkanevyeMeshkiPage() {
                   <textarea
                     value={equipment}
                     onChange={(e) => setEquipment(e.target.value)}
-                    placeholder="Например: стружкоотсос Jet DC-1100, диаметр горловины 215 мм"
+                    placeholder="Например: стружкоотсос, диаметр горловины 215 мм"
                     rows={4}
                     className="w-full rounded-[12px] border border-slate-200 bg-white px-4 py-4 text-[15px] leading-7 text-[#0f172a] outline-none transition placeholder:text-slate-400 focus:border-[#ff6428]"
                   />
@@ -509,7 +551,8 @@ export default function TkanevyeMeshkiPage() {
                 <div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[16px] bg-white">
                   <img
                     src="/images/whatsapp.png"
-                    alt="WhatsApp50px] object-contain"
+                    alt="WhatsApp"
+                    className="h-7 w-7 object-contain"
                   />
                 </div>
                 <div>
