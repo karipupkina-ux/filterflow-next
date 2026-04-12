@@ -41,6 +41,13 @@ export const SITEMAP_PATHS: readonly string[] = [
   "/bystrosemnye-homyty",
   "/nestandartnye-meshki-dlya-filtracii",
   "/politika-konfidencialnosti",
+  "/portfolio",
+  "/o-kompanii",
+  "/blog",
+  "/blog/kak-vybrat-meshok-aspiracii",
+  "/blog/kak-rabotaet-aspiraciya",
+  "/blog/kogda-menyat-filtr-meshok",
+  "/blog/tipy-filtruyushchikh-meshkov",
 ];
 
 type PageMetaInput = {

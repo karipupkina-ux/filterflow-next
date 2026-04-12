@@ -188,19 +188,19 @@ const catalogCards: CatalogCard[] = [
   {
     title: "Мешки для циклона",
     description: "Усиленные мешки для циклонных установок",
-    href: "/meshki-dlya-ciklona",
+    href: "/meshki-dlya-ciklonov-i-uvp",
     icon: "cycle",
   },
   {
     title: "Нестандартные мешки",
     description: "Изготовление по чертежам и индивидуальным размерам",
-    href: "/nestandartnye-meshki",
+    href: "/nestandartnye-meshki-dlya-filtracii",
     icon: "x",
   },
   {
     title: "Пошив фильтр-мешков",
     description: "Услуги пошива фильтровальных мешков под заказ",
-    href: "/poshiv-filtr-meshkov",
+    href: "/nestandartnye-meshki-dlya-filtracii",
     icon: "scissors",
   },
 ];
@@ -216,7 +216,7 @@ const articleCards: ArticleCard[] = [
     title: "Как работает система аспирации",
     description:
       "Принцип работы систем пылеудаления и роль фильтровальных мешков в очистке воздуха",
-    href: "/blog/kak-rabotaet-aspiratsiya",
+    href: "/blog/kak-rabotaet-aspiraciya",
   },
   {
     title: "Когда менять фильтровальный мешок",

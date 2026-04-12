@@ -303,7 +303,7 @@ export default function FiltracionnyeRukavaPage() {
             </div>
 
             <Link
-              href="/#portfolio"
+              href="/portfolio"
               className="transition-colors duration-200 hover:text-[#28c7bb]"
             >
               Портфолио

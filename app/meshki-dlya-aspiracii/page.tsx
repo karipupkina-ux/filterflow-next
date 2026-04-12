@@ -547,13 +547,13 @@ const blogArticles = [
     title: "Как выбрать мешок для аспирации",
     description:
       "Полное руководство по подбору фильтровального мешка: материалы, размеры и типы крепления",
-    link: "/blog/kak-vybrat-meshok-aspiratsii",
+    link: "/blog/kak-vybrat-meshok-aspiracii",
   },
   {
     title: "Как работает система аспирации",
     description:
       "Принцип работы систем пылеудаления и роль фильтровальных мешков",
-    link: "/blog/kak-rabotaet-aspiratsiya",
+    link: "/blog/kak-rabotaet-aspiraciya",
   },
   {
     title: "Когда менять фильтровальный мешок",
@@ -827,14 +827,14 @@ export default function Page() {
                   <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-2xl">
                     <div className="space-y-1">
                       <a
-                        href="/blog/kak-vybrat-meshok-aspiratsii"
+                        href="/blog/kak-vybrat-meshok-aspiracii"
                         className="block rounded-xl px-4 py-3 transition hover:bg-teal-50 hover:text-teal-600"
                       >
                         Как выбрать мешок для аспирации
                       </a>
 
                       <a
-                        href="/blog/kak-rabotaet-aspiratsiya"
+                        href="/blog/kak-rabotaet-aspiraciya"
                         className="block rounded-xl px-4 py-3 transition hover:bg-teal-50 hover:text-teal-600"
                       >
                         Как работает аспирация
@@ -1392,7 +1392,7 @@ export default function Page() {
             <p className="mt-6 text-center text-[14px] leading-6 text-slate-400">
               Нажимая кнопку, вы соглашаетесь с{" "}
               <a
-                href="/politika-konfidentsialnosti"
+                href="/politika-konfidencialnosti"
                 className="font-medium text-teal-600 transition hover:text-teal-700"
               >
                 политикой конфиденциальности

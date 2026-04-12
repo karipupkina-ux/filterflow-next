@@ -1025,7 +1025,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
             <a
-              href="/blog/kak-rabotaet-aspiratsiya"
+              href="/blog/kak-rabotaet-aspiraciya"
               className="group rounded-[20px] border border-[#e5e7eb] bg-white p-6 transition duration-300 hover:border-[#f2c18f] hover:bg-[#fdf7f0]"
             >
               <div className="mb-5 flex h-[40px] w-[40px] items-center justify-center rounded-[10px] border border-[#e5e7eb] text-[#f56600] transition group-hover:border-[#f56600] group-hover:bg-[#f56600] group-hover:text-white">

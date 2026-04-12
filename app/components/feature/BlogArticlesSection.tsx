@@ -11,7 +11,7 @@ const articles = [
     title: "Как работает система аспирации",
     description:
       "Принцип работы систем пылеудаления и роль фильтровальных мешков в очистке воздуха",
-    href: "/blog/kak-rabotaet-aspiratsiya",
+    href: "/blog/kak-rabotaet-aspiraciya",
   },
   {
     title: "Когда менять фильтровальный мешок",

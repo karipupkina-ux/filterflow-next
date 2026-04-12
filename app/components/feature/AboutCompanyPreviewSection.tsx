@@ -60,7 +60,7 @@ export default function AboutCompanyPreviewSection() {
   
               <div className="mt-6">
                 <a
-                  href="#o-kompanii"
+                  href="/o-kompanii"
                   className="inline-flex h-[48px] items-center justify-center gap-2 rounded-[12px] bg-[#23b8ad] px-6 text-[15px] font-medium text-white transition hover:bg-[#1ea79d]"
                 >
                   Подробнее о компании

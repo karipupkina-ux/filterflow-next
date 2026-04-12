@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { SITE_URL, absoluteCanonicalUrl } from "@/lib/seo-metadata";
+import { SITE_URL } from "@/lib/seo-metadata";
 import "./globals.css";
 import Footer from "./components/Footer";
-
-const canonicalHome = absoluteCanonicalUrl("/");
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -22,9 +20,6 @@ export const metadata: Metadata = {
     "УВП",
     "FilterFlow",
   ],
-  alternates: {
-    canonical: canonicalHome,
-  },
   icons: {
     icon: "/images/logo.png",
     shortcut: "/images/logo.png",
@@ -37,7 +32,6 @@ export const metadata: Metadata = {
     title: "FilterFlow — мешки для аспирации и фильтровальные рукава",
     description:
       "Производство фильтровальных мешков для аспирации и рукавов, нестандартные решения под заказ. Подбор размеров, доставка по России.",
-    url: canonicalHome,
     siteName: "FilterFlow",
     locale: "ru_RU",
     type: "website",
