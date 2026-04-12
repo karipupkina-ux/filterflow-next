@@ -20,7 +20,7 @@ import FloatingContacts from "./components/feature/FloatingContacts";
 import CookieBanner from "./components/feature/CookieBanner";
 
 const HOME_TITLE =
-  "Мешки для аспирации, фильтровальные рукава в наличии и под заказ";
+  "Мешки для аспирации и стружкоотсоса, фильтровальные рукава и рукавные фильтры в наличии и под заказ";
 export const metadata: Metadata = {
   ...pageMetadata({
     title: HOME_TITLE,

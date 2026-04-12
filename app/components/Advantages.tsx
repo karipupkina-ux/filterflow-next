@@ -46,7 +46,7 @@ export default function Advantages() {
   
           {/* Заголовок */}
           <h2 className="text-[40px] md:text-[56px] font-bold text-[#0f172a] mb-4">
-            Преимущества производителя фильтров для аспирации
+            Преимущества FilterFlow
           </h2>
   
           <p className="text-[18px] text-[#64748b] mb-16">

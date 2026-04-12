@@ -49,11 +49,11 @@ export default function Products() {
   return (
     <section id="catalog" className="bg-[#f8f9fb] py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="mb-5 text-center text-4xl font-bold text-[#0f172a] md:text-[64px]">
-          Каталог: мешки для аспирации и фильтровальные рукава
+        <h2 className="mb-4 text-center text-2xl font-bold text-[#0f172a] md:text-3xl">
+          Каталог продукции
         </h2>
 
-        <p className="mx-auto mb-16 max-w-4xl text-center text-lg text-[#475569] md:text-[22px]">
+        <p className="mx-auto mb-16 max-w-4xl text-center text-[15px] leading-relaxed text-[#475569] md:text-[16px]">
           Промышленная фильтрация пылевых частиц и аэрозолей: фильтровальные
           материалы, рукавные фильтры и мешки под аспирационную систему и задачи
           пылеулавливания
