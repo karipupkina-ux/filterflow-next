@@ -49,7 +49,7 @@ export default function Products() {
   return (
     <section id="catalog" className="bg-[#f8f9fb] py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="mb-4 text-center text-3xl font-bold text-[#0f172a] md:text-4xl">
+        <h2 className="mb-4 text-center text-[40px] font-bold text-[#0f172a] md:text-[56px]">
           Каталог продукции
         </h2>
 
