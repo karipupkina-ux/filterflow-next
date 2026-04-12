@@ -369,29 +369,29 @@ export default function VerhnieMeshkiPage() {
 
   const faqItems = [
     {
-      question: "Чем верхний мешок отличается от нижнего?",
+      question: "Чем верхний фильтровальный мешок отличается от нижнего?",
       answer:
-        "Верхний мешок устанавливается на первом этапе фильтрации и улавливает крупную стружку и пыль. Нижний мешок выполняет тонкую очистку воздуха от мелких частиц. Верхний мешок имеет более крупные поры и больший объём.",
+        "Верхний мешок для стружкоотсоса стоит в верхней части установки и работает как фильтр для аспирации: задерживает пыль и мелкие частицы в воздушном потоке. Нижний мешок чаще выполняет роль накопителя для крупной стружки и опилок. В паре они дают нормальное пылеулавливание на станке.",
     },
     {
-      question: "Как часто нужно чистить верхний мешок?",
+      question: "Как часто обслуживать верхний мешок-фильтр?",
       answer:
-        "Частота очистки зависит от интенсивности работы оборудования. В среднем рекомендуется проверять наполненность мешка раз в неделю и очищать при заполнении на 70-80%. При интенсивной работе может потребоваться ежедневная очистка.",
+        "Зависит от нагрузки: при интенсивной работе проверяйте засорение и натяжение мешка чаще. Если падает тяга или слышен «свист» на выходе — пора прочистить или заменить фильтровальный мешок для аспирации.",
     },
     {
-      question: "Можно ли стирать верхний мешок?",
+      question: "Можно ли стирать тканевый верхний мешок?",
       answer:
-        "Да, верхний мешок можно стирать в тёплой воде с мягким моющим средством. После стирки необходимо тщательно просушить мешок перед установкой. Не рекомендуется использовать агрессивные химические средства.",
+        "Часто да: полиэстеровые фильтровальные мешки можно стирать в тёплой воде с мягким средством, затем тщательно высушить. Не используйте агрессивную химию — она разрушает волокно и снижает эффективность фильтра для стружкоотсоса.",
     },
     {
-      question: "Какой срок службы верхнего мешка?",
+      question: "Какой срок службы верхнего мешка для аспирации?",
       answer:
-        "При правильной эксплуатации и регулярной очистке верхний мешок служит 2-3 года. Срок службы зависит от типа обрабатываемого материала, интенсивности работы и своевременности обслуживания.",
+        "При аккуратной эксплуатации и своевременной очистке верхний мешок обычно служит около 2–3 лет. На срок влияют пыль древесины, влажность и режим работы оборудования.",
     },
     {
-      question: "Можно ли заказать мешок нестандартного размера?",
+      question: "Можно ли заказать нестандартный размер верхнего мешка?",
       answer:
-        "Да, мы изготавливаем верхние мешки по индивидуальным размерам под конкретное оборудование. Для расчёта стоимости пришлите нам размеры: диаметр и длину мешка, диаметр входного отверстия.",
+        "Да: шьём фильтровальные мешки по вашим размерам — пришлите диаметр горловины, высоту и тип крепления или фото установки. Так можно подобрать мешок под редкую модель или замену без чертежа завода.",
     },
   ];
 
@@ -446,12 +446,14 @@ export default function VerhnieMeshkiPage() {
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
               <h1 className="mb-5 text-[34px] font-bold leading-[1.08] text-[#0f172a] md:text-[42px]">
-                Верхний мешок для аспирации
+                Верхние фильтровальные мешки для стружкоотсоса и аспирации
               </h1>
 
               <p className="mb-7 max-w-[640px] text-[17px] leading-8 text-[#475569]">
-                Фильтровальные верхние мешки для первичной очистки воздуха от крупной
-                стружки и пыли. Надёжная защита оборудования и эффективная фильтрация.
+                Тканевые фильтровальные мешки для аспирационных установок: верхний мешок-фильтр
+                очищает воздух от пыли и мелких опилок в потоке, снижая выброс частиц в цеху. Подойдут
+                для систем аспирации на деревообрабатывающем оборудовании и в комплекте с УВП — размеры
+                подбираем по модели или замеру.
               </p>
 
               <div className="flex flex-wrap gap-3.5">
@@ -476,7 +478,7 @@ export default function VerhnieMeshkiPage() {
             <div className="flex h-[360px] w-full items-center justify-center overflow-hidden rounded-2xl bg-[#f3f4f6]">
               <img
                 src="/images/products/verhniy-meshok.webp"
-                alt="Верхний мешок для аспирации"
+                alt="Верхний фильтровальный мешок для стружкоотсоса и аспирации"
                 className="max-h-full max-w-full object-contain"
               />
             </div>
@@ -488,29 +490,33 @@ export default function VerhnieMeshkiPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-12 text-center">
             <h2 className="mb-3 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
-              Особенности верхних мешков
+              Особенности верхних фильтровальных мешков
             </h2>
             <p className="mx-auto max-w-2xl text-[16px] leading-7 text-[#475569] md:text-[17px]">
-              Надёжная первичная фильтрация для защиты вашего оборудования
+              Фильтры для стружкоотсоса в верхнем узле — для эффективного пылеулавливания
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
             <div className="rounded-[22px] border border-orange-300 bg-white p-6 transition hover:shadow-lg">
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-orange-100 text-[22px] text-orange-500">≡</div>
-              <h3 className="mb-3 text-[18px] font-semibold leading-snug text-[#0f172a]">Первичная фильтрация</h3>
+              <h3 className="mb-3 text-[18px] font-semibold leading-snug text-[#0f172a]">
+                Фильтрация воздуха на выходе
+              </h3>
               <p className="text-[15px] leading-8 text-[#475569]">
-                Улавливает крупную стружку и пыль на первом этапе очистки воздуха,
-                защищая основной фильтр от быстрого засорения.
+                Верхний мешок для аспирации задерживает пыль и мелкие частицы в воздушном потоке,
+                помогая соблюдать чистоту воздуха в мастерской и снижать нагрузку на узел пылеудаления.
               </p>
             </div>
 
             <div className="rounded-[22px] border border-orange-300 bg-white p-6 transition hover:shadow-lg">
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-orange-100 text-[22px] text-orange-500">🛡</div>
-              <h3 className="mb-3 text-[18px] font-semibold leading-snug text-[#0f172a]">Прочный материал</h3>
+              <h3 className="mb-3 text-[18px] font-semibold leading-snug text-[#0f172a]">
+                Тканевые мешки для стружкоотсоса
+              </h3>
               <p className="text-[15px] leading-8 text-[#475569]">
-                Изготовлен из износостойкого полиэстера, выдерживающего интенсивные
-                нагрузки и истирание.
+                Износостойкий полиэстер выдерживает интенсивную работу фильтра для стружкоотсоса и
+                регулярную очистку.
               </p>
             </div>
 
@@ -558,7 +564,7 @@ export default function VerhnieMeshkiPage() {
               Технические характеристики
             </h2>
             <p className="text-[16px] leading-7 text-[#475569] md:text-[17px]">
-              Параметры верхних фильтровальных мешков
+              Ориентиры для верхнего фильтра аспирации и мешка-фильтра для стружкоотсоса
             </p>
           </div>
 
@@ -621,13 +627,16 @@ export default function VerhnieMeshkiPage() {
           <div className="overflow-hidden rounded-[24px] border border-[#ece7de] bg-white shadow-sm">
             <div className="px-7 pb-5 pt-7">
               <h2 className="text-[20px] font-bold text-[#0f172a] md:text-[22px]">
-                Стандартные размеры
+                Стандартные размеры верхних мешков
               </h2>
             </div>
 
             <div className="px-7 pb-7">
               <div className="overflow-x-auto">
                 <table className="w-full min-w-[760px] border-separate border-spacing-0">
+                  <caption className="sr-only">
+                    Типовые габариты цилиндрического верхнего фильтровального мешка для аспирации
+                  </caption>
                   <thead>
                     <tr className="bg-[#f56600] text-white">
                       <th className="px-5 py-4 text-left text-[16px] font-semibold">Диаметр (мм)</th>
@@ -677,12 +686,15 @@ export default function VerhnieMeshkiPage() {
             </div>
 
             <h2 className="mx-auto mb-4 max-w-5xl text-[30px] font-bold leading-[1.15] text-[#0f172a] md:text-[44px]">
-              Типовые размеры мешков для популярных стружкоотсосов
+              Размеры верхнего фильтровального мешка для стружкоотсосов и аспирации
             </h2>
 
             <p className="mx-auto max-w-4xl text-[16px] leading-8 text-[#475569] md:text-[17px]">
-              Найдите свою модель и узнайте точные размеры верхнего фильтровального мешка.
-              Если вашей модели нет в таблице — пришлите фото или напишите нам.
+              В колонке «Верхний мешок» — ориентиры по размеру фильтра для JET (в справочнике — в т.ч.
+              DC-1100VX-CK и DC-1200VX), PROMA OP-1500 и OP-2200, «Энкор Корвет» 64–67, КОНСАР УВП-1200 /
+              УВП-2000, CONSAR 2000, Makita, Bosch, Powermatic, ROCKSTAR, Triod, Holzmann, Record Power,
+              Felder, Sturm, Einhell, Metabo, Кратон и др. Нет строки с вашей моделью — пришлите фото
+              или напишите, подберём по замеру.
             </p>
           </div>
 
@@ -707,7 +719,7 @@ export default function VerhnieMeshkiPage() {
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Поиск по модели..."
+                placeholder="Поиск: JET, PROMA, Корвет, УВП, Makita…"
                 className="h-[48px] w-full rounded-full border border-slate-200 bg-white px-5 text-[15px] text-[#334155] outline-none transition placeholder:text-slate-400 focus:border-[#ff6b2c]"
               />
             </div>
@@ -716,6 +728,12 @@ export default function VerhnieMeshkiPage() {
           <div className="overflow-hidden rounded-[22px] border border-slate-200 bg-white shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full min-w-[1120px] border-collapse">
+                <caption className="sr-only">
+                  Справочник: верхний фильтровальный мешок для аспирации по брендам JET, PROMA,
+                  Энкор Корвет, КОНСАР, CONSAR, Makita, Bosch, Powermatic, ROCKSTAR, Triod, Holzmann,
+                  Record Power, Felder, Sturm, Einhell, Metabo, Кратон; мешок-фильтр для УВП и установок
+                  пылеулавливания
+                </caption>
                 <thead>
                   <tr className="bg-[#16233b] text-white">
                     <th className="px-4 py-4 text-left text-[15px] font-semibold">Бренд</th>
@@ -765,6 +783,11 @@ export default function VerhnieMeshkiPage() {
             </div>
           </div>
 
+          <p className="mx-auto mt-6 max-w-4xl text-[15px] leading-7 text-[#475569] md:text-[16px]">
+            Нижний слой в той же установке обычно собирает крупную стружку; для комплекта см. раздел
+            нижних мешков на сайте.
+          </p>
+
           <div className="mt-7 grid grid-cols-1 gap-5 lg:grid-cols-2">
             <div className="rounded-[18px] bg-[#f7efe4] px-5 py-4 text-[#475569]">
               <p className="text-[15px] leading-7">
@@ -798,11 +821,12 @@ export default function VerhnieMeshkiPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-11 text-center">
             <h2 className="mb-3 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
-              Применение верхних мешков
+              Где нужны верхние мешки для пылеулавливания
             </h2>
 
             <p className="mx-auto max-w-4xl text-[16px] leading-7 text-[#475569] md:text-[17px]">
-              Используются на различном деревообрабатывающем оборудовании
+              Фильтровальные мешки для аспирации опилок и пыли — на станках и линиях с подключением к
+              стружкоотсосу или общей аспирации
             </p>
           </div>
 
@@ -854,7 +878,7 @@ export default function VerhnieMeshkiPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-9 text-center">
             <h2 className="mb-3 text-[24px] font-bold leading-[1.15] text-white md:text-[34px]">
-              Заказать верхний мешок для аспирации
+              Заказать верхний фильтровальный мешок для стружкоотсоса
             </h2>
 
             <p className="mx-auto max-w-3xl text-[14px] leading-7 text-white/90 md:text-[15px]">
@@ -902,7 +926,7 @@ export default function VerhnieMeshkiPage() {
                   <textarea
                     value={equipment}
                     onChange={(e) => setEquipment(e.target.value)}
-                    placeholder="Например: стружкоотсос Jet DC-1100, диаметр горловины 215 мм"
+                    placeholder="Например: JET DC-1200VX, диаметр горловины по мешку 380 мм"
                     rows={4}
                     className="w-full rounded-[12px] border border-slate-200 bg-white px-4 py-4 text-[15px] leading-7 text-[#0f172a] outline-none transition placeholder:text-slate-400 focus:border-[#ff6428]"
                   />
@@ -1034,7 +1058,7 @@ export default function VerhnieMeshkiPage() {
                 </h3>
 
                 <p className="mt-3 text-[15px] leading-7 text-[#5b6b82]">
-                  Для тонкой очистки воздуха от мелкой пыли
+                  Накопитель для крупной стружки и опилок под стружкоотсосом
                 </p>
 
                 <div className="mt-6 inline-flex items-center gap-3 text-[15px] font-medium text-[#0aa79d] transition-colors duration-300 group-hover:text-[#f97316]">
@@ -1113,11 +1137,11 @@ export default function VerhnieMeshkiPage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-12 text-center">
             <h2 className="mb-3 text-[28px] font-bold leading-tight text-[#0f172a] md:text-[42px]">
-              Часто задаваемые вопросы
+              Вопросы о верхних фильтровальных мешках для аспирации
             </h2>
 
             <p className="mx-auto max-w-3xl text-[15px] leading-7 text-[#475569] md:text-[16px]">
-              Ответы на популярные вопросы о верхних мешках
+              Подбор, уход и отличие от нижнего накопительного мешка
             </p>
           </div>
 
@@ -1177,27 +1201,25 @@ export default function VerhnieMeshkiPage() {
           <div className="space-y-14">
             <div>
               <h2 className="max-w-[980px] text-[28px] font-bold leading-[1.15] text-[#0f2341] md:text-[42px]">
-                Мешки для аспирации и фильтровальные рукава — производство и подбор
+                Верхние мешки для аспирации и фильтровальные рукава — производство FilterFlow
               </h2>
 
               <div className="mt-7 max-w-[1180px] space-y-5 text-[15px] leading-8 text-[#42526b] md:text-[16px]">
                 <p>
-                  Мешки для аспирации и фильтровальные рукава — ключевой элемент любой
-                  аспирационной системы. Они очищают воздух от пыли, опилок,
-                  металлической стружки и других промышленных отходов. Правильно
-                  подобранный мешок обеспечивает эффективность системы, долговечность
-                  оборудования и безопасность персонала.
+                  На этой странице — прежде всего верхний фильтр аспирации: тканевые фильтровальные
+                  мешки для стружкоотсосов и установок пылеулавливания. В общем каталоге у нас также
+                  рукава и мешки для циклонов и линий с высокой запылённостью — подбираем материал и
+                  размер под вашу задачу.
                 </p>
 
                 <p>
-                  Мы производим мешки для аспирации разных диаметров и высоты, с верхним
-                  и нижним креплением, а также фильтровальные рукава для промышленных
-                  циклонов. Все изделия изготовлены из высококачественных материалов:
+                  Изготавливаем мешки для систем аспирации разного диаметра и высоты, с нужным
+                  креплением под патрубок. Основные материалы:
                   <strong className="font-semibold text-[#0f2341]">
                     {" "}
-                    полиэстер, полипропилен, иглопробивной фильтровальный материал
+                    полиэстер, полипропилен, иглопробивный фильтровальный материал
                   </strong>
-                  , устойчивых к износу и влаге.
+                  — с упором на износостойкость при работе с опилками и древесной пылью.
                 </p>
 
                 <div className="pt-1">
@@ -1229,13 +1251,13 @@ export default function VerhnieMeshkiPage() {
 
             <div className="rounded-[24px] bg-[#f6f8fb] px-7 py-9 md:px-10 md:py-10">
               <h2 className="max-w-[1080px] text-[26px] font-bold leading-[1.15] text-[#0f2341] md:text-[38px]">
-                Как правильно выбрать мешки для аспирационных систем
+                Как подобрать верхний фильтровальный мешок для стружкоотсоса
               </h2>
 
               <div className="mt-7 max-w-[1180px] space-y-5 text-[15px] leading-8 text-[#42526b] md:text-[16px]">
                 <p>
-                  Выбор мешка для аспирации напрямую влияет на эффективность системы и
-                  срок службы оборудования. Чтобы выбрать подходящий мешок, учитывайте:
+                  Для фильтров аспирации важны посадка на патрубок и соответствие ткани типу пыли.
+                  Ориентируйтесь на:
                 </p>
 
                 <ul className="space-y-4">
@@ -1277,49 +1299,34 @@ export default function VerhnieMeshkiPage() {
                 </ul>
 
                 <p>
-                  Для деревообрабатывающих предприятий обычно используются полиэстеровые
-                  мешки, для влажной или химически активной среды — полипропилен. Если
-                  размеры неизвестны, отправьте параметры оборудования — мы подберем
-                  мешок под вашу систему.
+                  Для деревообработки чаще берут полиэстеровые фильтровальные мешки; для влажной среды
+                  смотрят на полипропилен. Не знаете размер — пришлите марку станка (из таблицы выше
+                  или иную) или фото узла крепления, подскажем по верхнему мешку.
                 </p>
               </div>
             </div>
 
             <div className="border-t border-[#e7ebf0] pt-12">
               <h2 className="max-w-[1080px] text-[26px] font-bold leading-[1.15] text-[#0f2341] md:text-[38px]">
-                Фильтровальные мешки и рукава для аспирации
+                Купить фильтровальные мешки для аспирации и стружкоотсосов
               </h2>
 
               <div className="mt-7 max-w-[1180px] space-y-5 text-[15px] leading-8 text-[#42526b] md:text-[16px]">
                 <p>
-                  Наши
-                  <strong className="font-semibold text-[#0f2341]"> мешки для аспирации</strong>
-                  {" "}подходят для
-                  <strong className="font-semibold text-[#0f2341]"> стружкоотсосов, УВП и циклонных фильтров</strong>.
-                  {" "}Мы изготавливаем
-                  <strong className="font-semibold text-[#0f2341]"> фильтровальные рукава, мешки для стружкоотсоса верхние и нижние</strong>,
-                  {" "}а также
-                  <strong className="font-semibold text-[#0f2341]"> мешки для промышленных пылеулавливающих систем</strong>.
+                  В ассортименте — мешки для аспирационных установок и отдельно верхние и нижние мешки
+                  для стружкоотсоса, фильтровальные рукава для УВП и циклонов. Материалы подбираем под
+                  древесную пыль, опилки и типичные условия мастерской или цеха.
                 </p>
 
                 <p>
-                  В каталоге можно найти мешки для
-                  <strong className="font-semibold text-[#0f2341]">
-                    {" "}деревообрабатывающих станков, металлообработки, пищевая промышленность, химическая промышленность
-                  </strong>.
-                  {" "}Все изделия изготовлены из
-                  <strong className="font-semibold text-[#0f2341]">
-                    {" "}полиэстера, полипропилена и иглопробивного фильтровального материала
-                  </strong>,
-                  {" "}с длительным сроком службы и высокой степенью очистки воздуха.
+                  Работаем с деревообработкой, столярными производствами и смежными задачами; изделия
+                  шьём из полиэстера, полипропилена и иглопробивного полотна с упором на ресурс и
+                  стабильную степень очистки воздуха.
                 </p>
 
                 <p>
-                  Мы выполняем индивидуальные заказы на мешки для аспирации и доставку по всей России:
-                  <strong className="font-semibold text-[#0f2341]">
-                    {" "}Москва, Санкт-Петербург, Екатеринбург, Казань
-                  </strong>{" "}
-                  и другие города.
+                  Доставляем заказы по России: Москва, Санкт-Петербург, Екатеринбург, Казань и другие
+                  города — уточняйте сроки при оформлении.
                 </p>
               </div>
 
@@ -1328,7 +1335,7 @@ export default function VerhnieMeshkiPage() {
                   href="#zakaz-verhnih-meshkov"
                   className="inline-flex items-center gap-3 rounded-full bg-[#ff6b2c] px-7 py-3.5 text-[16px] font-semibold text-white transition hover:bg-[#f25a18]"
                 >
-                  <span>Заказать мешки для аспирации</span>
+                  <span>Заказать верхние мешки для аспирации</span>
                   <span className="text-[20px] leading-none">→</span>
                 </a>
               </div>
