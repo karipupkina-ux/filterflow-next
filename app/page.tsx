@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo-metadata";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import TechnologySection from "./components/feature/TechnologySection";
@@ -16,6 +18,34 @@ import BlogArticlesSection from "./components/feature/BlogArticlesSection";
 import ContactsSection from "./components/feature/ContactsSection";
 import FloatingContacts from "./components/feature/FloatingContacts";
 import CookieBanner from "./components/feature/CookieBanner";
+
+const HOME_TITLE =
+  "FilterFlow — мешки для аспирации, фильтровальные рукава и рукавные фильтры";
+
+export const metadata: Metadata = {
+  ...pageMetadata({
+    title: HOME_TITLE,
+    description:
+      "Производство фильтровальных мешков и рукавов для систем аспирации и пылеулавливания: рукавные фильтры, мешки для стружкоотсоса, циклонов и УВП. Пошив на заказ, промышленная фильтрация. Доставка по России.",
+    path: "/",
+    openGraphTitle: HOME_TITLE,
+  }),
+  keywords: [
+    "мешки для аспирации",
+    "купить мешки для аспирации",
+    "мешки для систем аспирации",
+    "мешки для аспирационных установок",
+    "фильтровальные рукава",
+    "рукавные фильтры",
+    "фильтры для аспирации",
+    "пылеулавливание",
+    "промышленная фильтрация",
+    "фильтровальные материалы",
+    "мешки для стружкоотсоса",
+    "мешки для циклонов",
+    "мешки для УВП",
+  ],
+};
 
 export default function HomePage() {
   return (

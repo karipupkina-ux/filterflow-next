@@ -145,7 +145,8 @@ export default function CatalogGridSection() {
           </h2>
 
           <p className="mt-3 text-[16px] leading-[1.7] text-slate-500 md:text-[17px]">
-            Вся продукция FilterFlow — производство под заказ, доставка по России
+            Рукавные фильтры, мешки для аспирации и фильтровальные материалы —
+            производство под заказ, доставка по России
           </p>
         </div>
 

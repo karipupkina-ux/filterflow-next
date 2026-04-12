@@ -61,12 +61,12 @@ export default function FAQSection() {
           </div>
 
           <h2 className="text-[34px] font-bold leading-[1.08] tracking-[-0.02em] text-[#1f2937] md:text-[52px]">
-            Ответы на ваши вопросы
+            Вопросы о мешках для аспирации и рукавных фильтрах
           </h2>
 
           <p className="mx-auto mt-4 max-w-3xl text-[16px] leading-[1.7] text-slate-500 md:text-[17px]">
-            Собрали самые популярные вопросы от наших клиентов. Не нашли ответ —
-            напишите нам!
+            Подбор фильтровальных материалов, сроки и доставка. Не нашли ответ —
+            напишите нам.
           </p>
         </div>
 

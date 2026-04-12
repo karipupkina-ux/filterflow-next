@@ -12,7 +12,7 @@ export default function TechnologySection() {
 
         {/* Main title */}
         <h2 className="text-5xl md:text-6xl font-bold tracking-tight leading-[1.1] text-[#1F2937] mb-10">
-          Технология производства
+          Технология пошива фильтровальных мешков и рукавов
         </h2>
 
         <div className="grid lg:grid-cols-[1.2fr_0.9fr] gap-12 items-start">

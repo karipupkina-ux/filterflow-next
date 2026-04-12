@@ -50,13 +50,13 @@ export default function Products() {
     <section id="catalog" className="bg-[#f8f9fb] py-24">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="mb-5 text-center text-4xl font-bold text-[#0f172a] md:text-[64px]">
-          Каталог продукции
+          Каталог: мешки для аспирации и фильтровальные рукава
         </h2>
 
         <p className="mx-auto mb-16 max-w-4xl text-center text-lg text-[#475569] md:text-[22px]">
-          Производим фильтровальные мешки и рукава для различных систем
-          <br className="hidden md:block" />
-          аспирации и пылеудаления
+          Промышленная фильтрация пылевых частиц и аэрозолей: фильтровальные
+          материалы, рукавные фильтры и мешки под аспирационную систему и задачи
+          пылеулавливания
         </p>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
