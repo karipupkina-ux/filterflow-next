@@ -4,7 +4,7 @@ import Navigation from "../components/Navigation";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import CookieBanner from "../components/feature/CookieBanner";
 import { pageMetadata } from "@/lib/seo-metadata";
-import PortfolioProjectsSection from "../components/feature/PortfolioProjectsSection";
+import PortfolioPageBlocks from "./PortfolioPageBlocks";
 
 export const metadata: Metadata = pageMetadata({
   title:
@@ -45,7 +45,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <PortfolioProjectsSection />
+        <PortfolioPageBlocks />
       </main>
 
       <CookieBanner />

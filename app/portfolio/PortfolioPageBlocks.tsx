@@ -364,6 +364,7 @@ type CategoryFilter = "all" | "wood" | "metal";
 
 type GalleryWorkItem = {
   title: string;
+  description: string;
   image: string;
   categories: ("wood" | "metal")[];
 };
@@ -377,161 +378,202 @@ const GALLERY_FILTERS: { id: CategoryFilter; label: string }[] = [
 const PORTFOLIO_WORKS: GalleryWorkItem[] = [
   {
     title: "Мешки для аспирации",
+    description:
+      "Установка системы аспирации с верхними мешками-фильтрами для цеха деревообработки.",
     image: "/images/nashi-raboti/meshki-aspirac.webp",
     categories: ["wood", "metal"],
   },
   {
     title: "Производство карманных фильтров на заказ",
+    description:
+      "Производство карманных фильтров для систем вентиляции и очистки воздуха.",
     image: "/images/nashi-raboti/generated_image.webp",
     categories: ["metal"],
   },
   {
     title: "Мешки для циклонов",
+    description: "Мешки большого объема для промышленных циклонов.",
     image: "/images/nashi-raboti/meshki-ciklonov-uvp.webp",
     categories: ["metal"],
   },
   {
     title: "Верхние мешки-фильтры",
+    description: "Верхние фильтровальные мешки для столярного оборудования.",
     image: "/images/nashi-raboti/photo_1.webp",
     categories: ["wood", "metal"],
   },
   {
     title: "Мешки для стружкоотсоса",
+    description:
+      "Мешки для циклонов и стружкоотсосов в мебельном производстве.",
     image: "/images/nashi-raboti/industrial_filter_system.webp",
     categories: ["wood"],
   },
   {
     title: "Фильтровальные рукава на заказ",
+    description:
+      "Комплексная система рукавных фильтров для очистки воздуха от металлической пыли.",
     image: "/images/nashi-raboti/filter_bag_white.webp",
     categories: ["metal"],
   },
   {
     title: "Рукавные фильтры",
+    description: "Система рукавных фильтров для пищевого производства.",
     image: "/images/nashi-raboti/filter_cage.webp",
     categories: ["metal"],
   },
   {
     title: "Нижние пылесборники",
+    description: "Нижние пылесборники для деревообрабатывающих станков.",
     image: "/images/nashi-raboti/image_webp_optimized.webp",
     categories: ["wood", "metal"],
   },
   {
     title: "Нестандартный мешок для фильтрации",
+    description: "Изготовление фильтров по индивидуальным размерам заказчика.",
     image: "/images/nashi-raboti/nestandartnye-meshki.webp",
     categories: ["wood", "metal"],
   },
   {
     title: "Фильтры по размерам",
+    description: "Изготовление фильтров по индивидуальным размерам заказчика.",
     image: "/images/nashi-raboti/converted_image5.webp",
     categories: ["metal"],
   },
   {
     title: "Антистатические фильтры",
+    description: "Антистатические рукавные фильтры для взрывоопасных производств.",
     image: "/images/nashi-raboti/filter_closeup.webp",
     categories: ["metal"],
   },
   {
     title: "Мешки для УВП",
+    description: "Мешки для мобильных установок вентиляции и пылеудаления.",
     image: "/images/nashi-raboti/grow_bags_white.webp",
     categories: ["metal"],
   },
   {
     title: "Мешок фильтр для стружкоотсоса",
+    description: "Фильтровальные мешки с металлическим кольцом для стружкоотсосов.",
     image: "/images/nashi-raboti/dust_collector_single.webp",
     categories: ["wood"],
   },
   {
     title: "Мешки для стружкоотсоса УВП",
+    description: "Крупногабаритные фильтровальные мешки для промышленных циклонов.",
     image: "/images/nashi-raboti/filter_sleeves_hero.webp",
     categories: ["wood"],
   },
   {
     title: "Фильтр-мешки для аспирации",
+    description: "Комплект фильтровальных мешков для промышленных пылесосов.",
     image: "/images/nashi-raboti/converted.webp",
     categories: ["wood", "metal"],
   },
   {
     title: "Фильтр карманный",
+    description:
+      "Карманные фильтры для систем вентиляции и кондиционирования воздуха.",
     image: "/images/nashi-raboti/air_filter.webp",
     categories: ["metal"],
   },
   {
     title: "Мешок для фильтрации жидкости",
+    description: "Мешки для фильтрации промышленных жидкостей и водоочистки.",
     image: "/images/nashi-raboti/filter55_bag.webp",
     categories: ["metal"],
   },
   {
     title: "Прозрачное окно у нижнего мешка",
+    description:
+      "Прозрачные смотровые окна на нижних мешках для контроля уровня наполнения.",
     image: "/images/nashi-raboti/window_webp_1.webp",
     categories: ["wood", "metal"],
   },
   {
     title: "Мешки для обезвоживания осадка",
+    description:
+      "Геотекстильные мешки для обезвоживания осадка на очистных сооружениях.",
     image: "/images/nashi-raboti/filter_bags_table.webp",
     categories: ["metal"],
   },
   {
     title: "Хомут быстросъёмный",
+    description:
+      "Быстросъёмные хомуты для соединения воздуховодов и фильтровального оборудования.",
     image: "/images/nashi-raboti/bystrosemnye-homuty.webp",
     categories: ["wood", "metal"],
   },
   {
     title: "Фильтр рукавный, комплект рукавов",
+    description:
+      "Фильтровальные мешки из полиэстера для промышленных систем пылеудаления.",
     image: "/images/nashi-raboti/filter_bags.webp",
     categories: ["metal"],
   },
   {
     title: "Мешки для аспирации опилок и стружки",
+    description: "Комплект фильтровальных мешков для промышленного оборудования.",
     image: "/images/nashi-raboti/meshki-aspiracii.webp",
     categories: ["wood"],
   },
   {
     title: "Мешки для промышленных систем аспирации",
+    description:
+      "Фильтровальные мешки с металлическим кольцом для надежного крепления.",
     image: "/images/nashi-raboti/meshki-struzhkootsosa.webp",
     categories: ["wood", "metal"],
   },
   {
     title: "Ткань для аспирации",
+    description:
+      "Фильтровальные мешки, установленные на деревообрабатывающем оборудовании.",
     image: "/images/nashi-raboti/roll_image.webp",
     categories: ["wood", "metal"],
   },
   {
     title: "Фильтровальная ткань",
+    description: "Крупногабаритные фильтровальные мешки для циклонных сепараторов.",
     image: "/images/nashi-raboti/fabric.webp",
     categories: ["metal"],
   },
   {
     title: "Ткань для стружкоотсоса",
+    description:
+      "Производство фильтровальных мешков на собственном швейном оборудовании.",
     image: "/images/nashi-raboti/fabric2.webp",
     categories: ["wood"],
   },
   {
     title: "Фильтр ткань",
+    description: "Антистатические фильтровальные мешки для взрывоопасных производств.",
     image: "/images/nashi-raboti/fabric3.webp",
     categories: ["metal"],
   },
   {
     title: "Ткань для фильтрации",
+    description: "Готовые фильтровальные мешки различных размеров на складе.",
     image: "/images/nashi-raboti/fabric4.webp",
     categories: ["metal"],
   },
   {
     title: "Мешок-фильтр на заказ",
+    description:
+      "Фильтровальные мешки из белого полиэстера для систем пылеудаления.",
     image: "/images/nashi-raboti/converted_image.webp",
     categories: ["wood", "metal"],
   },
   {
     title: "Петелька для подвеса на верхнем мешке",
+    description:
+      "Петелька для подвеса на верхнем фильтровальном мешке аспирационной установки.",
     image: `/images/nashi-raboti/${encodeURIComponent("edited_image (1).webp")}`,
     categories: ["wood", "metal"],
   },
 ];
 
-const INITIAL_VISIBLE = 8;
-
 function PortfolioProjectsGalleryBlock() {
   const [filter, setFilter] = useState<CategoryFilter>("all");
-  const [showAll, setShowAll] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const filteredWorks = useMemo(() => {
@@ -539,16 +581,7 @@ function PortfolioProjectsGalleryBlock() {
     return PORTFOLIO_WORKS.filter((w) => w.categories.includes(filter));
   }, [filter]);
 
-  const visibleWorks = useMemo(() => {
-    if (showAll) return filteredWorks;
-    return filteredWorks.slice(0, INITIAL_VISIBLE);
-  }, [filteredWorks, showAll]);
-
-  const hasMoreInFilter = filteredWorks.length > INITIAL_VISIBLE;
-
-  useEffect(() => {
-    setShowAll(false);
-  }, [filter]);
+  const visibleWorks = filteredWorks;
 
   useEffect(() => {
     if (activeIndex === null) {
@@ -688,38 +721,15 @@ function PortfolioProjectsGalleryBlock() {
                     <p className="text-left text-[13px] font-medium leading-[1.35] text-[#22d3c5] md:text-[14px]">
                       {item.title}
                     </p>
+                    <p className="mt-1 text-left text-[11px] leading-[1.3] text-white/95 opacity-0 transition duration-300 group-hover:opacity-100 md:text-[12px]">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               </button>
             ))}
           </div>
 
-          {hasMoreInFilter && (
-            <div className="mt-8 text-center">
-              {!showAll ? (
-                <button
-                  type="button"
-                  onClick={() => setShowAll(true)}
-                  className="inline-flex h-[46px] items-center justify-center gap-2 rounded-xl bg-[#23b8ad] px-6 text-[15px] font-medium text-white transition hover:bg-[#1ea79d]"
-                >
-                  Показать больше работ
-                  <svg
-                    className="h-4 w-4"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 5v14M5 12l7 7 7-7"
-                    />
-                  </svg>
-                </button>
-              ) : null}
-            </div>
-          )}
         </div>
       </section>
 
@@ -792,6 +802,9 @@ function PortfolioProjectsGalleryBlock() {
               />
               <p className="mt-4 text-[16px] font-medium text-[#22d3c5]">
                 {PORTFOLIO_WORKS[activeIndex].title}
+              </p>
+              <p className="mx-auto mt-2 max-w-[760px] text-[13px] leading-[1.45] text-white/90 md:text-[14px]">
+                {PORTFOLIO_WORKS[activeIndex].description}
               </p>
             </div>
 
