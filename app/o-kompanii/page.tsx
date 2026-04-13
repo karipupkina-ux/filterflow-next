@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import FloatingContacts from "../components/feature/FloatingContacts";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
@@ -215,6 +216,7 @@ export default function OKompaniiPage() {
   return (
     <>
       <Navigation />
+      <FloatingContacts />
 
       <main className="bg-[#f8fafc] pt-[118px] md:pt-[124px]">
         <div className="mx-auto max-w-7xl px-4 pb-20 pt-6 sm:px-6 lg:px-8">
@@ -406,7 +408,7 @@ export default function OKompaniiPage() {
 
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href="#kontakty-filterflow"
+                  href="#kontakty-filterflow-details"
                   className="inline-flex items-center justify-center rounded-xl bg-white px-7 py-3 text-base font-semibold text-[#0e8f8d] transition hover:bg-[#f1f5f9]"
                 >
                   Связаться с нами
@@ -420,7 +422,7 @@ export default function OKompaniiPage() {
               </div>
             </div>
 
-            <div className="mx-auto mt-10 max-w-5xl border-t border-white/20 pt-8">
+            <div id="kontakty-filterflow-details" className="mx-auto mt-10 max-w-5xl border-t border-white/20 pt-8">
               <div className="grid gap-6 text-center md:grid-cols-3">
                 <div>
                   <a
