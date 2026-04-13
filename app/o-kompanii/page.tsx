@@ -407,12 +407,14 @@ export default function OKompaniiPage() {
               </p>
 
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-                <Link
-                  href="/kontakty/"
+                <a
+                  href="https://wa.me/79514992576"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-xl bg-white px-7 py-3 text-base font-semibold text-[#0e8f8d] transition hover:bg-[#f1f5f9]"
                 >
                   Связаться с нами
-                </Link>
+                </a>
                 <Link
                   href="/portfolio"
                   className="inline-flex items-center justify-center rounded-xl border border-white/30 px-7 py-3 text-base font-semibold text-white transition hover:bg-white/10"
