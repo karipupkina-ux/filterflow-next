@@ -214,7 +214,7 @@ export default function OurWorksSection() {
               </button>
             ) : (
               <a
-                href="#nashi-proekty"
+                href="/portfolio"
                 className="inline-flex items-center gap-2 text-[16px] font-medium text-[#0f9f93] transition hover:text-[#0b8c81]"
               >
                 Смотреть все проекты
