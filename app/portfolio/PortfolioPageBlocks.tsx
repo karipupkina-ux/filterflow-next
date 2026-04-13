@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
@@ -820,15 +821,77 @@ function PortfolioProjectsGalleryBlock() {
 }
 
 // ——————————————————————————————————————————————————————————————
-// Экспорт: три блока подряд
+// CTA: портфолио / заказ
+// ——————————————————————————————————————————————————————————————
+
+function PortfolioCtaBlock() {
+  return (
+    <section className="bg-[#14b8a6] py-16 md:py-20 lg:py-24">
+      <div className="mx-auto max-w-4xl px-6 text-center md:px-8">
+        <h2 className="text-[26px] font-bold leading-[1.2] tracking-[-0.02em] text-white md:text-[34px] lg:text-[38px]">
+          Хотите увидеть ваш проект в нашем портфолио?
+        </h2>
+        <p className="mx-auto mt-5 max-w-[640px] text-[15px] leading-[1.65] text-white/95 md:mt-6 md:text-[16px] md:leading-[1.7] lg:text-[17px]">
+          Свяжитесь с нами для консультации и расчета стоимости системы
+          фильтрации для вашего предприятия
+        </p>
+
+        <div className="mt-9 flex flex-col items-stretch justify-center gap-4 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+          <Link
+            href="/#order"
+            className="inline-flex h-[52px] items-center justify-center gap-2.5 rounded-xl bg-white px-7 text-[15px] font-bold text-[#0f766e] shadow-sm transition duration-200 hover:bg-white/95 hover:shadow-md md:h-[56px] md:px-9 md:text-[16px]"
+          >
+            <svg
+              className="h-5 w-5 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden
+            >
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+            </svg>
+            Оформить заказ
+          </Link>
+
+          <a
+            href="tel:+79514992576"
+            className="inline-flex h-[52px] items-center justify-center gap-2.5 rounded-xl bg-[#0f766e] px-7 text-[15px] font-bold text-white shadow-sm transition duration-200 hover:bg-[#0d6960] hover:shadow-md md:h-[56px] md:px-9 md:text-[16px]"
+          >
+            <svg
+              className="h-5 w-5 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden
+            >
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            +7 951 499-25-76
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ——————————————————————————————————————————————————————————————
+// Экспорт
 // ——————————————————————————————————————————————————————————————
 
 export default function PortfolioPageBlocks() {
   return (
     <>
+      <PortfolioProjectsGalleryBlock />
       <PortfolioClientCasesBlock />
       <PortfolioClientExamplesBlock />
-      <PortfolioProjectsGalleryBlock />
+      <PortfolioCtaBlock />
     </>
   );
 }
