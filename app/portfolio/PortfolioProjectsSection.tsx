@@ -201,17 +201,16 @@ export default function PortfolioProjectsSection() {
     document.body.style.overflow = "hidden";
 
     const handleKeyDown = (e: KeyboardEvent) => {
+      const n = PORTFOLIO_WORKS.length;
       if (e.key === "Escape") setActiveIndex(null);
       if (e.key === "ArrowLeft") {
         setActiveIndex((prev) =>
-          prev === null
-            ? 0
-            : (prev - 1 + filteredWorks.length) % filteredWorks.length
+          prev === null ? 0 : (prev - 1 + n) % n
         );
       }
       if (e.key === "ArrowRight") {
         setActiveIndex((prev) =>
-          prev === null ? 0 : (prev + 1) % filteredWorks.length
+          prev === null ? 0 : (prev + 1) % n
         );
       }
     };
@@ -221,30 +220,27 @@ export default function PortfolioProjectsSection() {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [activeIndex, filteredWorks.length]);
+  }, [activeIndex]);
 
-  const openModal = useCallback(
-    (item: WorkItem) => {
-      const idx = filteredWorks.findIndex(
-        (w) => w.image === item.image && w.title === item.title
-      );
-      setActiveIndex(idx >= 0 ? idx : 0);
-    },
-    [filteredWorks]
-  );
+  const openModal = useCallback((item: WorkItem) => {
+    const idx = PORTFOLIO_WORKS.findIndex(
+      (w) => w.image === item.image && w.title === item.title
+    );
+    setActiveIndex(idx >= 0 ? idx : 0);
+  }, []);
 
   const closeModal = () => setActiveIndex(null);
 
   const showPrev = () => {
-    if (activeIndex === null || filteredWorks.length === 0) return;
-    setActiveIndex(
-      (activeIndex - 1 + filteredWorks.length) % filteredWorks.length
-    );
+    if (activeIndex === null) return;
+    const n = PORTFOLIO_WORKS.length;
+    setActiveIndex((activeIndex - 1 + n) % n);
   };
 
   const showNext = () => {
-    if (activeIndex === null || filteredWorks.length === 0) return;
-    setActiveIndex((activeIndex + 1) % filteredWorks.length);
+    if (activeIndex === null) return;
+    const n = PORTFOLIO_WORKS.length;
+    setActiveIndex((activeIndex + 1) % n);
   };
 
   return (
@@ -284,11 +280,13 @@ export default function PortfolioProjectsSection() {
                 className="group relative overflow-hidden rounded-[14px] bg-white text-left shadow-[0_6px_18px_rgba(15,23,42,0.08)]"
               >
                 <div className="relative h-[156px] overflow-hidden bg-[#eef1f4] sm:h-[178px] lg:h-[192px]">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="h-full w-full object-cover transition duration-500 ease-out group-hover:scale-[1.08]"
-                  />
+                  <div className="absolute inset-0 flex items-center justify-center overflow-hidden p-2 md:p-3">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="max-h-full max-w-full object-contain transition duration-500 ease-out group-hover:scale-[1.08]"
+                    />
+                  </div>
 
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
 
@@ -363,7 +361,7 @@ export default function PortfolioProjectsSection() {
         </div>
       </section>
 
-      {activeIndex !== null && filteredWorks[activeIndex] && (
+      {activeIndex !== null && PORTFOLIO_WORKS[activeIndex] && (
         <div
           className="fixed inset-0 z-[200] bg-black/80 px-4 py-6"
           onClick={closeModal}
@@ -394,7 +392,7 @@ export default function PortfolioProjectsSection() {
             </button>
 
             <div className="absolute left-1/2 top-4 z-[210] -translate-x-1/2 text-sm text-white/90 md:top-6">
-              {activeIndex + 1} / {filteredWorks.length}
+              {activeIndex + 1} / {PORTFOLIO_WORKS.length}
             </div>
 
             <button
@@ -426,12 +424,12 @@ export default function PortfolioProjectsSection() {
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src={filteredWorks[activeIndex].image}
-                alt={filteredWorks[activeIndex].title}
+                src={PORTFOLIO_WORKS[activeIndex].image}
+                alt={PORTFOLIO_WORKS[activeIndex].title}
                 className="mx-auto max-h-[78vh] w-auto max-w-full rounded-[18px] bg-white object-contain shadow-2xl"
               />
               <div className="mt-4 text-[16px] font-medium text-[#22d3c5]">
-                {filteredWorks[activeIndex].title}
+                {PORTFOLIO_WORKS[activeIndex].title}
               </div>
             </div>
 
