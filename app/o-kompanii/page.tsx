@@ -54,6 +54,123 @@ export default function OKompaniiPage() {
       ),
     },
   ];
+  const stats = [
+    {
+      value: "300+",
+      title: "Выполненных проектов",
+      text: "Успешно реализованных заказов для предприятий различных отраслей.",
+    },
+    {
+      value: "5",
+      title: "Лет на рынке",
+      text: "Опыт производства фильтровальной продукции с 2020 года.",
+    },
+    {
+      value: "120+",
+      title: "Постоянных клиентов",
+      text: "Предприятия, которые регулярно заказывают нашу продукцию.",
+    },
+    {
+      value: "100%",
+      title: "Соблюдение сроков",
+      text: "Гарантируем изготовление и доставку точно в срок.",
+    },
+  ];
+  const industries = [
+    {
+      title: "Деревообработка",
+      text: "Мешки для аспирации деревообрабатывающих станков, циклонов и стружкоотсосов. Работаем с мебельными фабриками, лесопилками и столярными цехами.",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <path d="M5 5h14M12 5v14" />
+          <path d="M8 9h8" />
+        </svg>
+      ),
+    },
+    {
+      title: "Металлообработка",
+      text: "Фильтровальные рукава для систем удаления металлической стружки и пыли. Сотрудничаем с машиностроительными и металлообрабатывающими заводами.",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <circle cx="12" cy="12" r="3" />
+          <path d="M12 4v2M12 18v2M4 12h2M18 12h2M6.3 6.3l1.4 1.4M16.3 16.3l1.4 1.4M17.7 6.3l-1.4 1.4M7.7 16.3l-1.4 1.4" />
+        </svg>
+      ),
+    },
+    {
+      title: "Другие отрасли",
+      text: "Пищевая промышленность, химическое производство, строительство. Изготавливаем фильтры для любых систем пылеудаления и аспирации.",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <path d="M6 4h12v16H6z" />
+          <path d="M9 8h6M9 12h6M9 16h4" />
+        </svg>
+      ),
+    },
+  ];
+  const productionBenefits = [
+    {
+      title: "Индивидуальный подход",
+      text: "Изготавливаем фильтры по вашим чертежам, образцам или фотографиям. Консультируем по выбору материалов и конструкции.",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <circle cx="12" cy="8" r="3" />
+          <path d="M6 19c0-2.8 2.7-5 6-5m0 0 2 2 4-4" />
+        </svg>
+      ),
+    },
+    {
+      title: "Соблюдение сроков",
+      text: "Гарантируем изготовление в оговоренные сроки. Работаем по договору с четкими обязательствами и прозрачным графиком.",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <rect x="4" y="5" width="16" height="15" rx="2" />
+          <path d="M8 3v4M16 3v4M8 11h8M12 14v3" />
+        </svg>
+      ),
+    },
+    {
+      title: "Гарантия качества",
+      text: "Используем только проверенные материалы и контролируем качество каждого изделия перед отправкой клиенту.",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <path d="M12 3l7 3v5c0 4.2-2.7 8-7 10-4.3-2-7-5.8-7-10V6z" />
+          <path d="m9.5 12.5 1.9 1.9 3.6-3.6" />
+        </svg>
+      ),
+    },
+    {
+      title: "Цены производителя",
+      text: "Работаем без посредников, поэтому вы получаете продукцию напрямую от производителя по выгодным условиям.",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <path d="M5 7h8l6 6-6 6-8-8z" />
+          <circle cx="10" cy="10" r="1.2" />
+        </svg>
+      ),
+    },
+    {
+      title: "Доставка по России и СНГ",
+      text: "Отправляем заказы транспортными компаниями в любой регион. Помогаем выбрать оптимальный способ доставки.",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z" />
+          <circle cx="7" cy="17" r="1.5" />
+          <circle cx="17" cy="17" r="1.5" />
+        </svg>
+      ),
+    },
+    {
+      title: "Техническая поддержка",
+      text: "Консультируем по эксплуатации, замене и обслуживанию фильтров. Подбираем оптимальное решение под вашу систему.",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <path d="M5 12a7 7 0 1 1 14 0v5a2 2 0 0 1-2 2h-2v-5h4" />
+          <path d="M5 14h4v5H7a2 2 0 0 1-2-2z" />
+        </svg>
+      ),
+    },
+  ];
 
   return (
     <>
@@ -141,6 +258,63 @@ export default function OKompaniiPage() {
                   />
                 </div>
               </div>
+            </div>
+          </section>
+
+          <section className="mt-14">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-[#0f172a] sm:text-5xl">Опыт работы</h2>
+              <p className="mx-auto mt-4 max-w-3xl text-[20px] leading-relaxed text-[#475569]">
+                За годы работы мы накопили обширный опыт в производстве фильтровальной продукции и построили
+                долгосрочные отношения с клиентами по всей России и СНГ.
+              </p>
+            </div>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              {stats.map((item) => (
+                <article
+                  key={item.title}
+                  className="rounded-2xl bg-white p-6 text-center shadow-[0_8px_18px_rgba(15,23,42,0.08)]"
+                >
+                  <p className="text-[52px] font-bold leading-none text-[#0aa79d]">{item.value}</p>
+                  <h3 className="mt-3 text-[24px] font-semibold text-[#0f172a]">{item.title}</h3>
+                  <p className="mt-2 text-[16px] leading-relaxed text-[#64748b]">{item.text}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="mt-12 rounded-3xl bg-white p-6 shadow-[0_10px_28px_rgba(15,23,42,0.06)] sm:p-8 lg:p-10">
+            <h2 className="text-[40px] font-bold text-[#0aa79d]">Работа с различными отраслями</h2>
+            <div className="mt-7 grid gap-5 lg:grid-cols-3">
+              {industries.map((item) => (
+                <article key={item.title} className="rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-5">
+                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[#d7f6f3] text-[#0a8d85]">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-[28px] font-semibold text-[#0f172a]">{item.title}</h3>
+                  <p className="mt-2 text-[17px] leading-relaxed text-[#475569]">{item.text}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="mt-14">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-[#0f172a] sm:text-5xl">Преимущества производства</h2>
+              <p className="mx-auto mt-4 max-w-3xl text-[20px] leading-relaxed text-[#475569]">
+                Почему предприятия выбирают FilterFlow для производства фильтровальных мешков и рукавов.
+              </p>
+            </div>
+            <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {productionBenefits.map((item) => (
+                <article key={item.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-6">
+                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#d7f6f3] text-[#0a8d85]">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-[28px] font-semibold text-[#0f172a]">{item.title}</h3>
+                  <p className="mt-2 text-[17px] leading-relaxed text-[#475569]">{item.text}</p>
+                </article>
+              ))}
             </div>
           </section>
         </div>
