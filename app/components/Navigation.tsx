@@ -93,7 +93,9 @@ export default function Navigation() {
           </a>
 
           <a
-            href="#"
+            href="https://max.ru/u/f9LHodD0cOLehfNZxc-dfvXrRQQ-ApKrfczCjbhEa_va3lGdtndd7SgNP8U"
+            target="_blank"
+            rel="noopener noreferrer"
             className="transition-colors duration-200 hover:text-[#28c4b7]"
           >
             MAX
