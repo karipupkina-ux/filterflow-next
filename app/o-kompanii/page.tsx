@@ -171,6 +171,46 @@ export default function OKompaniiPage() {
       ),
     },
   ];
+  const achievements = [
+    {
+      title: "География поставок",
+      text: "Работаем с предприятиями по всей России - от Калининграда до Владивостока. Отправляем продукцию в страны СНГ: Казахстан, Беларусь, Узбекистан, Киргизию.",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <path d="M12 21s7-4.8 7-10a7 7 0 1 0-14 0c0 5.2 7 10 7 10z" />
+          <circle cx="12" cy="11" r="2.5" />
+        </svg>
+      ),
+    },
+    {
+      title: "Повторные заказы",
+      text: "Более 85% наших клиентов делают повторные заказы. Это подтверждает высокое качество продукции и надежность сотрудничества с FilterFlow.",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <path d="M8 7H4v4M16 17h4v-4" />
+          <path d="M4 11a8 8 0 0 0 13 3M20 13a8 8 0 0 0-13-3" />
+        </svg>
+      ),
+    },
+    {
+      title: "Ассортимент продукции",
+      text: "Производим более 50 типоразмеров фильтровальных мешков и рукавов. Изготавливаем нестандартные изделия по индивидуальным чертежам заказчика.",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <path d="M12 3 4 7l8 4 8-4-8-4zM4 12l8 4 8-4M4 17l8 4 8-4" />
+        </svg>
+      ),
+    },
+    {
+      title: "Положительные отзывы",
+      text: "Клиенты отмечают высокое качество пошива, точное соблюдение размеров, долгий срок службы фильтров и оперативность выполнения заказов.",
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <path d="M9 11V6a3 3 0 0 1 3-3l1 4h5v4l-2 8H8V11zM4 11h4v8H4z" />
+        </svg>
+      ),
+    },
+  ];
 
   return (
     <>
@@ -315,6 +355,96 @@ export default function OKompaniiPage() {
                   <p className="mt-2 text-[17px] leading-relaxed text-[#475569]">{item.text}</p>
                 </article>
               ))}
+            </div>
+          </section>
+
+          <section className="mt-14">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-[#0f172a] sm:text-5xl">Наши достижения</h2>
+              <p className="mx-auto mt-4 max-w-3xl text-[20px] leading-relaxed text-[#475569]">
+                Результаты работы FilterFlow за годы присутствия на рынке фильтровальной продукции.
+              </p>
+            </div>
+
+            <div className="mt-8 grid items-start gap-6 rounded-3xl bg-white p-5 shadow-[0_10px_28px_rgba(15,23,42,0.06)] md:p-8 lg:grid-cols-[1fr_1.1fr]">
+              <div className="overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/catalog/conver55ted_image.webp"
+                  alt="Достижения компании FilterFlow"
+                  width={1200}
+                  height={900}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
+              <div className="space-y-5">
+                {achievements.map((item) => (
+                  <article key={item.title} className="flex items-start gap-4">
+                    <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#d7f6f3] text-[#0a8d85]">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-[32px] font-semibold leading-tight text-[#0f172a]">{item.title}</h3>
+                      <p className="mt-1 text-[17px] leading-relaxed text-[#475569]">{item.text}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="kontakty-filterflow"
+            className="mt-14 overflow-hidden rounded-3xl bg-gradient-to-b from-[#0ea5a2] to-[#0e8f8d] px-6 py-12 text-white sm:px-10 sm:py-14"
+          >
+            <div className="mx-auto max-w-4xl text-center">
+              <h2 className="text-4xl font-bold sm:text-5xl">Готовы начать сотрудничество?</h2>
+              <p className="mx-auto mt-5 max-w-3xl text-[20px] leading-relaxed text-white/90">
+                Свяжитесь с нами для консультации по выбору фильтровальной продукции. Рассчитаем стоимость,
+                подберем оптимальное решение и изготовим мешки точно в срок.
+              </p>
+
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+                <a
+                  href="#kontakty-filterflow"
+                  className="inline-flex items-center justify-center rounded-xl bg-white px-7 py-3 text-base font-semibold text-[#0e8f8d] transition hover:bg-[#f1f5f9]"
+                >
+                  Связаться с нами
+                </a>
+                <Link
+                  href="/portfolio"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/30 px-7 py-3 text-base font-semibold text-white transition hover:bg-white/10"
+                >
+                  Посмотреть портфолио
+                </Link>
+              </div>
+            </div>
+
+            <div className="mx-auto mt-10 max-w-5xl border-t border-white/20 pt-8">
+              <div className="grid gap-6 text-center md:grid-cols-3">
+                <div>
+                  <a
+                    href="tel:+79514992576"
+                    className="text-4xl font-bold tracking-tight text-white transition hover:text-[#d7f6f3]"
+                  >
+                    +7 951 499-25-76
+                  </a>
+                  <p className="mt-2 text-[18px] text-white/80">Звоните в любое время</p>
+                </div>
+                <div>
+                  <a
+                    href="mailto:filterflow@mail.ru"
+                    className="text-4xl font-bold tracking-tight text-white transition hover:text-[#d7f6f3]"
+                  >
+                    filterflow@mail.ru
+                  </a>
+                  <p className="mt-2 text-[18px] text-white/80">Пишите на почту</p>
+                </div>
+                <div>
+                  <p className="text-4xl font-bold tracking-tight text-white">от 1 дня</p>
+                  <p className="mt-2 text-[18px] text-white/80">Срок изготовления</p>
+                </div>
+              </div>
             </div>
           </section>
         </div>
