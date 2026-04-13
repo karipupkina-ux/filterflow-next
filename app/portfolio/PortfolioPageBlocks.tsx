@@ -24,9 +24,9 @@ const CASES: CaseStudy[] = [
     categoryClassName: "text-[#14b8a6]",
     task: "Старая система фильтрации не справлялась с объемом древесной пыли, что приводило к загрязнению цеха и снижению производительности.",
     solution:
-      "Установили 12 верхних мешков-фильтров из полиэстера с антистатической обработкой и 8 нижних пылесборников увеличенного объема.",
+      "Установили 12 верхних мешков-фильтров из полиэстера с антистатической обработкой и 8 нижних пылесборников увеличенного объёма — типовое решение для деревообрабатывающей аспирации.",
     result:
-      "Эффективность очистки воздуха повысилась до 99,5%, производительность цеха выросла на 15%, срок службы фильтров увеличился в 2 раза.",
+      "Эффективность пылеулавливания и очистки воздуха выросла до 99,5%, производительность цеха — на 15%, срок службы фильтровальных мешков удвоился.",
   },
   {
     title: "Комплексная система фильтрации для металлообрабатывающего завода",
@@ -34,9 +34,9 @@ const CASES: CaseStudy[] = [
     categoryClassName: "text-[#14b8a6]",
     task: "Высокая концентрация металлической стружки и абразивной пыли выводила из строя стандартные фильтры и нарушала нормы охраны труда.",
     solution:
-      "Смонтировали рукавные фильтры из износостойкого полиэстера и верхние мешки для УВП с увеличенной площадью фильтрации.",
+      "Смонтировали рукавные фильтры и фильтровальные рукава из износостойкого полиэстера, верхние мешки для УВП с увеличенной площадью фильтрации.",
     result:
-      "Снижение выбросов до предельно допустимых концентраций, бесперебойная работа линии, межсервисный интервал вырос примерно на 40%.",
+      "Снижение выбросов до ПДК, стабильная работа промышленной аспирации, межсервисный интервал вырос примерно на 40%.",
   },
   {
     title: "Фильтрация для пищевого производства",
@@ -44,7 +44,7 @@ const CASES: CaseStudy[] = [
     categoryClassName: "text-[#10b981]",
     task: "Требовались фильтры, соответствующие санитарным нормам пищевой промышленности для очистки воздуха от мучной пыли.",
     solution:
-      "Изготовили специализированные фильтровальные рукава из пищевого полиэстера с гладкой поверхностью для легкой очистки.",
+      "Изготовили на заказ фильтровальные рукава из пищевого полиэстера с гладкой поверхностью для лёгкой мойки и санитарных норм.",
     result:
       "Получено разрешение Роспотребнадзора, концентрация пыли снижена до нормативных значений, простота обслуживания системы.",
   },
@@ -130,11 +130,11 @@ function PortfolioClientCasesBlock() {
     <section className="border-b border-slate-200/80 bg-[#f9fafb] pb-14 pt-10 md:pb-20 md:pt-14">
       <div className="mx-auto max-w-[1200px] px-6 md:px-8">
         <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0f172a] md:text-[36px] lg:text-[40px]">
-          Кейсы наших клиентов
+          Реализованные проекты FilterFlow — кейсы клиентов
         </h2>
         <p className="mx-auto mt-4 max-w-[720px] text-center text-[15px] leading-[1.65] text-[#64748b] md:text-[16px] md:leading-[1.7]">
-          Реальные примеры решения задач по фильтрации для различных отраслей
-          промышленности
+          Решения для пылеулавливания: мешки и рукава на заказ для
+          деревообработки, металла и пищевой отрасли.
         </p>
 
         <div className="mx-auto mt-10 max-w-[1120px] space-y-8 md:mt-12 md:space-y-10">
@@ -163,9 +163,9 @@ function PortfolioClientCasesBlock() {
                 <div>
                   <div className="mb-3 flex items-center gap-3">
                     <CasesTaskIcon />
-                    <span className="text-[15px] font-bold text-[#0f172a] md:text-[16px]">
+                    <h4 className="text-[15px] font-bold text-[#0f172a] md:text-[16px]">
                       Задача
-                    </span>
+                    </h4>
                   </div>
                   <p className="text-[14px] leading-[1.7] text-[#475569] md:text-[15px] md:leading-[1.75]">
                     {item.task}
@@ -174,9 +174,9 @@ function PortfolioClientCasesBlock() {
                 <div>
                   <div className="mb-3 flex items-center gap-3">
                     <CasesSolutionIcon />
-                    <span className="text-[15px] font-bold text-[#0f172a] md:text-[16px]">
+                    <h4 className="text-[15px] font-bold text-[#0f172a] md:text-[16px]">
                       Решение
-                    </span>
+                    </h4>
                   </div>
                   <p className="text-[14px] leading-[1.7] text-[#475569] md:text-[15px] md:leading-[1.75]">
                     {item.solution}
@@ -185,9 +185,9 @@ function PortfolioClientCasesBlock() {
                 <div>
                   <div className="mb-3 flex items-center gap-3">
                     <CasesResultIcon />
-                    <span className="text-[15px] font-bold text-[#0f172a] md:text-[16px]">
+                    <h4 className="text-[15px] font-bold text-[#0f172a] md:text-[16px]">
                       Результат
-                    </span>
+                    </h4>
                   </div>
                   <p className="text-[14px] leading-[1.7] text-[#475569] md:text-[15px] md:leading-[1.75]">
                     {item.result}
@@ -295,10 +295,11 @@ function PortfolioClientExamplesBlock() {
     <section className="border-b border-slate-200/80 bg-white py-12 md:py-16 lg:py-[4.5rem]">
       <div className="mx-auto max-w-7xl px-6 md:px-8">
         <h2 className="text-center text-[26px] font-bold leading-tight tracking-[-0.02em] text-slate-900 md:text-[32px]">
-          Примеры клиентов
+          Примеры клиентов и отраслей
         </h2>
         <p className="mx-auto mt-3 max-w-[640px] text-center text-[15px] leading-[1.65] text-slate-500 md:mt-4 md:text-[16px] md:leading-[1.7]">
-          Мы работаем с предприятиями различных отраслей промышленности
+          Поставляем фильтровальные мешки, рукава и комплектующие для
+          промышленных систем аспирации предприятий разных отраслей.
         </p>
 
         <div className="mx-auto mt-10 grid max-w-[1180px] grid-cols-1 gap-6 md:mt-12 md:grid-cols-3 md:gap-7 lg:gap-8">
@@ -380,7 +381,7 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     categories: ["wood", "metal"],
   },
   {
-    title: "Производство карманных фильтров",
+    title: "Производство карманных фильтров на заказ",
     image: "/images/nashi-raboti/generated_image.webp",
     categories: ["metal"],
   },
@@ -400,7 +401,7 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     categories: ["wood"],
   },
   {
-    title: "Фильтровальные рукава",
+    title: "Фильтровальные рукава на заказ",
     image: "/images/nashi-raboti/filter_bag_white.webp",
     categories: ["metal"],
   },
@@ -445,7 +446,7 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     categories: ["wood"],
   },
   {
-    title: "Фильтр мешки",
+    title: "Фильтр-мешки для аспирации",
     image: "/images/nashi-raboti/converted.webp",
     categories: ["wood", "metal"],
   },
@@ -475,17 +476,17 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     categories: ["wood", "metal"],
   },
   {
-    title: "Фильтр рукавный",
+    title: "Фильтр рукавный, комплект рукавов",
     image: "/images/nashi-raboti/filter_bags.webp",
     categories: ["metal"],
   },
   {
-    title: "Мешки для аспирации опилок",
+    title: "Мешки для аспирации опилок и стружки",
     image: "/images/nashi-raboti/meshki-aspiracii.webp",
     categories: ["wood"],
   },
   {
-    title: "Мешки для систем аспирации",
+    title: "Мешки для промышленных систем аспирации",
     image: "/images/nashi-raboti/meshki-struzhkootsosa.webp",
     categories: ["wood", "metal"],
   },
@@ -515,7 +516,7 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     categories: ["metal"],
   },
   {
-    title: "Мешок-фильтр",
+    title: "Мешок-фильтр на заказ",
     image: "/images/nashi-raboti/converted_image.webp",
     categories: ["wood", "metal"],
   },
@@ -604,9 +605,13 @@ function PortfolioProjectsGalleryBlock() {
     <>
       <section className="bg-[#f8fafc] pb-16 pt-6 md:pb-20 md:pt-8">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="mb-8 text-center text-[28px] font-bold leading-tight text-[#0f172a] md:mb-10 md:text-[40px]">
+          <h2 className="mb-4 text-center text-[28px] font-bold leading-tight text-[#0f172a] md:mb-5 md:text-[40px]">
             Выполненные работы для промышленных предприятий
           </h2>
+          <p className="mx-auto mb-8 max-w-[720px] text-center text-[15px] leading-[1.65] text-[#64748b] md:mb-10 md:text-[16px] md:leading-[1.7]">
+            Фото изготовленных изделий: мешки для аспирации, циклонов и УВП,
+            рукавные фильтры, нестандартные позиции и изделия по вашим размерам.
+          </p>
 
           <div className="mb-8 flex flex-wrap items-center justify-center gap-2 md:gap-3">
             {GALLERY_FILTERS.map(({ id, label }) => {
@@ -640,7 +645,7 @@ function PortfolioProjectsGalleryBlock() {
                   <div className="absolute inset-0 flex items-center justify-center overflow-hidden p-2 md:p-3">
                     <img
                       src={item.image}
-                      alt={item.title}
+                      alt={`${item.title} — фото из портфолио FilterFlow`}
                       className="max-h-full max-w-full object-contain transition duration-500 ease-out group-hover:scale-[1.08]"
                     />
                   </div>
@@ -680,9 +685,9 @@ function PortfolioProjectsGalleryBlock() {
                   </div>
 
                   <div className="absolute inset-x-0 bottom-0 p-3">
-                    <div className="text-left text-[13px] font-medium leading-[1.35] text-[#22d3c5] md:text-[14px]">
+                    <p className="text-left text-[13px] font-medium leading-[1.35] text-[#22d3c5] md:text-[14px]">
                       {item.title}
-                    </div>
+                    </p>
                   </div>
                 </div>
               </button>
@@ -782,12 +787,12 @@ function PortfolioProjectsGalleryBlock() {
             >
               <img
                 src={PORTFOLIO_WORKS[activeIndex].image}
-                alt={PORTFOLIO_WORKS[activeIndex].title}
+                alt={`${PORTFOLIO_WORKS[activeIndex].title} — фото из портфолио FilterFlow`}
                 className="mx-auto max-h-[78vh] w-auto max-w-full rounded-[18px] bg-white object-contain shadow-2xl"
               />
-              <div className="mt-4 text-[16px] font-medium text-[#22d3c5]">
+              <p className="mt-4 text-[16px] font-medium text-[#22d3c5]">
                 {PORTFOLIO_WORKS[activeIndex].title}
-              </div>
+              </p>
             </div>
 
             <button
@@ -829,11 +834,11 @@ function PortfolioCtaBlock() {
     <section className="bg-[#14b8a6] py-16 md:py-20 lg:py-24">
       <div className="mx-auto max-w-4xl px-6 text-center md:px-8">
         <h2 className="text-[26px] font-bold leading-[1.2] tracking-[-0.02em] text-white md:text-[34px] lg:text-[38px]">
-          Хотите увидеть ваш проект в нашем портфолио?
+          Хотите попасть в наше портфолио?
         </h2>
         <p className="mx-auto mt-5 max-w-[640px] text-[15px] leading-[1.65] text-white/95 md:mt-6 md:text-[16px] md:leading-[1.7] lg:text-[17px]">
-          Свяжитесь с нами для консультации и расчета стоимости системы
-          фильтрации для вашего предприятия
+          Закажите расчёт: мешки, рукава и решения для пылеулавливания под ваше
+          производство — консультация инженера и смета без обязательств.
         </p>
 
         <div className="mt-9 flex flex-col items-stretch justify-center gap-4 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
