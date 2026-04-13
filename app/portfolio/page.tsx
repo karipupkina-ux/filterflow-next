@@ -3,7 +3,7 @@ import Link from "next/link";
 import Navigation from "../components/Navigation";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import CookieBanner from "../components/feature/CookieBanner";
-import PortfolioProjectsSection from "./PortfolioProjectsSection";
+import PortfolioPageBlocks from "./PortfolioPageBlocks";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
@@ -42,7 +42,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <PortfolioProjectsSection />
+        <PortfolioPageBlocks />
       </main>
 
       <CookieBanner />
