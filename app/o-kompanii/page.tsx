@@ -59,7 +59,7 @@ export default function OKompaniiPage() {
     <>
       <Navigation />
 
-      <main className="bg-[#f8fafc]">
+      <main className="bg-[#f8fafc] pt-[118px] md:pt-[124px]">
         <div className="mx-auto max-w-7xl px-4 pb-20 pt-6 sm:px-6 lg:px-8">
           <nav aria-label="Хлебные крошки" className="mb-7 text-[13px] text-[#64748b]">
             <ol className="flex items-center gap-2">
@@ -69,7 +69,7 @@ export default function OKompaniiPage() {
                 </Link>
               </li>
               <li aria-hidden="true" className="text-[#94a3b8]">
-                /
+                ›
               </li>
               <li className="text-[#334155]">О компании</li>
             </ol>
