@@ -45,10 +45,10 @@ export default function ContactForm() {
       className="rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-6 shadow-[0_8px_24px_rgba(15,23,42,0.04)] sm:p-8"
     >
       <h3 className="text-xl font-bold tracking-tight text-[#0f172a] sm:text-2xl">
-        Форма обратной связи
+        Форма обратной связи FilterFlow
       </h3>
       <p className="mt-2 text-sm leading-relaxed text-[#64748b] sm:text-[15px]">
-        Заполните форму, и мы свяжемся с вами в ближайшее время
+        Оставьте заявку на расчёт или консультацию по фильтровальным мешкам и рукавам — ответим в рабочем порядке
       </p>
 
       <div className="mt-6 space-y-5">

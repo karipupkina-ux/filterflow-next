@@ -6,9 +6,10 @@ import FloatingContacts from "../components/feature/FloatingContacts";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Контакты производителя FilterFlow — телефон и email",
+  title:
+    "Контакты FilterFlow — производитель фильтровальных мешков и рукавов | телефон и email",
   description:
-    "Контакты FilterFlow: телефон +7 951 499-25-76, email filterflow@mail.ru. Производство мешков для аспирации и рукавов. Связь в мессенджерах, заявка на сайте.",
+    "Связаться с FilterFlow: телефон производителя фильтровальных мешков +7 951 499-25-76, email FilterFlow filterflow@mail.ru. Заказать фильтровальные мешки и рукава, мешки для аспирации и стружкоотсоса. Производство в России, доставка по стране и в СНГ, форма обратной связи на сайте.",
   path: "/kontakty",
 });
 
@@ -87,26 +88,30 @@ export default function KontaktyPage() {
           {/* Hero */}
           <section className="mb-12 rounded-3xl bg-gradient-to-br from-[#effefc] via-white to-[#f0fdfa] p-8 shadow-[0_10px_28px_rgba(15,23,42,0.06)] sm:p-10 lg:p-12">
             <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl lg:text-[2.5rem]">
-              Контакты FilterFlow
+              Контакты FilterFlow — производитель фильтровальных мешков и рукавов в России
             </h1>
             <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-[#475569] sm:text-[17px]">
-              Свяжитесь с нами удобным способом — мы всегда готовы ответить на ваши вопросы и помочь с выбором
-              фильтровального оборудования. На этой странице собраны{" "}
-              <strong className="font-semibold text-[#334155]">контакты производителя фильтровальных мешков</strong>
-              : вы можете заказать фильтровальные мешки и рукава для аспирации или уточнить условия поставки.
+              Здесь собраны актуальные контакты производителя фильтровальных мешков и фильтровальных рукавов:
+              телефон, email FilterFlow и мессенджеры. Через эту страницу удобно{" "}
+              <span className="text-[#334155]">связаться с FilterFlow</span>, уточнить{" "}
+              <span className="text-[#334155]">контакты по фильтровальным мешкам</span>, заказать мешки для
+              аспирации или стружкоотсоса, обсудить рукавные фильтры и сроки изготовления. Мы отвечаем на
+              запросы по производству и помогаем подобрать решение под ваше оборудование.
             </p>
           </section>
 
           {/* Связаться с нами */}
           <section className="mb-14">
             <h2 className="mb-10 text-center text-2xl font-bold tracking-tight text-[#0f172a] sm:text-3xl lg:text-[2rem]">
-              Связаться с нами
+              Связаться с FilterFlow: телефон, email и мессенджеры
             </h2>
 
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-12 lg:items-start">
               <div className="space-y-10">
                 <div>
-                  <h3 className="mb-5 text-base font-bold text-[#0f172a] sm:text-lg">Телефон и email</h3>
+                  <h3 className="mb-5 text-base font-bold text-[#0f172a] sm:text-lg">
+                    Телефон производителя фильтровальных мешков и email FilterFlow
+                  </h3>
                   <ul className="space-y-6">
                     <li className="flex gap-4">
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#d7f6f3] text-[#0a8d85]">
@@ -142,7 +147,9 @@ export default function KontaktyPage() {
 
                 <div>
                   <h3 className="mb-2 text-base font-bold text-[#0f172a] sm:text-lg">Мессенджеры</h3>
-                  <p className="mb-4 text-sm text-[#64748b]">Напишите нам в удобном мессенджере</p>
+                  <p className="mb-4 text-sm text-[#64748b]">
+                    Быстрая связь по заказу фильтровальных мешков и рукавов — выберите удобный канал
+                  </p>
                   <div className="flex flex-wrap gap-3">
                     <a
                       href="https://wa.me/79514992576"
@@ -189,9 +196,14 @@ export default function KontaktyPage() {
 
           {/* Режим работы и доставка */}
           <section className="mb-14 rounded-3xl bg-gradient-to-b from-[#effefc] to-[#e6faf7] px-6 py-10 shadow-[0_10px_28px_rgba(15,23,42,0.05)] sm:px-10 sm:py-12">
-            <h2 className="mb-10 text-center text-xl font-bold text-[#0f172a] sm:text-2xl">
-              Режим работы и доставка
+            <h2 className="mb-4 text-center text-xl font-bold text-[#0f172a] sm:text-2xl">
+              Режим работы и доставка фильтровальных мешков
             </h2>
+            <p className="mx-auto mb-10 max-w-2xl text-center text-sm leading-relaxed text-[#475569] sm:text-[15px]">
+              Принимаем заявки на производство фильтровальных мешков и рукавов круглосуточно. Организуем доставку
+              фильтровальных мешков по России и в страны СНГ транспортными компаниями — сроки и способ отгрузки
+              согласуем при оформлении заказа.
+            </p>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
               <article className="flex flex-col items-center text-center">
                 <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white text-[#0aa79d] shadow-sm ring-1 ring-[#ccfbf1]">
@@ -217,7 +229,7 @@ export default function KontaktyPage() {
                 </div>
                 <h3 className="text-base font-bold text-[#0f172a]">Доставка</h3>
                 <p className="mt-2 max-w-xs text-sm leading-relaxed text-[#475569]">
-                  Доставка в любой регион транспортными компаниями
+                  Доставка фильтровальных мешков и рукавов в любой регион ТК: по России и за рубеж по договорённости
                 </p>
               </article>
             </div>
@@ -226,7 +238,7 @@ export default function KontaktyPage() {
           {/* SEO / информация */}
           <section className="rounded-3xl bg-white p-6 shadow-[0_10px_28px_rgba(15,23,42,0.06)] sm:p-8 lg:p-10">
             <h2 className="text-2xl font-bold tracking-tight text-[#0f172a] sm:text-3xl">
-              О компании FilterFlow — производитель фильтровальных мешков
+              О компании FilterFlow — производитель фильтровальных мешков и рукавов в России
             </h2>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -248,28 +260,27 @@ export default function KontaktyPage() {
 
             <div className="mt-8 space-y-4 text-[15px] leading-relaxed text-[#334155] sm:text-[17px]">
               <p>
-                <strong className="font-semibold text-[#0f172a]">FilterFlow</strong> — российское{" "}
-                <strong className="font-semibold text-[#0f172a]">производство фильтровальных мешков</strong>{" "}
-                и <strong className="font-semibold text-[#0f172a]">фильтровальных рукавов</strong> для систем
-                аспирации и пылеулавливания. Изготавливаем{" "}
-                <strong className="font-semibold text-[#0f172a]">мешки для аспирации</strong> и{" "}
-                <strong className="font-semibold text-[#0f172a]">мешки для стружкоотсоса</strong> из
-                полиэстера, полипропилена, иглопробивного войлока, а также из антистатических и термостойких
-                тканей — по типовым и индивидуальным размерам.
+                FilterFlow — российское производство фильтровальных мешков и производство фильтровальных рукавов для
+                аспирации и пылеулавливания. Изготавливаем мешки для аспирации и мешки для стружкоотсоса,
+                фильтровальные рукава и рукавные фильтры из полиэстера, полипропилена, иглопробивного войлока, а
+                также из антистатических и термостойких тканей — по типовым и индивидуальным размерам.
               </p>
               <p>
-                Если вам нужно <strong className="font-semibold text-[#0f172a]">купить фильтровальные мешки</strong>{" "}
-                или <strong className="font-semibold text-[#0f172a]">заказать фильтровальные мешки</strong> на
-                производство, начните с консультации: уточним материал, размеры и сроки.{" "}
-                <strong className="font-semibold text-[#0f172a]">Контакты FilterFlow</strong> указаны на этой
-                странице — выберите телефон, email или мессенджер.
+                Чтобы купить фильтровальные мешки или заказать фильтровальные рукава на производство, напишите или
+                позвоните: подскажем по материалу, конструкции и срокам. Контакты производителя фильтровальных
+                рукавов и мешков приведены выше — выберите телефон, email FilterFlow, мессенджер или форму обратной
+                связи FilterFlow.
               </p>
             </div>
 
             <div className="mt-10 rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-6 sm:p-8">
               <h3 className="text-xl font-bold text-[#0f172a] sm:text-2xl">
-                Как сделать заказ на фильтровальные мешки
+                Как заказать фильтровальные мешки и рукава: шаги для предприятий
               </h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-[#475569] sm:text-[17px]">
+                Ниже — типовой порядок: он подходит, если нужно заказать мешки для аспирации, заказать мешки для
+                стружкоотсоса или согласовать партию рукавных фильтров под ваш циклон или рукавный фильтр.
+              </p>
               <ol className="mt-5 list-decimal space-y-3 pl-5 text-[15px] leading-relaxed text-[#334155] sm:text-[17px]">
                 <li>
                   Свяжитесь с нами по телефону{" "}
@@ -280,19 +291,19 @@ export default function KontaktyPage() {
                   <a href={MAIL_HREF} className="font-semibold text-[#0aa79d] underline underline-offset-2 hover:text-[#088f86] break-all">
                     {MAIL_DISPLAY}
                   </a>
-                  — опишите задачу и оборудование.
+                  — кратко опишите задачу, тип оборудования и желаемые сроки.
                 </li>
                 <li>
-                  Пришлите размеры, фото ярлыка или чертёж: мы подберём материал и рассчитаем стоимость.
+                  Пришлите размеры, фото ярлыка или чертёж: подберём материал для фильтровальных мешков или
+                  рукавов и подготовим расчёт.
                 </li>
                 <li>
                   Согласуем комплектацию, сроки и способ отгрузки. Предоставляем все необходимые документы: при
-                  отгрузке передаём договор, товарная накладная{" "}
-                  и иные сопроводительные бумаги по договорённости.
+                  отгрузке передаём договор, товарная накладная и иные сопроводительные бумаги по договорённости.
                 </li>
                 <li>
-                  После подтверждения запускаем изготовление и организуем доставку удобной транспортной
-                  компанией.
+                  После подтверждения запускаем производство и организуем доставку фильтровальной продукции
+                  удобной транспортной компанией — в том числе в регионы России и страны СНГ.
                 </li>
               </ol>
             </div>
