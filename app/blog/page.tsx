@@ -1,32 +1,69 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import FloatingContacts from "../components/feature/FloatingContacts";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 const posts = [
   {
     href: "/blog/kak-vybrat-meshok-aspiracii",
+    image: "/images/products/optimized_image (4).webp",
+    category: "Руководство по выбору",
+    readTime: "8 мин",
     title: "Как выбрать мешок для аспирации",
-    excerpt:
-      "Материалы, размеры, тип крепления и подбор под модель оборудования.",
+    excerpt: "Полное руководство по выбору фильтровального мешка: материалы, размеры, типы креплений и критерии для разных задач.",
+    date: "15 марта 2026",
   },
   {
     href: "/blog/kak-rabotaet-aspiraciya",
+    image: "/images/products/optimized_image_2 (2).webp",
+    category: "Технические знания",
+    readTime: "7 мин",
     title: "Как работает система аспирации",
-    excerpt:
-      "Принцип пылеудаления, роль фильтровальных мешков и рукавных фильтров.",
+    excerpt: "Подробное объяснение принципа работы систем пылеудаления и фильтрации воздуха на производстве.",
+    date: "10 марта 2026",
   },
   {
     href: "/blog/kogda-menyat-filtr-meshok",
+    image: "/images/products/clean_no_text.webp",
+    category: "Обслуживание",
+    readTime: "6 мин",
     title: "Когда менять фильтровальный мешок",
-    excerpt:
-      "Признаки износа, сроки службы и влияние на производительность линии.",
+    excerpt: "Признаки износа, средние сроки службы, пошаговая процедура замены и советы по продлению ресурса фильтра.",
+    date: "5 марта 2026",
   },
   {
     href: "/blog/tipy-filtruyushchikh-meshkov",
+    image: "/images/products/optimized_image2.webp",
+    category: "Обзор продукции",
+    readTime: "10 мин",
     title: "Типы фильтровальных мешков",
-    excerpt:
-      "Верхние, нижние, рукавные решения и мешки для циклонов и УВП.",
+    excerpt: "Полный обзор видов фильтровальных мешков и рукавов: классификация по назначению, материалу и типу системы.",
+    date: "1 марта 2026",
+  },
+] as const;
+
+const popularTopics = [
+  {
+    href: "/meshki-dlya-aspiracii",
+    title: "Мешки для аспирации",
+    text: "Верхние и нижние фильтровальные мешки",
+  },
+  {
+    href: "/filtracionnye-rukava",
+    title: "Фильтровальные рукава",
+    text: "Рукавные фильтры для промышленности",
+  },
+  {
+    href: "/meshki-dlya-struzhkootsosa",
+    title: "Стружкоотсосы",
+    text: "Мешки для деревообрабатывающих станков",
+  },
+  {
+    href: "/meshki-dlya-ciklonov-i-uvp",
+    title: "Циклоны и УВП",
+    text: "Мешки для промышленных систем",
   },
 ] as const;
 
@@ -42,45 +79,99 @@ export default function BlogIndexPage() {
   return (
     <>
       <Navigation />
-      <main className="bg-[#f8fafc] pb-20 pt-[118px]">
-        <div className="mx-auto max-w-3xl px-6">
-          <h1 className="text-3xl font-bold leading-tight text-[#0f172a] md:text-4xl">
-            Полезные статьи
-          </h1>
-          <p className="mt-4 text-[16px] leading-relaxed text-[#475569]">
-            Материалы о подборе фильтровальных мешков, рукавных фильтров и
-            обслуживании аспирационных систем на производстве и в мастерских.
-          </p>
+      <FloatingContacts />
 
-          <ul className="mt-10 space-y-4">
-            {posts.map((post) => (
-              <li key={post.href}>
-                <Link
-                  href={post.href}
-                  className="block rounded-2xl border border-[#e2e8f0] bg-white p-6 shadow-sm transition hover:border-[#ff6b2c]/40 hover:shadow-md"
-                >
-                  <h2 className="text-lg font-semibold text-[#0f172a] md:text-xl">
-                    {post.title}
-                  </h2>
-                  <p className="mt-2 text-[15px] leading-relaxed text-[#64748b]">
-                    {post.excerpt}
-                  </p>
-                  <span className="mt-3 inline-block text-[15px] font-medium text-[#ff6b2c]">
-                    Читать →
-                  </span>
+      <main className="bg-[#f8fafc] pt-[118px] md:pt-[124px]">
+        <div className="mx-auto max-w-7xl px-4 pb-20 pt-6 sm:px-6 lg:px-8">
+          <nav aria-label="Хлебные крошки" className="mb-7 text-[13px] text-[#64748b]">
+            <ol className="flex flex-wrap items-center gap-2">
+              <li>
+                <Link href="/" className="transition-colors hover:text-[#0f172a]">
+                  Главная
                 </Link>
               </li>
-            ))}
-          </ul>
+              <li aria-hidden="true" className="text-[#94a3b8]">
+                ›
+              </li>
+              <li className="text-[#334155]">Статьи</li>
+            </ol>
+          </nav>
 
-          <p className="mt-10 text-center">
-            <Link
-              href="/"
-              className="text-[15px] font-medium text-[#0aa79d] hover:underline"
-            >
-              ← На главную
-            </Link>
-          </p>
+          <section className="rounded-3xl bg-gradient-to-br from-[#effefc] via-white to-[#f0fdfa] p-8 shadow-[0_10px_28px_rgba(15,23,42,0.06)] sm:p-10 lg:p-12">
+            <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl lg:text-[2.75rem]">
+              Статьи о фильтрации и аспирации
+            </h1>
+            <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-[#475569] sm:text-[17px]">
+              Полезные материалы о выборе, эксплуатации и обслуживании фильтровальных мешков и систем
+              пылеудаления. Здесь собраны статьи о фильтрации и статьи об аспирации для производственных
+              предприятий.
+            </p>
+          </section>
+
+          <section className="mt-10">
+            <h2 className="sr-only">Список статей</h2>
+            <div className="grid gap-6 md:grid-cols-2">
+              {posts.map((post) => (
+                <article key={post.href}>
+                  <Link
+                    href={post.href}
+                    className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e2e8f0] bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0aa79d]/40 hover:shadow-[0_14px_34px_rgba(10,167,157,0.16)]"
+                  >
+                    <div className="relative aspect-[16/9] overflow-hidden">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                      />
+                    </div>
+
+                    <div className="flex flex-1 flex-col p-5 sm:p-6">
+                      <div className="flex flex-wrap items-center gap-3 text-[13px] text-[#64748b]">
+                        <span className="rounded-full bg-[#ecfeff] px-2.5 py-1 font-medium text-[#0a8d85]">
+                          {post.category}
+                        </span>
+                        <span>{post.readTime}</span>
+                      </div>
+
+                      <h3 className="mt-4 text-xl font-semibold leading-snug text-[#0f172a] transition-colors duration-300 group-hover:text-[#0a8d85]">
+                        {post.title}
+                      </h3>
+                      <p className="mt-3 text-[15px] leading-relaxed text-[#475569]">{post.excerpt}</p>
+
+                      <div className="mt-6 flex items-center justify-between gap-3 text-[14px]">
+                        <span className="text-[#94a3b8]">{post.date}</span>
+                        <span className="font-medium text-[#0aa79d] transition-colors duration-300 group-hover:text-[#087e77]">
+                          Читать →
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="mt-14">
+            <h2 className="text-center text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl">
+              Популярные темы
+            </h2>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {popularTopics.map((topic) => (
+                <Link
+                  key={topic.href}
+                  href={topic.href}
+                  className="group rounded-2xl border border-[#e2e8f0] bg-white p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0aa79d]/40 hover:bg-[#f0fdfa] hover:shadow-[0_12px_28px_rgba(10,167,157,0.12)]"
+                >
+                  <h3 className="text-lg font-semibold text-[#0f172a] transition-colors duration-300 group-hover:text-[#0a8d85]">
+                    {topic.title}
+                  </h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-[#64748b]">{topic.text}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
     </>
