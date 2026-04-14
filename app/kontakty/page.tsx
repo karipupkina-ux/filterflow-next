@@ -99,7 +99,9 @@ export default function KontaktyPage() {
 
           {/* Связаться с нами */}
           <section className="mb-14">
-            <h2 className="mb-10 text-center text-xl font-bold text-[#0f172a] sm:text-2xl">Связаться с нами</h2>
+            <h2 className="mb-10 text-center text-2xl font-bold tracking-tight text-[#0f172a] sm:text-3xl lg:text-[2rem]">
+              Связаться с нами
+            </h2>
 
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-12 lg:items-start">
               <div className="space-y-10">
@@ -146,19 +148,27 @@ export default function KontaktyPage() {
                       href="https://wa.me/79514992576"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-md ring-1 ring-[#e2e8f0] transition hover:scale-105 hover:shadow-lg"
+                      className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-[#e2e8f0] transition hover:scale-105 hover:shadow-lg"
                       aria-label="WhatsApp"
                     >
-                      <img src="/images/whatsapp.png" alt="" className="h-9 w-9 object-contain" />
+                      <img
+                        src="/images/whatsapp.png"
+                        alt=""
+                        className="h-9 w-9 shrink-0 scale-[2] object-contain"
+                      />
                     </a>
                     <a
                       href="https://t.me/Violetta0502"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-md ring-1 ring-[#e2e8f0] transition hover:scale-105 hover:shadow-lg"
+                      className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-[#e2e8f0] transition hover:scale-105 hover:shadow-lg"
                       aria-label="Telegram"
                     >
-                      <img src="/images/telegram.png" alt="" className="h-9 w-9 object-contain" />
+                      <img
+                        src="/images/telegram.png"
+                        alt=""
+                        className="h-9 w-9 shrink-0 scale-[2] object-contain"
+                      />
                     </a>
                     <a
                       href="https://max.ru/u/f9LHodD0cOLehfNZxc-dfvXrRQQ-ApKrfczCjbhEa_va3lGdtndd7SgNP8U"
@@ -229,7 +239,9 @@ export default function KontaktyPage() {
                 <p className="mt-1 text-xs text-[#64748b]">типовые позиции</p>
               </div>
               <div className="rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-4 text-center sm:col-span-1">
-                <p className="text-lg font-bold text-[#0aa79d]">вся Россия</p>
+                <p className="text-base font-bold leading-snug text-[#0aa79d] sm:text-lg">
+                  вся Россия и страны СНГ
+                </p>
                 <p className="mt-1 text-xs text-[#64748b]">отправка ТК</p>
               </div>
             </div>
@@ -274,8 +286,8 @@ export default function KontaktyPage() {
                   Пришлите размеры, фото ярлыка или чертёж: мы подберём материал и рассчитаем стоимость.
                 </li>
                 <li>
-                  Согласуем комплектацию, сроки и способ отгрузки. Документы по сделке оформляем прозрачно: на
-                  отгрузку передаём <strong className="font-semibold text-[#0f172a]">договор, товарная накладная</strong>{" "}
+                  Согласуем комплектацию, сроки и способ отгрузки. Предоставляем все необходимые документы: при
+                  отгрузке передаём <strong className="font-semibold text-[#0f172a]">договор, товарная накладная</strong>{" "}
                   и иные сопроводительные бумаги по договорённости.
                 </li>
                 <li>
