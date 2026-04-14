@@ -240,7 +240,7 @@ export default function KontaktyPage() {
               </div>
               <div className="rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-4 text-center sm:col-span-1">
                 <p className="text-base font-bold leading-snug text-[#0aa79d] sm:text-lg">
-                  вся Россия и страны СНГ
+                  Россия и страны СНГ
                 </p>
                 <p className="mt-1 text-xs text-[#64748b]">отправка ТК</p>
               </div>
