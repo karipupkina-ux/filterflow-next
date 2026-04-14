@@ -6,9 +6,10 @@ import FloatingContacts from "../components/feature/FloatingContacts";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
-  title: "О компании FilterFlow — производство мешков для аспирации и рукавов",
+  title:
+    "О компании FilterFlow — производитель фильтровальных мешков и рукавов для аспирации",
   description:
-    "FilterFlow — производитель фильтровальных мешков и рукавов для аспирации, циклонов и УВП. Пошив на заказ, подбор материалов, доставка по России.",
+    "FilterFlow — российский производитель фильтровальных мешков и рукавов: изготовление на заказ для систем аспирации и пылеулавливания, циклонов, УВП и стружкоотсосов. Собственное производство полного цикла, индивидуальные размеры, поставки промышленным предприятиям по России и СНГ.",
   path: "/o-kompanii",
 });
 
@@ -16,7 +17,7 @@ export default function OKompaniiPage() {
   const advantages = [
     {
       title: "Современное оборудование",
-      text: "Профессиональные швейные машины и раскройное оборудование.",
+      text: "Профессиональные швейные и раскройные линии для стабильного качества пошива фильтровальных мешков и рукавов.",
       icon: (
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
           <path d="M4 7h6l2 3h8v7H4z" />
@@ -26,7 +27,7 @@ export default function OKompaniiPage() {
     },
     {
       title: "Контроль качества",
-      text: "Проверка каждого изделия перед отправкой клиенту.",
+      text: "Проверяем изделия перед отгрузкой, чтобы фильтры соответствовали заявленным параметрам для вашей системы аспирации.",
       icon: (
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
           <path d="M12 3l7 3v5c0 4.2-2.7 8-7 10-4.3-2-7-5.8-7-10V6z" />
@@ -36,7 +37,7 @@ export default function OKompaniiPage() {
     },
     {
       title: "Индивидуальные размеры",
-      text: "Изготовление по чертежам и образцам заказчика.",
+      text: "Изготовление продукции по индивидуальным размерам — по чертежам, образцам и техническим требованиям.",
       icon: (
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
           <path d="M7 4v16M17 4v16M7 8h5M12 16h5" />
@@ -46,7 +47,7 @@ export default function OKompaniiPage() {
     },
     {
       title: "Быстрое производство",
-      text: "Сроки изготовления от 3 до 10 рабочих дней.",
+      text: "Сжатые сроки изготовления: ориентир от 3 до 10 рабочих дней в зависимости от объёма и сложности заказа.",
       icon: (
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
           <circle cx="12" cy="12" r="8" />
@@ -59,17 +60,17 @@ export default function OKompaniiPage() {
     {
       value: "300+",
       title: "Выполненных проектов",
-      text: "Успешно реализованных заказов для предприятий различных отраслей.",
+      text: "Успешно реализованных заказов для промышленных предприятий разных отраслей.",
     },
     {
       value: "5",
       title: "Лет на рынке",
-      text: "Опыт производства фильтровальной продукции с 2020 года.",
+      text: "Опыт производства фильтровальных мешков и рукавов для промышленной фильтрации с 2020 года.",
     },
     {
       value: "120+",
       title: "Постоянных клиентов",
-      text: "Предприятия, которые регулярно заказывают нашу продукцию.",
+      text: "Предприятия, которые регулярно заказывают фильтровальную продукцию для аспирации и пылеулавливания.",
     },
     {
       value: "100%",
@@ -80,7 +81,7 @@ export default function OKompaniiPage() {
   const industries = [
     {
       title: "Деревообработка",
-      text: "Мешки для аспирации деревообрабатывающих станков, циклонов и стружкоотсосов. Работаем с мебельными фабриками, лесопилками и столярными цехами.",
+      text: "Мешки для аспирации деревообрабатывающих станков, циклонов и стружкоотсосов; при необходимости — решения под УВП. Работаем с мебельными фабриками, лесопилками и столярными цехами.",
       icon: (
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
           <path d="M5 5h14M12 5v14" />
@@ -90,7 +91,7 @@ export default function OKompaniiPage() {
     },
     {
       title: "Металлообработка",
-      text: "Фильтровальные рукава для систем удаления металлической стружки и пыли. Сотрудничаем с машиностроительными и металлообрабатывающими заводами.",
+      text: "Изготовление фильтровальных рукавов для систем удаления металлической стружки и пыли. Сотрудничаем с машиностроительными и металлообрабатывающими заводами.",
       icon: (
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
           <circle cx="12" cy="12" r="3" />
@@ -100,7 +101,7 @@ export default function OKompaniiPage() {
     },
     {
       title: "Другие отрасли",
-      text: "Пищевая промышленность, химическое производство, строительство. Изготавливаем фильтры для любых систем пылеудаления и аспирации.",
+      text: "Пищевая промышленность, химическое производство, строительство. Производим фильтры для систем пылеудаления, аспирации и промышленной фильтрации.",
       icon: (
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
           <path d="M6 4h12v16H6z" />
@@ -112,7 +113,7 @@ export default function OKompaniiPage() {
   const productionBenefits = [
     {
       title: "Индивидуальный подход",
-      text: "Изготавливаем фильтры по вашим чертежам, образцам или фотографиям. Консультируем по выбору материалов и конструкции.",
+      text: "Фильтровальные мешки и рукава по вашим чертежам, образцам или фотографиям. Консультируем по материалам и конструкции под вашу задачу.",
       icon: (
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
           <circle cx="12" cy="8" r="3" />
@@ -132,7 +133,7 @@ export default function OKompaniiPage() {
     },
     {
       title: "Гарантия качества",
-      text: "Используем только проверенные материалы и контролируем качество каждого изделия перед отправкой клиенту.",
+      text: "Используем проверенные материалы и контролируем качество на собственном производстве перед отправкой заказчику.",
       icon: (
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
           <path d="M12 3l7 3v5c0 4.2-2.7 8-7 10-4.3-2-7-5.8-7-10V6z" />
@@ -142,7 +143,7 @@ export default function OKompaniiPage() {
     },
     {
       title: "Цены производителя",
-      text: "Работаем без посредников, поэтому вы получаете продукцию напрямую от производителя по выгодным условиям.",
+      text: "Без посредников: как производитель фильтровальных мешков и рукавов предлагаем прозрачные условия и прямую работу с цехом.",
       icon: (
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
           <path d="M5 7h8l6 6-6 6-8-8z" />
@@ -175,7 +176,7 @@ export default function OKompaniiPage() {
   const achievements = [
     {
       title: "География поставок",
-      text: "Работаем с предприятиями по всей России - от Калининграда до Владивостока. Отправляем продукцию в страны СНГ: Казахстан, Беларусь, Узбекистан, Киргизию.",
+      text: "Российский производитель с поставками по всей стране — от Калининграда до Владивостока. Отправляем заказы в страны СНГ: Казахстан, Беларусь, Узбекистан, Киргизию.",
       icon: (
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
           <path d="M12 21s7-4.8 7-10a7 7 0 1 0-14 0c0 5.2 7 10 7 10z" />
@@ -195,7 +196,7 @@ export default function OKompaniiPage() {
     },
     {
       title: "Ассортимент продукции",
-      text: "Производим более 50 типоразмеров фильтровальных мешков и рукавов. Изготавливаем нестандартные изделия по индивидуальным чертежам заказчика.",
+      text: "Более 50 типоразмеров фильтровальных мешков и рукавов; нестандартные изделия — изготовление по индивидуальным чертежам и размерам.",
       icon: (
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
           <path d="M12 3 4 7l8 4 8-4-8-4zM4 12l8 4 8-4M4 17l8 4 8-4" />
@@ -236,12 +237,14 @@ export default function OKompaniiPage() {
 
           <section className="mb-14 rounded-3xl bg-white p-8 shadow-[0_10px_28px_rgba(15,23,42,0.06)] sm:p-10 lg:p-12">
             <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-[#0f172a] sm:text-5xl">
-              О компании FilterFlow
+              О компании FilterFlow — производитель фильтровальных мешков и рукавов для промышленной
+              аспирации
             </h1>
             <p className="mt-6 max-w-3xl text-[17px] leading-relaxed text-[#334155]">
-              Мы - производитель фильтровальных мешков и рукавов для систем аспирации и пылеулавливания.
-              Работаем с промышленными предприятиями по всей России и СНГ, обеспечивая стабильное качество,
-              понятные сроки и технически точное изготовление фильтровальных мешков на заказ.
+              FilterFlow — российский производитель фильтровальных мешков и рукавов. Изготавливаем на
+              заказ для систем аспирации и пылеулавливания, в том числе под циклоны, УВП и стружкоотсосы.
+              Работаем с промышленными предприятиями по России и СНГ: подбираем материалы, соблюдаем сроки и
+              держим контроль качества на собственном производстве полного цикла.
             </p>
           </section>
 
@@ -249,26 +252,27 @@ export default function OKompaniiPage() {
             <div className="grid items-start gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
               <div>
                 <h2 className="max-w-xl text-4xl font-bold leading-[1.05] text-[#0f172a] sm:text-5xl">
-                  Производство фильтровальных мешков и рукавов
+                  Производство фильтровальных мешков и рукавов на заказ
                 </h2>
-                <p className="mt-4 text-2xl font-semibold text-[#0aa79d] sm:text-[30px]">
+                <h3 className="mt-4 text-2xl font-semibold text-[#0aa79d] sm:text-[30px]">
                   Собственное производство полного цикла
-                </p>
+                </h3>
                 <div className="mt-6 space-y-4 text-[17px] leading-relaxed text-[#334155]">
                   <p>
-                    FilterFlow располагает собственным производственным цехом, оснащенным оборудованием для
-                    раскроя, пошива и контроля качества. Мы производим фильтровальные рукава и мешки для
-                    аспирации серийно и по индивидуальным параметрам.
+                    На собственном производстве FilterFlow установлено оборудование для раскроя, пошива и
+                    контроля качества: выпускаем фильтровальные рукава и мешки для аспирации серийно и по
+                    индивидуальным параметрам — в том числе под задачи промышленной фильтрации и систем
+                    пылеулавливания.
                   </p>
                   <p>
-                    Производство полного цикла позволяет контролировать каждый этап - от подбора материала
-                    до финальной проверки перед отправкой. Благодаря этому клиенты получают стабильный
-                    результат и прогнозируемый срок службы продукции.
+                    Производство полного цикла позволяет вести контроль на каждом этапе — от подбора
+                    материала до финальной проверки перед отгрузкой. Так заказчики получают предсказуемое
+                    качество и срок службы изделий при стабильной повторяемости партий.
                   </p>
                   <p>
-                    Выполняем изготовление фильтровальных мешков на заказ для различных отраслей: дерево- и
-                    металлообработки, цементного и пищевого производства, а также других промышленных
-                    процессов, где важна эффективная пылеочистка.
+                    Изготовление фильтровальных мешков на заказ ведём для дерево- и металлообработки,
+                    цементного и пищевого производства и других отраслей, где критична эффективная
+                    пылеочистка и надёжная работа аспирационного оборудования.
                   </p>
                 </div>
 
@@ -281,7 +285,7 @@ export default function OKompaniiPage() {
                       <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-[#d7f6f3] text-[#0a8d85]">
                         {item.icon}
                       </div>
-                      <h3 className="text-base font-semibold text-[#0f172a]">{item.title}</h3>
+                      <h4 className="text-base font-semibold text-[#0f172a]">{item.title}</h4>
                       <p className="mt-1 text-sm leading-relaxed text-[#475569]">{item.text}</p>
                     </article>
                   ))}
@@ -292,7 +296,7 @@ export default function OKompaniiPage() {
                 <div className="overflow-hidden rounded-3xl">
                   <Image
                     src="/images/catalog/converted_image4.webp"
-                    alt="Производство фильтровальных мешков и рукавов FilterFlow"
+                    alt="Цех FilterFlow: производство фильтровальных мешков и рукавов для аспирации"
                     width={900}
                     height={1200}
                     className="h-full w-full object-cover"
@@ -305,10 +309,13 @@ export default function OKompaniiPage() {
 
           <section className="mt-14">
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-[#0f172a] sm:text-5xl">Опыт работы</h2>
+              <h2 className="text-4xl font-bold text-[#0f172a] sm:text-5xl">
+                Опыт и масштабы: производство для промышленных предприятий
+              </h2>
               <p className="mx-auto mt-4 max-w-3xl text-[20px] leading-relaxed text-[#475569]">
-                За годы работы мы накопили обширный опыт в производстве фильтровальной продукции и построили
-                долгосрочные отношения с клиентами по всей России и СНГ.
+                За годы работы накопили опыт в изготовлении фильтровальных мешков и рукавов и выстроили
+                долгосрочное сотрудничество с предприятиями по всей России и СНГ — от единичных заказов до
+                регулярных поставок.
               </p>
             </div>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -326,7 +333,9 @@ export default function OKompaniiPage() {
           </section>
 
           <section className="mt-12 rounded-3xl bg-white p-6 shadow-[0_10px_28px_rgba(15,23,42,0.06)] sm:p-8 lg:p-10">
-            <h2 className="text-[40px] font-bold text-[#0aa79d]">Работа с различными отраслями</h2>
+            <h2 className="text-[40px] font-bold text-[#0aa79d]">
+              Промышленная фильтрация и типовые отрасли применения
+            </h2>
             <div className="mt-7 grid gap-5 lg:grid-cols-3">
               {industries.map((item) => (
                 <article key={item.title} className="rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-5">
@@ -342,9 +351,12 @@ export default function OKompaniiPage() {
 
           <section className="mt-14">
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-[#0f172a] sm:text-5xl">Преимущества производства</h2>
+              <h2 className="text-4xl font-bold text-[#0f172a] sm:text-5xl">
+                Почему заказывают производство у FilterFlow
+              </h2>
               <p className="mx-auto mt-4 max-w-3xl text-[20px] leading-relaxed text-[#475569]">
-                Почему предприятия выбирают FilterFlow для производства фильтровальных мешков и рукавов.
+                Преимущества собственного производства: прозрачные сроки, контроль качества и прямая работа с
+                производителем фильтровальных мешков и рукавов без лишних звеньев.
               </p>
             </div>
             <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -362,9 +374,12 @@ export default function OKompaniiPage() {
 
           <section className="mt-14">
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-[#0f172a] sm:text-5xl">Наши достижения</h2>
+              <h2 className="text-4xl font-bold text-[#0f172a] sm:text-5xl">
+                Достижения и ориентиры для заказчиков
+              </h2>
               <p className="mx-auto mt-4 max-w-3xl text-[20px] leading-relaxed text-[#475569]">
-                Результаты работы FilterFlow за годы присутствия на рынке фильтровальной продукции.
+                Итоги работы на рынке производства фильтровальных мешков и рукавов: география, повторные
+                заказы и расширяемый ассортимент под индивидуальные задачи.
               </p>
             </div>
 
@@ -372,7 +387,7 @@ export default function OKompaniiPage() {
               <div className="overflow-hidden rounded-2xl">
                 <Image
                   src="/images/catalog/conver55ted_image.webp"
-                  alt="Достижения компании FilterFlow"
+                  alt="FilterFlow — производство фильтровальных мешков и рукавов для промышленных заказчиков"
                   width={1200}
                   height={900}
                   className="h-full w-full object-cover"
@@ -400,10 +415,10 @@ export default function OKompaniiPage() {
             className="mt-14 overflow-hidden rounded-3xl bg-gradient-to-b from-[#0ea5a2] to-[#0e8f8d] px-6 py-12 text-white sm:px-10 sm:py-14"
           >
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-4xl font-bold sm:text-5xl">Готовы начать сотрудничество?</h2>
+              <h2 className="text-4xl font-bold sm:text-5xl">Готовы обсудить заказ на фильтровальные мешки?</h2>
               <p className="mx-auto mt-5 max-w-3xl text-[20px] leading-relaxed text-white/90">
-                Свяжитесь с нами для консультации по выбору фильтровальной продукции. Рассчитаем стоимость,
-                подберем оптимальное решение и изготовим мешки точно в срок.
+                Расскажем о сроках и материалах, подберём конструкцию под вашу систему аспирации или
+                пылеулавливания и рассчитаем стоимость изготовления фильтровальных мешков и рукавов.
               </p>
 
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
