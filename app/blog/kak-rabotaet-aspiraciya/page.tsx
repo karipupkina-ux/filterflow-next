@@ -13,92 +13,139 @@ export const metadata: Metadata = pageMetadata({
 
 const keyCriteria = [
   {
-    title: "Скорость воздушного потока",
-    text: "Стабильная скорость в магистрали не дает пыли оседать в воздуховодах и поддерживает равномерную загрузку фильтра.",
+    title: "Захват пыли",
+    text: "Загрязненный воздух всасывается через приемные патрубки у источника образования пыли.",
   },
   {
-    title: "Герметичность системы",
-    text: "Подсосы воздуха снижают разрежение и ухудшают отбор пыли у станка. Все соединения и патрубки должны быть плотно стянуты.",
+    title: "Транспортировка",
+    text: "Воздух с частицами движется по воздуховодам к фильтрационной установке без потерь производительности.",
   },
   {
-    title: "Класс фильтрации",
-    text: "Чем мельче и опаснее пыль, тем выше требования к ткани мешка и к площади фильтрующей поверхности.",
+    title: "Фильтрация",
+    text: "Поток проходит через фильтровальные мешки или рукава, где задерживаются твердые частицы.",
   },
   {
-    title: "Сервис и регламент",
-    text: "Своевременная очистка и замена мешков поддерживают производительность и снижают риск аварийных остановок.",
+    title: "Очистка",
+    text: "Очищенный воздух возвращается в помещение или выбрасывается наружу согласно проекту системы.",
+  },
+  {
+    title: "Сбор отходов",
+    text: "Отфильтрованная пыль и стружка накапливаются в нижнем мешке, контейнере или бункере.",
   },
 ];
 
 const systemParts = [
   {
     title: "Заборная точка",
-    text: "Кожухи, воронки и патрубки в зоне реза или шлифовки, где образуется пыль и стружка.",
+    text: "Локальные патрубки, воронки и кожухи, которые забирают пыль непосредственно в зоне обработки.",
   },
   {
     title: "Воздуховоды",
-    text: "Сеть каналов, по которой поток переносит частицы к пылеуловителю.",
+    text: "Система труб, по которой движется загрязненный воздух от станков к фильтрационному узлу.",
   },
   {
-    title: "Пылеуловитель",
-    text: "Циклон, мешочный фильтр или рукавная установка, где пыль отделяется от воздуха.",
+    title: "Фильтровальные мешки",
+    text: "Основной элемент тонкой очистки воздуха. Задерживают мелкие частицы и обеспечивают чистый выход.",
   },
   {
-    title: "Вентилятор",
-    text: "Создает разрежение, задает направление движения и общую производительность системы.",
+    title: "Бункер для отходов",
+    text: "Емкость для сбора отфильтрованной пыли и стружки. Упрощает выгрузку и обслуживание системы.",
   },
 ];
 
 const useCases = [
   {
-    title: "Деревообработка",
-    text: "Удаление стружки и древесной пыли от пил, фрезеров, рейсмусов и шлифовальных линий.",
+    title: "Локальная аспирация",
+    text: "Устанавливается рядом с источником пыли и подходит для мастерских или небольших участков с 1-3 станками.",
+    points: [
+      "Простая установка и обслуживание",
+      "Низкие затраты на оборудование",
+      "Эффективный захват пыли у источника",
+    ],
   },
   {
-    title: "Металлообработка",
-    text: "Сбор абразивной пыли после шлифования, зачистки и термической резки.",
+    title: "Централизованная аспирация",
+    text: "Единая сеть воздуховодов для нескольких рабочих мест. Эффективна для крупных производственных площадок.",
+    points: [
+      "Высокая производительность",
+      "Обслуживание множества станков",
+      "Экономия пространства в цехе",
+    ],
   },
   {
-    title: "Пищевые и химические производства",
-    text: "Локальный отсос мелкодисперсных фракций и поддержание санитарных требований.",
+    title: "Циклонная система",
+    text: "Использует центробежную силу для предварительного отделения крупных частиц и разгружает фильтры.",
+    points: [
+      "Эффективное отделение крупной стружки",
+      "Увеличение срока службы фильтров",
+      "Снижение частоты обслуживания",
+    ],
   },
 ];
 
-const warningItems = [
+const filtrationSteps = [
   {
-    title: "Неправильный расчет производительности",
-    text: "Слишком слабая тяга не уносит пыль полностью, а избыточная нагрузка ускоряет износ мешков и вентилятора.",
+    title: "Поверхностная фильтрация",
+    text: "Крупные частицы задерживаются на поверхности ткани, формируя первичный пылевой слой.",
   },
   {
-    title: "Экономия на фильтрующем материале",
-    text: "Дешевые ткани быстро теряют форму и пропускают пыль. Это приводит к частой замене и росту эксплуатационных затрат.",
+    title: "Глубинная фильтрация",
+    text: "Мелкие частицы проникают в структуру материала и задерживаются между волокнами.",
   },
   {
-    title: "Отсутствие обслуживания",
-    text: "Без регулярной очистки и контроля перепада давления система теряет эффективность и может остановить производство.",
+    title: "Регенерация фильтра",
+    text: "Периодическая очистка мешка от накопившейся пыли поддерживает стабильную пропускную способность.",
+  },
+];
+
+const efficiencyFactors = [
+  {
+    title: "Скорость воздуха",
+    description:
+      "Оптимальная скорость в воздуховодах 15-25 м/с позволяет уносить пыль без оседания.",
+  },
+  {
+    title: "Площадь фильтрации",
+    description:
+      "Достаточная площадь мешков снижает перегрузку системы и продлевает ресурс фильтрующих элементов.",
+  },
+  {
+    title: "Регулярное обслуживание",
+    description:
+      "Своевременная замена мешков и контроль герметичности поддерживают эффективность установки.",
   },
 ];
 
 const productLinks = [
   {
     title: "Мешки для аспирации",
-    description: "Верхние и нижние мешки для стружкоотсосов и локальных систем.",
-    href: "/meshki-dlya-aspiracii",
-  },
-  {
-    title: "Верхние мешки для аспирации",
-    description: "Фильтровальные мешки для тонкой очистки выходящего воздуха.",
-    href: "/meshki-dlya-aspiracii",
-  },
-  {
-    title: "Нижние мешки для аспирации",
-    description: "Сборные мешки для стружки и пылевых отходов большого объема.",
+    description: "Верхние и нижние фильтровальные мешки для систем пылеудаления.",
     href: "/meshki-dlya-aspiracii",
   },
   {
     title: "Фильтровальные рукава",
-    description: "Рукавные элементы для промышленных аспирационных установок.",
+    description: "Промышленные рукава для рукавных фильтров и установок УВП.",
     href: "/filtracionnye-rukava",
+  },
+  {
+    title: "Мешки для циклонов и УВП",
+    description: "Специализированные мешки для пылеулавливающих установок.",
+    href: "/meshki-dlya-aspiracii",
+  },
+  {
+    title: "Мешки для стружкоотсоса",
+    description: "Мешки для деревообрабатывающих станков и локальной аспирации.",
+    href: "/meshki-dlya-aspiracii",
+  },
+  {
+    title: "Верхние мешки для аспирации",
+    description: "Фильтрационные мешки для чистого выхода воздуха.",
+    href: "/meshki-dlya-aspiracii",
+  },
+  {
+    title: "Нижние мешки для аспирации",
+    description: "Сборные мешки для стружки и опилок.",
+    href: "/meshki-dlya-aspiracii",
   },
 ];
 
@@ -140,7 +187,9 @@ export default function Page() {
                 </Link>
               </li>
               <li>›</li>
-              <li className="text-[#0f172a]">Как работает аспирация</li>
+              <li className="text-[#0f172a]">
+                Как работает система аспирации
+              </li>
             </ol>
           </nav>
 
@@ -148,15 +197,14 @@ export default function Page() {
             Как работает система аспирации
           </h1>
           <p className="mt-4 max-w-4xl text-base leading-relaxed text-[#475569] md:text-xl">
-            Простое объяснение принципа работы аспирации: как пыль и стружка
-            удаляются из рабочей зоны, какие элементы отвечают за фильтрацию и
-            как поддерживать стабильную эффективность системы.
+            Подробное объяснение принципа работы системы пылеудаления и
+            фильтрации воздуха.
           </p>
 
           <div className="relative mt-8 overflow-hidden rounded-2xl">
             <Image
-              src="/images/filter-bags-optimized.webp"
-              alt="Система аспирации на производстве"
+              src="/images/products/optimized_image_2 (2).webp"
+              alt="Принцип работы системы аспирации"
               width={1600}
               height={900}
               className="h-auto w-full object-cover"
@@ -166,51 +214,33 @@ export default function Page() {
 
           <section className="mt-12">
             <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Что такое аспирация
+              Основной принцип работы
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[#334155] md:text-lg">
-              Система аспирации - это инженерный комплекс, который удаляет пыль,
-              стружку и мелкие частицы из зоны обработки. Ее задача не только в
-              поддержании чистоты, но и в защите оборудования, здоровья
-              сотрудников и соблюдении требований промышленной безопасности.
+              Система аспирации удаляет пыль, стружку и другие загрязнения из
+              воздуха производственных помещений. Принцип работы основан на
+              создании разрежения, которое засасывает загрязненный поток через
+              воздуховоды к фильтровальной установке.
             </p>
-            <p className="mt-3 text-base leading-relaxed text-[#334155] md:text-lg">
-              В отличие от обычной вентиляции, аспирация работает локально:
-              захватывает загрязнения непосредственно у источника образования и
-              направляет их в систему фильтрации до возврата воздуха в помещение
-              или выброса наружу.
-            </p>
-          </section>
-
-          <section className="mt-12">
-            <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Как работает система аспирации
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-[#334155] md:text-lg">
-              Вентилятор создает разрежение в воздуховоде, благодаря которому
-              пыльный поток втягивается из рабочей зоны. Далее смесь воздуха и
-              частиц проходит через пылеуловители, где основная масса отходов
-              отделяется и оседает в сборных элементах.
-            </p>
-            <p className="mt-3 text-base leading-relaxed text-[#334155] md:text-lg">
-              На следующем этапе воздух проходит тонкую фильтрацию. Эту роль
-              выполняют фильтрационные мешки или рукава, которые удерживают
-              остаточную пыль. После очистки воздух возвращается в цех или
-              выводится наружу в зависимости от проекта.
-            </p>
-
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {keyCriteria.map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-2xl border border-[#dbe3ea] bg-[#edf6f6] p-5"
-                >
-                  <h3 className="text-xl font-semibold text-[#0f172a]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-[#475569]">{item.text}</p>
-                </div>
-              ))}
+            <div className="mt-6 rounded-2xl border-l-4 border-[#0aa79d] bg-[#e8f6f5] p-5 md:p-6">
+              <h3 className="text-2xl font-semibold text-[#0f172a]">
+                Основные этапы работы:
+              </h3>
+              <ul className="mt-5 space-y-4">
+                {keyCriteria.map((item, index) => (
+                  <li key={item.title} className="flex items-start gap-3">
+                    <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0d9b92] text-sm font-bold text-white">
+                      {index + 1}
+                    </span>
+                    <p className="text-[#334155]">
+                      <span className="font-semibold text-[#0f172a]">
+                        {item.title}
+                      </span>{" "}
+                      - {item.text}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </section>
 
@@ -222,73 +252,9 @@ export default function Page() {
               {systemParts.map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm"
+                  className="rounded-xl border border-[#dbe3ea] bg-[#f8fafc] p-5"
                 >
-                  <h3 className="text-xl font-semibold text-[#0f172a]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-[#475569]">{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="mt-12">
-            <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Как движется воздух и пыль в системе
-            </h2>
-            <div className="mt-6 rounded-2xl border border-[#dbe3ea] bg-white p-6">
-              <ol className="space-y-4 text-[#334155]">
-                <li>
-                  1. Воздух с пылью захватывается в зоне станка через локальный
-                  патрубок или защитный кожух.
-                </li>
-                <li>
-                  2. Поток проходит по воздуховодам к пылеуловителю с
-                  минимальными потерями давления.
-                </li>
-                <li>
-                  3. Крупные частицы отделяются в циклоне или оседают в нижнем
-                  мешке.
-                </li>
-                <li>
-                  4. Мелкая фракция задерживается в верхних мешках или
-                  фильтрационных рукавах.
-                </li>
-                <li>
-                  5. Очищенный воздух выводится обратно в рабочее пространство
-                  или наружу.
-                </li>
-              </ol>
-            </div>
-          </section>
-
-          <section className="mt-12">
-            <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Роль фильтрационных мешков
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-[#334155] md:text-lg">
-              Фильтрационные мешки - ключевой элемент в финальной очистке
-              воздуха. Верхние мешки задерживают мелкодисперсные частицы, а
-              нижние служат для накопления и удобной утилизации пыли и стружки.
-            </p>
-            <p className="mt-3 text-base leading-relaxed text-[#334155] md:text-lg">
-              Материал мешка подбирается с учетом температуры, влажности,
-              абразивности и химического состава пыли. Правильная ткань и точный
-              размер напрямую влияют на ресурс фильтра и стабильность тяги.
-            </p>
-          </section>
-
-          <section className="mt-12">
-            <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Где применяются системы аспирации
-            </h2>
-            <div className="mt-6 space-y-4">
-              {useCases.map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-2xl border-l-4 border-[#0aa79d] bg-white p-5 shadow-sm"
-                >
+                  <div className="mb-4 h-10 w-10 rounded-lg bg-[#0d9b92]" />
                   <h3 className="text-2xl font-semibold text-[#0f172a]">
                     {item.title}
                   </h3>
@@ -300,18 +266,61 @@ export default function Page() {
 
           <section className="mt-12">
             <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Частые ошибки в эксплуатации
+              Процесс фильтрации
+            </h2>
+            <div className="mt-6 rounded-xl border border-[#dbe3ea] bg-[#f1f5f9] p-5 md:p-6">
+              <h3 className="text-3xl font-semibold text-[#0f172a]">
+                Как работает фильтровальный мешок
+              </h3>
+              <ul className="mt-5 space-y-5">
+                {filtrationSteps.map((item, index) => (
+                  <li key={item.title} className="flex items-start gap-3">
+                    <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#0d9b92] text-sm font-bold text-white">
+                      {index + 1}
+                    </span>
+                    <div>
+                      <h4 className="text-2xl font-semibold text-[#0f172a]">
+                        {item.title}
+                      </h4>
+                      <p className="mt-1 text-[#475569]">{item.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          <section className="mt-8">
+            <div className="rounded-xl bg-[#0d9b92] p-5 text-white md:p-6">
+              <h3 className="text-2xl font-semibold">Важно знать</h3>
+              <p className="mt-3 text-white/95">
+                Эффективность фильтрации зависит от правильного подбора материала
+                мешка, скорости воздушного потока и своевременного обслуживания
+                системы. Перегруженный пылью мешок снижает производительность и
+                может привести к повреждению оборудования.
+              </p>
+            </div>
+          </section>
+
+          <section className="mt-12">
+            <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
+              Типы систем аспирации
             </h2>
             <div className="mt-6 space-y-4">
-              {warningItems.map((item) => (
+              {useCases.map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-xl border-l-4 border-[#dc4c4c] bg-[#fff1f2] p-5"
+                  className="border-l-4 border-[#0aa79d] pl-4"
                 >
-                  <h3 className="text-2xl font-semibold text-[#7f1d1d]">
+                  <h3 className="text-2xl font-semibold text-[#0f172a]">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-[#7f1d1d]">{item.text}</p>
+                  <p className="mt-2 text-[#475569]">{item.text}</p>
+                  <ul className="mt-3 list-disc space-y-1 pl-5 text-[#334155]">
+                    {item.points.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -319,85 +328,34 @@ export default function Page() {
 
           <section className="mt-12">
             <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Когда нужна замена мешков
+              Факторы эффективности системы
             </h2>
-            <div className="mt-6 rounded-2xl border border-[#dbe3ea] bg-[#f1f5f9] p-6">
-              <p className="text-base leading-relaxed text-[#334155] md:text-lg">
-                Плановая замена требуется при заметной потере тяги, росте
-                перепада давления, механическом износе швов и появлении пылевого
-                следа после фильтрации. В среднем ресурс зависит от режима
-                работы, типа пыли и корректности обслуживания.
-              </p>
-              <p className="mt-3 text-base leading-relaxed text-[#334155] md:text-lg">
-                Чтобы избежать простоев, фиксируйте интервалы сервиса и держите
-                комплект совместимых мешков в запасе.
-              </p>
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {efficiencyFactors.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-xl border border-[#dbe3ea] bg-[#f1f5f9] p-5"
+                >
+                  <div className="mb-3 h-8 w-8 rounded-md bg-[#0d9b92]" />
+                  <h3 className="text-2xl font-semibold text-[#0f172a]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-[#475569]">{item.description}</p>
+                </div>
+              ))}
             </div>
           </section>
 
           <section className="mt-12">
             <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Рекомендации по подбору решений
+              Рекомендуемые товары
             </h2>
-            <div className="mt-6 space-y-4">
-              <div className="rounded-2xl border border-[#dbe3ea] bg-white p-5">
-                <h3 className="text-2xl font-semibold text-[#0f172a]">
-                  Для столярных и мебельных цехов
-                </h3>
-                <p className="mt-2 text-[#475569]">
-                  Для стабильной фильтрации древесной пыли используйте
-                  полиэстеровые мешки класса M. Для высокой загрузки выбирайте
-                  усиленные нижние мешки с прочным швом.
-                </p>
-              </div>
-              <div className="rounded-2xl border border-[#dbe3ea] bg-white p-5">
-                <h3 className="text-2xl font-semibold text-[#0f172a]">
-                  Для промышленных установок УВП
-                </h3>
-                <p className="mt-2 text-[#475569]">
-                  Подбирайте фильтрационные рукава по температуре, химической
-                  стойкости и площади фильтрации. Обязательно учитывайте режим
-                  регенерации и фактический расход воздуха.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section className="mt-12 rounded-2xl bg-[#0d9b92] p-6 text-white md:p-8">
-            <h2 className="text-3xl font-bold md:text-4xl">
-              Нужна помощь в подборе?
-            </h2>
-            <p className="mt-3 max-w-3xl text-base leading-relaxed text-white/90 md:text-lg">
-              Подскажем, какие мешки и рукава подойдут под вашу аспирационную
-              систему, нагрузку и тип пыли. Подберем размеры и материал без
-              лишних затрат на эксперименты.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/kontakty"
-                className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-[#0d9b92] transition hover:bg-[#e6fffd]"
-              >
-                Связаться с нами
-              </Link>
-              <Link
-                href="/meshki-dlya-aspiracii"
-                className="rounded-lg bg-[#0b7f77] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#096b65]"
-              >
-                Каталог мешков
-              </Link>
-            </div>
-          </section>
-
-          <section className="mt-12">
-            <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Рекомендуемые продукты
-            </h2>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
               {productLinks.map((item) => (
                 <Link
                   key={item.title}
                   href={item.href}
-                  className="rounded-xl border border-[#e2e8f0] bg-white p-5 transition hover:border-[#0aa79d] hover:shadow-sm"
+                  className="rounded-xl border border-[#e2e8f0] bg-[#f8fafc] p-5 transition hover:border-[#0aa79d]"
                 >
                   <h3 className="text-xl font-semibold text-[#0f172a]">
                     {item.title}
@@ -410,7 +368,7 @@ export default function Page() {
 
           <section className="mt-12 pb-8">
             <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Полезные статьи
+              Читайте также
             </h2>
             <div className="mt-6 grid gap-4 md:grid-cols-3">
               {relatedArticles.map((item) => (
