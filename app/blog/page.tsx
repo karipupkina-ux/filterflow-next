@@ -68,11 +68,11 @@ const popularTopics = [
 ] as const;
 
 export const metadata: Metadata = pageMetadata({
-  title: "Блог — статьи об аспирации, фильтрации и мешках | FilterFlow",
+  title: "Блог FilterFlow: статьи о мешках для аспирации и фильтрации воздуха",
   description:
-    "Статьи FilterFlow: подбор мешков для аспирации, принцип работы систем пылеудаления, сроки замены фильтров и обзор типов фильтровальных мешков.",
+    "Блог о системах аспирации и фильтрации воздуха: экспертные статьи по промышленной фильтрации, выбору и замене фильтровальных мешков для стружкоотсосов.",
   path: "/blog",
-  openGraphTitle: "Блог FilterFlow — аспирация и фильтрация",
+  openGraphTitle: "Статьи FilterFlow о мешках для аспирации",
 });
 
 export default function BlogIndexPage() {
@@ -93,18 +93,18 @@ export default function BlogIndexPage() {
               <li aria-hidden="true" className="text-[#94a3b8]">
                 ›
               </li>
-              <li className="text-[#334155]">Статьи</li>
+              <li className="text-[#334155]">Блог FilterFlow</li>
             </ol>
           </nav>
 
           <section className="rounded-3xl bg-gradient-to-br from-[#effefc] via-white to-[#f0fdfa] p-8 shadow-[0_10px_28px_rgba(15,23,42,0.06)] sm:p-10 lg:p-12">
             <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl lg:text-[2.75rem]">
-              Статьи о фильтрации и аспирации
+              Блог о системах аспирации и фильтрации воздуха
             </h1>
             <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-[#475569] sm:text-[17px]">
-              Полезные материалы о выборе, эксплуатации и обслуживании фильтровальных мешков и систем
-              пылеудаления. Здесь собраны статьи о фильтрации и статьи об аспирации для производственных
-              предприятий.
+              Публикуем статьи о мешках для аспирации и статьи о фильтровальных мешках для производств,
+              цехов и мастерских. В блоге собраны полезные статьи о мешках для стружкоотсоса: как выбрать
+              мешок для аспирации, как работает система аспирации и когда менять фильтровальный мешок.
             </p>
           </section>
 
@@ -155,7 +155,7 @@ export default function BlogIndexPage() {
 
           <section className="mt-14">
             <h2 className="text-center text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl">
-              Популярные темы
+              Популярные темы блога о мешках для стружкоотсоса
             </h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {popularTopics.map((topic) => (
@@ -170,6 +170,39 @@ export default function BlogIndexPage() {
                   <p className="mt-2 text-[15px] leading-relaxed text-[#64748b]">{topic.text}</p>
                 </Link>
               ))}
+            </div>
+          </section>
+
+          <section className="mt-14 rounded-3xl border border-[#e2e8f0] bg-white p-7 shadow-sm sm:p-10">
+            <h2 className="text-2xl font-bold tracking-tight text-[#0f172a] sm:text-3xl">
+              Экспертные статьи по промышленной фильтрации
+            </h2>
+            <p className="mt-4 text-[15px] leading-relaxed text-[#475569] sm:text-[17px]">
+              Здесь выходят статьи FilterFlow для специалистов по пылеудалению и вентиляции: от базовых
+              принципов до практики обслуживания. Мы регулярно дополняем блог новыми материалами, чтобы
+              статьи о мешках для аспирации и фильтровальные мешки статьи помогали принимать точные
+              технические решения в ежедневной работе.
+            </p>
+
+            <div className="mt-7 grid gap-5 md:grid-cols-2">
+              <article className="rounded-2xl bg-[#f8fafc] p-5">
+                <h3 className="text-lg font-semibold text-[#0f172a]">
+                  Статьи о стружкоотсосах и аспирационных установках
+                </h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-[#475569]">
+                  Разбираем, как выбрать мешок для аспирации под производительность оборудования, как
+                  работает система аспирации в разных режимах и как снизить пылевую нагрузку на фильтр.
+                </p>
+              </article>
+              <article className="rounded-2xl bg-[#f8fafc] p-5">
+                <h3 className="text-lg font-semibold text-[#0f172a]">
+                  Статьи о фильтровальных мешках: выбор, типы и замена
+                </h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-[#475569]">
+                  Публикуем практические рекомендации про типы фильтровальных мешков, сроки службы и
+                  критерии, когда менять фильтровальный мешок без потери эффективности системы.
+                </p>
+              </article>
             </div>
           </section>
 
