@@ -50,8 +50,8 @@ export default function HomePage() {
     <>
       <Navigation />
       <Hero />
-      <TechnologySection />
       <Products />
+      <TechnologySection />
       <Advantages />
       <ModernProductionSection />
       <CooperationBenefitsSection />
