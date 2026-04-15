@@ -171,31 +171,37 @@ const recommendedProducts = [
     title: "Мешки для аспирации",
     text: "Верхние и нижние фильтровальные мешки всех типов",
     href: "/meshki-dlya-aspiracii",
+    icon: "bag",
   },
   {
     title: "Верхние мешки для аспирации",
     text: "Фильтровальные мешки для очистки воздуха",
     href: "/verhnie-meshki",
+    icon: "top",
   },
   {
     title: "Нижние мешки для аспирации",
     text: "Накопительные мешки для стружки и опилок",
     href: "/nizhnie-meshki",
+    icon: "bottom",
   },
   {
     title: "Мешки для стружкоотсоса",
     text: "Мешки для деревообрабатывающих станков",
     href: "/meshki-dlya-struzhkootsosa",
+    icon: "chips",
   },
   {
     title: "Фильтрационные рукава",
     text: "Промышленные рукавные фильтры",
     href: "/filtracionnye-rukava",
+    icon: "sleeve",
   },
   {
     title: "Мешки для циклонов и УВП",
     text: "Мешки для пылеулавливающих установок",
     href: "/meshki-dlya-ciklonov-i-uvp",
+    icon: "cyclone",
   },
 ];
 
@@ -213,7 +219,7 @@ const relatedArticles = [
   {
     title: "Когда менять фильтровальный мешок",
     text: "Признаки износа и сроки замены",
-    href: "/blog/kogda-menyat-filtr",
+    href: "/blog/kogda-menyat-filtr-meshok",
   },
 ];
 
@@ -558,7 +564,7 @@ export default function Page() {
                 Получить консультацию <span className="ml-2">→</span>
               </Link>
               <Link
-                href="/#portfolio"
+                href="/portfolio"
                 className="inline-flex items-center rounded-lg border border-[#0b6f69] bg-[#0b7f78] px-6 py-3 text-[16px] font-semibold text-white transition-all hover:bg-[#096c66]"
               >
                 Каталог продукции <span className="ml-2">→</span>
@@ -578,12 +584,50 @@ export default function Page() {
                   className="group rounded-xl border border-[#e3e8ec] bg-[#f8fafb] px-5 py-4 transition-all duration-300 hover:border-[#90ddd7] hover:bg-[#edf9f8] hover:shadow-[0_8px_20px_rgba(15,159,150,0.12)]"
                 >
                   <div className="flex items-center gap-3">
-                    <MiniIcon />
-                    <h3 className="text-xl font-bold leading-tight text-[#111827] transition-colors group-hover:text-[#0f7f77]">
+                    <span className="inline-flex h-6 w-6 items-center justify-center rounded-md border border-[#dbe3ea] bg-white text-[#12988f] transition group-hover:border-[#91dfd9] group-hover:bg-[#e8f7f5]">
+                      {card.icon === "bag" && (
+                        <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-none stroke-current stroke-2">
+                          <path d="M7 9h10v10a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V9Z" />
+                          <path d="M9 9V7a3 3 0 0 1 6 0v2" />
+                        </svg>
+                      )}
+                      {card.icon === "top" && (
+                        <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-none stroke-current stroke-2">
+                          <path d="M12 6v12" />
+                          <path d="m8 10 4-4 4 4" />
+                        </svg>
+                      )}
+                      {card.icon === "bottom" && (
+                        <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-none stroke-current stroke-2">
+                          <path d="M12 6v12" />
+                          <path d="m8 14 4 4 4-4" />
+                        </svg>
+                      )}
+                      {card.icon === "chips" && (
+                        <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-none stroke-current stroke-2">
+                          <path d="M5 7h14" />
+                          <path d="M7 12h10" />
+                          <path d="M9 17h6" />
+                        </svg>
+                      )}
+                      {card.icon === "sleeve" && (
+                        <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-none stroke-current stroke-2">
+                          <path d="m6 4 3 16h6l3-16H6Z" />
+                        </svg>
+                      )}
+                      {card.icon === "cyclone" && (
+                        <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-none stroke-current stroke-2">
+                          <path d="M4 7h16" />
+                          <path d="M7 12h10" />
+                          <path d="M10 17h4" />
+                        </svg>
+                      )}
+                    </span>
+                    <h3 className="text-lg font-semibold leading-tight text-[#111827] transition-colors group-hover:text-[#0f7f77]">
                       {card.title}
                     </h3>
                   </div>
-                  <p className="mt-2 text-[15px] leading-relaxed text-[#6b7280]">{card.text}</p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-[#6b7280]">{card.text}</p>
                 </Link>
               ))}
             </div>
@@ -600,10 +644,17 @@ export default function Page() {
                   href={article.href}
                   className="group rounded-xl border border-[#e3e8ec] bg-white px-5 py-5 transition-all duration-300 hover:border-[#7fd8d1] hover:bg-[#eefaf8] hover:shadow-[0_8px_20px_rgba(15,159,150,0.12)]"
                 >
-                  <h3 className="text-3xl font-bold leading-tight text-[#111827] transition-colors group-hover:text-[#0f7f77]">
+                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-md border border-[#dbe3ea] bg-white text-[#12988f] transition group-hover:border-[#91dfd9] group-hover:bg-[#e8f7f5]">
+                    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-none stroke-current stroke-2">
+                      <path d="M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
+                      <path d="M9 9h6" />
+                      <path d="M9 13h6" />
+                    </svg>
+                  </span>
+                  <h3 className="mt-3 text-2xl font-semibold leading-tight text-[#111827] transition-colors group-hover:text-[#0f7f77]">
                     {article.title}
                   </h3>
-                  <p className="mt-2 text-[16px] text-[#6b7280]">{article.text}</p>
+                  <p className="mt-2 text-sm text-[#6b7280]">{article.text}</p>
                 </Link>
               ))}
             </div>
