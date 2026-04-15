@@ -896,12 +896,12 @@ export default function Page() {
         className="relative min-h-[620px] w-full overflow-hidden scroll-mt-[120px]"
       >
         <img
-          src="/images/meshki-hero.webp"
+          src="/images/hero.png"
           alt="Фильтровальные мешки для аспирации и пылеулавливания"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
-        <div className="relative z-10 mx-auto flex min-h-[620px] max-w-7xl items-start justify-center px-6 pb-16 pt-24 md:pt-28">
+        <div className="relative z-10 mx-auto flex min-h-[620px] max-w-7xl items-start justify-center px-6 pb-16 pt-14 md:pt-20">
           <div className="max-w-4xl text-center text-white">
             <div className="mb-5 inline-block rounded-full bg-teal-500/90 px-4 py-1 text-sm">
               Производство и поставка

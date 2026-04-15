@@ -777,10 +777,10 @@ export default function Page() {
         <div
           className="relative min-h-[640px] bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/meshki-hero.webp')",
+            backgroundImage: "url('/images/hero.png')",
           }}
         >
-          <div className="mx-auto flex min-h-[640px] max-w-[1440px] items-center justify-center px-6 py-14">
+          <div className="mx-auto flex min-h-[640px] max-w-[1440px] items-start justify-center px-6 pb-14 pt-10 md:pt-14">
             <div className="flex w-full max-w-[980px] flex-col items-center text-center text-white">
               <div className="mb-5 inline-flex rounded-full bg-[#28c4b7]/35 px-6 py-2.5 text-[13px] font-semibold text-[#d8fffb] backdrop-blur-sm">
                 Для деревообработки
