@@ -5,10 +5,11 @@ import Navigation from "../../components/Navigation";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Как работает система аспирации и пылеудаления | FilterFlow",
+  title: "Как работает аспирация на производстве: принцип системы | FilterFlow",
   description:
-    "Принцип работы аспирации на станках и линиях: воздушный поток, циклон, рукавный фильтр и мешки. Зачем нужны верхний и нижний мешки и рукавные фильтры.",
+    "Подробно объясняем, как работает система аспирации воздуха на производстве: принцип работы аспирации, фильтрация воздуха, удаление пыли и стружки, выбор мешков и обслуживание.",
   path: "/blog/kak-rabotaet-aspiraciya",
+  openGraphTitle: "Как устроена промышленная аспирация | FilterFlow",
 });
 
 const keyCriteria = [
@@ -55,7 +56,7 @@ const systemParts = [
 
 const useCases = [
   {
-    title: "Локальная аспирация",
+    title: "Локальная аспирация для деревообработки",
     text: "Устанавливается рядом с источником пыли и подходит для мастерских или небольших участков с 1-3 станками.",
     points: [
       "Простая установка и обслуживание",
@@ -64,7 +65,7 @@ const useCases = [
     ],
   },
   {
-    title: "Централизованная аспирация",
+    title: "Централизованная промышленная аспирация",
     text: "Единая сеть воздуховодов для нескольких рабочих мест. Эффективна для крупных производственных площадок.",
     points: [
       "Высокая производительность",
@@ -73,7 +74,7 @@ const useCases = [
     ],
   },
   {
-    title: "Циклонная система",
+    title: "Циклонная аспирационная система для удаления пыли",
     text: "Использует центробежную силу для предварительного отделения крупных частиц и разгружает фильтры.",
     points: [
       "Эффективное отделение крупной стружки",
@@ -192,7 +193,7 @@ export default function Page() {
               <li>›</li>
               <li>
                 <Link href="/blog" className="hover:text-[#0aa79d]">
-                  Статьи
+                  Блог
                 </Link>
               </li>
               <li>›</li>
@@ -203,11 +204,12 @@ export default function Page() {
           </nav>
 
           <h1 className="mt-6 max-w-4xl text-3xl font-bold leading-tight text-[#0f172a] md:text-5xl">
-            Как работает система аспирации
+            Как работает аспирация на производстве
           </h1>
           <p className="mt-4 max-w-4xl text-base leading-relaxed text-[#475569] md:text-xl">
-            Подробное объяснение принципа работы системы пылеудаления и
-            фильтрации воздуха.
+            В статье FilterFlow разбираем, как работает аспирация, как устроена
+            аспирационная система для удаления пыли и стружки, и за счет чего
+            обеспечивается стабильная фильтрация воздуха на производстве.
           </p>
 
           <div className="relative mt-8 overflow-hidden rounded-2xl">
@@ -223,7 +225,7 @@ export default function Page() {
 
           <section className="mt-12">
             <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Основной принцип работы
+              Принцип работы аспирации: от захвата до очистки воздуха
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[#334155] md:text-lg">
               Система аспирации удаляет пыль, стружку и другие загрязнения из
@@ -233,7 +235,7 @@ export default function Page() {
             </p>
             <div className="mt-6 rounded-2xl border-l-4 border-[#0aa79d] bg-[#e8f6f5] p-5 md:p-6">
               <h3 className="text-2xl font-semibold text-[#0f172a]">
-                Основные этапы работы:
+                Этапы работы аспирационной системы
               </h3>
               <ul className="mt-5 space-y-4">
                 {keyCriteria.map((item, index) => (
@@ -255,7 +257,7 @@ export default function Page() {
 
           <section className="mt-12">
             <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Основные элементы системы аспирации
+              Основные элементы системы аспирации воздуха
             </h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {systemParts.map((item) => (
@@ -275,7 +277,7 @@ export default function Page() {
 
           <section className="mt-12">
             <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Процесс фильтрации
+              Как работает пылеулавливающая система и фильтрация
             </h2>
             <div className="mt-6 rounded-xl border border-[#dbe3ea] bg-[#f1f5f9] p-5 md:p-6">
               <h3 className="text-3xl font-semibold text-[#0f172a]">
@@ -301,7 +303,9 @@ export default function Page() {
 
           <section className="mt-8">
             <div className="rounded-xl bg-[#0d9b92] p-5 text-white md:p-6">
-              <h3 className="text-2xl font-semibold">Важно знать</h3>
+              <h2 className="text-2xl font-semibold">
+                Важно знать об аспирации для удаления опилок
+              </h2>
               <p className="mt-3 text-white/95">
                 Эффективность фильтрации зависит от правильного подбора материала
                 мешка, скорости воздушного потока и своевременного обслуживания
@@ -313,7 +317,7 @@ export default function Page() {
 
           <section className="mt-12">
             <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Типы систем аспирации
+              Типы систем удаления пыли и стружки
             </h2>
             <div className="mt-6 space-y-4">
               {useCases.map((item) => (
@@ -337,7 +341,7 @@ export default function Page() {
 
           <section className="mt-12">
             <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Факторы эффективности системы
+              Что влияет на эффективность промышленной аспирации
             </h2>
             <div className="mt-6 grid gap-4 md:grid-cols-3">
               {efficiencyFactors.map((item) => (
@@ -416,7 +420,7 @@ export default function Page() {
 
           <section className="mt-12 pb-8">
             <h2 className="text-3xl font-bold text-[#0f172a] md:text-4xl">
-              Читайте также
+              Статьи об аспирации: читайте также
             </h2>
             <div className="mt-6 grid gap-4 md:grid-cols-3">
               {relatedArticles.map((item) => (
