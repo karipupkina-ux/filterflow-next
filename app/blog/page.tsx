@@ -26,7 +26,7 @@ const posts = [
   },
   {
     href: "/blog/kogda-menyat-filtr-meshok",
-    image: "/images/products/clean_no_text.webp",
+    image: "/images/products/clean_no_text.webp.webp",
     category: "Обслуживание",
     readTime: "6 мин",
     title: "Когда менять фильтровальный мешок",
