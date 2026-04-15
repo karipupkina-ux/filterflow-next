@@ -235,7 +235,7 @@ export default function Page() {
 
           <div className="relative mt-8 overflow-hidden rounded-2xl">
             <Image
-              src="/images/products/clean_no_text.webp"
+              src="/images/products/clean_no_text.webp.webp"
               alt="Новый и изношенный фильтровальный мешок"
               width={1600}
               height={900}
