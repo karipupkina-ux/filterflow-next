@@ -172,6 +172,34 @@ export default function BlogIndexPage() {
               ))}
             </div>
           </section>
+
+          <section className="mt-16 rounded-3xl bg-[#0f1f3b] px-6 py-12 text-white shadow-[0_16px_40px_rgba(15,31,59,0.28)] sm:px-10 sm:py-14">
+            <div className="mx-auto max-w-4xl text-center">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Нужна консультация по подбору фильтра?
+              </h2>
+              <p className="mt-4 text-[16px] leading-relaxed text-[#c9d7ee] sm:text-[18px]">
+                Наши специалисты помогут выбрать оптимальный вариант для вашего оборудования
+              </p>
+
+              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+                <a
+                  href="https://wa.me/79514992576"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full items-center justify-center rounded-xl bg-[#16d9c7] px-7 py-3.5 text-[15px] font-semibold text-[#08312d] transition-colors hover:bg-[#0fc8b7] sm:w-auto"
+                >
+                  Написать в WhatsApp
+                </a>
+                <Link
+                  href="/kontakty"
+                  className="inline-flex w-full items-center justify-center rounded-xl bg-white/12 px-7 py-3.5 text-[15px] font-semibold text-white ring-1 ring-white/20 transition-colors hover:bg-white/20 sm:w-auto"
+                >
+                  Связаться с нами
+                </Link>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
     </>
