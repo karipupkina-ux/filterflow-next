@@ -330,7 +330,7 @@ export default function Page() {
                 Связаться с нами
               </Link>
               <Link
-                href="/meshki-dlya-aspiracii"
+                href="/portfolio"
                 className="rounded-lg bg-[#0b7f77] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#096b65]"
               >
                 Каталог мешков
