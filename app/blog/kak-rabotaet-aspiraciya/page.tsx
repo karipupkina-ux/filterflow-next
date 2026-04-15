@@ -121,31 +121,37 @@ const productLinks = [
     title: "Мешки для аспирации",
     description: "Верхние и нижние фильтровальные мешки для систем пылеудаления.",
     href: "/meshki-dlya-aspiracii",
+    icon: "bag",
   },
   {
     title: "Фильтровальные рукава",
     description: "Промышленные рукава для рукавных фильтров и установок УВП.",
     href: "/filtracionnye-rukava",
+    icon: "sleeve",
   },
   {
     title: "Мешки для циклонов и УВП",
     description: "Специализированные мешки для пылеулавливающих установок.",
     href: "/meshki-dlya-aspiracii",
+    icon: "cyclone",
   },
   {
     title: "Мешки для стружкоотсоса",
     description: "Мешки для деревообрабатывающих станков и локальной аспирации.",
     href: "/meshki-dlya-aspiracii",
+    icon: "chips",
   },
   {
     title: "Верхние мешки для аспирации",
     description: "Фильтрационные мешки для чистого выхода воздуха.",
     href: "/meshki-dlya-aspiracii",
+    icon: "top",
   },
   {
     title: "Нижние мешки для аспирации",
     description: "Сборные мешки для стружки и опилок.",
     href: "/meshki-dlya-aspiracii",
+    icon: "bottom",
   },
 ];
 
@@ -154,16 +160,19 @@ const relatedArticles = [
     title: "Как выбрать мешок для аспирации",
     description: "Материалы, размеры и крепления для разных задач.",
     href: "/blog/kak-vybrat-meshok-aspiracii",
+    icon: "article",
   },
   {
     title: "Когда менять фильтровальный мешок",
     description: "Основные признаки износа и рекомендации по замене.",
     href: "/blog/kogda-menyat-filtr-meshok",
+    icon: "article",
   },
   {
     title: "Типы фильтрующих мешков",
     description: "Сравнение конструкций и вариантов для разных условий.",
     href: "/blog/tipy-filtruyushchikh-meshkov",
+    icon: "article",
   },
 ];
 
@@ -355,8 +364,47 @@ export default function Page() {
                 <Link
                   key={item.title}
                   href={item.href}
-                  className="rounded-xl border border-[#e2e8f0] bg-[#f8fafc] p-5 transition hover:border-[#0aa79d]"
+                  className="group rounded-xl border border-[#e2e8f0] bg-[#f8fafc] p-5 transition hover:border-[#0aa79d] hover:bg-[#ebfbf8]"
                 >
+                  <div className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-md border border-[#dbe3ea] bg-white text-[#0d9b92] transition group-hover:border-[#0aa79d] group-hover:bg-[#ddf7f2]">
+                    {item.icon === "bag" && (
+                      <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current stroke-2">
+                        <path d="M7 9h10v10a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V9Z" />
+                        <path d="M9 9V7a3 3 0 0 1 6 0v2" />
+                      </svg>
+                    )}
+                    {item.icon === "sleeve" && (
+                      <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current stroke-2">
+                        <path d="m6 4 3 16h6l3-16H6Z" />
+                      </svg>
+                    )}
+                    {item.icon === "cyclone" && (
+                      <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current stroke-2">
+                        <path d="M4 7h16" />
+                        <path d="M7 12h10" />
+                        <path d="M10 17h4" />
+                      </svg>
+                    )}
+                    {item.icon === "chips" && (
+                      <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current stroke-2">
+                        <path d="M5 7h14" />
+                        <path d="M7 12h10" />
+                        <path d="M9 17h6" />
+                      </svg>
+                    )}
+                    {item.icon === "top" && (
+                      <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current stroke-2">
+                        <path d="M12 4v16" />
+                        <path d="m7 9 5-5 5 5" />
+                      </svg>
+                    )}
+                    {item.icon === "bottom" && (
+                      <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current stroke-2">
+                        <path d="M12 4v16" />
+                        <path d="m17 15-5 5-5-5" />
+                      </svg>
+                    )}
+                  </div>
                   <h3 className="text-xl font-semibold text-[#0f172a]">
                     {item.title}
                   </h3>
@@ -375,8 +423,15 @@ export default function Page() {
                 <Link
                   key={item.title}
                   href={item.href}
-                  className="rounded-xl border border-[#e2e8f0] bg-[#f8fafc] p-5 transition hover:border-[#0aa79d]"
+                  className="group rounded-xl border border-[#e2e8f0] bg-[#f8fafc] p-5 transition hover:border-[#0aa79d] hover:bg-[#ebfbf8]"
                 >
+                  <div className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-md border border-[#dbe3ea] bg-white text-[#0d9b92] transition group-hover:border-[#0aa79d] group-hover:bg-[#ddf7f2]">
+                    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current stroke-2">
+                      <path d="M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
+                      <path d="M9 9h6" />
+                      <path d="M9 13h6" />
+                    </svg>
+                  </div>
                   <h3 className="text-2xl font-semibold text-[#0f172a]">
                     {item.title}
                   </h3>
