@@ -30,26 +30,23 @@ export default function Hero() {
 
       <div className="relative z-10 flex h-full flex-col px-6 pb-12 pt-[120px]">
         <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center text-center">
-          <h1
-            className={`max-w-[1200px] text-[56px] font-bold leading-[1.05] text-white md:text-[74px] ${transitionIn} ${enter} delay-0`}
-          >
-            Мешки для аспирации и стружкоотсоса
-            <br />
-            Фильтровальные рукава
-            <br />
-            в наличии и под заказ
-          </h1>
+        <h1
+  className={`max-w-[1200px] text-[56px] font-bold leading-[1.05] text-white md:text-[74px] ${transitionIn} ${enter} delay-0`}
+>
+  Мешки для аспирации и стружкоотсоса
+  <br />
+  Фильтровальные рукава от производителя
+</h1>
 
-          <p
-            className={`mt-6 max-w-[980px] text-[15px] leading-[1.5] text-white/90 md:text-[17px] ${transitionIn} ${enter} delay-[150ms]`}
-          >
-            Производим мешки для аспирационных установок и пылеулавливания
-            (верхние и нижние), тканевые мешки для стружкоотсоса, в том числе для
-            циклонов и УВП. Фильтрующие рукава и фильтры для аспирации любых
-            размеров — напрямую от производителя. Индивидуальные размеры, быстрое
-            изготовление, доставка по России и СНГ.
-          </p>
-
+<p
+  className={`mt-6 max-w-[980px] text-[15px] leading-[1.5] text-white/90 md:text-[17px] ${transitionIn} ${enter} delay-[150ms]`}
+>
+В наличии и под заказ. Производим мешки для аспирации и стружкоотсоса
+  (верхние и нижние), а также фильтровальные рукава для систем пылеулавливания,
+  циклонов и УВП. Изготавливаем фильтры для аспирации любых размеров напрямую
+  от производителя — с учетом задач вашего производства. Индивидуальные
+  размеры, быстрое изготовление и доставка по России и СНГ.
+</p>
           <div
             className={`mt-8 flex flex-wrap items-center justify-center gap-4 ${transitionIn} ${enter} delay-[300ms]`}
           >
