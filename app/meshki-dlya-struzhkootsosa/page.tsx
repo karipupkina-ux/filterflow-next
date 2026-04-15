@@ -790,7 +790,7 @@ export default function Page() {
                 Мешки для стружкоотсоса
                 <br className="max-md:hidden" />
                 <span className="max-md:block">
-                  — мешок-фильтр и накопитель
+                  мешок-фильтр и накопитель
                 </span>
               </h1>
 
