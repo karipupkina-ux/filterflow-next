@@ -777,7 +777,8 @@ export default function Page() {
         <div
           className="relative min-h-[640px] bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/hero.png')",
+            backgroundImage:
+              "linear-gradient(90deg, rgba(7,18,35,0.72) 0%, rgba(9,24,44,0.58) 32%, rgba(10,29,48,0.42) 55%, rgba(10,29,48,0.18) 100%), linear-gradient(180deg, rgba(4,12,24,0.34) 0%, rgba(4,12,24,0.16) 28%, rgba(4,12,24,0.18) 72%, rgba(4,12,24,0.42) 100%), url('/images/hero.png')",
           }}
         >
           <div className="mx-auto flex min-h-[640px] max-w-[1440px] items-start justify-center px-6 pb-14 pt-10 md:pt-14">

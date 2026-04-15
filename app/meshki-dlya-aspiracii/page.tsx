@@ -893,15 +893,16 @@ export default function Page() {
       {/* HERO */}
       <section
         id="top"
-        className="relative min-h-[620px] w-full overflow-hidden scroll-mt-[120px]"
+        className="relative w-full overflow-hidden scroll-mt-[120px]"
       >
-        <img
-          src="/images/hero.png"
-          alt="Фильтровальные мешки для аспирации и пылеулавливания"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-
-        <div className="relative z-10 mx-auto flex min-h-[620px] max-w-7xl items-start justify-center px-6 pb-16 pt-14 md:pt-20">
+        <div
+          className="relative min-h-[620px] w-full bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "linear-gradient(90deg, rgba(7,18,35,0.72) 0%, rgba(9,24,44,0.58) 32%, rgba(10,29,48,0.42) 55%, rgba(10,29,48,0.18) 100%), linear-gradient(180deg, rgba(4,12,24,0.34) 0%, rgba(4,12,24,0.16) 28%, rgba(4,12,24,0.18) 72%, rgba(4,12,24,0.42) 100%), url('/images/hero.png')",
+          }}
+        >
+        <div className="relative mx-auto flex min-h-[620px] max-w-7xl items-start justify-center px-6 pb-16 pt-14 md:pt-20">
           <div className="max-w-4xl text-center text-white">
             <div className="mb-5 inline-block rounded-full bg-teal-500/90 px-4 py-1 text-sm">
               Производство и поставка
@@ -983,6 +984,7 @@ export default function Page() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
