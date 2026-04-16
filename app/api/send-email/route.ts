@@ -5,6 +5,8 @@ import { NextResponse } from "next/server";
 const EMAIL_USER = process.env.EMAIL_USER;
 const EMAIL_PASS = process.env.EMAIL_PASS;
 const RECEIVER_EMAIL = "filterflow@mail.ru";
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
 const SMTP_HOST = "smtp.mail.ru";
 const SMTP_PORT = 465;
@@ -45,6 +47,51 @@ function nodemailerErrDetails(err: unknown): Record<string, unknown> {
     command: e.command,
     response: e.response,
   };
+}
+
+async function sendTelegramNotification(params: {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  sentAt: string;
+}) {
+  if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
+    console.log("[send-email] telegram skipped: missing env", {
+      hasBotToken: Boolean(TELEGRAM_BOT_TOKEN),
+      hasChatId: Boolean(TELEGRAM_CHAT_ID),
+    });
+    return;
+  }
+
+  const text = [
+    "Новая заявка с сайта FilterFlow",
+    "",
+    `Имя: ${params.name}`,
+    `Email: ${params.email}`,
+    `Телефон: ${params.phone || "—"}`,
+    `Сообщение: ${params.message}`,
+    `Дата и время: ${params.sentAt}`,
+  ].join("\n");
+
+  const response = await fetch(
+    `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: TELEGRAM_CHAT_ID,
+        text,
+      }),
+    }
+  );
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(
+      `Telegram send failed with status ${response.status}: ${errorText}`
+    );
+  }
 }
 
 export async function POST(request: Request) {
@@ -182,6 +229,22 @@ export async function POST(request: Request) {
       response: info.response,
       msTotal: Date.now() - started,
     });
+
+    try {
+      await sendTelegramNotification({
+        name,
+        email,
+        phone,
+        message,
+        sentAt,
+      });
+      console.log("[send-email] telegram notification OK");
+    } catch (telegramErr) {
+      console.error(
+        "[send-email] telegram notification FAILED",
+        String(telegramErr)
+      );
+    }
 
     return NextResponse.json({ ok: true });
   } catch (error) {
