@@ -11,6 +11,9 @@ export default function ContactForm() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [consent, setConsent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
+  const [errorText, setErrorText] = useState("");
 
   const msgLen = message.length;
   const canSubmit =
@@ -18,25 +21,50 @@ export default function ContactForm() {
     email.trim().length > 0 &&
     message.trim().length > 0 &&
     msgLen <= MAX_MSG &&
-    consent;
+    consent &&
+    !isSubmitting;
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!canSubmit) return;
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    setErrorText("");
 
-    const body = [
-      `Имя: ${name.trim()}`,
-      `Email: ${email.trim()}`,
-      phone.trim() ? `Телефон: ${phone.trim()}` : "",
-      "",
-      message.trim(),
-    ]
-      .filter(Boolean)
-      .join("\n");
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          phone: phone.trim(),
+          message: message.trim(),
+        }),
+      });
 
-    const subject = encodeURIComponent("Сообщение с сайта FilterFlow (контакты)");
-    const mailBody = encodeURIComponent(body);
-    window.location.href = `mailto:filterflow@mail.ru?subject=${subject}&body=${mailBody}`;
+      const data: { error?: string } = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(data.error || "Не удалось отправить заявку. Попробуйте позже.");
+      }
+
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+      setConsent(false);
+      setSubmitStatus("success");
+    } catch (error) {
+      setSubmitStatus("error");
+      setErrorText(
+        error instanceof Error ? error.message : "Произошла ошибка при отправке."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -147,8 +175,16 @@ export default function ContactForm() {
           disabled={!canSubmit}
           className="w-full rounded-full bg-[#0aa79d] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#088f86] disabled:cursor-not-allowed disabled:bg-[#94a3b8] disabled:opacity-90"
         >
-          Отправить сообщение
+          {isSubmitting ? "Отправка..." : "Отправить сообщение"}
         </button>
+        {submitStatus === "success" && (
+          <p className="text-sm font-medium text-[#0aa79d]">Заявка успешно отправлена</p>
+        )}
+        {submitStatus === "error" && (
+          <p className="text-sm font-medium text-[#dc2626]">
+            {errorText || "Произошла ошибка при отправке."}
+          </p>
+        )}
       </div>
     </form>
   );
