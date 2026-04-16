@@ -125,6 +125,15 @@ export async function POST(request: Request) {
     const email = typeof raw?.email === "string" ? raw.email.trim() : "";
     const phone = typeof raw?.phone === "string" ? raw.phone.trim() : "";
     const message = typeof raw?.message === "string" ? raw.message.trim() : "";
+    const website =
+      typeof raw?.website === "string" ? raw.website.trim() : "";
+
+    // Honeypot: скрытое поле для отлова автозаполнения спамерами.
+    // Если поле заполнено — заявку не отправляем (и email/telegram не триггерим).
+    if (website) {
+      console.warn("[send-email] honeypot triggered");
+      return NextResponse.json({ error: "Spam detected." }, { status: 400 });
+    }
 
     if (!name || !email || !message) {
       console.warn("[send-email] validation failed", {

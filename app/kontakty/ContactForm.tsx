@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   sendApplicationEmail,
   SEND_EMAIL_USER_ERROR,
@@ -14,10 +14,15 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [website, setWebsite] = useState("");
   const [consent, setConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
   const [errorText, setErrorText] = useState("");
+  const lastSubmitAtRef = useRef(0);
+
+  // Защита от "тапа" / автосабмита с клиента.
+  const MIN_SUBMIT_INTERVAL_MS = 10_000;
 
   const msgLen = message.length;
   const canSubmit =
@@ -31,6 +36,13 @@ export default function ContactForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     console.log("[ContactForm] submit started");
+
+    // Honeypot антиспам: если автозаполнитель заполнил скрытое поле — не отправляем.
+    if (website.trim().length > 0) {
+      console.log("[ContactForm] honeypot filled; blocking submission");
+      return;
+    }
+
     if (!canSubmit) {
       console.log("[ContactForm] submit blocked by canSubmit=false", {
         hasName: name.trim().length > 0,
@@ -43,6 +55,15 @@ export default function ContactForm() {
       });
       return;
     }
+
+    const now = Date.now();
+    if (now - lastSubmitAtRef.current < MIN_SUBMIT_INTERVAL_MS) {
+      setSubmitStatus("error");
+      setErrorText("Слишком часто отправляете. Подождите несколько секунд.");
+      return;
+    }
+    lastSubmitAtRef.current = now;
+
     setIsSubmitting(true);
     setSubmitStatus(null);
     setErrorText("");
@@ -52,6 +73,7 @@ export default function ContactForm() {
       email: email.trim(),
       phone: phone.trim(),
       message: message.trim(),
+      website: website.trim(),
     };
     console.log("[ContactForm] payload prepared", payload);
 
@@ -64,6 +86,7 @@ export default function ContactForm() {
       setEmail("");
       setPhone("");
       setMessage("");
+      setWebsite("");
       setConsent(false);
       setSubmitStatus("success");
     } catch (error) {
@@ -89,6 +112,17 @@ export default function ContactForm() {
       </p>
 
       <div className="mt-6 space-y-5">
+        {/* Honeypot антиспам: обычный пользователь это поле не видит и не заполняет */}
+        <input
+          type="text"
+          name="website"
+          value={website}
+          onChange={(e) => setWebsite(e.target.value)}
+          autoComplete="off"
+          tabIndex={-1}
+          aria-hidden="true"
+          className="hidden"
+        />
         <div>
           <label htmlFor="contact-name" className="mb-1.5 block text-sm font-medium text-[#334155]">
             Ваше имя <span className="text-[#0aa79d]">*</span>
@@ -184,10 +218,12 @@ export default function ContactForm() {
           disabled={!canSubmit}
           className="w-full rounded-full bg-[#0aa79d] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#088f86] disabled:cursor-not-allowed disabled:bg-[#94a3b8] disabled:opacity-90"
         >
-          {isSubmitting ? "Отправка..." : "Отправить сообщение"}
+          {isSubmitting ? "Отправляем..." : "Отправить сообщение"}
         </button>
         {submitStatus === "success" && (
-          <p className="text-sm font-medium text-[#0aa79d]">Заявка успешно отправлена</p>
+          <p className="text-sm font-medium text-[#0aa79d]">
+            Спасибо! Мы получили заявку и свяжемся с вами в ближайшее время.
+          </p>
         )}
         {submitStatus === "error" && (
           <p className="text-sm font-medium text-[#dc2626]">

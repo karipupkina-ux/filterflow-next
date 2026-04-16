@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   sendApplicationEmail,
   SEND_EMAIL_USER_ERROR,
@@ -13,11 +13,16 @@ export default function ContactsSection() {
     email: "",
     phone: "",
     message: "",
+    website: "",
     agree: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
   const [errorText, setErrorText] = useState("");
+  const lastSubmitAtRef = useRef(0);
+
+  // Защита от "тапа" / автосабмита с клиента.
+  const MIN_SUBMIT_INTERVAL_MS = 10_000;
 
   const isButtonActive =
     form.agree &&
@@ -49,9 +54,24 @@ export default function ContactsSection() {
       return;
     }
 
+    // Honeypot антиспам: если автозаполнитель заполнил скрытое поле — не отправляем.
+    if (form.website.trim().length > 0) {
+      console.log("[ContactsSection] honeypot filled; blocking submission");
+      return;
+    }
+
     if (!form.agree || isSubmitting) {
       return;
     }
+
+    const now = Date.now();
+    if (now - lastSubmitAtRef.current < MIN_SUBMIT_INTERVAL_MS) {
+      setSubmitStatus("error");
+      setErrorText("Слишком часто отправляете. Подождите несколько секунд.");
+      return;
+    }
+    lastSubmitAtRef.current = now;
+
     setIsSubmitting(true);
     setSubmitStatus(null);
     setErrorText("");
@@ -62,6 +82,7 @@ export default function ContactsSection() {
         email: form.email.trim(),
         phone: form.phone.trim(),
         message: form.message.trim(),
+        website: form.website.trim(),
       });
 
       setForm({
@@ -69,6 +90,7 @@ export default function ContactsSection() {
         email: "",
         phone: "",
         message: "",
+        website: "",
         agree: false,
       });
       setSubmitStatus("success");
@@ -261,6 +283,17 @@ export default function ContactsSection() {
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Honeypot антиспам: обычный пользователь это поле не видит и не заполняет */}
+              <input
+                type="text"
+                name="website"
+                value={form.website}
+                onChange={handleChange}
+                autoComplete="off"
+                tabIndex={-1}
+                aria-hidden="true"
+                className="hidden"
+              />
               <div>
                 <label className="mb-2 block text-[12px] font-medium text-[#344054]">
                   Ваше имя *
@@ -370,11 +403,11 @@ export default function ContactsSection() {
                     : "cursor-not-allowed bg-[#98a2b3]"
                 }`}
               >
-                {isSubmitting ? "Отправка..." : "Отправить сообщение"}
+                {isSubmitting ? "Отправляем..." : "Отправить сообщение"}
               </button>
               {submitStatus === "success" && (
                 <p className="text-sm font-medium text-[#11b3a6]">
-                  Заявка успешно отправлена
+                  Спасибо! Мы получили заявку и свяжемся с вами в ближайшее время.
                 </p>
               )}
               {submitStatus === "error" && (

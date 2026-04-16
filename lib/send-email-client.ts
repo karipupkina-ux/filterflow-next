@@ -5,6 +5,11 @@ export type ApplicationPayload = {
   email: string;
   phone: string;
   message: string;
+  /**
+   * Honeypot-поле для антиспама.
+   * Обычный пользователь не заполняет его (оно скрыто на форме).
+   */
+  website?: string;
 };
 
 /** Текст для пользователя при любой ошибке отправки (детали только в console.error) */
