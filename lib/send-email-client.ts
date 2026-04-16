@@ -41,11 +41,15 @@ export async function sendApplicationEmail(
   }
 
   if (!response.ok) {
+    const userMessage =
+      typeof data.error === "string" && data.error.trim().length > 0
+        ? data.error
+        : SEND_EMAIL_USER_ERROR;
     console.error("send-email API error:", {
       status: response.status,
       statusText: response.statusText,
       body: data,
     });
-    throw new Error(SEND_EMAIL_USER_ERROR);
+    throw new Error(userMessage);
   }
 }

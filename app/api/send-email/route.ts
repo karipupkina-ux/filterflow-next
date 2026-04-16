@@ -11,6 +11,9 @@ const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const SMTP_HOST = "smtp.mail.ru";
 const SMTP_PORT = 465;
 const SMTP_SECURE = true;
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX_REQUESTS = 3;
+const rateLimitStore = new Map<string, number[]>();
 
 /** Для логов: не светим полный email целиком */
 function maskEmailHint(user: string): string {
@@ -47,6 +50,52 @@ function nodemailerErrDetails(err: unknown): Record<string, unknown> {
     command: e.command,
     response: e.response,
   };
+}
+
+function getClientIp(request: Request): string {
+  const forwardedFor = request.headers.get("x-forwarded-for");
+  if (forwardedFor) {
+    const firstIp = forwardedFor.split(",")[0]?.trim();
+    if (firstIp) return firstIp;
+  }
+
+  const realIp = request.headers.get("x-real-ip")?.trim();
+  if (realIp) return realIp;
+
+  return "unknown";
+}
+
+function isRateLimited(clientIp: string): boolean {
+  const now = Date.now();
+  const recentRequests =
+    rateLimitStore.get(clientIp)?.filter(
+      (timestamp) => now - timestamp < RATE_LIMIT_WINDOW_MS
+    ) ?? [];
+
+  if (recentRequests.length >= RATE_LIMIT_MAX_REQUESTS) {
+    rateLimitStore.set(clientIp, recentRequests);
+    return true;
+  }
+
+  recentRequests.push(now);
+  rateLimitStore.set(clientIp, recentRequests);
+
+  if (rateLimitStore.size > 500) {
+    for (const [ip, timestamps] of rateLimitStore.entries()) {
+      const activeTimestamps = timestamps.filter(
+        (timestamp) => now - timestamp < RATE_LIMIT_WINDOW_MS
+      );
+
+      if (activeTimestamps.length === 0) {
+        rateLimitStore.delete(ip);
+        continue;
+      }
+
+      rateLimitStore.set(ip, activeTimestamps);
+    }
+  }
+
+  return false;
 }
 
 async function sendTelegramNotification(params: {
@@ -127,12 +176,29 @@ export async function POST(request: Request) {
     const message = typeof raw?.message === "string" ? raw.message.trim() : "";
     const website =
       typeof raw?.website === "string" ? raw.website.trim() : "";
+    const clientIp = getClientIp(request);
 
     // Honeypot: скрытое поле для отлова автозаполнения спамерами.
     // Если поле заполнено — заявку не отправляем (и email/telegram не триггерим).
     if (website) {
-      console.warn("[send-email] honeypot triggered");
-      return NextResponse.json({ error: "Spam detected." }, { status: 400 });
+      console.warn("[send-email] honeypot triggered", { clientIp });
+      return NextResponse.json({ ok: true });
+    }
+
+    if (isRateLimited(clientIp)) {
+      console.warn("[send-email] rate limit triggered", { clientIp });
+      return NextResponse.json(
+        {
+          error:
+            "Слишком много попыток отправки. Подождите немного и попробуйте снова.",
+        },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": String(Math.ceil(RATE_LIMIT_WINDOW_MS / 1000)),
+          },
+        }
+      );
     }
 
     if (!name || !email || !message) {

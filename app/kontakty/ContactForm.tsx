@@ -1,13 +1,73 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import {
   sendApplicationEmail,
   SEND_EMAIL_USER_ERROR,
 } from "@/lib/send-email-client";
 
 const MAX_MSG = 500;
+const MIN_MSG = 10;
+const MIN_SUBMIT_INTERVAL_MS = 10_000;
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PHONE_ALLOWED_RE = /^[\d+\s\-()]+$/;
+
+type FieldErrors = Partial<
+  Record<"name" | "email" | "phone" | "message" | "consent", string>
+>;
+
+function validateForm(values: {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  consent: boolean;
+}): FieldErrors {
+  const errors: FieldErrors = {};
+  const normalizedName = values.name.trim();
+  const normalizedEmail = values.email.trim();
+  const normalizedPhone = values.phone.trim();
+  const normalizedMessage = values.message.trim();
+  const phoneDigits = normalizedPhone.replace(/\D/g, "");
+
+  if (!normalizedName) {
+    errors.name = "Укажите имя.";
+  }
+
+  if (!normalizedEmail) {
+    errors.email = "Укажите email.";
+  } else if (!EMAIL_RE.test(normalizedEmail)) {
+    errors.email = "Проверьте корректность email.";
+  }
+
+  if (normalizedPhone) {
+    if (!PHONE_ALLOWED_RE.test(normalizedPhone) || phoneDigits.length < 6) {
+      errors.phone = "Проверьте телефон. Укажите номер в понятном формате.";
+    }
+  }
+
+  if (!normalizedMessage) {
+    errors.message = "Введите сообщение.";
+  } else if (normalizedMessage.length < MIN_MSG) {
+    errors.message = `Сообщение должно быть не короче ${MIN_MSG} символов.`;
+  } else if (normalizedMessage.length > MAX_MSG) {
+    errors.message = `Сообщение должно быть не длиннее ${MAX_MSG} символов.`;
+  }
+
+  if (!values.consent) {
+    errors.consent = "Нужно согласие на обработку персональных данных.";
+  }
+
+  return errors;
+}
+
+function getInputClassName(hasError: boolean): string {
+  return [
+    "w-full rounded-xl border bg-white px-4 py-2.5 text-sm text-[#0f172a] outline-none ring-[#0aa79d]/30 transition placeholder:text-[#94a3b8] focus:border-[#0aa79d] focus:ring-2",
+    hasError ? "border-[#dc2626] focus:border-[#dc2626] focus:ring-[#dc2626]/20" : "border-[#e2e8f0]",
+  ].join(" ");
+}
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -19,45 +79,50 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
   const [errorText, setErrorText] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const lastSubmitAtRef = useRef(0);
 
-  // Защита от "тапа" / автосабмита с клиента.
-  const MIN_SUBMIT_INTERVAL_MS = 10_000;
-
   const msgLen = message.length;
-  const canSubmit =
-    name.trim().length > 0 &&
-    email.trim().length > 0 &&
-    message.trim().length > 0 &&
-    msgLen <= MAX_MSG &&
-    consent &&
-    !isSubmitting;
+  const validationErrors = useMemo(
+    () => validateForm({ name, email, phone, message, consent }),
+    [name, email, phone, message, consent]
+  );
+  const canSubmit = Object.keys(validationErrors).length === 0 && !isSubmitting;
+
+  function clearFieldError(field: keyof FieldErrors) {
+    setFieldErrors((prev) => {
+      if (!prev[field]) return prev;
+      const next = { ...prev };
+      delete next[field];
+      return next;
+    });
+  }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    console.log("[ContactForm] submit started");
 
     // Honeypot антиспам: если автозаполнитель заполнил скрытое поле — не отправляем.
     if (website.trim().length > 0) {
-      console.log("[ContactForm] honeypot filled; blocking submission");
+      setSubmitStatus("success");
+      setErrorText("");
       return;
     }
 
-    if (!canSubmit) {
-      console.log("[ContactForm] submit blocked by canSubmit=false", {
-        hasName: name.trim().length > 0,
-        hasEmail: email.trim().length > 0,
-        hasMessage: message.trim().length > 0,
-        msgLen,
-        withinLimit: msgLen <= MAX_MSG,
-        consent,
-        isSubmitting,
-      });
+    if (isSubmitting) {
+      return;
+    }
+
+    const nextErrors = validateForm({ name, email, phone, message, consent });
+    if (Object.keys(nextErrors).length > 0) {
+      setFieldErrors(nextErrors);
+      setSubmitStatus(null);
+      setErrorText("");
       return;
     }
 
     const now = Date.now();
     if (now - lastSubmitAtRef.current < MIN_SUBMIT_INTERVAL_MS) {
+      setFieldErrors({});
       setSubmitStatus("error");
       setErrorText("Слишком часто отправляете. Подождите несколько секунд.");
       return;
@@ -65,6 +130,7 @@ export default function ContactForm() {
     lastSubmitAtRef.current = now;
 
     setIsSubmitting(true);
+    setFieldErrors({});
     setSubmitStatus(null);
     setErrorText("");
 
@@ -75,12 +141,9 @@ export default function ContactForm() {
       message: message.trim(),
       website: website.trim(),
     };
-    console.log("[ContactForm] payload prepared", payload);
 
     try {
-      console.log("[ContactForm] before fetch");
       await sendApplicationEmail(payload);
-      console.log("[ContactForm] after fetch");
 
       setName("");
       setEmail("");
@@ -90,10 +153,12 @@ export default function ContactForm() {
       setConsent(false);
       setSubmitStatus("success");
     } catch (error) {
-      console.error("[ContactForm] fetch failed", error);
-      console.error("ContactForm:", error);
       setSubmitStatus("error");
-      setErrorText(SEND_EMAIL_USER_ERROR);
+      setErrorText(
+        error instanceof Error && error.message
+          ? error.message
+          : SEND_EMAIL_USER_ERROR
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -121,7 +186,7 @@ export default function ContactForm() {
           autoComplete="off"
           tabIndex={-1}
           aria-hidden="true"
-          className="hidden"
+          className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden opacity-0"
         />
         <div>
           <label htmlFor="contact-name" className="mb-1.5 block text-sm font-medium text-[#334155]">
@@ -134,10 +199,20 @@ export default function ContactForm() {
             autoComplete="name"
             placeholder="Иван Иванов"
             value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full rounded-xl border border-[#e2e8f0] bg-white px-4 py-2.5 text-sm text-[#0f172a] outline-none ring-[#0aa79d]/30 transition placeholder:text-[#94a3b8] focus:border-[#0aa79d] focus:ring-2"
+            onChange={(e) => {
+              setName(e.target.value);
+              clearFieldError("name");
+            }}
+            className={getInputClassName(Boolean(fieldErrors.name))}
+            aria-invalid={Boolean(fieldErrors.name)}
+            aria-describedby={fieldErrors.name ? "contact-name-error" : undefined}
             required
           />
+          {fieldErrors.name && (
+            <p id="contact-name-error" className="mt-1.5 text-sm text-[#dc2626]">
+              {fieldErrors.name}
+            </p>
+          )}
         </div>
 
         <div>
@@ -151,10 +226,20 @@ export default function ContactForm() {
             autoComplete="email"
             placeholder="example@mail.ru"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded-xl border border-[#e2e8f0] bg-white px-4 py-2.5 text-sm text-[#0f172a] outline-none ring-[#0aa79d]/30 transition placeholder:text-[#94a3b8] focus:border-[#0aa79d] focus:ring-2"
+            onChange={(e) => {
+              setEmail(e.target.value);
+              clearFieldError("email");
+            }}
+            className={getInputClassName(Boolean(fieldErrors.email))}
+            aria-invalid={Boolean(fieldErrors.email)}
+            aria-describedby={fieldErrors.email ? "contact-email-error" : undefined}
             required
           />
+          {fieldErrors.email && (
+            <p id="contact-email-error" className="mt-1.5 text-sm text-[#dc2626]">
+              {fieldErrors.email}
+            </p>
+          )}
         </div>
 
         <div>
@@ -168,9 +253,19 @@ export default function ContactForm() {
             autoComplete="tel"
             placeholder="+7 (___) ___-__-__"
             value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            className="w-full rounded-xl border border-[#e2e8f0] bg-white px-4 py-2.5 text-sm text-[#0f172a] outline-none ring-[#0aa79d]/30 transition placeholder:text-[#94a3b8] focus:border-[#0aa79d] focus:ring-2"
+            onChange={(e) => {
+              setPhone(e.target.value);
+              clearFieldError("phone");
+            }}
+            className={getInputClassName(Boolean(fieldErrors.phone))}
+            aria-invalid={Boolean(fieldErrors.phone)}
+            aria-describedby={fieldErrors.phone ? "contact-phone-error" : undefined}
           />
+          {fieldErrors.phone && (
+            <p id="contact-phone-error" className="mt-1.5 text-sm text-[#dc2626]">
+              {fieldErrors.phone}
+            </p>
+          )}
         </div>
 
         <div>
@@ -184,21 +279,43 @@ export default function ContactForm() {
             maxLength={MAX_MSG}
             placeholder="Ваш вопрос или комментарий (макс. 500 символов)"
             value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className="w-full resize-y rounded-xl border border-[#e2e8f0] bg-white px-4 py-2.5 text-sm text-[#0f172a] outline-none ring-[#0aa79d]/30 transition placeholder:text-[#94a3b8] focus:border-[#0aa79d] focus:ring-2"
+            onChange={(e) => {
+              setMessage(e.target.value);
+              clearFieldError("message");
+            }}
+            className={`${getInputClassName(Boolean(fieldErrors.message))} resize-y`}
+            aria-invalid={Boolean(fieldErrors.message)}
+            aria-describedby={
+              fieldErrors.message
+                ? "contact-message-error contact-message-counter"
+                : "contact-message-counter"
+            }
             required
           />
-          <div className="mt-1 flex justify-end text-xs text-[#94a3b8]">
+          <div
+            id="contact-message-counter"
+            className="mt-1 flex justify-end text-xs text-[#94a3b8]"
+          >
             {msgLen}/{MAX_MSG}
           </div>
+          {fieldErrors.message && (
+            <p id="contact-message-error" className="mt-1.5 text-sm text-[#dc2626]">
+              {fieldErrors.message}
+            </p>
+          )}
         </div>
 
         <label className="flex cursor-pointer gap-3 text-sm leading-snug text-[#475569]">
           <input
             type="checkbox"
             checked={consent}
-            onChange={(e) => setConsent(e.target.checked)}
+            onChange={(e) => {
+              setConsent(e.target.checked);
+              clearFieldError("consent");
+            }}
             className="mt-0.5 h-4 w-4 shrink-0 rounded border-[#cbd5e1] text-[#0aa79d] focus:ring-[#0aa79d]"
+            aria-invalid={Boolean(fieldErrors.consent)}
+            aria-describedby={fieldErrors.consent ? "contact-consent-error" : undefined}
             required
           />
           <span>
@@ -212,21 +329,31 @@ export default function ContactForm() {
             .
           </span>
         </label>
+        {fieldErrors.consent && (
+          <p id="contact-consent-error" className="-mt-3 text-sm text-[#dc2626]">
+            {fieldErrors.consent}
+          </p>
+        )}
 
         <button
           type="submit"
-          disabled={!canSubmit}
+          disabled={isSubmitting}
           className="w-full rounded-full bg-[#0aa79d] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#088f86] disabled:cursor-not-allowed disabled:bg-[#94a3b8] disabled:opacity-90"
         >
           {isSubmitting ? "Отправляем..." : "Отправить сообщение"}
         </button>
+        {!isSubmitting && !canSubmit && Object.keys(fieldErrors).length === 0 && (
+          <p className="text-sm text-[#64748b]">
+            Заполните обязательные поля и подтвердите согласие на обработку данных.
+          </p>
+        )}
         {submitStatus === "success" && (
-          <p className="text-sm font-medium text-[#0aa79d]">
-            Спасибо! Мы получили заявку и свяжемся с вами в ближайшее время.
+          <p className="text-sm font-medium text-[#0aa79d]" role="status">
+            Заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.
           </p>
         )}
         {submitStatus === "error" && (
-          <p className="text-sm font-medium text-[#dc2626]">
+          <p className="text-sm font-medium text-[#dc2626]" role="alert">
             {errorText || SEND_EMAIL_USER_ERROR}
           </p>
         )}
