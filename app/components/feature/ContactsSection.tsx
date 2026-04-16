@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 export default function ContactsSection() {
   const [form, setForm] = useState({
@@ -10,24 +10,16 @@ export default function ContactsSection() {
     message: "",
     agree: false,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
+  const [errorText, setErrorText] = useState("");
 
-  const isButtonActive = form.agree;
-
-  const mailtoHref = useMemo(() => {
-    const subject = encodeURIComponent("Сообщение с сайта FilterFlow");
-    const body = encodeURIComponent(
-      [
-        `Имя: ${form.name || "-"}`,
-        `Email: ${form.email || "-"}`,
-        `Телефон: ${form.phone || "-"}`,
-        "",
-        "Сообщение:",
-        form.message || "-",
-      ].join("\n")
-    );
-
-    return `mailto:filterflow@mail.ru?subject=${subject}&body=${body}`;
-  }, [form]);
+  const isButtonActive =
+    form.agree &&
+    form.name.trim().length > 0 &&
+    form.email.trim().length > 0 &&
+    form.message.trim().length > 0 &&
+    !isSubmitting;
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -43,7 +35,7 @@ export default function ContactsSection() {
     setForm((prev) => ({ ...prev, [name]: value }));
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     const formElement = e.currentTarget;
@@ -52,11 +44,49 @@ export default function ContactsSection() {
       return;
     }
 
-    if (!form.agree) {
+    if (!form.agree || isSubmitting) {
       return;
     }
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    setErrorText("");
 
-    window.location.href = mailtoHref;
+    try {
+      const response = await fetch("/api/send-email/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name.trim(),
+          email: form.email.trim(),
+          phone: form.phone.trim(),
+          message: form.message.trim(),
+        }),
+      });
+
+      const data: { error?: string } = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(data.error || "Не удалось отправить заявку. Попробуйте позже.");
+      }
+
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+        agree: false,
+      });
+      setSubmitStatus("success");
+    } catch (error) {
+      setSubmitStatus("error");
+      setErrorText(
+        error instanceof Error ? error.message : "Произошла ошибка при отправке."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -348,8 +378,18 @@ export default function ContactsSection() {
                     : "cursor-not-allowed bg-[#98a2b3]"
                 }`}
               >
-                Отправить сообщение
+                {isSubmitting ? "Отправка..." : "Отправить сообщение"}
               </button>
+              {submitStatus === "success" && (
+                <p className="text-sm font-medium text-[#11b3a6]">
+                  Заявка успешно отправлена
+                </p>
+              )}
+              {submitStatus === "error" && (
+                <p className="text-sm font-medium text-[#dc2626]">
+                  {errorText || "Произошла ошибка при отправке."}
+                </p>
+              )}
             </form>
           </div>
         </div>
