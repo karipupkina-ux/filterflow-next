@@ -192,12 +192,12 @@ export default function Page() {
       <div className="sticky top-0 z-50">
         <div className="border-b border-[#d8dde3] bg-[#c9c9c9]">
           <div className="mx-auto flex h-10 max-w-[1440px] items-center justify-end gap-6 px-6 text-[13px] text-white">
-            <a
-              href="mailto:filterflow@mail.ru"
+            <Link
+              href="/kontakty"
               className="transition-colors duration-200 hover:text-[#28c4b7]"
             >
               filterflow@mail.ru
-            </a>
+            </Link>
 
             <a
               href="tel:+79514992576"
@@ -669,12 +669,12 @@ export default function Page() {
               >
                 Заказать в WhatsApp
               </a>
-              <a
-                href="mailto:filterflow@mail.ru?subject=Заказ%20мешков%20для%20опилок"
+              <Link
+                href="/kontakty"
                 className="inline-flex h-[52px] items-center justify-center rounded-[14px] border border-[#e3e8ee] bg-[#f8fafc] px-8 text-[16px] font-semibold text-[#10233f] transition-colors duration-200 hover:border-[#28c4b7] hover:text-[#28c4b7]"
               >
                 Запросить расчёт
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -850,8 +850,8 @@ export default function Page() {
           </div>
 
           <div className="mt-10 flex justify-center">
-            <a
-              href="mailto:filterflow@mail.ru?subject=Заказать%20мешки%20для%20опилок"
+            <Link
+              href="/kontakty"
               className="inline-flex h-[60px] items-center justify-center gap-3 rounded-full bg-[#ff6b2c] px-10 text-[17px] font-semibold text-white transition-colors duration-200 hover:bg-[#e85e24] md:px-12 md:text-[18px]"
             >
               Заказать мешки для опилок
@@ -868,7 +868,7 @@ export default function Page() {
                 <path d="M5 12h14" />
                 <path d="m13 6 6 6-6 6" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -876,12 +876,12 @@ export default function Page() {
       <SeeAlsoLinks />
 
       <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 xl:flex">
-        <a
-          href="mailto:filterflow@mail.ru"
+        <Link
+          href="/kontakty"
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white text-[#ff7a2f] shadow-[0_10px_30px_rgba(15,23,42,0.12)] transition-transform duration-200 hover:scale-105"
         >
           <span className="text-[28px]">✉</span>
-        </a>
+        </Link>
 
         <a
           href="tel:+79514992576"

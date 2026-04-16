@@ -15,7 +15,6 @@ export const metadata: Metadata = pageMetadata({
 
 const TEL_HREF = "tel:+79514992576";
 const TEL_DISPLAY = "+7 951 499-25-76";
-const MAIL_HREF = "mailto:filterflow@mail.ru";
 const MAIL_DISPLAY = "filterflow@mail.ru";
 
 function IconPhone() {
@@ -133,12 +132,9 @@ export default function KontaktyPage() {
                       </div>
                       <div>
                         <p className="text-xs font-medium uppercase tracking-wide text-[#64748b]">Email</p>
-                        <a
-                          href={MAIL_HREF}
-                          className="mt-0.5 inline-block text-base font-semibold text-[#0aa79d] transition hover:text-[#088f86] break-all"
-                        >
+                        <span className="mt-0.5 inline-block text-base font-semibold text-[#0aa79d] break-all">
                           {MAIL_DISPLAY}
-                        </a>
+                        </span>
                         <p className="mt-1 text-sm text-[#64748b]">Ответим в течение 24 часов</p>
                       </div>
                     </li>
@@ -288,9 +284,9 @@ export default function KontaktyPage() {
                     {TEL_DISPLAY}
                   </a>{" "}
                   или напишите на{" "}
-                  <a href={MAIL_HREF} className="font-semibold text-[#0aa79d] underline underline-offset-2 hover:text-[#088f86] break-all">
+                  <span className="font-semibold text-[#0aa79d] break-all">
                     {MAIL_DISPLAY}
-                  </a>
+                  </span>
                   — кратко опишите задачу, тип оборудования и желаемые сроки.
                 </li>
                 <li>

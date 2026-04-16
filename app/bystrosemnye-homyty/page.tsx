@@ -1,6 +1,7 @@
 import Navigation from "../components/Navigation";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import Footer from "../components/Footer";
+import ClampOrderForm from "../components/ClampOrderForm";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo-metadata";
@@ -979,174 +980,7 @@ export default function Page() {
             </div>
 
             <div className="mx-auto mt-10 max-w-[920px] rounded-[28px] bg-white px-8 py-10 shadow-[0_16px_40px_rgba(15,23,42,0.08)] md:px-12 md:py-12">
-              <form
-                action="mailto:filterflow@mail.ru"
-                method="post"
-                encType="text/plain"
-                className="space-y-8"
-              >
-                <div className="grid gap-6 md:grid-cols-2">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="mb-3 block text-[15px] font-semibold text-[#334155]"
-                    >
-                      Имя <span className="text-[#ef4444]">*</span>
-                    </label>
-                    <input
-                      id="name"
-                      name="Имя"
-                      type="text"
-                      required
-                      placeholder="Ваше имя"
-                      className="h-[56px] w-full rounded-[14px] border border-[#cfd8e3] px-5 text-[15px] text-[#0f172a] outline-none transition-colors duration-200 placeholder:text-[#94a3b8] focus:border-[#22c1b6] focus:ring-1 focus:ring-[#22c1b6]"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="mb-3 block text-[15px] font-semibold text-[#334155]"
-                    >
-                      Телефон <span className="text-[#ef4444]">*</span>
-                    </label>
-                    <input
-                      id="phone"
-                      name="Телефон"
-                      type="tel"
-                      required
-                      placeholder="+7 (___) ___-__-__"
-                      className="h-[56px] w-full rounded-[14px] border border-[#cfd8e3] px-5 text-[15px] text-[#0f172a] outline-none transition-colors duration-200 placeholder:text-[#94a3b8] focus:border-[#22c1b6] focus:ring-1 focus:ring-[#22c1b6]"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="mb-3 block text-[15px] font-semibold text-[#334155]"
-                  >
-                    Email <span className="text-[#ef4444]">*</span>
-                  </label>
-                  <input
-                    id="email"
-                    name="Email"
-                    type="email"
-                    required
-                    placeholder="your@email.com"
-                    className="h-[56px] w-full rounded-[14px] border border-[#cfd8e3] px-5 text-[15px] text-[#0f172a] outline-none transition-colors duration-200 placeholder:text-[#94a3b8] focus:border-[#22c1b6] focus:ring-1 focus:ring-[#22c1b6]"
-                  />
-                </div>
-
-                <div className="grid gap-6 md:grid-cols-2">
-                  <div>
-                    <label
-                      htmlFor="diameter"
-                      className="mb-3 block text-[15px] font-semibold text-[#334155]"
-                    >
-                      Диаметр (мм) <span className="text-[#ef4444]">*</span>
-                    </label>
-                    <input
-                      id="diameter"
-                      name="Диаметр"
-                      type="text"
-                      required
-                      placeholder="Например: 300"
-                      className="h-[56px] w-full rounded-[14px] border border-[#cfd8e3] px-5 text-[15px] text-[#0f172a] outline-none transition-colors duration-200 placeholder:text-[#94a3b8] focus:border-[#22c1b6] focus:ring-1 focus:ring-[#22c1b6]"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="quantity"
-                      className="mb-3 block text-[15px] font-semibold text-[#334155]"
-                    >
-                      Количество (шт) <span className="text-[#ef4444]">*</span>
-                    </label>
-                    <input
-                      id="quantity"
-                      name="Количество"
-                      type="number"
-                      min="1"
-                      required
-                      placeholder="Например: 10"
-                      className="h-[56px] w-full rounded-[14px] border border-[#cfd8e3] px-5 text-[15px] text-[#0f172a] outline-none transition-colors duration-200 placeholder:text-[#94a3b8] focus:border-[#22c1b6] focus:ring-1 focus:ring-[#22c1b6]"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="clampType"
-                    className="mb-3 block text-[15px] font-semibold text-[#334155]"
-                  >
-                    Тип хомута <span className="text-[#ef4444]">*</span>
-                  </label>
-                  <select
-                    id="clampType"
-                    name="Тип хомута"
-                    required
-                    defaultValue=""
-                    className="h-[56px] w-full rounded-[14px] border border-[#cfd8e3] bg-white px-5 text-[15px] text-[#0f172a] outline-none transition-colors duration-200 focus:border-[#22c1b6] focus:ring-1 focus:ring-[#22c1b6]"
-                  >
-                    <option value="" disabled>
-                      Выберите тип хомута
-                    </option>
-                    <option value="Ленточный">Ленточный</option>
-                    <option value="Профильный">Профильный</option>
-                    <option value="Рычажный">Рычажный</option>
-                    <option value="Нужна консультация">Нужна консультация</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="comment"
-                    className="mb-3 block text-[15px] font-semibold text-[#334155]"
-                  >
-                    Комментарий
-                  </label>
-                  <textarea
-                    id="comment"
-                    name="Комментарий"
-                    maxLength={500}
-                    rows={5}
-                    placeholder="Дополнительная информация о заказе (максимум 500 символов)"
-                    className="w-full rounded-[14px] border border-[#cfd8e3] px-5 py-4 text-[15px] text-[#0f172a] outline-none transition-colors duration-200 placeholder:text-[#94a3b8] focus:border-[#22c1b6] focus:ring-1 focus:ring-[#22c1b6]"
-                  />
-                  <div className="mt-2 text-right text-[14px] text-[#64748b]">
-                    0/500
-                  </div>
-                </div>
-
-                <div className="pt-1">
-                  <label className="flex items-start gap-3 text-[15px] leading-[1.6] text-[#334155]">
-                    <input
-                      type="checkbox"
-                      name="Согласие"
-                      required
-                      className="mt-1 h-[24px] w-[24px] rounded border border-[#cfd8e3] accent-[#149c94]"
-                    />
-                    <span>
-                      Даю согласие на обработку персональных данных и соглашаюсь с{" "}
-                      <Link
-                        href="/politika-konfidencialnosti"
-                        className="font-medium text-[#149c94] underline underline-offset-4 transition-colors duration-200 hover:text-[#118b84]"
-                      >
-                        политикой конфиденциальности
-                      </Link>{" "}
-                      <span className="text-[#ef4444]">*</span>
-                    </span>
-                  </label>
-                </div>
-
-                <button
-                  type="submit"
-                  className="inline-flex h-[58px] w-full items-center justify-center rounded-[16px] bg-[#149c94] px-8 text-[18px] font-semibold text-white shadow-[0_12px_30px_rgba(20,156,148,0.24)] transition-all duration-200 hover:bg-[#118b84]"
-                >
-                  Отправить заявку
-                </button>
-              </form>
+              <ClampOrderForm />
             </div>
           </div>
         </section>
@@ -1181,8 +1015,8 @@ export default function Page() {
                 +7 (951) 499-25-76
               </a>
 
-              <a
-                href="mailto:filterflow@mail.ru"
+              <Link
+                href="/kontakty"
                 className="inline-flex h-[58px] min-w-[258px] items-center justify-center gap-3 rounded-[16px] bg-[#0f6f69] px-7 text-[16px] font-semibold text-white shadow-[0_14px_34px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0d6660] hover:shadow-[0_18px_38px_rgba(0,0,0,0.18)]"
               >
                 <svg
@@ -1198,7 +1032,7 @@ export default function Page() {
                   <path d="m4 7 8 6 8-6" />
                 </svg>
                 filterflow@mail.ru
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -1306,12 +1140,12 @@ export default function Page() {
       </main>
 
       <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 xl:flex">
-        <a
-          href="mailto:filterflow@mail.ru"
+        <Link
+          href="/kontakty"
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white text-[#ff7a2f] shadow-[0_10px_30px_rgba(15,23,42,0.12)] transition-transform duration-200 hover:scale-105"
         >
           <span className="text-[28px]">✉</span>
-        </a>
+        </Link>
 
         <a
           href="tel:+79514992576"

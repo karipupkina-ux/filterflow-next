@@ -2,6 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import {
+  sendApplicationEmail,
+  SEND_EMAIL_USER_ERROR,
+} from "@/lib/send-email-client";
 
 const MAX_MSG = 500;
 
@@ -32,24 +36,12 @@ export default function ContactForm() {
     setErrorText("");
 
     try {
-      const response = await fetch("/api/send-email/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: name.trim(),
-          email: email.trim(),
-          phone: phone.trim(),
-          message: message.trim(),
-        }),
+      await sendApplicationEmail({
+        name: name.trim(),
+        email: email.trim(),
+        phone: phone.trim(),
+        message: message.trim(),
       });
-
-      const data: { error?: string } = await response.json().catch(() => ({}));
-
-      if (!response.ok) {
-        throw new Error(data.error || "Не удалось отправить заявку. Попробуйте позже.");
-      }
 
       setName("");
       setEmail("");
@@ -58,10 +50,9 @@ export default function ContactForm() {
       setConsent(false);
       setSubmitStatus("success");
     } catch (error) {
+      console.error("ContactForm:", error);
       setSubmitStatus("error");
-      setErrorText(
-        error instanceof Error ? error.message : "Произошла ошибка при отправке."
-      );
+      setErrorText(SEND_EMAIL_USER_ERROR);
     } finally {
       setIsSubmitting(false);
     }
@@ -182,7 +173,7 @@ export default function ContactForm() {
         )}
         {submitStatus === "error" && (
           <p className="text-sm font-medium text-[#dc2626]">
-            {errorText || "Произошла ошибка при отправке."}
+            {errorText || SEND_EMAIL_USER_ERROR}
           </p>
         )}
       </div>

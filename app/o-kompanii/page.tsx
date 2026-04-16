@@ -451,12 +451,12 @@ export default function OKompaniiPage() {
                   <p className="mt-2 text-[18px] text-white/80">Звоните в любое время</p>
                 </div>
                 <div>
-                  <a
-                    href="mailto:filterflow@mail.ru"
+                  <Link
+                    href="/kontakty"
                     className="text-4xl font-bold tracking-tight text-white transition hover:text-[#d7f6f3]"
                   >
                     filterflow@mail.ru
-                  </a>
+                  </Link>
                   <p className="mt-2 text-[18px] text-white/80">Пишите на почту</p>
                 </div>
                 <div>

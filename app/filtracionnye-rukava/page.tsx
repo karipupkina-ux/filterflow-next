@@ -41,12 +41,12 @@ export default function FiltracionnyeRukavaPage() {
       {/* Верхняя тонкая шапка */}
       <div className="bg-[#bdbdbd] text-white">
         <div className="mx-auto flex h-10 max-w-[1440px] items-center justify-end gap-6 px-6 text-[13px]">
-          <a
-            href="mailto:filterflow@mail.ru"
+          <Link
+            href="/kontakty"
             className="transition-colors duration-200 hover:text-[#28c7bb]"
           >
             filterflow@mail.ru
-          </a>
+          </Link>
 
           <a
             href="tel:+79514992576"
@@ -1766,13 +1766,13 @@ export default function FiltracionnyeRukavaPage() {
             </div>
 
             <div className="mt-10 flex justify-center">
-              <a
-                href="mailto:filterflow@mail.ru"
+              <Link
+                href="/kontakty"
                 className="inline-flex h-[62px] items-center justify-center gap-3 rounded-full bg-[#149f95] px-9 text-[17px] font-semibold text-white transition-colors duration-200 hover:bg-[#118d84]"
               >
                 Заказать фильтровальные рукава
                 <span className="text-[22px] leading-none">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -1782,12 +1782,13 @@ export default function FiltracionnyeRukavaPage() {
 
       {/* Плавающие контакты */}
       <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 xl:flex">
-        <a
-          href="mailto:filterflow@mail.ru"
+        <Link
+          href="/kontakty"
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white text-[#ff7a2f] shadow-[0_10px_30px_rgba(15,23,42,0.12)] transition-transform duration-200 hover:scale-105"
+          aria-label="Форма обратной связи FilterFlow"
         >
           <span className="text-[28px]">✉</span>
-        </a>
+        </Link>
 
         <a
           href="tel:+79514992576"

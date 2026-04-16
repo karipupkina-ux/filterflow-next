@@ -83,12 +83,7 @@ export default function PolitikaKonfidencialnostiPage() {
 
                   <p className="mb-3">
                     Email:{" "}
-                    <a
-                      href="mailto:filterflow@mail.ru"
-                      className="text-[#ff6b2c] hover:underline"
-                    >
-                      filterflow@mail.ru
-                    </a>
+                    <span className="text-[#ff6b2c]">filterflow@mail.ru</span>
                   </p>
 
                   <p>
@@ -227,12 +222,7 @@ export default function PolitikaKonfidencialnostiPage() {
                 <p>
                   Для реализации своих прав пользователь может обратиться по
                   адресу электронной почты:{" "}
-                  <a
-                    href="mailto:filterflow@mail.ru"
-                    className="text-[#ff6b2c] hover:underline"
-                  >
-                    filterflow@mail.ru
-                  </a>
+                  <span className="text-[#ff6b2c]">filterflow@mail.ru</span>
                 </p>
               </div>
             </div>
@@ -277,12 +267,7 @@ export default function PolitikaKonfidencialnostiPage() {
 
                   <p className="mb-3 text-[18px] leading-8 text-[#334155]">
                     Email:{" "}
-                    <a
-                      href="mailto:filterflow@mail.ru"
-                      className="text-[#ff6b2c] hover:underline"
-                    >
-                      filterflow@mail.ru
-                    </a>
+                    <span className="text-[#ff6b2c]">filterflow@mail.ru</span>
                   </p>
 
                   <p className="text-[18px] leading-8 text-[#334155]">

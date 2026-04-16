@@ -1,9 +1,79 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
+import {
+  sendApplicationEmail,
+  SEND_EMAIL_USER_ERROR,
+} from "@/lib/send-email-client";
 
 export default function OrderFormSection() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [productType, setProductType] = useState("");
+  const [comment, setComment] = useState("");
   const [agreed, setAgreed] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
+    null
+  );
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!agreed || !name.trim() || !phone.trim() || !email.trim() || !productType) {
+      return;
+    }
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    try {
+      const message = [
+        "Заявка: оформить заказ (главная страница)",
+        "",
+        "Тип продукции:",
+        productType,
+        "",
+        `Email: ${email.trim()}`,
+        "",
+        "Комментарий:",
+        comment.trim() || "—",
+      ].join("\n");
+      await sendApplicationEmail({
+        name: name.trim(),
+        email: email.trim(),
+        phone: phone.trim(),
+        message,
+      });
+      setName("");
+      setPhone("");
+      setEmail("");
+      setProductType("");
+      setComment("");
+      setAgreed(false);
+      setSubmitStatus("success");
+    } catch (err) {
+      console.error("OrderFormSection:", err);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  const productOptions = [
+    "Мешки для аспирации",
+    "Фильтрационные рукава",
+    "Мешки для стружкоотсоса",
+    "Мешки для циклонов и УВП",
+    "Нестандартные мешки",
+  ];
+
+  const canSubmit =
+    agreed &&
+    name.trim().length > 0 &&
+    phone.trim().length > 0 &&
+    email.trim().length > 0 &&
+    productType.length > 0 &&
+    !isSubmitting;
 
   return (
     <section id="order" className="bg-[#f8fafc] py-16 md:py-20">
@@ -51,8 +121,8 @@ export default function OrderFormSection() {
                 </div>
               </a>
 
-              <a
-                href="mailto:filterflow@mail.ru"
+              <Link
+                href="/kontakty"
                 className="group flex items-start gap-4"
               >
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-[#dff5f1] text-[#23b8ad] transition group-hover:bg-[#23b8ad] group-hover:text-white">
@@ -84,7 +154,7 @@ export default function OrderFormSection() {
                     filterflow@mail.ru
                   </div>
                 </div>
-              </a>
+              </Link>
 
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-[#dff5f1] text-[#23b8ad]">
@@ -117,14 +187,17 @@ export default function OrderFormSection() {
           </div>
 
           <div className="rounded-[22px] border border-[#e7edf2] bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.06)] md:p-8">
-            <form className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="mb-2 block text-[14px] font-medium text-[#1f2937]">
                   Ваше имя *
                 </label>
                 <input
                   type="text"
+                  name="name"
                   required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   placeholder="Иван Иванов"
                   className="h-[56px] w-full rounded-[14px] border border-[#dbe4ea] px-4 text-[15px] text-[#1f2937] outline-none transition placeholder:text-slate-400 focus:border-[#23b8ad]"
                 />
@@ -136,7 +209,10 @@ export default function OrderFormSection() {
                 </label>
                 <input
                   type="tel"
+                  name="phone"
                   required
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   placeholder="+7 (___) ___-__-__"
                   className="h-[56px] w-full rounded-[14px] border border-[#dbe4ea] px-4 text-[15px] text-[#1f2937] outline-none transition placeholder:text-slate-400 focus:border-[#23b8ad]"
                 />
@@ -144,10 +220,14 @@ export default function OrderFormSection() {
 
               <div>
                 <label className="mb-2 block text-[14px] font-medium text-[#1f2937]">
-                  Email
+                  Email *
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="example@mail.ru"
                   className="h-[56px] w-full rounded-[14px] border border-[#dbe4ea] px-4 text-[15px] text-[#1f2937] outline-none transition placeholder:text-slate-400 focus:border-[#23b8ad]"
                 />
@@ -158,18 +238,20 @@ export default function OrderFormSection() {
                   Тип продукции *
                 </label>
                 <select
+                  name="productType"
                   required
-                  defaultValue=""
+                  value={productType}
+                  onChange={(e) => setProductType(e.target.value)}
                   className="h-[56px] w-full rounded-[14px] border border-[#dbe4ea] px-4 text-[15px] text-[#1f2937] outline-none transition focus:border-[#23b8ad]"
                 >
                   <option value="" disabled>
                     Выберите тип продукции
                   </option>
-                  <option>Мешки для аспирации</option>
-                  <option>Фильтрационные рукава</option>
-                  <option>Мешки для стружкоотсоса</option>
-                  <option>Мешки для циклонов и УВП</option>
-                  <option>Нестандартные мешки</option>
+                  {productOptions.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
                 </select>
               </div>
 
@@ -178,8 +260,11 @@ export default function OrderFormSection() {
                   Комментарий
                 </label>
                 <textarea
+                  name="comment"
                   rows={5}
                   maxLength={500}
+                  value={comment}
+                  onChange={(e) => setComment(e.target.value)}
                   placeholder="Укажите размеры, количество и другие детали заказа (макс. 500 символов)"
                   className="w-full rounded-[14px] border border-[#dbe4ea] px-4 py-4 text-[15px] text-[#1f2937] outline-none transition placeholder:text-slate-400 focus:border-[#23b8ad]"
                 />
@@ -228,15 +313,26 @@ export default function OrderFormSection() {
 
               <button
                 type="submit"
-                disabled={!agreed}
+                disabled={!canSubmit}
                 className={`mt-2 flex h-[58px] w-full items-center justify-center rounded-[16px] text-[16px] font-semibold text-white transition ${
-                  agreed
+                  canSubmit
                     ? "bg-[#23b8ad] hover:bg-[#1ea79b]"
                     : "cursor-not-allowed bg-[#aab4c2]"
                 }`}
               >
-                Отправить заявку
+                {isSubmitting ? "Отправка..." : "Отправить заявку"}
               </button>
+
+              {submitStatus === "success" && (
+                <p className="text-center text-sm font-medium text-[#23b8ad]">
+                  Заявка успешно отправлена
+                </p>
+              )}
+              {submitStatus === "error" && (
+                <p className="text-center text-sm font-medium text-red-600">
+                  {SEND_EMAIL_USER_ERROR}
+                </p>
+              )}
             </form>
           </div>
         </div>

@@ -2,6 +2,10 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import {
+  sendApplicationEmail,
+  SEND_EMAIL_USER_ERROR,
+} from "@/lib/send-email-client";
 import Navigation from "../components/Navigation";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import FloatingContacts from "../components/feature/FloatingContacts";
@@ -140,7 +144,12 @@ export default function NizhnieMeshkiPage() {
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [equipment, setEquipment] = useState("");
+  const [isSubmittingLead, setIsSubmittingLead] = useState(false);
+  const [leadStatus, setLeadStatus] = useState<"success" | "error" | null>(
+    null
+  );
 
   const faqItems = [
     {
@@ -186,16 +195,36 @@ export default function NizhnieMeshkiPage() {
     });
   }, [activeBrand, query]);
 
-  const mailHref = useMemo(() => {
-    const subject = "Заявка на нижний мешок для аспирации";
-    const body = [
-      `Имя: ${name || "-"}`,
-      `Телефон: ${phone || "-"}`,
-      `Модель оборудования / размеры мешка: ${equipment || "-"}`,
-    ].join("\n");
-
-    return `mailto:filterflow@mail.ru?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }, [name, phone, equipment]);
+  async function sendQuickLead() {
+    if (!phone.trim() || !email.trim()) {
+      return;
+    }
+    setIsSubmittingLead(true);
+    setLeadStatus(null);
+    try {
+      await sendApplicationEmail({
+        name: name.trim() || "—",
+        email: email.trim(),
+        phone: phone.trim(),
+        message: [
+          "Заявка: нижний мешок для аспирации",
+          "",
+          "Модель оборудования / размеры мешка:",
+          equipment.trim() || "—",
+        ].join("\n"),
+      });
+      setLeadStatus("success");
+      setName("");
+      setPhone("");
+      setEmail("");
+      setEquipment("");
+    } catch (e) {
+      console.error("nizhnie-meshki lead:", e);
+      setLeadStatus("error");
+    } finally {
+      setIsSubmittingLead(false);
+    }
+  }
 
   return (
     <>
@@ -820,6 +849,19 @@ export default function NizhnieMeshkiPage() {
 
                   <div>
                     <label className="mb-2 block text-[14px] font-medium text-[#334155]">
+                      Email <span className="text-[#ff6428]">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="example@mail.ru"
+                      className="h-[50px] w-full rounded-[12px] border border-slate-200 bg-white px-4 text-[15px] text-[#0f172a] outline-none transition placeholder:text-slate-400 focus:border-[#ff6428]"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="mb-2 block text-[14px] font-medium text-[#334155]">
                       Модель оборудования / размеры мешка
                     </label>
                     <textarea
@@ -831,12 +873,24 @@ export default function NizhnieMeshkiPage() {
                     />
                   </div>
 
-                  <a
-                    href={mailHref}
-                    className="flex h-[52px] w-full items-center justify-center rounded-[12px] bg-[#ff6b2c] text-[17px] font-semibold text-white transition hover:bg-[#f25b1a]"
+                  <button
+                    type="button"
+                    onClick={sendQuickLead}
+                    disabled={isSubmittingLead}
+                    className="flex h-[52px] w-full items-center justify-center rounded-[12px] bg-[#ff6b2c] text-[17px] font-semibold text-white transition hover:bg-[#f25b1a] disabled:cursor-not-allowed disabled:bg-slate-400"
                   >
-                    Отправить заявку
-                  </a>
+                    {isSubmittingLead ? "Отправка..." : "Отправить заявку"}
+                  </button>
+                  {leadStatus === "success" && (
+                    <p className="text-center text-sm font-medium text-emerald-700">
+                      Заявка успешно отправлена
+                    </p>
+                  )}
+                  {leadStatus === "error" && (
+                    <p className="text-center text-sm font-medium text-red-600">
+                      {SEND_EMAIL_USER_ERROR}
+                    </p>
+                  )}
 
                   <p className="text-center text-[12px] leading-6 text-slate-400">
                     Нажимая кнопку, вы соглашаетесь с{" "}
@@ -884,8 +938,8 @@ export default function NizhnieMeshkiPage() {
                   </div>
                 </a>
 
-                <a
-                  href="mailto:filterflow@mail.ru"
+                <Link
+                  href="/kontakty"
                   className="flex items-center gap-4 rounded-[20px] border border-white/20 bg-[rgba(255,255,255,0.16)] p-5 text-white transition hover:bg-[rgba(255,255,255,0.21)]"
                 >
                   <div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[16px] bg-white text-[24px] text-[#ff6428]">
@@ -896,7 +950,7 @@ export default function NizhnieMeshkiPage() {
                     <div className="text-[17px] font-bold">filterflow@mail.ru</div>
                     <div className="text-[13px] text-white/78">Пришлите размеры или фото оборудования</div>
                   </div>
-                </a>
+                </Link>
 
                 <div className="rounded-[20px] border border-white/20 bg-[rgba(255,255,255,0.16)] p-5 text-white">
                   <h3 className="mb-3 flex items-center gap-3 text-[18px] font-bold">

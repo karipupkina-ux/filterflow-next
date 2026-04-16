@@ -60,12 +60,12 @@ export default function Navigation() {
       {/* Верхняя полоска */}
       <div className={topBarClass}>
         <div className="mx-auto flex h-10 max-w-[1440px] items-center justify-end gap-6 px-6 text-[13px] text-white">
-          <a
-            href="mailto:filterflow@mail.ru"
+          <Link
+            href="/kontakty"
             className="transition-colors duration-200 hover:text-[#28c4b7]"
           >
             filterflow@mail.ru
-          </a>
+          </Link>
 
           <a
             href="tel:+79514992576"

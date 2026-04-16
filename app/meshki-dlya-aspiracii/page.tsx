@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MeshkiAspiraciiOrderForm from "../components/MeshkiAspiraciiOrderForm";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import { pageMetadata } from "@/lib/seo-metadata";
 
@@ -654,12 +655,12 @@ export default function Page() {
       <div className="sticky top-0 z-50">
         <div className="h-[36px] w-full border-b border-gray-300 bg-[#D0D0D0]">
           <div className="mx-auto flex h-full max-w-7xl items-center justify-end gap-7 px-6 text-[14px] text-slate-600">
-            <a
-              href="mailto:filterflow@mail.ru"
+            <Link
+              href="/kontakty"
               className="transition hover:text-teal-600"
             >
               filterflow@mail.ru
-            </a>
+            </Link>
 
             <a
               href="tel:+79514992576"
@@ -1309,7 +1310,10 @@ export default function Page() {
       </section>
 
       {/* ЗЕЛЕНЫЙ БЛОК ЗАЯВКИ */}
-      <section className="bg-[#129d95] py-16 md:py-20">
+      <section
+        id="zakaz-meshki-form"
+        className="scroll-mt-[100px] bg-[#129d95] py-16 md:py-20"
+      >
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
           <div className="max-w-[620px] text-white">
             <div className="mb-8 inline-flex rounded-full bg-white/12 px-5 py-2 text-[16px] font-semibold text-white">
@@ -1340,66 +1344,7 @@ export default function Page() {
           </div>
 
           <div className="rounded-[28px] bg-white p-7 shadow-[0_20px_50px_rgba(0,0,0,0.12)] md:p-8">
-            <div className="mb-5">
-              <label className="mb-3 block text-[16px] font-medium text-slate-800">
-                Ваше имя
-              </label>
-              <input
-                type="text"
-                placeholder="Иван Иванов"
-                className="h-[58px] w-full rounded-2xl border border-[#e6e8ec] px-5 text-[16px] text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-teal-500"
-              />
-            </div>
-
-            <div className="mb-5">
-              <label className="mb-3 block text-[16px] font-medium text-slate-800">
-                Телефон
-              </label>
-              <input
-                type="tel"
-                placeholder="+7 (___) ___-__-__"
-                className="h-[58px] w-full rounded-2xl border border-[#e6e8ec] px-5 text-[16px] text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-teal-500"
-              />
-            </div>
-
-            <div className="mb-5">
-              <label className="mb-3 block text-[16px] font-medium text-slate-800">
-                Тип мешка / оборудование
-              </label>
-              <input
-                type="text"
-                placeholder="Например: верхний мешок для стружкоотсоса"
-                className="h-[58px] w-full rounded-2xl border border-[#e6e8ec] px-5 text-[16px] text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-teal-500"
-              />
-            </div>
-
-            <div className="mb-6">
-              <label className="mb-3 block text-[16px] font-medium text-slate-800">
-                Комментарий
-              </label>
-              <textarea
-                rows={4}
-                placeholder="Размеры, количество, особые требования..."
-                className="w-full resize-none rounded-2xl border border-[#e6e8ec] px-5 py-4 text-[16px] text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-teal-500"
-              />
-            </div>
-
-            <a
-              href="mailto:filterflow@mail.ru?subject=Заявка%20с%20сайта%20FilterFlow"
-              className="flex h-[62px] w-full items-center justify-center rounded-2xl bg-[#22b8ad] px-6 text-[18px] font-semibold text-white transition hover:bg-[#1aa99f]"
-            >
-              Отправить заявку
-            </a>
-
-            <p className="mt-6 text-center text-[14px] leading-6 text-slate-400">
-              Нажимая кнопку, вы соглашаетесь с{" "}
-              <a
-                href="/politika-konfidencialnosti"
-                className="font-medium text-teal-600 transition hover:text-teal-700"
-              >
-                политикой конфиденциальности
-              </a>
-            </p>
+            <MeshkiAspiraciiOrderForm />
           </div>
         </div>
       </section>
@@ -1788,7 +1733,7 @@ export default function Page() {
 
             <div className="mt-10 flex justify-center md:mt-12">
               <a
-                href="mailto:filterflow@mail.ru?subject=Заказать%20мешки%20для%20аспирации"
+                href="#zakaz-meshki-form"
                 className="inline-flex h-[68px] items-center justify-center gap-3 rounded-full bg-[#ff6b2c] px-10 text-[20px] font-semibold text-white transition hover:bg-[#f15e20] md:px-14"
               >
                 Заказать мешки для аспирации

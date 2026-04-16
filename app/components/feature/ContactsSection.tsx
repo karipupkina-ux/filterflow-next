@@ -1,6 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
+import {
+  sendApplicationEmail,
+  SEND_EMAIL_USER_ERROR,
+} from "@/lib/send-email-client";
 
 export default function ContactsSection() {
   const [form, setForm] = useState({
@@ -52,24 +57,12 @@ export default function ContactsSection() {
     setErrorText("");
 
     try {
-      const response = await fetch("/api/send-email/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: form.name.trim(),
-          email: form.email.trim(),
-          phone: form.phone.trim(),
-          message: form.message.trim(),
-        }),
+      await sendApplicationEmail({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        phone: form.phone.trim(),
+        message: form.message.trim(),
       });
-
-      const data: { error?: string } = await response.json().catch(() => ({}));
-
-      if (!response.ok) {
-        throw new Error(data.error || "Не удалось отправить заявку. Попробуйте позже.");
-      }
 
       setForm({
         name: "",
@@ -80,10 +73,9 @@ export default function ContactsSection() {
       });
       setSubmitStatus("success");
     } catch (error) {
+      console.error("ContactsSection:", error);
       setSubmitStatus("error");
-      setErrorText(
-        error instanceof Error ? error.message : "Произошла ошибка при отправке."
-      );
+      setErrorText(SEND_EMAIL_USER_ERROR);
     } finally {
       setIsSubmitting(false);
     }
@@ -135,8 +127,8 @@ export default function ContactsSection() {
               </div>
             </a>
 
-            <a
-              href="mailto:filterflow@mail.ru"
+            <Link
+              href="/kontakty"
               className="group flex items-start gap-4 rounded-[24px] bg-white px-6 py-5 shadow-[0_8px_28px_rgba(15,23,42,0.05)] transition-all duration-200 hover:-translate-y-[1px] hover:shadow-[0_12px_34px_rgba(15,23,42,0.08)]"
             >
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#c9f0ea] text-[#11b3a6] transition-colors duration-200 group-hover:bg-[#b9ebe3]">
@@ -163,7 +155,7 @@ export default function ContactsSection() {
                   Ответим в течение 24 часов
                 </div>
               </div>
-            </a>
+            </Link>
 
             <div className="flex items-start gap-4 rounded-[24px] bg-white px-6 py-5 shadow-[0_8px_28px_rgba(15,23,42,0.05)]">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#c9f0ea] text-[#11b3a6]">
@@ -387,7 +379,7 @@ export default function ContactsSection() {
               )}
               {submitStatus === "error" && (
                 <p className="text-sm font-medium text-[#dc2626]">
-                  {errorText || "Произошла ошибка при отправке."}
+                  {errorText || SEND_EMAIL_USER_ERROR}
                 </p>
               )}
             </form>

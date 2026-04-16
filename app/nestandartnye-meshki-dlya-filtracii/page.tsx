@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
+import { sendApplicationEmail } from "@/lib/send-email-client";
 import Navigation from "../components/Navigation";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import Footer from "../components/Footer";
@@ -16,8 +17,12 @@ export default function Page() {
   const [quantity, setQuantity] = useState("");
   const [extraInfo, setExtraInfo] = useState("");
   const [consent, setConsent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
+    null
+  );
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!name.trim() || !phone.trim() || !email.trim() || !task.trim()) {
@@ -32,27 +37,41 @@ export default function Page() {
       return;
     }
 
-    const subject = encodeURIComponent(
-      "Заявка: нестандартные мешки для фильтрации"
-    );
-
-    const body = encodeURIComponent(
-      `Имя: ${name}
-Телефон: ${phone}
-Email: ${email}
-
-Описание оборудования / задачи:
-${task}
-
-Количество (шт):
-${quantity || "Не указано"}
-
-Дополнительная информация:
-${extraInfo || "Не указано"}
-`
-    );
-
-    window.location.href = `mailto:filterflow@mail.ru?subject=${subject}&body=${body}`;
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    try {
+      const message = [
+        "Заявка: нестандартные мешки для фильтрации",
+        "",
+        "Описание оборудования / задачи:",
+        task.trim(),
+        "",
+        "Количество (шт):",
+        quantity.trim() || "—",
+        "",
+        "Дополнительная информация:",
+        extraInfo.trim() || "—",
+      ].join("\n");
+      await sendApplicationEmail({
+        name: name.trim(),
+        email: email.trim(),
+        phone: phone.trim(),
+        message,
+      });
+      setName("");
+      setPhone("");
+      setEmail("");
+      setTask("");
+      setQuantity("");
+      setExtraInfo("");
+      setConsent(false);
+      setSubmitStatus("success");
+    } catch (err) {
+      console.error("nestandartnye form:", err);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -1190,7 +1209,8 @@ ${extraInfo || "Не указано"}
 
                 <button
                   type="submit"
-                  className="flex h-[56px] w-full items-center justify-center rounded-[16px] bg-[#148f88] px-6 text-[17px] font-semibold text-white transition hover:bg-[#117c76]"
+                  disabled={isSubmitting}
+                  className="flex h-[56px] w-full items-center justify-center rounded-[16px] bg-[#148f88] px-6 text-[17px] font-semibold text-white transition hover:bg-[#117c76] disabled:cursor-not-allowed disabled:bg-[#94a3b8]"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1200,8 +1220,18 @@ ${extraInfo || "Не указано"}
                   >
                     <path d="M21.7 2.3a1 1 0 0 0-1.04-.22L2.66 9.08a1 1 0 0 0 .08 1.88l7.04 2.35 2.35 7.04a1 1 0 0 0 .9.68h.06a1 1 0 0 0 .92-.58l7-18a1 1 0 0 0-.3-1.15ZM11.3 12.7l-5.2-1.73 11.13-4.33-5.93 6.06Zm1.73 5.2-1.73-5.2 6.06-5.93-4.33 11.13Z" />
                   </svg>
-                  Отправить заявку
+                  {isSubmitting ? "Отправка..." : "Отправить заявку"}
                 </button>
+                {submitStatus === "success" && (
+                  <p className="text-center text-sm font-medium text-[#148f88]">
+                    Заявка успешно отправлена
+                  </p>
+                )}
+                {submitStatus === "error" && (
+                  <p className="text-center text-sm font-medium text-red-600">
+                    Не удалось отправить заявку. Попробуйте позже.
+                  </p>
+                )}
               </form>
             </div>
           </div>
@@ -1237,8 +1267,8 @@ ${extraInfo || "Не указано"}
                 +7 (951) 499-25-76
               </a>
 
-              <a
-                href="mailto:filterflow@mail.ru"
+              <Link
+                href="/kontakty"
                 className="inline-flex min-w-[270px] items-center justify-center rounded-[18px] border border-white/35 bg-transparent px-7 py-4 text-[16px] font-semibold text-white transition hover:bg-white/8"
               >
                 <svg
@@ -1250,7 +1280,7 @@ ${extraInfo || "Не указано"}
                   <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 3.24-7.09 4.73a1.5 1.5 0 0 1-1.66 0L4 7.24V6l7.8 5.2a.5.5 0 0 0 .4 0L20 6v1.24Z" />
                 </svg>
                 filterflow@mail.ru
-              </a>
+              </Link>
             </div>
           </div>
         </section>
