@@ -30,18 +30,35 @@ export default function ContactForm() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!canSubmit) return;
+    console.log("[ContactForm] submit started");
+    if (!canSubmit) {
+      console.log("[ContactForm] submit blocked by canSubmit=false", {
+        hasName: name.trim().length > 0,
+        hasEmail: email.trim().length > 0,
+        hasMessage: message.trim().length > 0,
+        msgLen,
+        withinLimit: msgLen <= MAX_MSG,
+        consent,
+        isSubmitting,
+      });
+      return;
+    }
     setIsSubmitting(true);
     setSubmitStatus(null);
     setErrorText("");
 
+    const payload = {
+      name: name.trim(),
+      email: email.trim(),
+      phone: phone.trim(),
+      message: message.trim(),
+    };
+    console.log("[ContactForm] payload prepared", payload);
+
     try {
-      await sendApplicationEmail({
-        name: name.trim(),
-        email: email.trim(),
-        phone: phone.trim(),
-        message: message.trim(),
-      });
+      console.log("[ContactForm] before fetch");
+      await sendApplicationEmail(payload);
+      console.log("[ContactForm] after fetch");
 
       setName("");
       setEmail("");
@@ -50,6 +67,7 @@ export default function ContactForm() {
       setConsent(false);
       setSubmitStatus("success");
     } catch (error) {
+      console.error("[ContactForm] fetch failed", error);
       console.error("ContactForm:", error);
       setSubmitStatus("error");
       setErrorText(SEND_EMAIL_USER_ERROR);
