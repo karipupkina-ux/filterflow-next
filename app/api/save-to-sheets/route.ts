@@ -3,6 +3,22 @@ import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 
+function getErrorDetails(error: unknown) {
+  if (error instanceof Error) {
+    return {
+      name: error.name,
+      message: error.message,
+      stack: error.stack,
+    };
+  }
+
+  if (typeof error === "object" && error !== null) {
+    return JSON.parse(JSON.stringify(error));
+  }
+
+  return { message: String(error) };
+}
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();
@@ -20,9 +36,23 @@ export async function POST(req: Request) {
     const sheetName = process.env.GOOGLE_SHEETS_SHEET_NAME || "Лист1";
 
     if (!clientEmail || !privateKey || !spreadsheetId || !sheetName) {
-      console.error("Google Sheets env is not configured");
+      console.error("Google Sheets env is not configured", {
+        hasClientEmail: Boolean(clientEmail),
+        hasPrivateKey: Boolean(privateKey),
+        hasSpreadsheetId: Boolean(spreadsheetId),
+        hasSheetName: Boolean(sheetName),
+      });
+
       return NextResponse.json(
-        { error: "Google Sheets is not configured" },
+        {
+          error: "Google Sheets is not configured",
+          details: {
+            hasClientEmail: Boolean(clientEmail),
+            hasPrivateKey: Boolean(privateKey),
+            hasSpreadsheetId: Boolean(spreadsheetId),
+            hasSheetName: Boolean(sheetName),
+          },
+        },
         { status: 500 }
       );
     }
@@ -33,6 +63,21 @@ export async function POST(req: Request) {
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     });
 
+    // Сначала отдельно проверяем авторизацию
+    try {
+      await auth.authorize();
+    } catch (authError) {
+      console.error("Google auth failed:", authError);
+
+      return NextResponse.json(
+        {
+          error: "Google auth failed",
+          details: getErrorDetails(authError),
+        },
+        { status: 500 }
+      );
+    }
+
     const sheets = google.sheets({
       version: "v4",
       auth,
@@ -40,30 +85,52 @@ export async function POST(req: Request) {
 
     const now = new Date().toLocaleString("ru-RU");
 
-    await sheets.spreadsheets.values.append({
-      spreadsheetId,
-      range: `${sheetName}!A:G`,
-      valueInputOption: "USER_ENTERED",
-      requestBody: {
-        values: [
-          [
-            now,
-            name || "",
-            email || "",
-            phone || "",
-            message || "",
-            "Сайт",
-            "Новая",
+    try {
+      await sheets.spreadsheets.values.append({
+        spreadsheetId,
+        range: `${sheetName}!A:G`,
+        valueInputOption: "USER_ENTERED",
+        requestBody: {
+          values: [
+            [
+              now,
+              name || "",
+              email || "",
+              phone || "",
+              message || "",
+              "Сайт",
+              "Новая",
+            ],
           ],
-        ],
-      },
-    });
+        },
+      });
+    } catch (appendError) {
+      console.error("Google Sheets append failed:", appendError);
+
+      return NextResponse.json(
+        {
+          error: "Google Sheets append failed",
+          details: getErrorDetails(appendError),
+          debug: {
+            spreadsheetId,
+            sheetName,
+            clientEmail,
+            range: `${sheetName}!A:G`,
+          },
+        },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Ошибка записи в Google Sheets:", error);
+
     return NextResponse.json(
-      { error: "Ошибка записи в таблицу" },
+      {
+        error: "Ошибка записи в таблицу",
+        details: getErrorDetails(error),
+      },
       { status: 500 }
     );
   }
