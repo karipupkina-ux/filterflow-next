@@ -1,6 +1,8 @@
 import { google } from "googleapis";
 import { NextResponse } from "next/server";
 
+export const runtime = "nodejs";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();
@@ -17,7 +19,7 @@ export async function POST(req: Request) {
     const spreadsheetId = process.env.GOOGLE_SHEETS_SPREADSHEET_ID;
     const sheetName = process.env.GOOGLE_SHEETS_SHEET_NAME || "Лист1";
 
-    if (!clientEmail || !privateKey || !spreadsheetId) {
+    if (!clientEmail || !privateKey || !spreadsheetId || !sheetName) {
       console.error("Google Sheets env is not configured");
       return NextResponse.json(
         { error: "Google Sheets is not configured" },
