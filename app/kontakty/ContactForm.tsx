@@ -144,7 +144,19 @@ export default function ContactForm() {
 
     try {
       await sendApplicationEmail(payload);
-
+    
+      try {
+        await fetch("/api/save-to-sheets", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+      } catch (sheetError) {
+        console.error("Ошибка записи в Google Sheets:", sheetError);
+      }
+    
       setName("");
       setEmail("");
       setPhone("");
