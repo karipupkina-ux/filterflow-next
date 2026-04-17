@@ -53,18 +53,18 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="bg-[#f8fafc] py-16 md:py-20">
-      <div className="mx-auto max-w-5xl px-6">
+    <section className="bg-[#f8fafc] py-12 md:py-16 lg:py-20">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <div className="mb-10 text-center md:mb-12">
           <div className="mb-4 inline-flex rounded-full bg-[#e8faf7] px-5 py-2 text-[12px] font-medium uppercase tracking-[0.18em] text-[#0f9f93]">
             Часто задаваемые вопросы
           </div>
 
-          <h2 className="text-[34px] font-bold leading-[1.08] tracking-[-0.02em] text-[#1f2937] md:text-[52px]">
+          <h2 className="text-[28px] font-bold leading-[1.12] tracking-[-0.02em] text-[#1f2937] sm:text-[34px] md:text-[52px]">
             Вопросы о мешках для аспирации и рукавных фильтрах
           </h2>
 
-          <p className="mx-auto mt-4 max-w-3xl text-[16px] leading-[1.7] text-slate-500 md:text-[17px]">
+          <p className="mx-auto mt-3 max-w-3xl text-[14px] leading-[1.65] text-slate-500 sm:text-[16px] md:text-[17px]">
             Подбор фильтровальных материалов, сроки и доставка. Не нашли ответ —
             напишите нам.
           </p>
@@ -86,9 +86,9 @@ export default function FAQSection() {
                 <button
                   type="button"
                   onClick={() => toggleItem(index)}
-                  className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left md:px-6"
+                  className="flex w-full items-center justify-between gap-3 px-4 py-4 text-left sm:px-5 sm:py-5 md:px-6"
                 >
-                  <span className="text-[17px] font-medium leading-[1.5] text-[#1f2937] transition md:text-[18px]">
+                  <span className="text-[15px] font-medium leading-[1.45] text-[#1f2937] transition sm:text-[17px] md:text-[18px]">
                     {item.question}
                   </span>
 
@@ -125,7 +125,7 @@ export default function FAQSection() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="border-t border-[#eef2f5] px-5 pb-5 pt-4 text-[15px] leading-[1.8] text-slate-600 md:px-6 md:text-[16px]">
+                    <div className="border-t border-[#eef2f5] px-4 pb-4 pt-3 text-[14px] leading-[1.7] text-slate-600 sm:px-5 sm:pb-5 sm:pt-4 sm:text-[15px] md:px-6 md:text-[16px]">
                       {item.answer}
                     </div>
                   </div>

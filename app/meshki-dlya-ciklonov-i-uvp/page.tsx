@@ -323,11 +323,11 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
     <>
       <Navigation />
 
-      <section className="bg-[#f5f3ee] pt-[86px] pb-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-[#f5f3ee] pb-12 pt-[105px] sm:pb-14 lg:pb-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid items-start gap-10 lg:grid-cols-[1fr_0.95fr]">
-            <div className="pt-8 lg:pt-10">
-              <div className="mb-7 flex flex-wrap items-center gap-2 text-[14px]">
+            <div className="pt-4 sm:pt-6 lg:pt-10">
+              <div className="mb-6 flex flex-wrap items-center gap-2 text-[13px] sm:text-[14px]">
                 <a href="/" className="text-teal-600 transition hover:text-teal-700 hover:underline">
                   Главная
                 </a>
@@ -344,32 +344,32 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 </span>
               </div>
 
-              <h1 className="mb-7 text-[34px] font-bold leading-[1.05] text-[#0f172a] md:text-[56px]">
+              <h1 className="mb-5 text-[28px] font-bold leading-[1.1] text-[#0f172a] sm:text-[32px] md:text-[48px] lg:text-[56px]">
                 Мешки для циклонов
                 <br />
                 и УВП
               </h1>
 
-              <p className="max-w-[620px] text-[18px] leading-8 text-[#475569] md:text-[19px]">
+              <p className="max-w-[620px] text-[14px] leading-7 text-[#475569] sm:text-[16px] md:text-[18px]">
                 Производим фильтровальные мешки под циклонные и рукавные узлы, линии УВП и общие
                 системы пылеулавливания в цеху: задерживаем пылевые частицы в потоке и снижаем
                 запылённость воздуха. Шьём под ваши размеры и режим — от типовой установки до
                 отдельного циклона.
               </p>
 
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
                 <a
                   href="https://wa.me/79514992576?text=Здравствуйте!%20Хочу%20заказать%20мешки%20для%20УВП%20и%20циклонов"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-[56px] items-center justify-center rounded-xl bg-[#f56600] px-8 text-[18px] font-semibold text-white transition hover:bg-[#de5b00]"
+                  className="inline-flex h-[48px] w-full items-center justify-center rounded-xl bg-[#f56600] px-6 text-[15px] font-semibold text-white transition hover:bg-[#de5b00] sm:h-[54px] sm:w-auto sm:px-8 sm:text-[17px] md:h-[56px] md:text-[18px]"
                 >
                   Заказать расчёт
                 </a>
 
                 <a
                   href="#vidy-filtrovalnyh-meshkov"
-                  className="inline-flex h-[56px] items-center justify-center rounded-xl border-2 border-[#f56600] px-8 text-[18px] font-semibold text-[#f56600] transition hover:bg-[#f56600] hover:text-white"
+                  className="inline-flex h-[48px] w-full items-center justify-center rounded-xl border-2 border-[#f56600] px-6 text-[15px] font-semibold text-[#f56600] transition hover:bg-[#f56600] hover:text-white sm:h-[54px] sm:w-auto sm:px-8 sm:text-[17px] md:h-[56px] md:text-[18px]"
                 >
                   Виды мешков
                 </a>
@@ -381,7 +381,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 <img
                   src="/images/catalog/meshki-ciklonov-uvp.webp"
                   alt="Мешки для циклонов и УВП, фильтры для аспирационных установок"
-                  className="h-auto w-full object-cover"
+                  className="h-auto w-full object-cover object-[center_45%]"
                 />
               </div>
             </div>
@@ -389,8 +389,8 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         </div>
       </section>
 
-      <section id="vidy-filtrovalnyh-meshkov" className="bg-[#f8fafc] py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section id="vidy-filtrovalnyh-meshkov" className="bg-[#f8fafc] py-14 md:py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
               Типы мешков для циклонов, УВП и аспирации
@@ -401,26 +401,26 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            <div className="rounded-[22px] border border-slate-200 bg-white p-8 shadow-sm">
-              <div className="mb-8 flex justify-center">
+          <div className="grid grid-cols-1 gap-5 sm:gap-6 lg:grid-cols-2 lg:gap-8">
+            <div className="rounded-[22px] border border-slate-200 bg-white p-5 shadow-sm sm:p-7 md:p-8">
+              <div className="mb-6 flex justify-center sm:mb-8">
                 <img
                   src="/images/catalog/meshki-dlya-ciklonov.webp"
                   alt="Мешки для циклонов"
-                  className="h-[206px] w-auto object-contain"
+                  className="h-[170px] w-auto object-contain sm:h-[206px]"
                 />
               </div>
-              <h3 className="mb-4 text-[22px] font-bold text-[#0f172a] md:text-[24px]">
+              <h3 className="mb-3 text-[20px] font-bold text-[#0f172a] md:text-[24px]">
                 Мешки для циклонов
               </h3>
-              <p className="mb-7 text-[16px] leading-8 text-[#475569]">
+              <p className="mb-6 text-[15px] leading-7 text-[#475569] sm:text-[16px] sm:leading-8">
                 После сепарации крупной фракции мешок удерживает мелкую пыль на линии
                 пылеулавливания — важны посадка на рукав и устойчивость к потоку воздуха.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-4">
                   <span className="mt-[8px] text-[18px] font-semibold leading-none text-[#ff6b2c]">✓</span>
-                  <span className="text-[16px] leading-7 text-[#334155]">Эффективность до 99%</span>
+                  <span className="text-[15px] leading-6 text-[#334155] sm:text-[16px] sm:leading-7">Эффективность до 99%</span>
                 </li>
                 <li className="flex items-start gap-4">
                   <span className="mt-[8px] text-[18px] font-semibold leading-none text-[#ff6b2c]">✓</span>
@@ -433,18 +433,18 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               </ul>
             </div>
 
-            <div className="rounded-[22px] border border-slate-200 bg-white p-8 shadow-sm">
-              <div className="mb-8 flex justify-center">
+            <div className="rounded-[22px] border border-slate-200 bg-white p-5 shadow-sm sm:p-7 md:p-8">
+              <div className="mb-6 flex justify-center sm:mb-8">
                 <img
                   src="/images/catalog/meshki-ciklonov-uvp.webp"
                   alt="Мешки для УВП"
-                  className="h-[206px] w-auto object-contain"
+                  className="h-[170px] w-auto object-contain sm:h-[206px]"
                 />
               </div>
-              <h3 className="mb-4 text-[22px] font-bold text-[#0f172a] md:text-[24px]">
+              <h3 className="mb-3 text-[20px] font-bold text-[#0f172a] md:text-[24px]">
                 Мешки для УВП и аспирационных установок
               </h3>
-              <p className="mb-7 text-[16px] leading-8 text-[#475569]">
+              <p className="mb-6 text-[15px] leading-7 text-[#475569] sm:text-[16px] sm:leading-8">
                 Рукавные и фильтровальные мешки для УВП на большие объёмы воздуха — в том числе
                 под типовые линейки вроде КОНСАР УВП-1200, УВП-2000 и CONSAR 2000, если совпадают
                 посадочные размеры; точный размер подбираем по замеру или чертежу.
@@ -465,18 +465,18 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               </ul>
             </div>
 
-            <div className="rounded-[22px] border border-slate-200 bg-white p-8 shadow-sm">
-              <div className="mb-8 flex justify-center">
+            <div className="rounded-[22px] border border-slate-200 bg-white p-5 shadow-sm sm:p-7 md:p-8">
+              <div className="mb-6 flex justify-center sm:mb-8">
                 <img
                   src="/images/catalog/rukavnie-filtri.webp"
                   alt="Рукавные фильтры"
-                  className="h-[206px] w-auto object-contain"
+                  className="h-[170px] w-auto object-contain sm:h-[206px]"
                 />
               </div>
-              <h3 className="mb-4 text-[22px] font-bold text-[#0f172a] md:text-[24px]">
+              <h3 className="mb-3 text-[20px] font-bold text-[#0f172a] md:text-[24px]">
                 Рукавные фильтры
               </h3>
-              <p className="mb-7 text-[16px] leading-8 text-[#475569]">
+              <p className="mb-6 text-[15px] leading-7 text-[#475569] sm:text-[16px] sm:leading-8">
                 Промышленные рукавные фильтры для систем очистки воздуха
                 на производствах с высокой запылённостью.
               </p>
@@ -496,18 +496,18 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               </ul>
             </div>
 
-            <div className="rounded-[22px] border border-slate-200 bg-white p-8 shadow-sm">
-              <div className="mb-8 flex justify-center">
+            <div className="rounded-[22px] border border-slate-200 bg-white p-5 shadow-sm sm:p-7 md:p-8">
+              <div className="mb-6 flex justify-center sm:mb-8">
                 <img
                   src="/images/catalog/kartridgnie-filtri.webp"
                   alt="Картриджные фильтры"
-                  className="h-[206px] w-auto object-contain"
+                  className="h-[170px] w-auto object-contain sm:h-[206px]"
                 />
               </div>
-              <h3 className="mb-4 text-[22px] font-bold text-[#0f172a] md:text-[24px]">
+              <h3 className="mb-3 text-[20px] font-bold text-[#0f172a] md:text-[24px]">
                 Картриджные фильтры
               </h3>
-              <p className="mb-7 text-[16px] leading-8 text-[#475569]">
+              <p className="mb-6 text-[15px] leading-7 text-[#475569] sm:text-[16px] sm:leading-8">
                 Компактные картриджные фильтры для эффективной очистки
                 воздуха в ограниченном пространстве.
               </p>
@@ -530,8 +530,8 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         </div>
       </section>
 
-      <section className="bg-[#f5f1eb] py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-[#f5f1eb] py-14 md:py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
               Преимущества фильтров для циклонов и УВП
@@ -617,8 +617,8 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         </div>
       </section>
 
-      <section className="bg-[#f8fafc] py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-[#f8fafc] py-14 md:py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
               Где применяют мешки для пылеулавливания
@@ -704,8 +704,8 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         </div>
       </section>
 
-      <section className="bg-[#f8fafc] py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-[#f8fafc] py-14 md:py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-10 text-center">
             <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
               Материалы фильтров для аспирации и циклонов
@@ -716,7 +716,54 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
           </div>
 
           <div className="overflow-hidden rounded-[20px] border border-slate-200 bg-white shadow-sm">
-            <div className="overflow-x-auto">
+            <div className="divide-y divide-slate-200 md:hidden">
+              <div className="px-4 py-4">
+                <p className="text-sm font-semibold text-[#0f172a]">Полиэстер</p>
+                <div className="mt-2 space-y-1 text-[13px] leading-6 text-[#475569]">
+                  <p><span className="font-medium text-[#0f172a]">Температура:</span> До 150°C</p>
+                  <p><span className="font-medium text-[#0f172a]">Эффективность:</span> 99%</p>
+                  <p><span className="font-medium text-[#0f172a]">Применение:</span> Деревообработка, металлообработка</p>
+                  <p><span className="font-medium text-[#0f172a]">Срок службы:</span> 2-3 года</p>
+                </div>
+              </div>
+              <div className="px-4 py-4">
+                <p className="text-sm font-semibold text-[#0f172a]">Полипропилен</p>
+                <div className="mt-2 space-y-1 text-[13px] leading-6 text-[#475569]">
+                  <p><span className="font-medium text-[#0f172a]">Температура:</span> До 90°C</p>
+                  <p><span className="font-medium text-[#0f172a]">Эффективность:</span> 98%</p>
+                  <p><span className="font-medium text-[#0f172a]">Применение:</span> Пищевая промышленность</p>
+                  <p><span className="font-medium text-[#0f172a]">Срок службы:</span> 1-2 года</p>
+                </div>
+              </div>
+              <div className="px-4 py-4">
+                <p className="text-sm font-semibold text-[#0f172a]">Номекс</p>
+                <div className="mt-2 space-y-1 text-[13px] leading-6 text-[#475569]">
+                  <p><span className="font-medium text-[#0f172a]">Температура:</span> До 200°C</p>
+                  <p><span className="font-medium text-[#0f172a]">Эффективность:</span> 99,9%</p>
+                  <p><span className="font-medium text-[#0f172a]">Применение:</span> Химическая промышленность</p>
+                  <p><span className="font-medium text-[#0f172a]">Срок службы:</span> 4-5 лет</p>
+                </div>
+              </div>
+              <div className="px-4 py-4">
+                <p className="text-sm font-semibold text-[#0f172a]">Стекловолокно</p>
+                <div className="mt-2 space-y-1 text-[13px] leading-6 text-[#475569]">
+                  <p><span className="font-medium text-[#0f172a]">Температура:</span> До 260°C</p>
+                  <p><span className="font-medium text-[#0f172a]">Эффективность:</span> 99,9%</p>
+                  <p><span className="font-medium text-[#0f172a]">Применение:</span> Цементные заводы</p>
+                  <p><span className="font-medium text-[#0f172a]">Срок службы:</span> 3-4 года</p>
+                </div>
+              </div>
+              <div className="px-4 py-4">
+                <p className="text-sm font-semibold text-[#0f172a]">ПТФЭ (Тефлон)</p>
+                <div className="mt-2 space-y-1 text-[13px] leading-6 text-[#475569]">
+                  <p><span className="font-medium text-[#0f172a]">Температура:</span> До 260°C</p>
+                  <p><span className="font-medium text-[#0f172a]">Эффективность:</span> 99,99%</p>
+                  <p><span className="font-medium text-[#0f172a]">Применение:</span> Агрессивные среды</p>
+                  <p><span className="font-medium text-[#0f172a]">Срок службы:</span> 5+ лет</p>
+                </div>
+              </div>
+            </div>
+            <div className="hidden overflow-x-auto md:block">
               <table className="w-full min-w-[980px] border-collapse">
                 <caption className="sr-only">
                   Сравнение материалов фильтровальных мешков для циклонов, УВП и аспирационных
@@ -777,17 +824,17 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
             </div>
           </div>
 
-          <div className="mt-12 rounded-[22px] border border-[#efd1ad] bg-[#f8efe4] px-8 py-8 shadow-sm">
-            <div className="flex items-start gap-6">
-              <div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[14px] bg-[#f56600]">
+          <div className="mt-8 rounded-[22px] border border-[#efd1ad] bg-[#f8efe4] px-4 py-5 shadow-sm sm:mt-12 sm:px-8 sm:py-8">
+            <div className="flex items-start gap-4 sm:gap-6">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] bg-[#f56600] sm:h-[52px] sm:w-[52px] sm:rounded-[14px]">
                 <InfoIcon />
               </div>
 
               <div>
-                <h3 className="mb-3 text-[22px] font-bold leading-tight text-[#0f172a]">
+                <h3 className="mb-2 text-[18px] font-bold leading-tight text-[#0f172a] sm:mb-3 sm:text-[22px]">
                   Подбор материала
                 </h3>
-                <p className="max-w-[1120px] text-[16px] leading-8 text-[#334155]">
+                <p className="max-w-[1120px] text-[14px] leading-7 text-[#334155] sm:text-[16px] sm:leading-8">
                   Наши специалисты помогут подобрать оптимальный материал фильтровального
                   мешка в зависимости от типа пыли, температуры, влажности и других
                   условий эксплуатации. Свяжитесь с нами для консультации.
@@ -798,8 +845,8 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         </div>
       </section>
 
-      <section className="bg-[#ff6428] py-18 md:py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-[#ff6428] py-14 md:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-9 text-center">
             <h2 className="mb-3 text-[24px] font-bold leading-[1.15] text-white md:text-[34px]">
               Купить мешки для циклонов и УВП — расчёт стоимости
@@ -975,8 +1022,8 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         </div>
       </section>
 
-      <section className="bg-[#f8fafc] py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-[#f8fafc] py-14 md:py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
               Похожие продукты
@@ -1056,8 +1103,8 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         </div>
       </section>
 
-      <section className="bg-[#f8fafc] py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-[#f8fafc] py-14 md:py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <div className="mb-4 inline-flex rounded-full bg-[#f8efe4] px-5 py-2 text-[14px] font-semibold text-[#f56600]">
@@ -1141,8 +1188,8 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         </div>
       </section>
 
-      <section className="bg-[#f8fafc] py-20">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="bg-[#f8fafc] py-14 md:py-16 lg:py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
               Вопросы о мешках для циклонов и УВП
@@ -1168,9 +1215,9 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                   <button
                     type="button"
                     onClick={() => setOpenFaq(isOpen ? null : index)}
-                    className="flex w-full items-center justify-between gap-6 px-9 py-8 text-left"
+                    className="flex w-full items-center justify-between gap-4 px-4 py-4 text-left sm:gap-6 sm:px-6 sm:py-6 md:px-9 md:py-8"
                   >
-                    <span className="text-[18px] font-semibold leading-8 text-[#0f172a] md:text-[19px]">
+                    <span className="text-[15px] font-semibold leading-6 text-[#0f172a] sm:text-[17px] sm:leading-7 md:text-[19px] md:leading-8">
                       {item.question}
                     </span>
                     <span className="shrink-0">
@@ -1179,8 +1226,8 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                   </button>
 
                   {isOpen && (
-                    <div className="px-9 pb-8">
-                      <p className="max-w-[900px] text-[16px] leading-8 text-[#475569]">
+                    <div className="px-4 pb-4 sm:px-6 sm:pb-6 md:px-9 md:pb-8">
+                      <p className="max-w-[900px] text-[14px] leading-7 text-[#475569] sm:text-[16px] sm:leading-8">
                         {item.answer}
                       </p>
                     </div>
@@ -1192,8 +1239,8 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-white py-14 md:py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-[1180px]">
             <h2 className="mb-8 text-[30px] font-bold leading-tight text-[#0f172a] md:text-[44px]">
               Мешки для циклонов и УВП в системах аспирации

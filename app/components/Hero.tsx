@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 
 const transitionIn =
   "transition-[opacity,transform] duration-700 ease-out";
@@ -19,19 +18,19 @@ export default function Hero() {
     : "translate-y-[30px] opacity-0";
 
   return (
-    <section className="relative h-[760px] w-full overflow-hidden">
+    <section className="relative min-h-[500px] w-full overflow-hidden sm:min-h-[580px] lg:min-h-[760px]">
       <img
         src="/images/hero.png"
         alt="Мешки для аспирации и фильтровальные рукава FilterFlow"
-        className="absolute inset-0 h-full w-full object-cover object-[center_72%]"
+        className="absolute inset-0 h-full w-full object-cover object-[center_66%] sm:object-[center_70%]"
       />
 
       <div className="absolute inset-0 bg-black/40" />
 
-      <div className="relative z-10 flex h-full flex-col px-6 pb-12 pt-[120px]">
+      <div className="relative z-10 flex h-full flex-col px-4 pb-7 pt-[88px] sm:px-6 sm:pb-10 sm:pt-[108px] lg:pt-[120px]">
         <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center text-center">
         <h1
-  className={`max-w-[1200px] text-[56px] font-bold leading-[1.05] text-white md:text-[74px] ${transitionIn} ${enter} delay-0`}
+  className={`max-w-[1200px] text-[30px] font-bold leading-[1.1] text-white sm:text-[38px] md:text-[52px] lg:text-[74px] ${transitionIn} ${enter} delay-0`}
 >
   Мешки для аспирации и стружкоотсоса
   <br />
@@ -39,7 +38,7 @@ export default function Hero() {
 </h1>
 
 <p
-  className={`mt-6 max-w-[980px] text-[15px] leading-[1.5] text-white/90 md:text-[17px] ${transitionIn} ${enter} delay-[150ms]`}
+  className={`mt-4 max-w-[980px] text-[14px] leading-[1.5] text-white/90 sm:text-[15px] md:text-[17px] ${transitionIn} ${enter} delay-[150ms]`}
 >
 В наличии и под заказ. Производим мешки для аспирации и стружкоотсоса
   (верхние и нижние), а также фильтровальные рукава для систем пылеулавливания,
@@ -48,20 +47,20 @@ export default function Hero() {
   размеры, быстрое изготовление и доставка по России и СНГ.
 </p>
           <div
-            className={`mt-8 flex flex-wrap items-center justify-center gap-4 ${transitionIn} ${enter} delay-[300ms]`}
+            className={`mt-6 flex flex-col items-stretch justify-center gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 ${transitionIn} ${enter} delay-[300ms]`}
           >
             <a
               href="https://wa.me/79514992576"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl bg-teal-500 px-6 py-3 text-base font-medium text-white transition hover:bg-teal-600"
+            className="inline-flex h-11 w-full items-center justify-center rounded-xl bg-teal-500 px-5 text-[15px] font-medium text-white transition hover:bg-teal-600 sm:h-auto sm:w-auto sm:px-6 sm:py-3 sm:text-base"
             >
               Оформить заказ
             </a>
 
             <a
               href="#catalog"
-              className="inline-flex items-center justify-center rounded-xl border border-white/35 bg-white/10 px-6 py-3 text-base font-medium text-white backdrop-blur-md transition hover:bg-white/18"
+            className="inline-flex h-11 w-full items-center justify-center rounded-xl border border-white/35 bg-white/10 px-5 text-[15px] font-medium text-white backdrop-blur-md transition hover:bg-white/18 sm:h-auto sm:w-auto sm:px-6 sm:py-3 sm:text-base"
             >
               Каталог продукции
             </a>
@@ -69,7 +68,7 @@ export default function Hero() {
         </div>
 
         <div
-          className={`flex justify-center pt-4 ${transitionIn} ${enter} delay-[450ms]`}
+          className={`flex justify-center pt-3 sm:pt-4 ${transitionIn} ${enter} delay-[450ms]`}
         >
           <a
             href="#catalog"

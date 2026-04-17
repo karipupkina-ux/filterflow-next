@@ -68,8 +68,8 @@ export default function KontaktyPage() {
       <Navigation />
       <FloatingContacts />
 
-      <main className="bg-[#f8fafc] pt-[118px] md:pt-[124px]">
-        <div className="mx-auto max-w-7xl px-4 pb-20 pt-6 sm:px-6 lg:px-8">
+      <main className="bg-[#f8fafc] pt-[105px] md:pt-[116px]">
+        <div className="mx-auto max-w-7xl px-4 pb-14 pt-5 sm:px-6 sm:pb-16 sm:pt-6 lg:px-8 lg:pb-20">
           <nav aria-label="Хлебные крошки" className="mb-7 text-[13px] text-[#64748b]">
             <ol className="flex flex-wrap items-center gap-2">
               <li>
@@ -85,7 +85,7 @@ export default function KontaktyPage() {
           </nav>
 
           {/* Hero */}
-          <section className="mb-12 rounded-3xl bg-gradient-to-br from-[#effefc] via-white to-[#f0fdfa] p-8 shadow-[0_10px_28px_rgba(15,23,42,0.06)] sm:p-10 lg:p-12">
+          <section className="mb-10 rounded-3xl bg-gradient-to-br from-[#effefc] via-white to-[#f0fdfa] p-6 shadow-[0_10px_28px_rgba(15,23,42,0.06)] sm:mb-12 sm:p-10 lg:p-12">
             <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl lg:text-[2.5rem]">
               Контакты FilterFlow — производитель фильтровальных мешков и рукавов в России
             </h1>
@@ -157,7 +157,7 @@ export default function KontaktyPage() {
                       <img
                         src="/images/whatsapp.png"
                         alt=""
-                        className="h-9 w-9 shrink-0 scale-[2] object-contain"
+                        className="h-7 w-7 shrink-0 object-contain sm:h-8 sm:w-8"
                       />
                     </a>
                     <a
@@ -170,7 +170,7 @@ export default function KontaktyPage() {
                       <img
                         src="/images/telegram.png"
                         alt=""
-                        className="h-9 w-9 shrink-0 scale-[2] object-contain"
+                        className="h-7 w-7 shrink-0 object-contain sm:h-8 sm:w-8"
                       />
                     </a>
                     <a

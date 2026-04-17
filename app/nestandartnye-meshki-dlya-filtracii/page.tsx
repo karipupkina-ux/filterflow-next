@@ -6,7 +6,6 @@ import { FormEvent, useState } from "react";
 import { sendApplicationEmail } from "@/lib/send-email-client";
 import Navigation from "../components/Navigation";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
-import Footer from "../components/Footer";
 import FloatingContacts from "../components/feature/FloatingContacts";
 
 export default function Page() {
@@ -80,8 +79,8 @@ export default function Page() {
       <FloatingContacts />
 
       <main className="bg-[#f6f7f7]">
-        <section className="mx-auto max-w-[1280px] px-6 pt-6 pb-12">
-          <div className="mb-8 rounded-lg bg-[#eef0f0] px-6 py-4">
+        <section className="mx-auto max-w-[1280px] px-4 pb-10 pt-[105px] sm:px-6 sm:pb-12 sm:pt-[116px]">
+          <div className="mb-6 rounded-lg bg-[#eef0f0] px-4 py-3 sm:mb-8 sm:px-6 sm:py-4">
             <div className="flex items-center gap-2 text-[14px]">
               <Link
                 href="/"
@@ -96,9 +95,9 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="grid items-center gap-10 lg:grid-cols-2">
+          <div className="grid items-center gap-7 sm:gap-10 lg:grid-cols-2">
             <div>
-              <h1 className="mb-6 text-[28px] font-semibold leading-[1.2] text-[#0f172a] sm:text-[34px] lg:text-[40px]">
+              <h1 className="mb-4 text-[26px] font-semibold leading-[1.16] text-[#0f172a] sm:mb-6 sm:text-[32px] lg:text-[40px]">
                 Нестандартные мешки
                 <br />
                 для фильтрации по
@@ -106,17 +105,17 @@ export default function Page() {
                 чертежам заказчика
               </h1>
 
-              <p className="mb-8 max-w-[620px] text-[16px] leading-[1.7] text-[#5b677a]">
+              <p className="mb-6 max-w-[620px] text-[15px] leading-[1.65] text-[#5b677a] sm:mb-8 sm:text-[16px] sm:leading-[1.7]">
                 Изготавливаем нестандартные фильтровальные мешки под заказ — по
                 индивидуальным чертежам и размерам, под ваш узел фильтрации.
                 Любые формы, конфигурации и материалы; консультация и расчёт до
                 запуска в пошив.
               </p>
 
-              <div className="flex flex-col gap-4 sm:flex-row">
+              <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
                 <a
                   href="#order-form"
-                  className="flex items-center justify-center rounded-lg bg-[#149c8d] px-6 py-3 text-[15px] font-medium text-white transition hover:bg-[#11897d]"
+                  className="flex h-11 items-center justify-center rounded-lg bg-[#149c8d] px-6 text-[15px] font-medium text-white transition hover:bg-[#11897d] sm:h-auto sm:py-3"
                 >
                   Заказать расчёт
                   <span className="ml-2">→</span>
@@ -124,7 +123,7 @@ export default function Page() {
 
                 <a
                   href="tel:+79514992576"
-                  className="flex items-center justify-center rounded-lg border border-[#149c8d] px-6 py-3 text-[15px] font-medium text-[#149c8d] transition hover:bg-[#f0fbf9]"
+                  className="flex h-11 items-center justify-center rounded-lg border border-[#149c8d] px-6 text-[15px] font-medium text-[#149c8d] transition hover:bg-[#f0fbf9] sm:h-auto sm:py-3"
                 >
                   +7 (951) 499-25-76
                 </a>
@@ -1254,7 +1253,7 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
                 href="tel:+79514992576"
-                className="inline-flex min-w-[270px] items-center justify-center rounded-[18px] bg-white px-7 py-4 text-[16px] font-semibold text-[#118f87] shadow-[0_10px_24px_rgba(15,23,42,0.12)] transition hover:-translate-y-0.5 hover:bg-[#f7fffd]"
+                className="inline-flex w-full items-center justify-center rounded-[18px] bg-white px-6 py-3.5 text-[15px] font-semibold text-[#118f87] shadow-[0_10px_24px_rgba(15,23,42,0.12)] transition hover:-translate-y-0.5 hover:bg-[#f7fffd] sm:w-auto sm:min-w-[250px] sm:px-7 sm:py-4 sm:text-[16px]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1269,7 +1268,7 @@ export default function Page() {
 
               <Link
                 href="/kontakty"
-                className="inline-flex min-w-[270px] items-center justify-center rounded-[18px] border border-white/35 bg-transparent px-7 py-4 text-[16px] font-semibold text-white transition hover:bg-white/8"
+                className="inline-flex w-full items-center justify-center rounded-[18px] border border-white/35 bg-transparent px-6 py-3.5 text-[15px] font-semibold text-white transition hover:bg-white/8 sm:w-auto sm:min-w-[250px] sm:px-7 sm:py-4 sm:text-[16px]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

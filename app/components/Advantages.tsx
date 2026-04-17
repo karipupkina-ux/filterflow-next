@@ -41,40 +41,40 @@ export default function Advantages() {
     ];
   
     return (
-      <section className="bg-[#f8f9fb] py-24">
-        <div className="mx-auto max-w-[1200px] px-6 text-center">
+      <section className="bg-[#f8f9fb] py-14 md:py-20 lg:py-24">
+        <div className="mx-auto max-w-[1200px] px-4 text-center sm:px-6">
   
           {/* Заголовок */}
-          <h2 className="text-[40px] md:text-[56px] font-bold text-[#0f172a] mb-4">
+          <h2 className="mb-4 text-[30px] font-bold text-[#0f172a] md:text-[44px] lg:text-[56px]">
             Преимущества FilterFlow
           </h2>
   
-          <p className="text-[18px] text-[#64748b] mb-16">
+          <p className="mb-10 text-[15px] leading-[1.6] text-[#64748b] md:mb-14 md:text-[18px]">
             Пошив фильтровальных рукавов и мешков на заказ — индивидуальные
             размеры, сроки и поставки по России
           </p>
   
           {/* Карточки */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 xl:grid-cols-4 xl:gap-7">
             {items.map((item, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl p-8 border border-[#e5e7eb] shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                className="rounded-2xl border border-[#e5e7eb] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl md:p-7"
               >
                 {/* Иконка */}
                 <div className="mb-6 flex justify-center">
-                  <div className="flex h-[70px] w-[70px] items-center justify-center rounded-xl bg-[#d1f2ef]">
+                  <div className="flex h-[58px] w-[58px] items-center justify-center rounded-xl bg-[#d1f2ef] md:h-[70px] md:w-[70px]">
                     {item.icon}
                   </div>
                 </div>
   
                 {/* Заголовок */}
-                <h3 className="text-[20px] font-semibold text-[#0f172a] mb-3">
+                <h3 className="mb-2 text-[18px] font-semibold text-[#0f172a] md:mb-3 md:text-[20px]">
                   {item.title}
                 </h3>
   
                 {/* Текст */}
-                <p className="text-[15px] text-[#64748b] leading-[1.6]">
+                <p className="text-[14px] leading-[1.6] text-[#64748b] md:text-[15px]">
                   {item.text}
                 </p>
               </div>

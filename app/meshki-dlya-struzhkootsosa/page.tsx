@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Navigation from "../components/Navigation";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import { pageMetadata } from "@/lib/seo-metadata";
 
@@ -511,6 +512,7 @@ const faqItems = [
 export default function Page() {
   return (
     <main id="top" className="min-h-screen bg-[#f8fafc] text-slate-900">
+      <Navigation />
       <style>{`
         details.ff-faq > summary::-webkit-details-marker {
           display: none;
@@ -536,258 +538,22 @@ export default function Page() {
         }
       `}</style>
 
-      <div className="sticky top-0 z-50">
-        <div className="border-b border-[#d8dde3] bg-[#c9c9c9]">
-          <div className="mx-auto flex h-10 max-w-[1440px] items-center justify-end gap-6 px-6 text-[13px] text-white">
-            <Link
-              href="/kontakty"
-              className="transition-colors duration-200 hover:text-[#28c4b7]"
-            >
-              filterflow@mail.ru
-            </Link>
-
-            <a
-              href="tel:+79514992576"
-              className="transition-colors duration-200 hover:text-[#28c4b7]"
-            >
-              +7 (951) 499-25-76
-            </a>
-
-            <a
-              href="https://wa.me/79514992576"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors duration-200 hover:text-[#28c4b7]"
-            >
-              WhatsApp
-            </a>
-
-            <a
-              href="https://t.me/Violetta0502"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors duration-200 hover:text-[#28c4b7]"
-            >
-              Telegram
-            </a>
-
-            <a
-              href="https://max.ru/u/f9LHodD0cOLehfNZxc-dfvXrRQQ-ApKrfczCjbhEa_va3lGdtndd7SgNP8U"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-[#a95cff] transition-colors duration-200 hover:text-[#28c4b7]"
-            >
-              MAX
-            </a>
-          </div>
-        </div>
-
-        <header className="border-b border-[#e9edf3] bg-white shadow-[0_2px_10px_rgba(15,23,42,0.03)]">
-          <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-4">
-            <Link href="/" className="flex items-center gap-4">
-              <img
-                src="/favicon.ico"
-                alt="FilterFlow"
-                className="h-[58px] w-[58px] rounded-[14px] object-contain"
-              />
-              <span className="text-[26px] font-bold tracking-[-0.02em] text-[#11233f]">
-                FilterFlow
-              </span>
-            </Link>
-
-            <nav className="hidden items-center gap-12 text-[16px] font-medium text-[#334155] lg:flex">
-              <Link
-                href="/"
-                className="transition-colors duration-200 hover:text-[#28c4b7]"
-              >
-                Главная
-              </Link>
-
-              <div className="group relative">
-                <button
-                  type="button"
-                  className="flex items-center gap-2 text-[#334155] transition-colors duration-200 hover:text-[#28c4b7] group-hover:text-[#28c4b7]"
-                >
-                  <span>Продукция</span>
-                  <svg
-                    className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-
-                <div className="absolute left-1/2 top-full z-30 w-[320px] -translate-x-1/2 pt-4 opacity-0 invisible pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto">
-                  <div className="rounded-[22px] bg-white p-4 shadow-[0_20px_60px_rgba(0,0,0,0.14)]">
-                    <div className="space-y-1.5">
-                      {productLinks.map((item) => {
-                        const isActive =
-                          item.href === "/meshki-dlya-struzhkootsosa";
-
-                        return (
-                          <Link
-                            key={item.href}
-                            href={item.href}
-                            className={`flex items-start gap-3 rounded-[14px] px-4 py-3 text-[15px] transition-all duration-200 ${
-                              isActive
-                                ? "bg-[#eefaf8] text-[#28c4b7]"
-                                : "text-[#475569] hover:bg-[#eefaf8] hover:text-[#28c4b7]"
-                            }`}
-                          >
-                            <svg
-                              viewBox="0 0 20 20"
-                              className="mt-[2px] h-[18px] w-[18px] shrink-0 text-[#28c4b7]"
-                              fill="currentColor"
-                              aria-hidden="true"
-                            >
-                              <circle cx="10" cy="10" r="3" />
-                            </svg>
-
-                            <span className="leading-[1.4]">{item.label}</span>
-                          </Link>
-                        );
-                      })}
-                    </div>
-
-                    <Link
-                      href="/#catalog"
-                      className="mt-4 flex h-[50px] items-center justify-center rounded-[14px] bg-[#28c4b7] text-[16px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8]"
-                    >
-                      Весь каталог
-                      <span className="ml-2 text-[18px]">→</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="group relative">
-                <button
-                  type="button"
-                  className="flex items-center gap-2 text-[#334155] transition-colors duration-200 hover:text-[#28c4b7] group-hover:text-[#28c4b7]"
-                >
-                  <span>Статьи</span>
-                  <svg
-                    className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-
-                <div className="absolute left-1/2 top-full z-30 w-[340px] -translate-x-1/2 pt-4 opacity-0 invisible pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto">
-                  <div className="rounded-[22px] bg-white p-4 shadow-[0_20px_60px_rgba(0,0,0,0.14)]">
-                    <div className="space-y-1.5">
-                      {articleLinks.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="flex items-start gap-3 rounded-[14px] px-4 py-3 text-[15px] text-[#475569] transition-all duration-200 hover:bg-[#eefaf8] hover:text-[#28c4b7]"
-                        >
-                          <svg
-                            viewBox="0 0 24 24"
-                            className="mt-[1px] h-[18px] w-[18px] shrink-0 text-[#28c4b7]"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="1.8"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            aria-hidden="true"
-                          >
-                            <rect x="5" y="4" width="14" height="16" rx="2" />
-                            <path d="M8 8h8M8 12h8M8 16h5" />
-                          </svg>
-
-                          <span className="leading-[1.4]">{item.label}</span>
-                        </Link>
-                      ))}
-                    </div>
-
-                    <Link
-                      href="/blog"
-                      className="mt-4 flex h-[50px] items-center justify-center rounded-[14px] bg-[#28c4b7] text-[16px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8]"
-                    >
-                      Все статьи блога
-                      <span className="ml-2 text-[18px]">→</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <Link
-                href="/portfolio"
-                className="transition-colors duration-200 hover:text-[#28c4b7]"
-              >
-                Портфолио
-              </Link>
-
-              <Link
-                href="/o-kompanii"
-                className="transition-colors duration-200 hover:text-[#28c4b7]"
-              >
-                О компании
-              </Link>
-
-              <Link
-                href="/kontakty"
-                className="transition-colors duration-200 hover:text-[#28c4b7]"
-              >
-                Контакты
-              </Link>
-            </nav>
-
-            <a
-              href="https://wa.me/79514992576"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden h-[48px] items-center justify-center rounded-[14px] bg-[#28c4b7] px-8 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8] lg:flex"
-            >
-              Получить расчёт
-            </a>
-          </div>
-
-          <div className="mx-auto max-w-[1440px] px-6 pb-4">
-            <div className="flex items-center gap-3 text-[14px]">
-              <Link
-                href="/"
-                className="font-medium text-[#28c4b7] transition-colors duration-200 hover:text-[#1fa99e]"
-              >
-                Главная
-              </Link>
-              <span className="text-[#a0aec0]">›</span>
-              <span className="text-[#475569]">Мешки для стружкоотсоса</span>
-            </div>
-          </div>
-        </header>
-      </div>
-
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden pt-[105px] lg:pt-0">
         <div
-          className="relative min-h-[640px] bg-cover bg-center"
+          className="relative min-h-[540px] bg-cover bg-[center_62%] sm:min-h-[600px] md:bg-center lg:min-h-[640px]"
           style={{
             backgroundImage:
               "linear-gradient(90deg, rgba(7,18,35,0.72) 0%, rgba(9,24,44,0.58) 32%, rgba(10,29,48,0.42) 55%, rgba(10,29,48,0.18) 100%), linear-gradient(180deg, rgba(4,12,24,0.34) 0%, rgba(4,12,24,0.16) 28%, rgba(4,12,24,0.18) 72%, rgba(4,12,24,0.42) 100%), url('/images/hero.png')",
           }}
         >
-          <div className="mx-auto flex min-h-[640px] max-w-[1440px] items-start justify-center px-6 pb-14 pt-10 md:pt-14">
+          <div className="mx-auto flex min-h-[540px] max-w-[1440px] items-start justify-center px-4 pb-8 pt-8 sm:min-h-[600px] sm:px-6 sm:pb-10 sm:pt-11 md:pt-14 lg:min-h-[640px] lg:pb-14">
             <div className="flex w-full max-w-[980px] flex-col items-center text-center text-white">
               <div className="mb-5 inline-flex rounded-full bg-[#28c4b7]/35 px-6 py-2.5 text-[13px] font-semibold text-[#d8fffb] backdrop-blur-sm">
                 Для деревообработки
               </div>
 
-              <h1 className="mb-5 max-w-[920px] text-[34px] font-bold leading-[1.12] tracking-[-0.03em] sm:text-[42px] md:text-[52px] md:leading-[1.08]">
+              <h1 className="mb-4 max-w-[920px] text-[30px] font-bold leading-[1.12] tracking-[-0.03em] sm:mb-5 sm:text-[38px] md:text-[48px] lg:text-[52px] md:leading-[1.08]">
                 Мешки для стружкоотсоса
                 <br className="max-md:hidden" />
                 <span className="max-md:block">
@@ -795,19 +561,19 @@ export default function Page() {
                 </span>
               </h1>
 
-              <p className="max-w-[760px] text-[17px] leading-[1.7] text-white/92 md:text-[18px]">
+              <p className="max-w-[760px] text-[15px] leading-7 text-white/92 sm:text-[16px] sm:leading-8 md:text-[18px]">
                 Мешок-фильтр и мешок для сбора стружки на стружкоотсосе — для
                 деревообработки и мебельного производства: тканевые мешки под
                 патрубок, сбор опилок и узлы в аспирации и на УВП. Пошив под размер
                 патрубка, заказ от одной штуки.
               </p>
 
-              <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+              <div className="mt-7 flex w-full flex-col items-stretch justify-center gap-3 sm:mt-9 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
                 <a
                   href="https://wa.me/79514992576"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-[58px] items-center justify-center gap-3 rounded-[16px] bg-[#28c4b7] px-8 text-[16px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8]"
+                  className="inline-flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] bg-[#28c4b7] px-6 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8] sm:h-[58px] sm:w-auto sm:px-8 sm:text-[16px]"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -823,7 +589,7 @@ export default function Page() {
 
                 <Link
                   href="/kontakty"
-                  className="inline-flex h-[58px] items-center justify-center gap-3 rounded-[16px] border border-white/25 bg-white/10 px-8 text-[16px] font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/18"
+                  className="inline-flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] border border-white/25 bg-white/10 px-6 text-[15px] font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/18 sm:h-[58px] sm:w-auto sm:px-8 sm:text-[16px]"
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -840,7 +606,7 @@ export default function Page() {
                 </Link>
               </div>
 
-              <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[14px] text-white/92 md:text-[15px]">
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-white/92 sm:mt-8 sm:gap-x-8 sm:gap-y-3 sm:text-[14px] md:mt-10 md:text-[15px]">
                 <div className="flex items-center gap-2">
                   <svg
                     viewBox="0 0 24 24"
@@ -1170,7 +936,7 @@ export default function Page() {
           </div>
 
           <div className="overflow-hidden rounded-[22px] border border-[#edf1f5] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
-            <div className="grid grid-cols-4 bg-white px-6 py-5 text-[14px] font-semibold text-[#10233f] md:px-7 md:text-[15px]">
+            <div className="hidden grid-cols-4 bg-white px-6 py-5 text-[14px] font-semibold text-[#10233f] md:grid md:px-7 md:text-[15px]">
               <div>Материал</div>
               <div>Степень фильтрации</div>
               <div>Температура</div>
@@ -1178,16 +944,36 @@ export default function Page() {
             </div>
 
             {materials.map((item, index) => (
-              <div
-                key={item.material}
-                className={`grid grid-cols-4 px-6 py-5 text-[14px] text-[#475569] md:px-7 md:text-[15px] ${
-                  index !== materials.length - 1 ? "border-t border-[#edf1f5]" : ""
-                }`}
-              >
-                <div className="font-medium text-[#10233f]">{item.material}</div>
-                <div>{item.filtration}</div>
-                <div>{item.temperature}</div>
-                <div>{item.use}</div>
+              <div key={item.material}>
+                <div
+                  className={`block px-4 py-4 text-[14px] text-[#475569] md:hidden ${
+                    index !== materials.length - 1 ? "border-t border-[#edf1f5]" : ""
+                  }`}
+                >
+                  <p className="text-sm font-semibold text-[#10233f]">{item.material}</p>
+                  <div className="mt-2 space-y-1 text-[13px] leading-6 text-[#475569]">
+                    <p>
+                      <span className="font-medium text-[#10233f]">Фильтрация:</span> {item.filtration}
+                    </p>
+                    <p>
+                      <span className="font-medium text-[#10233f]">Температура:</span> {item.temperature}
+                    </p>
+                    <p>
+                      <span className="font-medium text-[#10233f]">Применение:</span> {item.use}
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  className={`hidden grid-cols-4 px-6 py-5 text-[14px] text-[#475569] md:grid md:px-7 md:text-[15px] ${
+                    index !== materials.length - 1 ? "border-t border-[#edf1f5]" : ""
+                  }`}
+                >
+                  <div className="font-medium text-[#10233f]">{item.material}</div>
+                  <div>{item.filtration}</div>
+                  <div>{item.temperature}</div>
+                  <div>{item.use}</div>
+                </div>
               </div>
             ))}
           </div>
@@ -1700,7 +1486,7 @@ export default function Page() {
       <SeeAlsoLinks />
 
       {/* Плавающие контакты */}
-      <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 xl:flex">
+      <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 lg:flex">
         <Link
           href="/kontakty"
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white text-[#ff7a2f] shadow-[0_10px_30px_rgba(15,23,42,0.12)] transition-transform duration-200 hover:scale-105"

@@ -76,15 +76,15 @@ export default function OrderFormSection() {
     !isSubmitting;
 
   return (
-    <section id="order" className="bg-[#f8fafc] py-16 md:py-20">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="order" className="bg-[#f8fafc] py-12 md:py-16 lg:py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
           <div>
-            <h2 className="text-[34px] font-bold leading-[1.08] tracking-[-0.02em] text-[#1f2937] md:text-[52px]">
+            <h2 className="text-[28px] font-bold leading-[1.12] tracking-[-0.02em] text-[#1f2937] sm:text-[34px] md:text-[52px]">
               Оформить заказ
             </h2>
 
-            <p className="mt-6 max-w-[520px] text-[16px] leading-[1.8] text-slate-600 md:text-[17px]">
+            <p className="mt-5 max-w-[520px] text-[14px] leading-[1.7] text-slate-600 sm:text-[16px] md:text-[17px]">
               Заполните форму — уточним задачу по аспирации или пылеулавливанию и
               подберём рукавные фильтры или мешки под ваше оборудование.
               Изготавливаем фильтровальные мешки и рукава точно по требованиям.
@@ -186,7 +186,7 @@ export default function OrderFormSection() {
             </div>
           </div>
 
-          <div className="rounded-[22px] border border-[#e7edf2] bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.06)] md:p-8">
+          <div className="rounded-[22px] border border-[#e7edf2] bg-white p-5 shadow-[0_10px_30px_rgba(15,23,42,0.06)] sm:p-6 md:p-8">
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="mb-2 block text-[14px] font-medium text-[#1f2937]">
@@ -199,7 +199,7 @@ export default function OrderFormSection() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Иван Иванов"
-                  className="h-[56px] w-full rounded-[14px] border border-[#dbe4ea] px-4 text-[15px] text-[#1f2937] outline-none transition placeholder:text-slate-400 focus:border-[#23b8ad]"
+                  className="h-12 w-full rounded-[14px] border border-[#dbe4ea] px-4 text-[15px] text-[#1f2937] outline-none transition placeholder:text-slate-400 focus:border-[#23b8ad] sm:h-[56px]"
                 />
               </div>
 
@@ -214,7 +214,7 @@ export default function OrderFormSection() {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="+7 (___) ___-__-__"
-                  className="h-[56px] w-full rounded-[14px] border border-[#dbe4ea] px-4 text-[15px] text-[#1f2937] outline-none transition placeholder:text-slate-400 focus:border-[#23b8ad]"
+                  className="h-12 w-full rounded-[14px] border border-[#dbe4ea] px-4 text-[15px] text-[#1f2937] outline-none transition placeholder:text-slate-400 focus:border-[#23b8ad] sm:h-[56px]"
                 />
               </div>
 
@@ -229,7 +229,7 @@ export default function OrderFormSection() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="example@mail.ru"
-                  className="h-[56px] w-full rounded-[14px] border border-[#dbe4ea] px-4 text-[15px] text-[#1f2937] outline-none transition placeholder:text-slate-400 focus:border-[#23b8ad]"
+                  className="h-12 w-full rounded-[14px] border border-[#dbe4ea] px-4 text-[15px] text-[#1f2937] outline-none transition placeholder:text-slate-400 focus:border-[#23b8ad] sm:h-[56px]"
                 />
               </div>
 
@@ -242,7 +242,7 @@ export default function OrderFormSection() {
                   required
                   value={productType}
                   onChange={(e) => setProductType(e.target.value)}
-                  className="h-[56px] w-full rounded-[14px] border border-[#dbe4ea] px-4 text-[15px] text-[#1f2937] outline-none transition focus:border-[#23b8ad]"
+                  className="h-12 w-full rounded-[14px] border border-[#dbe4ea] px-4 text-[15px] text-[#1f2937] outline-none transition focus:border-[#23b8ad] sm:h-[56px]"
                 >
                   <option value="" disabled>
                     Выберите тип продукции
@@ -314,7 +314,7 @@ export default function OrderFormSection() {
               <button
                 type="submit"
                 disabled={!canSubmit}
-                className={`mt-2 flex h-[58px] w-full items-center justify-center rounded-[16px] text-[16px] font-semibold text-white transition ${
+                className={`mt-2 flex h-12 w-full items-center justify-center rounded-[16px] text-[15px] font-semibold text-white transition sm:h-[58px] sm:text-[16px] ${
                   canSubmit
                     ? "bg-[#23b8ad] hover:bg-[#1ea79b]"
                     : "cursor-not-allowed bg-[#aab4c2]"

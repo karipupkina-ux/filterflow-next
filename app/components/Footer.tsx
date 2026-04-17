@@ -40,10 +40,10 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#0E274B] text-white">
-      <div className="mx-auto max-w-[1360px] px-6 pt-14 sm:px-8 md:pt-16 lg:px-10">
-        <div className="grid grid-cols-1 gap-y-12 md:grid-cols-[320px_1fr_1fr_1fr] md:gap-x-14 lg:grid-cols-[360px_1fr_1fr_1fr]">
+      <div className="mx-auto max-w-[1360px] px-4 pt-12 sm:px-6 sm:pt-14 md:pt-16 lg:px-10">
+        <div className="grid grid-cols-1 gap-y-10 md:grid-cols-[280px_1fr_1fr_1fr] md:gap-x-10 lg:grid-cols-[360px_1fr_1fr_1fr] lg:gap-x-14">
           <div className="max-w-[320px]">
-            <Link href="/" className="inline-flex items-center gap-4">
+            <Link href="/" className="inline-flex items-center gap-3 sm:gap-4">
               <Image
                 src="/images/logo.png"
                 alt="FilterFlow"
@@ -51,12 +51,12 @@ export default function Footer() {
                 height={64}
                 className="h-[64px] w-[64px] rounded-[14px] object-cover"
               />
-              <span className="text-[30px] font-semibold tracking-[-0.02em] text-white">
+              <span className="text-[24px] font-semibold tracking-[-0.02em] text-white sm:text-[30px]">
                 FilterFlow
               </span>
             </Link>
 
-            <p className="mt-8 max-w-[295px] text-[16px] leading-[1.65] text-white/82">
+            <p className="mt-6 max-w-[295px] text-[15px] leading-[1.65] text-white/82 sm:mt-8 sm:text-[16px]">
               Российский производитель фильтровальных мешков и рукавов для систем
               аспирации, стружкоотсосов и промышленных систем очистки воздуха с 2020 года.
             </p>
@@ -245,7 +245,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 border-t border-white/10 pt-7">
+        <div className="mt-10 border-t border-white/10 pt-6 sm:mt-14 sm:pt-7">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex items-start gap-3">
               <span className="mt-0.5 flex h-[22px] w-[22px] items-center justify-center text-[#22C7BB]">

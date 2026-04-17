@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function FloatingContacts() {
   return (
     <>
-      <div className="fixed right-5 top-1/2 z-50 flex -translate-y-1/2 flex-col gap-3">
+      <div className="fixed right-5 top-1/2 z-50 hidden -translate-y-1/2 flex-col gap-3 lg:flex">
         
         {/* Почта */}
         <Link

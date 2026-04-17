@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import MeshkiAspiraciiOrderForm from "../components/MeshkiAspiraciiOrderForm";
+import Navigation from "../components/Navigation";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import { pageMetadata } from "@/lib/seo-metadata";
 
@@ -620,6 +621,7 @@ const seoSelectionPoints = [
 export default function Page() {
   return (
     <>
+      <Navigation />
       <style>{`
         details.faq-item > summary::-webkit-details-marker {
           display: none;
@@ -651,294 +653,54 @@ export default function Page() {
         }
       `}</style>
 
-      {/* HEADER */}
-      <div className="sticky top-0 z-50">
-        <div className="h-[36px] w-full border-b border-gray-300 bg-[#D0D0D0]">
-          <div className="mx-auto flex h-full max-w-7xl items-center justify-end gap-7 px-6 text-[14px] text-slate-600">
-            <Link
-              href="/kontakty"
-              className="transition hover:text-teal-600"
-            >
-              filterflow@mail.ru
-            </Link>
-
-            <a
-              href="tel:+79514992576"
-              className="transition hover:text-teal-600"
-            >
-              +7 (951) 499-25-76
-            </a>
-
-            <a
-              href="https://wa.me/79514992576"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition hover:text-teal-600"
-            >
-              WhatsApp
-            </a>
-
-            <a
-              href="https://t.me/Violetta0502"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition hover:text-teal-600"
-            >
-              Telegram
-            </a>
-
-            <a
-              href="https://max.ru/u/f9LHodD0cOLehfNZxc-dfvXrRQQ-ApKrfczCjbhEa_va3lGdtndd7SgNP8U"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-[#9B5DE5] transition hover:text-teal-600"
-            >
-              MAX
-            </a>
-          </div>
-        </div>
-
-        <div className="w-full border-b border-gray-200 bg-white shadow-sm">
-          <div className="mx-auto flex min-h-[82px] max-w-7xl items-center justify-between px-6">
-            <div className="flex flex-col">
-              <a href="/" className="flex items-center gap-4">
-                <img
-                  src="/favicon.ico"
-                  alt="FilterFlow"
-                  className="h-12 w-12 rounded-xl"
-                />
-                <span className="text-xl font-semibold transition hover:text-teal-600">
-                  FilterFlow
-                </span>
-              </a>
-
-              <div className="mt-1 flex items-center gap-2 text-sm">
-                <a href="/" className="text-teal-600 hover:underline">
-                  Главная
-                </a>
-                <span className="text-gray-400">›</span>
-                <span className="text-gray-700">Мешки для аспирации</span>
-              </div>
-            </div>
-
-            <nav className="hidden items-center gap-8 text-gray-700 lg:flex">
-              <a href="/" className="transition hover:text-teal-600">
-                Главная
-              </a>
-
-              <div className="group relative">
-                <button
-                  type="button"
-                  className="flex items-center gap-2 transition hover:text-teal-600"
-                >
-                  <span>Продукция</span>
-                  <svg
-                    className="h-4 w-4 text-teal-500 transition-transform duration-200 group-hover:rotate-180"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-
-                <div className="absolute left-1/2 top-full z-30 w-[310px] -translate-x-1/2 pt-4 opacity-0 invisible pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto">
-                  <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-2xl">
-                    <div className="space-y-1">
-                      <a
-                        href="/meshki-dlya-aspiracii"
-                        className="block rounded-xl bg-teal-50 px-4 py-3 font-medium text-teal-700 transition hover:bg-teal-100 hover:text-teal-700"
-                      >
-                        • Мешки для аспирации
-                      </a>
-
-                      <a
-                        href="/filtracionnye-rukava"
-                        className="block rounded-xl px-4 py-3 transition hover:bg-teal-50 hover:text-teal-600"
-                      >
-                        • Фильтровальные рукава
-                      </a>
-
-                      <a
-                        href="/meshki-dlya-struzhkootsosa"
-                        className="block rounded-xl px-4 py-3 transition hover:bg-teal-50 hover:text-teal-600"
-                      >
-                        • Мешки для стружкоотсоса
-                      </a>
-
-                      <a
-                        href="/meshki-dlya-ciklonov-i-uvp"
-                        className="block rounded-xl px-4 py-3 transition hover:bg-teal-50 hover:text-teal-600"
-                      >
-                        • Мешки для циклонов и УВП
-                      </a>
-
-                      <a
-                        href="/bystrosemnye-homyty"
-                        className="block rounded-xl px-4 py-3 transition hover:bg-teal-50 hover:text-teal-600"
-                      >
-                        • Быстросъёмные хомуты
-                      </a>
-
-                      <a
-                        href="/nestandartnye-meshki-dlya-filtracii"
-                        className="block rounded-xl px-4 py-3 transition hover:bg-teal-50 hover:text-teal-600"
-                      >
-                        • Нестандартные мешки для фильтрации
-                      </a>
-                    </div>
-
-                    <a
-                      href="/#catalog"
-                      className="mt-4 block rounded-xl bg-teal-500 px-4 py-3 text-center font-medium text-white transition hover:bg-teal-600"
-                    >
-                      Весь каталог →
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="group relative">
-                <button
-                  type="button"
-                  className="flex items-center gap-2 transition hover:text-teal-600"
-                >
-                  <span>Статьи</span>
-                  <svg
-                    className="h-4 w-4 text-teal-500 transition-transform duration-200 group-hover:rotate-180"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-
-                <div className="absolute left-1/2 top-full z-30 w-[320px] -translate-x-1/2 pt-4 opacity-0 invisible pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto">
-                  <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-2xl">
-                    <div className="space-y-1">
-                      <a
-                        href="/blog/kak-vybrat-meshok-aspiracii"
-                        className="block rounded-xl px-4 py-3 transition hover:bg-teal-50 hover:text-teal-600"
-                      >
-                        Как выбрать мешок для аспирации
-                      </a>
-
-                      <a
-                        href="/blog/kak-rabotaet-aspiraciya"
-                        className="block rounded-xl px-4 py-3 transition hover:bg-teal-50 hover:text-teal-600"
-                      >
-                        Как работает аспирация
-                      </a>
-
-                      <a
-                        href="/blog/kogda-menyat-filtr-meshok"
-                        className="block rounded-xl px-4 py-3 transition hover:bg-teal-50 hover:text-teal-600"
-                      >
-                        Когда менять фильтр-мешок
-                      </a>
-
-                      <a
-                        href="/blog/tipy-filtruyushchikh-meshkov"
-                        className="block rounded-xl px-4 py-3 transition hover:bg-teal-50 hover:text-teal-600"
-                      >
-                        Типы фильтровальных мешков
-                      </a>
-                    </div>
-
-                    <a
-                      href="/blog"
-                      className="mt-4 block rounded-xl bg-teal-500 px-4 py-3 text-center font-medium text-white transition hover:bg-teal-600"
-                    >
-                      Все статьи блога →
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <a href="/portfolio" className="transition hover:text-teal-600">
-                Портфолио
-              </a>
-
-              <a href="/o-kompanii" className="transition hover:text-teal-600">
-                О компании
-              </a>
-
-              <a href="/kontakty" className="transition hover:text-teal-600">
-                Контакты
-              </a>
-            </nav>
-
-            <a
-              href="https://wa.me/79514992576"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl bg-teal-500 px-5 py-2 text-sm text-white transition hover:bg-teal-600"
-            >
-              Получить расчёт
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* HERO */}
       <section
         id="top"
-        className="relative w-full overflow-hidden scroll-mt-[120px]"
+        className="relative w-full overflow-hidden scroll-mt-[120px] pt-[105px] lg:pt-0"
       >
         <div
-          className="relative min-h-[620px] w-full bg-cover bg-center"
+          className="relative min-h-[540px] w-full bg-cover bg-[center_62%] sm:min-h-[600px] md:bg-center lg:min-h-[620px]"
           style={{
             backgroundImage:
               "linear-gradient(90deg, rgba(7,18,35,0.72) 0%, rgba(9,24,44,0.58) 32%, rgba(10,29,48,0.42) 55%, rgba(10,29,48,0.18) 100%), linear-gradient(180deg, rgba(4,12,24,0.34) 0%, rgba(4,12,24,0.16) 28%, rgba(4,12,24,0.18) 72%, rgba(4,12,24,0.42) 100%), url('/images/hero.png')",
           }}
         >
-        <div className="relative mx-auto flex min-h-[620px] max-w-7xl items-start justify-center px-6 pb-16 pt-14 md:pt-20">
+        <div className="relative mx-auto flex min-h-[540px] max-w-7xl items-start justify-center px-4 pb-9 pt-8 sm:min-h-[600px] sm:px-6 sm:pb-12 sm:pt-12 md:pt-16 lg:min-h-[620px] lg:pb-16 lg:pt-20">
           <div className="max-w-4xl text-center text-white">
-            <div className="mb-5 inline-block rounded-full bg-teal-500/90 px-4 py-1 text-sm">
+            <div className="mb-4 inline-block rounded-full bg-teal-500/90 px-4 py-1 text-[12px] sm:text-sm">
               Производство и поставка
             </div>
 
-            <h1 className="mb-6 max-w-[920px] text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="mb-4 max-w-[920px] text-[30px] font-bold leading-[1.12] sm:mb-5 sm:text-[38px] md:text-[50px] lg:text-7xl">
               Фильтровальные мешки для аспирации и пылеулавливания
             </h1>
 
-            <p className="mb-10 text-lg md:text-xl">
+            <p className="mb-7 text-[15px] leading-7 text-white/92 sm:mb-9 sm:text-[17px] sm:leading-8 md:text-xl">
               Мешки для систем аспирации и промышленных установок: удержание
               пыли и опилок, тканевые решения и фильтры для аспирации. Для
               стружкоотсосов, УВП и циклонов — пошив по размерам, доставка по
               России.
             </p>
 
-            <div className="mb-10 flex flex-wrap justify-center gap-4">
+            <div className="mb-8 flex flex-col justify-center gap-3 sm:mb-10 sm:flex-row sm:flex-wrap sm:gap-4">
               <a
                 href="https://wa.me/79514992576"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-xl bg-teal-500 px-8 py-4 text-lg font-semibold transition hover:bg-teal-600"
+                className="inline-flex h-12 w-full items-center justify-center rounded-xl bg-teal-500 px-6 text-[15px] font-semibold transition hover:bg-teal-600 sm:h-auto sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
               >
                 Получить расчет
               </a>
 
               <a
                 href="/kontakty"
-                className="rounded-xl border border-white/40 bg-white/10 px-8 py-4 text-lg backdrop-blur-md transition hover:bg-white/20"
+                className="inline-flex h-12 w-full items-center justify-center rounded-xl border border-white/40 bg-white/10 px-6 text-[15px] backdrop-blur-md transition hover:bg-white/20 sm:h-auto sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
               >
                 Связаться с нами
               </a>
             </div>
 
-            <div className="mt-6 flex flex-wrap justify-center gap-8 text-sm text-white/90 md:text-base">
+            <div className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-2 text-[13px] text-white/90 sm:mt-6 sm:gap-x-8 sm:gap-y-3 sm:text-sm md:text-base">
               <div className="flex items-center gap-2">
                 <svg
                   className="h-5 w-5 text-teal-400"
