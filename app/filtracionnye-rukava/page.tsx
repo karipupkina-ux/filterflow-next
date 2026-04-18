@@ -51,7 +51,7 @@ export default function FiltracionnyeRukavaPage() {
         >
           <div className="mx-auto flex min-h-[600px] max-w-[1440px] flex-col items-center justify-start px-4 pb-16 pt-20 sm:min-h-[680px] sm:px-6 sm:pb-20 sm:pt-24 md:pt-28 lg:min-h-[760px] lg:pb-24 lg:pt-40 xl:pt-44">
             <div className="flex w-full max-w-[980px] flex-col items-center gap-6 text-center text-white lg:gap-8">
-              <div className="inline-flex rounded-full border border-green-500/30 bg-green-500/15 px-4 py-1.5 text-[12px] font-semibold text-green-500 backdrop-blur-[4px] sm:px-7 sm:py-3 sm:text-[15px]">
+              <div className="inline-flex rounded-full border border-[#28c7bb]/40 bg-[#28c7bb]/15 px-4 py-1.5 text-[12px] font-semibold text-[#28c7bb] backdrop-blur-[4px] sm:px-7 sm:py-3 sm:text-[15px]">
                 Промышленная фильтрация
               </div>
 
@@ -87,7 +87,7 @@ export default function FiltracionnyeRukavaPage() {
 
                 <Link
                   href="/kontakty"
-                  className="flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] border border-white/30 bg-white/10 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-white/20 sm:h-[60px] sm:w-auto sm:rounded-[20px] sm:px-8 sm:text-[16px] md:h-[64px] md:px-10 md:text-[17px]"
+                  className="flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] border border-[#28c7bb]/40 bg-[#28c7bb]/15 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-[#28c7bb]/28 sm:h-[60px] sm:w-auto sm:rounded-[20px] sm:px-8 sm:text-[16px] md:h-[64px] md:px-10 md:text-[17px]"
                 >
                   <span className="text-[18px] sm:text-[22px]">☎</span>
                   Связаться с нами

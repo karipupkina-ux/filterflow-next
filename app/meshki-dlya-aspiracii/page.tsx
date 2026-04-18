@@ -667,11 +667,11 @@ export default function Page() {
         >
         <div className="relative mx-auto flex min-h-[600px] max-w-7xl flex-col items-center justify-start px-4 pb-16 pt-20 sm:min-h-[680px] sm:px-6 sm:pb-20 sm:pt-24 md:pt-28 lg:min-h-[760px] lg:pb-24 lg:pt-40 xl:pt-44">
           <div className="flex max-w-4xl flex-col items-center gap-6 text-center text-white lg:gap-8">
-            <div className="inline-flex rounded-full border border-green-500/30 bg-green-500/15 px-4 py-1.5 text-[13px] font-semibold text-green-500 backdrop-blur-[4px] sm:text-sm">
+            <div className="inline-flex rounded-full border border-[#14b8a6]/40 bg-[#14b8a6]/15 px-4 py-1.5 text-[13px] font-semibold text-[#14b8a6] [text-shadow:0_0_18px_rgba(0,0,0,0.45)] backdrop-blur-[4px] sm:text-sm">
               Производство и поставка
             </div>
 
-            <h1 className="max-w-[920px] text-[30px] font-bold leading-[1.12] [text-shadow:0_2px_28px_rgba(0,0,0,0.55)] sm:text-[38px] md:text-[50px] lg:text-7xl">
+            <h1 className="max-w-[920px] text-[26px] font-bold leading-[1.12] [text-shadow:0_2px_28px_rgba(0,0,0,0.55)] sm:text-[34px] md:text-[44px] lg:text-[58px] lg:leading-[1.08]">
               Фильтровальные мешки для аспирации и пылеулавливания
             </h1>
 
@@ -694,7 +694,7 @@ export default function Page() {
 
               <a
                 href="/kontakty"
-                className="inline-flex h-12 w-full items-center justify-center rounded-xl border border-white/30 bg-white/10 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-white/20 sm:h-auto sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
+                className="inline-flex h-12 w-full items-center justify-center rounded-xl border border-[#14b8a6]/40 bg-[#14b8a6]/15 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-[#14b8a6]/28 sm:h-auto sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
               >
                 Связаться с нами
               </a>
