@@ -659,30 +659,30 @@ export default function Page() {
         className="relative w-full overflow-hidden scroll-mt-[120px] pt-[105px] lg:pt-0"
       >
         <div
-          className="relative min-h-[540px] w-full bg-cover bg-[center_62%] sm:min-h-[600px] md:bg-center lg:min-h-[620px]"
+          className="relative min-h-[600px] w-full bg-cover bg-[center_58%] sm:min-h-[680px] md:bg-center lg:min-h-[760px]"
           style={{
             backgroundImage:
               "linear-gradient(90deg, rgba(7,18,35,0.72) 0%, rgba(9,24,44,0.58) 32%, rgba(10,29,48,0.42) 55%, rgba(10,29,48,0.18) 100%), linear-gradient(180deg, rgba(4,12,24,0.34) 0%, rgba(4,12,24,0.16) 28%, rgba(4,12,24,0.18) 72%, rgba(4,12,24,0.42) 100%), url('/images/hero.png')",
           }}
         >
-        <div className="relative mx-auto flex min-h-[540px] max-w-7xl items-start justify-center px-4 pb-9 pt-8 sm:min-h-[600px] sm:px-6 sm:pb-12 sm:pt-12 md:pt-16 lg:min-h-[620px] lg:pb-16 lg:pt-20">
-          <div className="max-w-4xl text-center text-white">
-            <div className="mb-4 inline-block rounded-full bg-teal-500/90 px-4 py-1 text-[12px] sm:text-sm">
+        <div className="relative mx-auto flex min-h-[600px] max-w-7xl flex-col items-center justify-start px-4 pb-16 pt-20 sm:min-h-[680px] sm:px-6 sm:pb-20 sm:pt-24 md:pt-28 lg:min-h-[760px] lg:pb-24 lg:pt-40 xl:pt-44">
+          <div className="flex max-w-4xl flex-col items-center gap-6 text-center text-white lg:gap-8">
+            <div className="inline-flex rounded-full border border-green-500/30 bg-green-500/15 px-4 py-1.5 text-[13px] font-semibold text-green-500 backdrop-blur-[4px] sm:text-sm">
               Производство и поставка
             </div>
 
-            <h1 className="mb-4 max-w-[920px] text-[30px] font-bold leading-[1.12] sm:mb-5 sm:text-[38px] md:text-[50px] lg:text-7xl">
+            <h1 className="max-w-[920px] text-[30px] font-bold leading-[1.12] [text-shadow:0_2px_28px_rgba(0,0,0,0.55)] sm:text-[38px] md:text-[50px] lg:text-7xl">
               Фильтровальные мешки для аспирации и пылеулавливания
             </h1>
 
-            <p className="mb-7 text-[15px] leading-7 text-white/92 sm:mb-9 sm:text-[17px] sm:leading-8 md:text-xl">
+            <p className="text-[15px] leading-7 text-white antialiased sm:text-[17px] sm:leading-8 md:text-xl [text-shadow:0_1px_14px_rgba(0,0,0,0.65)]">
               Мешки для систем аспирации и промышленных установок: удержание
               пыли и опилок, тканевые решения и фильтры для аспирации. Для
               стружкоотсосов, УВП и циклонов — пошив по размерам, доставка по
               России.
             </p>
 
-            <div className="mb-8 flex flex-col justify-center gap-3 sm:mb-10 sm:flex-row sm:flex-wrap sm:gap-4">
+            <div className="flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row sm:flex-nowrap sm:items-center sm:gap-6 lg:gap-8">
               <a
                 href="https://wa.me/79514992576"
                 target="_blank"
@@ -694,13 +694,13 @@ export default function Page() {
 
               <a
                 href="/kontakty"
-                className="inline-flex h-12 w-full items-center justify-center rounded-xl border border-white/40 bg-white/10 px-6 text-[15px] backdrop-blur-md transition hover:bg-white/20 sm:h-auto sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
+                className="inline-flex h-12 w-full items-center justify-center rounded-xl border border-white/30 bg-white/10 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-white/20 sm:h-auto sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
               >
                 Связаться с нами
               </a>
             </div>
 
-            <div className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-2 text-[13px] text-white/90 sm:mt-6 sm:gap-x-8 sm:gap-y-3 sm:text-sm md:text-base">
+            <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-[13px] text-white sm:gap-x-8 sm:gap-y-3 sm:text-sm md:text-base [text-shadow:0_1px_10px_rgba(0,0,0,0.5)]">
               <div className="flex items-center gap-2">
                 <svg
                   className="h-5 w-5 text-teal-400"

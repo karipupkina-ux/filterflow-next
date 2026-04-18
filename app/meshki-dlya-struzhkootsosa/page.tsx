@@ -544,16 +544,16 @@ export default function Page() {
           className="relative min-h-[600px] bg-cover bg-[center_58%] sm:min-h-[680px] md:bg-center lg:min-h-[760px]"
           style={{
             backgroundImage:
-              "linear-gradient(90deg, rgba(7,18,35,0.78) 0%, rgba(9,24,44,0.64) 32%, rgba(10,29,48,0.48) 55%, rgba(10,29,48,0.22) 100%), linear-gradient(180deg, rgba(4,12,24,0.48) 0%, rgba(4,12,24,0.24) 32%, rgba(4,12,24,0.32) 68%, rgba(4,12,24,0.58) 100%), url('/images/hero.png')",
+              "linear-gradient(90deg, rgba(7,18,35,0.72) 0%, rgba(9,24,44,0.58) 32%, rgba(10,29,48,0.42) 55%, rgba(10,29,48,0.18) 100%), linear-gradient(180deg, rgba(4,12,24,0.34) 0%, rgba(4,12,24,0.16) 28%, rgba(4,12,24,0.18) 72%, rgba(4,12,24,0.42) 100%), url('/images/hero.png')",
           }}
         >
-          <div className="mx-auto flex min-h-[600px] max-w-[1440px] flex-col items-center justify-start px-4 pb-16 pt-20 sm:min-h-[680px] sm:px-6 sm:pb-20 sm:pt-24 md:pt-28 lg:min-h-[760px] lg:pb-24 lg:pt-32">
-            <div className="flex w-full max-w-[980px] flex-col items-center text-center text-white">
-              <div className="mb-5 inline-flex rounded-full border border-white/10 bg-black/30 px-6 py-2.5 text-[13px] font-semibold text-[#e8fffb]">
+          <div className="mx-auto flex min-h-[600px] max-w-[1440px] flex-col items-center justify-start px-4 pb-16 pt-20 sm:min-h-[680px] sm:px-6 sm:pb-20 sm:pt-24 md:pt-28 lg:min-h-[760px] lg:pb-24 lg:pt-40 xl:pt-44">
+            <div className="flex w-full max-w-[980px] flex-col items-center gap-6 text-center text-white lg:gap-8">
+              <div className="inline-flex rounded-full border border-green-500/30 bg-green-500/15 px-4 py-1.5 text-[13px] font-semibold text-green-500 backdrop-blur-[4px] sm:px-7 sm:py-3 sm:text-[15px]">
                 Для деревообработки
               </div>
 
-              <h1 className="mb-4 max-w-[920px] text-[30px] font-bold leading-[1.12] tracking-[-0.03em] [text-shadow:0_2px_28px_rgba(0,0,0,0.55)] sm:mb-5 sm:text-[38px] md:text-[48px] lg:text-[52px] md:leading-[1.08]">
+              <h1 className="max-w-[920px] text-[30px] font-bold leading-[1.12] tracking-[-0.03em] [text-shadow:0_2px_28px_rgba(0,0,0,0.55)] sm:text-[38px] md:text-[48px] lg:text-[52px] md:leading-[1.08]">
                 Мешки для стружкоотсоса
                 <br className="max-md:hidden" />
                 <span className="max-md:block">
@@ -568,7 +568,7 @@ export default function Page() {
                 патрубка, заказ от одной штуки.
               </p>
 
-              <div className="mt-7 flex w-full flex-col items-stretch justify-center gap-3 sm:mt-9 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+              <div className="flex w-full flex-col items-stretch justify-center gap-3 sm:w-auto sm:flex-row sm:flex-nowrap sm:items-center sm:gap-6 lg:gap-8">
                 <a
                   href="https://wa.me/79514992576"
                   target="_blank"
@@ -589,7 +589,7 @@ export default function Page() {
 
                 <Link
                   href="/kontakty"
-                  className="inline-flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] border border-white/30 bg-black/25 px-6 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-black/35 sm:h-[58px] sm:w-auto sm:px-8 sm:text-[16px]"
+                  className="inline-flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] border border-white/30 bg-white/10 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-white/20 sm:h-[58px] sm:w-auto sm:px-8 sm:text-[16px]"
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -606,7 +606,7 @@ export default function Page() {
                 </Link>
               </div>
 
-              <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-white sm:mt-8 sm:gap-x-8 sm:gap-y-3 sm:text-[14px] md:mt-10 md:text-[15px] [text-shadow:0_1px_10px_rgba(0,0,0,0.5)]">
+              <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-white sm:gap-x-8 sm:gap-y-3 sm:text-[14px] md:text-[15px] [text-shadow:0_1px_10px_rgba(0,0,0,0.5)]">
                 <div className="flex items-center gap-2">
                   <svg
                     viewBox="0 0 24 24"
