@@ -87,7 +87,7 @@ export default function FiltracionnyeRukavaPage() {
 
                 <Link
                   href="/kontakty"
-                  className="flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] border border-[#28c7bb]/40 bg-[#28c7bb]/15 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-[#28c7bb]/28 sm:h-[60px] sm:w-auto sm:rounded-[20px] sm:px-8 sm:text-[16px] md:h-[64px] md:px-10 md:text-[17px]"
+                  className="flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] border border-white/30 bg-white/10 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-white/20 sm:h-[60px] sm:w-auto sm:rounded-[20px] sm:px-8 sm:text-[16px] md:h-[64px] md:px-10 md:text-[17px]"
                 >
                   <span className="text-[18px] sm:text-[22px]">☎</span>
                   Связаться с нами

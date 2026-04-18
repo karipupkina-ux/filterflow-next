@@ -694,7 +694,7 @@ export default function Page() {
 
               <a
                 href="/kontakty"
-                className="inline-flex h-12 w-full items-center justify-center rounded-xl border border-[#14b8a6]/40 bg-[#14b8a6]/15 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-[#14b8a6]/28 sm:h-auto sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
+                className="inline-flex h-12 w-full items-center justify-center rounded-xl border border-white/30 bg-white/10 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-white/20 sm:h-auto sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
               >
                 Связаться с нами
               </a>

@@ -589,7 +589,7 @@ export default function Page() {
 
                 <Link
                   href="/kontakty"
-                  className="inline-flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] border border-[#28c4b7]/40 bg-[#28c4b7]/15 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-[#28c4b7]/28 sm:h-[58px] sm:w-auto sm:px-8 sm:text-[16px]"
+                  className="inline-flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] border border-white/30 bg-white/10 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-white/20 sm:h-[58px] sm:w-auto sm:px-8 sm:text-[16px]"
                 >
                   <svg
                     viewBox="0 0 24 24"
