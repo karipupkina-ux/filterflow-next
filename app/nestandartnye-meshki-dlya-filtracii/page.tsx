@@ -7,6 +7,7 @@ import { sendApplicationEmail } from "@/lib/send-email-client";
 import Navigation from "../components/Navigation";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import FloatingContacts from "../components/feature/FloatingContacts";
+import EmailLink from "../components/EmailLink";
 
 export default function Page() {
   const [name, setName] = useState("");
@@ -1266,10 +1267,7 @@ export default function Page() {
                 +7 (951) 499-25-76
               </a>
 
-              <Link
-                href="/kontakty"
-                className="inline-flex w-full items-center justify-center rounded-[18px] border border-white/35 bg-transparent px-6 py-3.5 text-[15px] font-semibold text-white transition hover:bg-white/8 sm:w-auto sm:min-w-[250px] sm:px-7 sm:py-4 sm:text-[16px]"
-              >
+              <EmailLink className="inline-flex w-full items-center justify-center rounded-[18px] border border-white/35 bg-transparent px-6 py-3.5 text-[15px] font-semibold text-white transition hover:bg-white/8 sm:w-auto sm:min-w-[250px] sm:px-7 sm:py-4 sm:text-[16px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="mr-3 h-5 w-5"
@@ -1279,7 +1277,7 @@ export default function Page() {
                   <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 3.24-7.09 4.73a1.5 1.5 0 0 1-1.66 0L4 7.24V6l7.8 5.2a.5.5 0 0 0 .4 0L20 6v1.24Z" />
                 </svg>
                 filterflow@mail.ru
-              </Link>
+              </EmailLink>
             </div>
           </div>
         </section>

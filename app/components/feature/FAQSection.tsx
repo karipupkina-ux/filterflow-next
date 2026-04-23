@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import EmailLink from "../EmailLink";
 
 type FaqItem = {
   question: string;
@@ -8,6 +9,7 @@ type FaqItem = {
 };
 
 export default function FAQSection() {
+  const emailText = "filterflow@mail.ru";
   const faqs: FaqItem[] = [
     {
       question: "Из каких материалов изготавливаются фильтровальные мешки?",
@@ -51,6 +53,21 @@ export default function FAQSection() {
   const toggleItem = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
+
+  function renderAnswer(answer: string) {
+    if (!answer.includes(emailText)) {
+      return answer;
+    }
+
+    const [before, after] = answer.split(emailText);
+    return (
+      <>
+        {before}
+        <EmailLink className="underline underline-offset-2">{emailText}</EmailLink>
+        {after}
+      </>
+    );
+  }
 
   return (
     <section className="bg-[#f8fafc] py-12 md:py-16 lg:py-20">
@@ -126,7 +143,7 @@ export default function FAQSection() {
                 >
                   <div className="overflow-hidden">
                     <div className="border-t border-[#eef2f5] px-4 pb-4 pt-3 text-[14px] leading-[1.7] text-slate-600 sm:px-5 sm:pb-5 sm:pt-4 sm:text-[15px] md:px-6 md:text-[16px]">
-                      {item.answer}
+                      {renderAnswer(item.answer)}
                     </div>
                   </div>
                 </div>

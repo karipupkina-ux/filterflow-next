@@ -5,6 +5,7 @@ import ClampOrderForm from "../components/ClampOrderForm";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo-metadata";
+import EmailLink from "../components/EmailLink";
 
 export const metadata: Metadata = pageMetadata({
   title:
@@ -1015,10 +1016,7 @@ export default function Page() {
                 +7 (951) 499-25-76
               </a>
 
-              <Link
-                href="/kontakty"
-                className="inline-flex h-[58px] min-w-[258px] items-center justify-center gap-3 rounded-[16px] bg-[#0f6f69] px-7 text-[16px] font-semibold text-white shadow-[0_14px_34px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0d6660] hover:shadow-[0_18px_38px_rgba(0,0,0,0.18)]"
-              >
+              <EmailLink className="inline-flex h-[58px] min-w-[258px] items-center justify-center gap-3 rounded-[16px] bg-[#0f6f69] px-7 text-[16px] font-semibold text-white shadow-[0_14px_34px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0d6660] hover:shadow-[0_18px_38px_rgba(0,0,0,0.18)]">
                 <svg
                   viewBox="0 0 24 24"
                   className="h-[18px] w-[18px]"
@@ -1032,7 +1030,7 @@ export default function Page() {
                   <path d="m4 7 8 6 8-6" />
                 </svg>
                 filterflow@mail.ru
-              </Link>
+              </EmailLink>
             </div>
           </div>
         </section>

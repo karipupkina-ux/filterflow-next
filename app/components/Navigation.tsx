@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import EmailLink from "./EmailLink";
 
 type MenuKey = "products" | "articles" | null;
 
@@ -151,12 +152,9 @@ export default function Navigation() {
             Email
           </a>
 
-          <Link
-            href="/kontakty"
-            className="hidden transition-colors duration-200 hover:text-[#28c4b7] sm:inline"
-          >
+          <EmailLink className="hidden transition-colors duration-200 hover:text-[#28c4b7] sm:inline">
             filterflow@mail.ru
-          </Link>
+          </EmailLink>
 
           <a
             href="tel:+79514992576"

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import EmailLink from "../EmailLink";
 import {
   sendApplicationEmail,
   SEND_EMAIL_USER_ERROR,
@@ -121,10 +122,7 @@ export default function OrderFormSection() {
                 </div>
               </a>
 
-              <Link
-                href="/kontakty"
-                className="group flex items-start gap-4"
-              >
+              <EmailLink className="group flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-[#dff5f1] text-[#23b8ad] transition group-hover:bg-[#23b8ad] group-hover:text-white">
                   <svg
                     className="h-5 w-5"
@@ -154,7 +152,7 @@ export default function OrderFormSection() {
                     filterflow@mail.ru
                   </div>
                 </div>
-              </Link>
+              </EmailLink>
 
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-[#dff5f1] text-[#23b8ad]">

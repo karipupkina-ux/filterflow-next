@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useRef, useState } from "react";
+import EmailLink from "../EmailLink";
 import {
   sendApplicationEmail,
   SEND_EMAIL_USER_ERROR,
@@ -149,10 +150,7 @@ export default function ContactsSection() {
               </div>
             </a>
 
-            <Link
-              href="/kontakty"
-              className="group flex items-start gap-4 rounded-[24px] bg-white px-6 py-5 shadow-[0_8px_28px_rgba(15,23,42,0.05)] transition-all duration-200 hover:-translate-y-[1px] hover:shadow-[0_12px_34px_rgba(15,23,42,0.08)]"
-            >
+            <EmailLink className="group flex items-start gap-4 rounded-[24px] bg-white px-6 py-5 shadow-[0_8px_28px_rgba(15,23,42,0.05)] transition-all duration-200 hover:-translate-y-[1px] hover:shadow-[0_12px_34px_rgba(15,23,42,0.08)]">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#c9f0ea] text-[#11b3a6] transition-colors duration-200 group-hover:bg-[#b9ebe3]">
                 <svg
                   className="h-5 w-5"
@@ -177,7 +175,7 @@ export default function ContactsSection() {
                   Ответим в течение 24 часов
                 </div>
               </div>
-            </Link>
+            </EmailLink>
 
             <div className="flex items-start gap-4 rounded-[24px] bg-white px-6 py-5 shadow-[0_8px_28px_rgba(15,23,42,0.05)]">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#c9f0ea] text-[#11b3a6]">

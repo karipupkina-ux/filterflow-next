@@ -9,6 +9,7 @@ import {
 import Navigation from "../components/Navigation";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import FloatingContacts from "../components/feature/FloatingContacts";
+import EmailLink from "../components/EmailLink";
 
 type GuideRow = {
   brand: string;
@@ -1047,10 +1048,7 @@ export default function VerhnieMeshkiPage() {
                 </div>
               </a>
 
-              <Link
-                href="/kontakty"
-                className="flex items-center gap-4 rounded-[20px] border border-white/20 bg-[rgba(255,255,255,0.16)] p-5 text-white transition hover:bg-[rgba(255,255,255,0.21)]"
-              >
+              <EmailLink className="flex items-center gap-4 rounded-[20px] border border-white/20 bg-[rgba(255,255,255,0.16)] p-5 text-white transition hover:bg-[rgba(255,255,255,0.21)]">
                 <div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[16px] bg-white text-[24px] text-[#ff6428]">
                   ✉
                 </div>
@@ -1061,7 +1059,7 @@ export default function VerhnieMeshkiPage() {
                     Пришлите размеры или фото оборудования
                   </div>
                 </div>
-              </Link>
+              </EmailLink>
 
               <div className="rounded-[20px] border border-white/20 bg-[rgba(255,255,255,0.16)] p-5 text-white">
                 <h3 className="mb-3 flex items-center gap-3 text-[18px] font-semibold">

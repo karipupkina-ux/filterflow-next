@@ -4,6 +4,8 @@ import { pageMetadata } from "@/lib/seo-metadata";
 import Navigation from "../components/Navigation";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import ContactForm from "./ContactForm";
+import EmailLink from "../components/EmailLink";
+import { COMPANY_EMAIL } from "@/lib/contact";
 
 export const metadata: Metadata = pageMetadata({
   title:
@@ -15,7 +17,7 @@ export const metadata: Metadata = pageMetadata({
 
 const TEL_HREF = "tel:+79514992576";
 const TEL_DISPLAY = "+7 951 499-25-76";
-const MAIL_DISPLAY = "filterflow@mail.ru";
+const MAIL_DISPLAY = COMPANY_EMAIL;
 
 function IconPhone() {
   return (
@@ -132,9 +134,9 @@ export default function KontaktyPage() {
                       </div>
                       <div>
                         <p className="text-xs font-medium uppercase tracking-wide text-[#64748b]">Email</p>
-                        <span className="mt-0.5 inline-block text-base font-semibold text-[#0aa79d] break-all">
+                        <EmailLink className="mt-0.5 inline-block text-base font-semibold text-[#0aa79d] break-all">
                           {MAIL_DISPLAY}
-                        </span>
+                        </EmailLink>
                         <p className="mt-1 text-sm text-[#64748b]">Ответим в течение 24 часов</p>
                       </div>
                     </li>
@@ -284,9 +286,9 @@ export default function KontaktyPage() {
                     {TEL_DISPLAY}
                   </a>{" "}
                   или напишите на{" "}
-                  <span className="font-semibold text-[#0aa79d] break-all">
+                  <EmailLink className="font-semibold text-[#0aa79d] break-all">
                     {MAIL_DISPLAY}
-                  </span>
+                  </EmailLink>
                   — кратко опишите задачу, тип оборудования и желаемые сроки.
                 </li>
                 <li>

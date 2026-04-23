@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import { pageMetadata } from "@/lib/seo-metadata";
+import EmailLink from "../components/EmailLink";
 
 export const metadata: Metadata = pageMetadata({
   title:
@@ -192,12 +193,9 @@ export default function Page() {
       <div className="sticky top-0 z-50">
         <div className="border-b border-[#d8dde3] bg-[#c9c9c9]">
           <div className="mx-auto flex h-10 max-w-[1440px] items-center justify-end gap-6 px-6 text-[13px] text-white">
-            <Link
-              href="/kontakty"
-              className="transition-colors duration-200 hover:text-[#28c4b7]"
-            >
+            <EmailLink className="transition-colors duration-200 hover:text-[#28c4b7]">
               filterflow@mail.ru
-            </Link>
+            </EmailLink>
 
             <a
               href="tel:+79514992576"

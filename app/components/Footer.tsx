@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import EmailLink from "./EmailLink";
 
 export default function Footer() {
   const productLinks = [
@@ -129,10 +130,7 @@ export default function Footer() {
                 <span>+7 (951) 499-25-76</span>
               </a>
 
-              <Link
-                href="/kontakty"
-                className="group flex items-center gap-3 text-[15px] text-white/88 transition-colors duration-200 hover:text-[#22C7BB]"
-              >
+              <EmailLink className="group flex items-center gap-3 text-[15px] text-white/88 transition-colors duration-200 hover:text-[#22C7BB]">
                 <span className="flex h-[28px] w-[28px] items-center justify-center text-[#22C7BB]">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                     <path
@@ -150,7 +148,7 @@ export default function Footer() {
                   </svg>
                 </span>
                 <span>filterflow@mail.ru</span>
-              </Link>
+              </EmailLink>
 
               <div className="flex items-center gap-3 text-[15px] text-white/88">
                 <span className="flex h-[28px] w-[28px] items-center justify-center text-[#22C7BB]">
@@ -271,10 +269,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <Link
-              href="/kontakty"
-              className="group inline-flex items-center gap-3 text-[17px] text-white/82 transition-colors duration-200 hover:text-[#22C7BB]"
-            >
+            <EmailLink className="group inline-flex items-center gap-3 text-[17px] text-white/82 transition-colors duration-200 hover:text-[#22C7BB]">
               <span className="text-[#22C7BB]">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
                   <path
@@ -292,7 +287,7 @@ export default function Footer() {
                 </svg>
               </span>
               <span>filterflow@mail.ru</span>
-            </Link>
+            </EmailLink>
           </div>
         </div>
 
