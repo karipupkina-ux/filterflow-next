@@ -146,7 +146,7 @@ export default function Navigation() {
           </a>
 
           <a
-            href="/kontakty"
+            href="mailto:filterflow@mail.ru?subject=&body="
             className="transition-colors duration-200 hover:text-[#28c4b7] sm:hidden"
           >
             Email
@@ -477,8 +477,8 @@ export default function Navigation() {
                   </span>
                   <span className={contactsTextClass}>Позвонить</span>
                 </a>
-                <Link
-                  href="/kontakty"
+                <a
+                  href="mailto:filterflow@mail.ru?subject=&body="
                   className={contactsItemClass}
                   onClick={() => setIsContactsOpen(false)}
                 >
@@ -486,7 +486,7 @@ export default function Navigation() {
                     <img src="/images/email.png" alt="" className="h-[20px] w-[20px] object-contain" />
                   </span>
                   <span className={contactsTextClass}>Email</span>
-                </Link>
+                </a>
               </div>
             </div>
 
