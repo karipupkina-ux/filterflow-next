@@ -1,4 +1,4 @@
-import Link from "next/link";
+import EmailLink from "../EmailLink";
 
 export default function FloatingContacts() {
   return (
@@ -6,13 +6,12 @@ export default function FloatingContacts() {
       <div className="fixed right-5 top-1/2 z-50 hidden -translate-y-1/2 flex-col gap-3 lg:flex">
         
         {/* Почта */}
-        <Link
-          href="/kontakty"
+        <EmailLink
           className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md transition hover:scale-110"
-          aria-label="Написать через форму на странице контактов"
+          ariaLabel="Написать на email"
         >
           <img src="/images/email.png" alt="Почта" className="h-20 w-20 object-contain" />
-        </Link>
+        </EmailLink>
 
         {/* Телефон */}
         <a
