@@ -245,7 +245,7 @@ export default function KontaktyPage() {
                 <p className="mt-1 text-xs text-[#64748b]">минимальный заказ</p>
               </div>
               <div className="rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-4 text-center">
-                <p className="text-lg font-bold text-[#0aa79d]">1–3 дня</p>
+                <p className="text-lg font-bold text-[#0aa79d]">от 1 дня</p>
                 <p className="mt-1 text-xs text-[#64748b]">типовые позиции</p>
               </div>
               <div className="rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-4 text-center sm:col-span-1">
