@@ -9,8 +9,8 @@ const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
 const SMTP_HOST = "smtp.mail.ru";
-const SMTP_PORT = 465;
-const SMTP_SECURE = true;
+const SMTP_PORT = 587;
+const SMTP_SECURE = false;
 const RATE_LIMIT_WINDOW_MS = 60_000;
 const RATE_LIMIT_MAX_REQUESTS = 3;
 const rateLimitStore = new Map<string, number[]>();
