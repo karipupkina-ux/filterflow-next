@@ -1,19 +1,28 @@
 import nodemailer from "nodemailer";
-import type { SentMessageInfo } from "nodemailer/lib/smtp-transport";
+import type { Transporter } from "nodemailer";
+import type SMTPTransport from "nodemailer/lib/smtp-transport";
 import { NextResponse } from "next/server";
+
+export const runtime = "nodejs";
 
 const EMAIL_USER = process.env.EMAIL_USER;
 const EMAIL_PASS = process.env.EMAIL_PASS;
 const RECEIVER_EMAIL = "filterflow@mail.ru";
-const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
 const SMTP_HOST = "smtp.mail.ru";
 const SMTP_PORT = 587;
 const SMTP_SECURE = false;
+
+const SMTP_CONNECTION_TIMEOUT_MS = 20_000;
+const SMTP_GREETING_TIMEOUT_MS = 20_000;
+const SMTP_SOCKET_TIMEOUT_MS = 30_000;
+
 const RATE_LIMIT_WINDOW_MS = 60_000;
-const RATE_LIMIT_MAX_REQUESTS = 3;
+const RATE_LIMIT_MAX_REQUESTS = 5;
 const rateLimitStore = new Map<string, number[]>();
+
+const USER_ERROR =
+  "Не удалось отправить заявку. Попробуйте позже или свяжитесь с нами по телефону.";
 
 /** Для логов: не светим полный email целиком */
 function maskEmailHint(user: string): string {
@@ -33,7 +42,7 @@ function escapeHtml(text: string): string {
     .replace(/"/g, "&quot;");
 }
 
-function nodemailerErrDetails(err: unknown): Record<string, unknown> {
+function smtpErrDetails(err: unknown): Record<string, unknown> {
   if (!err || typeof err !== "object") return { message: String(err) };
   const e = err as NodeJS.ErrnoException & {
     responseCode?: number;
@@ -50,6 +59,19 @@ function nodemailerErrDetails(err: unknown): Record<string, unknown> {
     command: e.command,
     response: e.response,
   };
+}
+
+function isSmtpTimeout(err: unknown): boolean {
+  if (!err || typeof err !== "object") return false;
+  const e = err as NodeJS.ErrnoException;
+  return (
+    e.code === "ETIMEDOUT" ||
+    e.code === "ESOCKET" ||
+    e.code === "ECONNRESET" ||
+    e.code === "ECONNREFUSED" ||
+    (typeof e.message === "string" &&
+      /timeout|timed out|connection timeout/i.test(e.message))
+  );
 }
 
 function getClientIp(request: Request): string {
@@ -98,49 +120,24 @@ function isRateLimited(clientIp: string): boolean {
   return false;
 }
 
-async function sendTelegramNotification(params: {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-  sentAt: string;
-}) {
-  if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
-    console.log("[send-email] telegram skipped: missing env", {
-      hasBotToken: Boolean(TELEGRAM_BOT_TOKEN),
-      hasChatId: Boolean(TELEGRAM_CHAT_ID),
-    });
-    return;
-  }
-
-  const text = [
-    "Новая заявка с сайта FilterFlow",
-    "",
-    `Имя: ${params.name}`,
-    `Email: ${params.email}`,
-    `Телефон: ${params.phone || "—"}`,
-    `Сообщение: ${params.message}`,
-    `Дата и время: ${params.sentAt}`,
-  ].join("\n");
-
-  const response = await fetch(
-    `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        chat_id: TELEGRAM_CHAT_ID,
-        text,
-      }),
-    }
-  );
-
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(
-      `Telegram send failed with status ${response.status}: ${errorText}`
-    );
-  }
+function createMailTransporter(): Transporter<SMTPTransport.SentMessageInfo> {
+  return nodemailer.createTransport({
+    host: SMTP_HOST,
+    port: SMTP_PORT,
+    secure: SMTP_SECURE,
+    requireTLS: true,
+    auth: {
+      user: EMAIL_USER,
+      pass: EMAIL_PASS,
+    },
+    connectionTimeout: SMTP_CONNECTION_TIMEOUT_MS,
+    greetingTimeout: SMTP_GREETING_TIMEOUT_MS,
+    socketTimeout: SMTP_SOCKET_TIMEOUT_MS,
+    tls: {
+      minVersion: "TLSv1.2",
+      servername: SMTP_HOST,
+    },
+  });
 }
 
 export async function POST(request: Request) {
@@ -149,24 +146,34 @@ export async function POST(request: Request) {
 
   try {
     if (!EMAIL_USER || !EMAIL_PASS) {
-      console.error(
-        "[send-email] missing env: need EMAIL_USER and EMAIL_PASS",
-        { hasUser: Boolean(EMAIL_USER), hasPass: Boolean(EMAIL_PASS) }
-      );
-      return NextResponse.json(
-        { error: "Email service is not configured on the server." },
-        { status: 500 }
-      );
+      console.error("[send-email] missing env: need EMAIL_USER and EMAIL_PASS", {
+        hasUser: Boolean(EMAIL_USER),
+        hasPass: Boolean(EMAIL_PASS),
+      });
+      return NextResponse.json({ error: USER_ERROR }, { status: 500 });
     }
 
     console.log("[send-email] env ok, auth user:", maskEmailHint(EMAIL_USER));
+    console.log("[send-email] SMTP config", {
+      host: SMTP_HOST,
+      port: SMTP_PORT,
+      secure: SMTP_SECURE,
+      requireTLS: true,
+      connectionTimeout: SMTP_CONNECTION_TIMEOUT_MS,
+      greetingTimeout: SMTP_GREETING_TIMEOUT_MS,
+      socketTimeout: SMTP_SOCKET_TIMEOUT_MS,
+      receiver: RECEIVER_EMAIL,
+    });
 
     let body: unknown;
     try {
       body = await request.json();
     } catch (parseErr) {
       console.error("[send-email] JSON parse failed", parseErr);
-      return NextResponse.json({ error: "Invalid JSON body." }, { status: 400 });
+      return NextResponse.json(
+        { error: "Некорректные данные формы." },
+        { status: 400 }
+      );
     }
 
     const raw = body as Record<string, unknown>;
@@ -178,8 +185,6 @@ export async function POST(request: Request) {
       typeof raw?.website === "string" ? raw.website.trim() : "";
     const clientIp = getClientIp(request);
 
-    // Honeypot: скрытое поле для отлова автозаполнения спамерами.
-    // Если поле заполнено — заявку не отправляем (и email/telegram не триггерим).
     if (website) {
       console.warn("[send-email] honeypot triggered", { clientIp });
       return NextResponse.json({ ok: true });
@@ -192,12 +197,7 @@ export async function POST(request: Request) {
           error:
             "Слишком много попыток отправки. Подождите немного и попробуйте снова.",
         },
-        {
-          status: 429,
-          headers: {
-            "Retry-After": String(Math.ceil(RATE_LIMIT_WINDOW_MS / 1000)),
-          },
-        }
+        { status: 429 }
       );
     }
 
@@ -208,7 +208,7 @@ export async function POST(request: Request) {
         hasMessage: Boolean(message),
       });
       return NextResponse.json(
-        { error: "Fields name, email and message are required." },
+        { error: "Заполните имя, email и сообщение." },
         { status: 400 }
       );
     }
@@ -219,15 +219,7 @@ export async function POST(request: Request) {
       timeZone: "Europe/Moscow",
     }).format(new Date());
 
-    const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port: SMTP_PORT,
-      secure: SMTP_SECURE,
-      auth: {
-        user: EMAIL_USER,
-        pass: EMAIL_PASS,
-      },
-    });
+    const transporter = createMailTransporter();
 
     try {
       await transporter.verify();
@@ -238,15 +230,23 @@ export async function POST(request: Request) {
         ms: Date.now() - started,
       });
     } catch (verifyErr) {
-      console.error(
-        "[send-email] SMTP verify FAILED — Mail.ru требует пароль приложения (не пароль от ящика). См. https://help.mail.ru/mail/security/protection/external"
-      );
-      console.error("[send-email] verify error message:", String(verifyErr));
-      console.error("[send-email] verify error details:", nodemailerErrDetails(verifyErr));
-      return NextResponse.json(
-        { error: "Failed to send email." },
-        { status: 500 }
-      );
+      const details = smtpErrDetails(verifyErr);
+      console.error("[send-email] SMTP verify FAILED", details);
+
+      if (isSmtpTimeout(verifyErr)) {
+        console.error(
+          "[send-email] SMTP timeout hint: Timeweb Cloud по умолчанию блокирует исходящие порты 25/465/587. " +
+            "Разблокируйте порт 587 в панели Timeweb или обратитесь в поддержку. " +
+            "Документация: https://timeweb.cloud/docs/cloud-servers/limitations"
+        );
+      } else {
+        console.error(
+          "[send-email] SMTP auth hint: Mail.ru требует пароль приложения (не пароль от ящика). " +
+            "См. https://help.mail.ru/mail/security/protection/external"
+        );
+      }
+
+      return NextResponse.json({ error: USER_ERROR }, { status: 500 });
     }
 
     const textBody = [
@@ -276,9 +276,8 @@ export async function POST(request: Request) {
       <p><strong>Дата и время отправки (МСК):</strong> ${escapeHtml(sentAt)}</p>
     `;
 
-    let info: SentMessageInfo;
     try {
-      info = await transporter.sendMail({
+      const info = await transporter.sendMail({
         from: `"FilterFlow" <${EMAIL_USER}>`,
         to: RECEIVER_EMAIL,
         replyTo: email,
@@ -286,44 +285,29 @@ export async function POST(request: Request) {
         text: textBody,
         html: htmlBody,
       });
-    } catch (sendErr) {
-      console.error(
-        "[send-email] sendMail FAILED",
-        nodemailerErrDetails(sendErr)
-      );
-      return NextResponse.json(
-        { error: "Failed to send email." },
-        { status: 500 }
-      );
-    }
 
-    console.log("[send-email] sendMail OK", {
-      messageId: info.messageId,
-      accepted: info.accepted,
-      rejected: info.rejected,
-      response: info.response,
-      msTotal: Date.now() - started,
-    });
-
-    try {
-      await sendTelegramNotification({
-        name,
-        email,
-        phone,
-        message,
-        sentAt,
+      console.log("[send-email] sendMail OK", {
+        messageId: info.messageId,
+        accepted: info.accepted,
+        rejected: info.rejected,
+        response: info.response,
+        msTotal: Date.now() - started,
       });
-      console.log("[send-email] telegram notification OK");
-    } catch (telegramErr) {
-      console.error(
-        "[send-email] telegram notification FAILED",
-        String(telegramErr)
-      );
+    } catch (sendErr) {
+      console.error("[send-email] sendMail FAILED", smtpErrDetails(sendErr));
+
+      if (isSmtpTimeout(sendErr)) {
+        console.error(
+          "[send-email] sendMail timeout hint: проверьте разблокировку SMTP-портов на Timeweb Cloud"
+        );
+      }
+
+      return NextResponse.json({ error: USER_ERROR }, { status: 500 });
     }
 
     return NextResponse.json({ ok: true });
   } catch (error) {
-    console.error("[send-email] unexpected error", nodemailerErrDetails(error));
-    return NextResponse.json({ error: "Failed to send email." }, { status: 500 });
+    console.error("[send-email] unexpected error", smtpErrDetails(error));
+    return NextResponse.json({ error: USER_ERROR }, { status: 500 });
   }
 }

@@ -14,7 +14,7 @@ export type ApplicationPayload = {
 
 /** Текст для пользователя при любой ошибке отправки (детали только в console.error) */
 export const SEND_EMAIL_USER_ERROR =
-  "Не удалось отправить заявку. Попробуйте позже.";
+  "Не удалось отправить заявку. Попробуйте позже или свяжитесь с нами по телефону.";
 
 export async function sendApplicationEmail(
   payload: ApplicationPayload
