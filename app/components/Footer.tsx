@@ -261,10 +261,12 @@ export default function Footer() {
 
               <div>
                 <div className="text-[17px] font-medium leading-none text-white">
-                  Лукьянова В.А.
+                  ИП Лукьянова В.А.
                 </div>
                 <div className="mt-2 text-[15px] leading-[1.4] text-white/50">
-                  Самозанятая (НПД) · г. Москва, Россия
+                  ИНН 610208440807
+                  <br />
+                  ОГРНИП 326619600158844
                 </div>
               </div>
             </div>

@@ -12,6 +12,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
     sitemap: `${base}/sitemap.xml`,
-    host: "www.filterflow.ru",
+    host: "filterflow.ru",
   };
 }

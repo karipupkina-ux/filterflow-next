@@ -7,7 +7,7 @@ import EmailLink from "../components/EmailLink";
 export const metadata: Metadata = pageMetadata({
   title: "Политика конфиденциальности — обработка персональных данных",
   description:
-    "Политика обработки персональных данных сайта FilterFlow: цели, сроки хранения, права субъектов и контакты оператора. Актуальная редакция для пользователей www.filterflow.ru.",
+    "Политика обработки персональных данных сайта FilterFlow: цели, сроки хранения, права субъектов и контакты оператора. Актуальная редакция для пользователей filterflow.ru.",
   path: "/politika-konfidencialnosti",
 });
 
@@ -66,12 +66,12 @@ export default function PolitikaKonfidencialnostiPage() {
                   порядок обработки и защиты персональных данных пользователей
                   сайта{" "}
                   <a
-                    href="https://www.filterflow.ru/"
+                    href="https://filterflow.ru/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-semibold text-[#0f172a] hover:underline"
                   >
-                    https://www.filterflow.ru/
+                    https://filterflow.ru/
                   </a>
                 </p>
 
@@ -239,12 +239,12 @@ export default function PolitikaKonfidencialnostiPage() {
                   настоящую Политику. Актуальная версия Политики всегда
                   размещается на сайте{" "}
                   <a
-                    href="https://www.filterflow.ru/"
+                    href="https://filterflow.ru/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-semibold text-[#0f172a] hover:underline"
                   >
-                    https://www.filterflow.ru/
+                    https://filterflow.ru/
                   </a>
                 </p>
               </div>

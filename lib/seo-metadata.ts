@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 /**
- * Канонический production-домен (www). Совпадает с Vercel: apex редиректит на www.
+ * Канонический production-домен.
  * Используйте только это значение для metadataBase, canonical, OG, sitemap, robots.
  */
-export const SITE_URL = "https://www.filterflow.ru";
+export const SITE_URL = "https://filterflow.ru";
 
 const BASE = SITE_URL.replace(/\/$/, "");
 
