@@ -68,9 +68,7 @@ export default function FiltracionnyeRukavaPage() {
 
               <div className="flex w-full flex-col items-stretch justify-center gap-3 sm:w-auto sm:flex-row sm:flex-nowrap sm:items-center sm:gap-6 lg:gap-8">
                 <a
-                  href="https://wa.me/79514992576"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/#contacts"
                   className="flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] bg-[#28c7bb] px-6 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b5aa] sm:h-[60px] sm:w-auto sm:rounded-[20px] sm:px-8 sm:text-[16px] md:h-[64px] md:px-10 md:text-[17px]"
                 >
                   <svg

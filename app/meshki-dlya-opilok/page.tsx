@@ -389,9 +389,7 @@ export default function Page() {
             </nav>
 
             <a
-              href="https://wa.me/79514992576"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/#contacts"
               className="hidden h-[48px] items-center justify-center rounded-[14px] bg-[#28c4b7] px-8 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8] lg:flex"
             >
               Получить расчёт

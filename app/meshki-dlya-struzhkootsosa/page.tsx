@@ -570,9 +570,7 @@ export default function Page() {
 
               <div className="flex w-full flex-col items-stretch justify-center gap-3 sm:w-auto sm:flex-row sm:flex-nowrap sm:items-center sm:gap-6 lg:gap-8">
                 <a
-                  href="https://wa.me/79514992576"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/#contacts"
                   className="inline-flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] bg-[#28c4b7] px-6 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8] sm:h-[58px] sm:w-auto sm:px-8 sm:text-[16px]"
                 >
                   <svg

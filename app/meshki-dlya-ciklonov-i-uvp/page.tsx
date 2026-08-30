@@ -360,9 +360,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
 
               <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
                 <a
-                  href="https://wa.me/79514992576?text=Здравствуйте!%20Хочу%20заказать%20мешки%20для%20УВП%20и%20циклонов"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/#contacts"
                   className="inline-flex h-[48px] w-full items-center justify-center rounded-xl bg-[#f56600] px-6 text-[15px] font-semibold text-white transition hover:bg-[#de5b00] sm:h-[54px] sm:w-auto sm:px-8 sm:text-[17px] md:h-[56px] md:text-[18px]"
                 >
                   Заказать расчёт

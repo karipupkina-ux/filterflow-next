@@ -684,9 +684,7 @@ export default function Page() {
 
             <div className="flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row sm:flex-nowrap sm:items-center sm:gap-6 lg:gap-8">
               <a
-                href="https://wa.me/79514992576"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/#contacts"
                 className="inline-flex h-12 w-full items-center justify-center rounded-xl bg-teal-500 px-6 text-[15px] font-semibold transition hover:bg-teal-600 sm:h-auto sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
               >
                 Получить расчет

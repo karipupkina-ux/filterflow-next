@@ -50,9 +50,7 @@ export default function Hero() {
             className={`mt-6 flex flex-col items-stretch justify-center gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 ${transitionIn} ${enter} delay-[300ms]`}
           >
             <a
-              href="https://wa.me/79514992576"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contacts"
             className="inline-flex h-11 w-full items-center justify-center rounded-xl bg-teal-500 px-5 text-[15px] font-medium text-white transition hover:bg-teal-600 sm:h-auto sm:w-auto sm:px-6 sm:py-3 sm:text-base"
             >
               Оформить заказ

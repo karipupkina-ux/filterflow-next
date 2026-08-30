@@ -115,7 +115,7 @@ export default function Page() {
 
               <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
                 <a
-                  href="#order-form"
+                  href="/#contacts"
                   className="flex h-11 items-center justify-center rounded-lg bg-[#149c8d] px-6 text-[15px] font-medium text-white transition hover:bg-[#11897d] sm:h-auto sm:py-3"
                 >
                   Заказать расчёт
@@ -1050,7 +1050,7 @@ export default function Page() {
 
               <div className="mt-12 flex justify-center">
                 <a
-                  href="#order-form"
+                  href="/#contacts"
                   className="inline-flex items-center justify-center rounded-full bg-[#19b5a5] px-10 py-4 text-[18px] font-medium text-white transition hover:bg-[#149c8d]"
                 >
                   Заказать расчёт

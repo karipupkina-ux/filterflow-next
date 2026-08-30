@@ -37,7 +37,7 @@ export default function MeshkiHero() {
             <div className="flex flex-wrap gap-4 mb-6">
   
               <a
-                href="/kontakty"
+                href="/#contacts"
                 className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold"
               >
                 Получить расчёт

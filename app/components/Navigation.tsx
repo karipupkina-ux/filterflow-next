@@ -401,9 +401,7 @@ export default function Navigation() {
 
           {/* Кнопка */}
           <a
-            href="https://wa.me/79514992576"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/#contacts"
             className="hidden h-[46px] items-center justify-center rounded-[14px] bg-[#28c4b7] px-7 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8] sm:inline-flex"
           >
             Получить расчёт
@@ -602,9 +600,7 @@ export default function Navigation() {
             </div>
             <div className="border-t border-[#e8edf3] px-4 py-4">
               <a
-                href="https://wa.me/79514992576"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/#contacts"
                 className="flex h-12 w-full items-center justify-center rounded-xl bg-[#28c4b7] text-[15px] font-semibold text-white transition hover:bg-[#20b4a8]"
               >
                 Получить расчёт

@@ -490,9 +490,7 @@ export default function VerhnieMeshkiPage() {
 
               <div className="flex flex-wrap gap-3.5">
                 <a
-                  href="https://wa.me/79514992576"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/#contacts"
                   className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-5 py-3 text-[15px] font-medium text-white transition hover:bg-orange-600"
                 >
                   Заказать расчёт

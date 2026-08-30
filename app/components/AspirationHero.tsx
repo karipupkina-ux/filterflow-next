@@ -35,9 +35,12 @@ export default function AspirationHero() {
 
         {/* КНОПКИ */}
         <div className="flex gap-4 mb-6">
-          <button className="bg-teal-500 hover:bg-teal-600 px-6 py-3 rounded-lg font-medium">
+          <a
+            href="/#contacts"
+            className="bg-teal-500 hover:bg-teal-600 px-6 py-3 rounded-lg font-medium"
+          >
             Получить расчет
-          </button>
+          </a>
 
           <button className="border border-white/50 px-6 py-3 rounded-lg hover:bg-white/10">
             Связаться с нами
