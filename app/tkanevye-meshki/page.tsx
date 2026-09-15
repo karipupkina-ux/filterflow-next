@@ -569,7 +569,7 @@ export default function TkanevyeMeshkiPage() {
               >
                 <div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[16px] bg-white">
                   <img
-                    src="/images/whatsapp.png"
+                    src="/images/whatsapp.svg"
                     alt="WhatsApp"
                     className="h-7 w-7 object-contain"
                   />

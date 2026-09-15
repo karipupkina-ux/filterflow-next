@@ -4,7 +4,7 @@ export default function MeshkiHero() {
   
         {/* ФОН */}
         <img
-          src="/images/hero.png"
+          src="/images/hero.webp"
           alt="Мешки для аспирации"
           className="absolute inset-0 w-full h-full object-cover"
         />

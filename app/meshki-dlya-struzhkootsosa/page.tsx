@@ -544,7 +544,7 @@ export default function Page() {
           className="relative min-h-[600px] bg-cover bg-[center_58%] sm:min-h-[680px] md:bg-center lg:min-h-[760px]"
           style={{
             backgroundImage:
-              "linear-gradient(90deg, rgba(7,18,35,0.72) 0%, rgba(9,24,44,0.58) 32%, rgba(10,29,48,0.42) 55%, rgba(10,29,48,0.18) 100%), linear-gradient(180deg, rgba(4,12,24,0.34) 0%, rgba(4,12,24,0.16) 28%, rgba(4,12,24,0.18) 72%, rgba(4,12,24,0.42) 100%), url('/images/hero.png')",
+              "linear-gradient(90deg, rgba(7,18,35,0.72) 0%, rgba(9,24,44,0.58) 32%, rgba(10,29,48,0.42) 55%, rgba(10,29,48,0.18) 100%), linear-gradient(180deg, rgba(4,12,24,0.34) 0%, rgba(4,12,24,0.16) 28%, rgba(4,12,24,0.18) 72%, rgba(4,12,24,0.42) 100%), url('/images/hero.webp')",
           }}
         >
           <div className="mx-auto flex min-h-[600px] max-w-[1440px] flex-col items-center justify-start px-4 pb-16 pt-20 sm:min-h-[680px] sm:px-6 sm:pb-20 sm:pt-24 md:pt-28 lg:min-h-[760px] lg:pb-24 lg:pt-40 xl:pt-44">
@@ -1506,7 +1506,7 @@ export default function Page() {
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white shadow-[0_10px_30px_rgba(15,23,42,0.12)] transition-transform duration-200 hover:scale-105"
         >
           <img
-            src="/images/whatsapp.png"
+            src="/images/whatsapp.svg"
             alt="WhatsApp"
             className="h-[44px] w-[44px] object-contain"
           />
@@ -1519,7 +1519,7 @@ export default function Page() {
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white shadow-[0_10px_30px_rgba(15,23,42,0.12)] transition-transform duration-200 hover:scale-105"
         >
           <img
-            src="/images/telegram.png"
+            src="/images/telegram.svg"
             alt="Telegram"
             className="h-[44px] w-[44px] object-contain"
           />
@@ -1532,7 +1532,7 @@ export default function Page() {
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[linear-gradient(135deg,#6d4dff_0%,#c23fff_100%)] shadow-[0_10px_30px_rgba(15,23,42,0.16)] transition-transform duration-200 hover:scale-105"
         >
           <img
-            src="/images/max.png"
+            src="/images/max.svg"
             alt="MAX"
             className="h-[30px] w-[30px] object-contain"
           />

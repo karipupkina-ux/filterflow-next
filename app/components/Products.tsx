@@ -67,6 +67,9 @@ export default function Products() {
                   <img
                     src={item.image}
                     alt={item.title}
+                    loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
                     className="max-h-[180px] w-auto max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 sm:max-h-[220px]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/12 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />

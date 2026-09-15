@@ -15,6 +15,9 @@ export default function AboutCompanyPreviewSection() {
               <img
                 src="/images/logo_fj.webp"
                 alt="FilterFlow"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
                 className="w-full rounded-[20px] object-cover shadow-[0_8px_24px_rgba(15,23,42,0.08)]"
               />
             </div>

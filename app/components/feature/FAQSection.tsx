@@ -197,8 +197,10 @@ export default function FAQSection() {
               className="inline-flex h-[44px] items-center justify-center gap-2 rounded-[12px] bg-[#8b5cf6] px-5 text-[15px] font-medium text-white transition hover:brightness-95"
             >
               <img
-                src="/images/max.png"
+                src="/images/max.svg"
                 alt="MAX"
+                loading="lazy"
+                decoding="async"
                 className="h-4 w-4 object-contain"
               />
               MAX

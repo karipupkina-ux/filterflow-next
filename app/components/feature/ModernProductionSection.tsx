@@ -60,6 +60,9 @@ export default function ModernProductionSection() {
               <img
                 src="/images/catalog/nashi-tehnol.webp"
                 alt="Производство"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
                 className="w-full rounded-2xl object-cover"
               />
             </div>

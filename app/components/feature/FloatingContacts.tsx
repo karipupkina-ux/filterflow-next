@@ -10,7 +10,7 @@ export default function FloatingContacts() {
           className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md transition hover:scale-110"
           ariaLabel="Написать на email"
         >
-          <img src="/images/email.png" alt="Почта" className="h-20 w-20 object-contain" />
+          <img src="/images/email.svg" alt="Почта" className="h-20 w-20 object-contain" />
         </EmailLink>
 
         {/* Телефон */}
@@ -18,7 +18,7 @@ export default function FloatingContacts() {
           href="tel:+79514992576"
           className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md transition hover:scale-110"
         >
-          <img src="/images/phone.png" alt="Телефон" className="h-20 w-20 object-contain" />
+          <img src="/images/phone.svg" alt="Телефон" className="h-20 w-20 object-contain" />
         </a>
 
         {/* WhatsApp */}
@@ -27,7 +27,7 @@ export default function FloatingContacts() {
           target="_blank"
           className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md transition hover:scale-110"
         >
-          <img src="/images/whatsapp.png" alt="WhatsApp" className="h-20 w-20 object-contain" />
+          <img src="/images/whatsapp.svg" alt="WhatsApp" className="h-20 w-20 object-contain" />
         </a>
 
         {/* Telegram */}
@@ -36,7 +36,7 @@ export default function FloatingContacts() {
           target="_blank"
           className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md transition hover:scale-110"
         >
-          <img src="/images/telegram.png" alt="Telegram" className="h-20 w-20 object-contain"/>
+          <img src="/images/telegram.svg" alt="Telegram" className="h-20 w-20 object-contain"/>
         </a>
 
         {/* MAX */}
@@ -45,7 +45,7 @@ export default function FloatingContacts() {
           target="_blank"
           className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 shadow-md transition hover:scale-110"
         >
-          <img src="/images/max.png" alt="MAX" className="h-6 w-6 object-contain" />
+          <img src="/images/max.svg" alt="MAX" className="h-6 w-6 object-contain" />
         </a>
       </div>
 

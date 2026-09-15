@@ -236,8 +236,10 @@ export default function ContactsSection() {
                   aria-label="WhatsApp"
                 >
                   <img
-                    src="/images/whatsapp.png"
+                    src="/images/whatsapp.svg"
                     alt="WhatsApp"
+                    loading="lazy"
+                    decoding="async"
                     className="h-10 w-10 object-contain"
                     style={{ filter: "brightness(0) invert(1)" }}
                   />
@@ -251,8 +253,10 @@ export default function ContactsSection() {
                   aria-label="Telegram"
                 >
                   <img
-                    src="/images/telegram.png"
+                    src="/images/telegram.svg"
                     alt="Telegram"
+                    loading="lazy"
+                    decoding="async"
                     className="h-10 w-10 object-contain"
                   />
                 </a>
@@ -265,8 +269,10 @@ export default function ContactsSection() {
                   aria-label="MAX"
                 >
                   <img
-                    src="/images/max.png"
+                    src="/images/max.svg"
                     alt="MAX"
+                    loading="lazy"
+                    decoding="async"
                     className="h-10 w-10 object-contain"
                   />
                 </a>

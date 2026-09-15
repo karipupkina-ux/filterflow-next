@@ -437,7 +437,7 @@ export default function Navigation() {
                   onClick={() => setIsContactsOpen(false)}
                 >
                   <span className={contactsIconWrapClass}>
-                    <img src="/images/whatsapp.png" alt="" className="h-8 w-8 object-contain" />
+                    <img src="/images/whatsapp.svg" alt="" loading="lazy" decoding="async" className="h-8 w-8 object-contain" />
                   </span>
                   <span className={contactsTextClass}>WhatsApp</span>
                 </a>
@@ -449,7 +449,7 @@ export default function Navigation() {
                   onClick={() => setIsContactsOpen(false)}
                 >
                   <span className={contactsIconWrapClass}>
-                    <img src="/images/telegram.png" alt="" className="h-8 w-8 object-contain" />
+                    <img src="/images/telegram.svg" alt="" loading="lazy" decoding="async" className="h-8 w-8 object-contain" />
                   </span>
                   <span className={contactsTextClass}>Telegram</span>
                 </a>
@@ -461,7 +461,7 @@ export default function Navigation() {
                   onClick={() => setIsContactsOpen(false)}
                 >
                   <span className={contactsIconWrapClass}>
-                    <img src="/images/max.png" alt="" className="h-[20px] w-[20px] object-contain" />
+                    <img src="/images/max.svg" alt="" loading="lazy" decoding="async" className="h-[20px] w-[20px] object-contain" />
                   </span>
                   <span className={contactsTextClass}>MAX</span>
                 </a>
@@ -471,7 +471,7 @@ export default function Navigation() {
                   onClick={() => setIsContactsOpen(false)}
                 >
                   <span className={contactsIconWrapClass}>
-                    <img src="/images/phone.png" alt="" className="h-7 w-7 object-contain" />
+                    <img src="/images/phone.svg" alt="" loading="lazy" decoding="async" className="h-7 w-7 object-contain" />
                   </span>
                   <span className={contactsTextClass}>Позвонить</span>
                 </a>
@@ -481,7 +481,7 @@ export default function Navigation() {
                   onClick={() => setIsContactsOpen(false)}
                 >
                   <span className={contactsIconWrapClass}>
-                    <img src="/images/email.png" alt="" className="h-[20px] w-[20px] object-contain" />
+                    <img src="/images/email.svg" alt="" loading="lazy" decoding="async" className="h-[20px] w-[20px] object-contain" />
                   </span>
                   <span className={contactsTextClass}>Email</span>
                 </a>

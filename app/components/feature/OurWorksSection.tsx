@@ -145,6 +145,9 @@ export default function OurWorksSection() {
                     <img
                       src={item.image}
                       alt={item.title}
+                      loading="lazy"
+                      decoding="async"
+                      fetchPriority="low"
                       className="max-h-full max-w-full object-contain transition duration-500 group-hover:scale-[1.04]"
                     />
                   </div>

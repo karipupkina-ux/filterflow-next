@@ -157,7 +157,7 @@ export default function KontaktyPage() {
                       aria-label="WhatsApp"
                     >
                       <img
-                        src="/images/whatsapp.png"
+                        src="/images/whatsapp.svg"
                         alt=""
                         className="h-7 w-7 shrink-0 object-contain sm:h-8 sm:w-8"
                       />
@@ -170,7 +170,7 @@ export default function KontaktyPage() {
                       aria-label="Telegram"
                     >
                       <img
-                        src="/images/telegram.png"
+                        src="/images/telegram.svg"
                         alt=""
                         className="h-7 w-7 shrink-0 object-contain sm:h-8 sm:w-8"
                       />
@@ -182,7 +182,7 @@ export default function KontaktyPage() {
                       className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500 shadow-md transition hover:scale-105 hover:shadow-lg"
                       aria-label="MAX"
                     >
-                      <img src="/images/max.png" alt="" className="h-7 w-7 object-contain" />
+                      <img src="/images/max.svg" alt="" className="h-7 w-7 object-contain" />
                     </a>
                   </div>
                 </div>

@@ -194,7 +194,7 @@ export default function Footer() {
 
             <ul className="mt-7 space-y-4">
               {extraProductLinks.map((item) => (
-                <li key={item.href}>
+                <li key={`${item.href}-${item.label}`}>
                   <Link
                     href={item.href}
                     className="text-[15px] leading-[1.45] text-white/82 transition-colors duration-200 hover:text-[#22C7BB]"

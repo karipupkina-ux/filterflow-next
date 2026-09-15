@@ -1159,7 +1159,7 @@ export default function Page() {
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white shadow-[0_10px_30px_rgba(15,23,42,0.12)] transition-transform duration-200 hover:scale-105"
         >
           <img
-            src="/images/whatsapp.png"
+            src="/images/whatsapp.svg"
             alt="WhatsApp"
             className="h-[44px] w-[44px] object-contain"
           />
@@ -1172,7 +1172,7 @@ export default function Page() {
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white shadow-[0_10px_30px_rgba(15,23,42,0.12)] transition-transform duration-200 hover:scale-105"
         >
           <img
-            src="/images/telegram.png"
+            src="/images/telegram.svg"
             alt="Telegram"
             className="h-[44px] w-[44px] object-contain"
           />
@@ -1185,7 +1185,7 @@ export default function Page() {
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[linear-gradient(135deg,#6d4dff_0%,#c23fff_100%)] shadow-[0_10px_30px_rgba(15,23,42,0.16)] transition-transform duration-200 hover:scale-105"
         >
           <img
-            src="/images/max.png"
+            src="/images/max.svg"
             alt="MAX"
             className="h-[30px] w-[30px] object-contain"
           />

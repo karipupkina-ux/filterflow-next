@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const transitionIn =
@@ -18,11 +19,15 @@ export default function Hero() {
     : "translate-y-[30px] opacity-0";
 
   return (
-    <section className="relative min-h-[500px] w-full overflow-hidden sm:min-h-[580px] lg:min-h-[760px]">
-      <img
-        src="/images/hero.png"
+    <section className="relative min-h-[500px] w-full overflow-hidden bg-[#9aa8b4] sm:min-h-[580px] lg:min-h-[760px]">
+      <Image
+        src="/images/hero.webp"
         alt="Мешки для аспирации и фильтровальные рукава FilterFlow"
-        className="absolute inset-0 h-full w-full object-cover object-[center_66%] sm:object-[center_70%]"
+        fill
+        priority
+        fetchPriority="high"
+        sizes="100vw"
+        className="object-cover object-[center_66%] sm:object-[center_70%]"
       />
 
       <div className="absolute inset-0 bg-black/40" />
