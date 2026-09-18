@@ -68,7 +68,7 @@ export default function ReviewsSection() {
           </div>
 
           <p className="text-[19px] italic leading-[1.75] text-slate-600 md:text-[21px]">
-            "{review.text}"
+            &ldquo;{review.text}&rdquo;
           </p>
 
           <div className="my-8 h-px bg-[#e8edf3]" />

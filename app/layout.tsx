@@ -3,6 +3,8 @@ import Script from "next/script";
 import { SITE_URL } from "@/lib/seo-metadata";
 import "./globals.css";
 import Footer from "./components/Footer";
+import CookieBanner from "./components/feature/CookieBanner";
+import YandexMetrika from "./components/YandexMetrika";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -23,11 +25,10 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: [
-      { url: "/images/favicon.ico", sizes: "any" },
-      { url: "/images/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-48x48.png", type: "image/png", sizes: "48x48" },
     ],
-    shortcut: "/images/favicon.ico",
-    apple: "/images/apple-icon.png",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   verification: {
     yandex: "23c47eef0576e1ca",
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/images/og-512.jpg",
         width: 512,
         height: 512,
         alt: "FilterFlow",
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
     title: "FilterFlow — мешки для аспирации и фильтровальные рукава",
     description:
       "Производство фильтровальных мешков для аспирации и рукавов, нестандартные решения под заказ. Подбор размеров, доставка по России.",
-    images: ["/images/logo.png"],
+    images: ["/images/og-512.jpg"],
   },
   robots: {
     index: true,
@@ -76,16 +77,12 @@ export default function RootLayout({
     "@type": "Organization",
     name: "FilterFlow",
     url: SITE_URL,
-    logo: `${SITE_URL}/images/logo.png`,
+    logo: `${SITE_URL}/images/logo-64.webp`,
   };
 
   return (
     <html lang="ru">
       <head>
-        <link
-          href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-          rel="stylesheet"
-        />
         <meta name="theme-color" content="#0f172a" />
       </head>
       <body>
@@ -96,40 +93,10 @@ export default function RootLayout({
             __html: JSON.stringify(organizationSchema),
           }}
         />
-        <Script
-          id="yandex-metrika"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(m,e,t,r,i,k,a){
-                m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-                m[i].l=1*new Date();
-                for (var j = 0; j < document.scripts.length; j++) {
-                  if (document.scripts[j].src === r) { return; }
-                }
-                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
-              })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-              ym(109113581, "init", {
-                webvisor: true,
-                clickmap: true,
-                trackLinks: true,
-                accurateTrackBounce: true
-              });
-            `,
-          }}
-        />
-        <noscript>
-          <div>
-            <img
-              src="https://mc.yandex.ru/watch/109113581"
-              style={{ position: "absolute", left: "-9999px" }}
-              alt=""
-            />
-          </div>
-        </noscript>
+        <YandexMetrika />
         {children}
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );

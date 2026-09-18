@@ -64,10 +64,11 @@ export default function MeshkiAspiraciiOrderForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="mb-5">
-        <label className="mb-3 block text-[16px] font-medium text-slate-800">
+        <label className="mb-3 block text-[16px] font-medium text-slate-800" htmlFor="meshki-order-name">
           Ваше имя <span className="text-red-500">*</span>
         </label>
         <input
+          id="meshki-order-name"
           type="text"
           name="name"
           required
@@ -79,10 +80,11 @@ export default function MeshkiAspiraciiOrderForm() {
       </div>
 
       <div className="mb-5">
-        <label className="mb-3 block text-[16px] font-medium text-slate-800">
+        <label className="mb-3 block text-[16px] font-medium text-slate-800" htmlFor="meshki-order-phone">
           Телефон <span className="text-red-500">*</span>
         </label>
         <input
+          id="meshki-order-phone"
           type="tel"
           name="phone"
           required
@@ -94,10 +96,11 @@ export default function MeshkiAspiraciiOrderForm() {
       </div>
 
       <div className="mb-5">
-        <label className="mb-3 block text-[16px] font-medium text-slate-800">
+        <label className="mb-3 block text-[16px] font-medium text-slate-800" htmlFor="meshki-order-email">
           Email <span className="text-red-500">*</span>
         </label>
         <input
+          id="meshki-order-email"
           type="email"
           name="email"
           required
@@ -109,10 +112,11 @@ export default function MeshkiAspiraciiOrderForm() {
       </div>
 
       <div className="mb-5">
-        <label className="mb-3 block text-[16px] font-medium text-slate-800">
+        <label className="mb-3 block text-[16px] font-medium text-slate-800" htmlFor="meshki-order-equipment">
           Тип мешка / оборудование
         </label>
         <input
+          id="meshki-order-equipment"
           type="text"
           name="equipment"
           value={equipment}
@@ -123,10 +127,11 @@ export default function MeshkiAspiraciiOrderForm() {
       </div>
 
       <div className="mb-6">
-        <label className="mb-3 block text-[16px] font-medium text-slate-800">
+        <label className="mb-3 block text-[16px] font-medium text-slate-800" htmlFor="meshki-order-comment">
           Комментарий
         </label>
         <textarea
+          id="meshki-order-comment"
           name="message"
           rows={4}
           value={comment}

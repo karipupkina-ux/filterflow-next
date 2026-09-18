@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import {
   sendApplicationEmail,
@@ -84,16 +85,17 @@ export default function TkanevyeMeshkiPage() {
   return (
     <>
       <Navigation />
+      <main>
 
       <section className="bg-[#f8fafc] pt-[118px] pb-16">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-7 flex flex-wrap items-center gap-2 text-[14px]">
-            <a
+            <Link
               href="/"
               className="text-teal-600 transition hover:text-teal-700 hover:underline"
             >
               Главная
-            </a>
+            </Link>
             <span className="text-slate-400">›</span>
             <a
               href="/meshki-dlya-aspiracii"
@@ -111,9 +113,12 @@ export default function TkanevyeMeshkiPage() {
 
           <div className="grid items-start gap-10 lg:grid-cols-[1.02fr_0.98fr]">
             <div className="overflow-hidden rounded-[24px] bg-[#eef2f5] shadow-sm">
-              <img
+              <Image
                 src="/images/catalog/tkanevie-meshki.webp"
                 alt="Фильтровальные мешки тканевые для аспирации"
+                width={1536}
+                height={1024}
+                sizes="(max-width: 1023px) 100vw, 50vw"
                 className="h-auto w-full object-cover"
               />
             </div>
@@ -571,6 +576,8 @@ export default function TkanevyeMeshkiPage() {
                   <img
                     src="/images/whatsapp.svg"
                     alt="WhatsApp"
+                    width={24}
+                    height={24}
                     className="h-7 w-7 object-contain"
                   />
                 </div>
@@ -622,6 +629,7 @@ export default function TkanevyeMeshkiPage() {
         </div>
       </section>
 
+      </main>
       <FloatingContacts />
     </>
   );

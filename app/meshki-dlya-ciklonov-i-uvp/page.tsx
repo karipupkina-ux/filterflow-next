@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import {
   sendApplicationEmail,
@@ -323,15 +324,16 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
   return (
     <>
       <Navigation />
+      <main>
 
       <section className="bg-[#f5f3ee] pb-12 pt-[105px] sm:pb-14 lg:pb-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid items-start gap-10 lg:grid-cols-[1fr_0.95fr]">
             <div className="pt-4 sm:pt-6 lg:pt-10">
               <div className="mb-6 flex flex-wrap items-center gap-2 text-[13px] sm:text-[14px]">
-                <a href="/" className="text-teal-600 transition hover:text-teal-700 hover:underline">
+                <Link href="/" className="text-teal-600 transition hover:text-teal-700 hover:underline">
                   Главная
-                </a>
+                </Link>
                 <span className="text-slate-400">›</span>
                 <a
                   href="/meshki-dlya-aspiracii"
@@ -359,12 +361,12 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               </p>
 
               <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
-                <a
+                <Link
                   href="/#contacts"
                   className="inline-flex h-[48px] w-full items-center justify-center rounded-xl bg-[#f56600] px-6 text-[15px] font-semibold text-white transition hover:bg-[#de5b00] sm:h-[54px] sm:w-auto sm:px-8 sm:text-[17px] md:h-[56px] md:text-[18px]"
                 >
                   Заказать расчёт
-                </a>
+                </Link>
 
                 <a
                   href="#vidy-filtrovalnyh-meshkov"
@@ -377,9 +379,12 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
 
             <div className="flex items-start justify-center">
               <div className="w-full max-w-[640px] overflow-hidden rounded-[22px] bg-[#efedf2]">
-                <img
+                <Image
                   src="/images/catalog/meshki-ciklonov-uvp.webp"
                   alt="Мешки для циклонов и УВП, фильтры для аспирационных установок"
+                  width={1365}
+                  height={2048}
+                  sizes="(max-width: 1023px) 100vw, 50vw"
                   className="h-auto w-full object-cover object-[center_45%]"
                 />
               </div>
@@ -403,9 +408,12 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
           <div className="grid grid-cols-1 gap-5 sm:gap-6 lg:grid-cols-2 lg:gap-8">
             <div className="rounded-[22px] border border-slate-200 bg-white p-5 shadow-sm sm:p-7 md:p-8">
               <div className="mb-6 flex justify-center sm:mb-8">
-                <img
+                <Image
                   src="/images/catalog/meshki-dlya-ciklonov.webp"
                   alt="Мешки для циклонов"
+                  width={1200}
+                  height={907}
+                  sizes="(max-width: 1023px) 100vw, 50vw"
                   className="h-[170px] w-auto object-contain sm:h-[206px]"
                 />
               </div>
@@ -434,9 +442,12 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
 
             <div className="rounded-[22px] border border-slate-200 bg-white p-5 shadow-sm sm:p-7 md:p-8">
               <div className="mb-6 flex justify-center sm:mb-8">
-                <img
+                <Image
                   src="/images/catalog/meshki-ciklonov-uvp.webp"
                   alt="Мешки для УВП"
+                  width={1365}
+                  height={2048}
+                  sizes="(max-width: 1023px) 100vw, 50vw"
                   className="h-[170px] w-auto object-contain sm:h-[206px]"
                 />
               </div>
@@ -466,9 +477,12 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
 
             <div className="rounded-[22px] border border-slate-200 bg-white p-5 shadow-sm sm:p-7 md:p-8">
               <div className="mb-6 flex justify-center sm:mb-8">
-                <img
+                <Image
                   src="/images/catalog/rukavnie-filtri.webp"
                   alt="Рукавные фильтры"
+                  width={1200}
+                  height={799}
+                  sizes="(max-width: 1023px) 100vw, 50vw"
                   className="h-[170px] w-auto object-contain sm:h-[206px]"
                 />
               </div>
@@ -497,9 +511,12 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
 
             <div className="rounded-[22px] border border-slate-200 bg-white p-5 shadow-sm sm:p-7 md:p-8">
               <div className="mb-6 flex justify-center sm:mb-8">
-                <img
+                <Image
                   src="/images/catalog/kartridgnie-filtri.webp"
                   alt="Картриджные фильтры"
+                  width={1200}
+                  height={799}
+                  sizes="(max-width: 1023px) 100vw, 50vw"
                   className="h-[170px] w-auto object-contain sm:h-[206px]"
                 />
               </div>
@@ -967,6 +984,8 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                   <img
                     src="/images/whatsapp.svg"
                     alt="WhatsApp"
+                    width={50}
+                    height={50}
                     className="h-[50px] w-[50px] object-contain"
                   />
                 </div>
@@ -1035,9 +1054,12 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               className="group rounded-[22px] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#f56600] hover:shadow-md"
             >
               <div className="mb-6 flex justify-center">
-                <img
-                  src="/images/catalog/meshki-aspiracii.webp"
+                <Image
+                  src="/images/catalog/cards/meshki-aspiracii.webp"
                   alt="Мешки для аспирации"
+                  width={293}
+                  height={440}
+                  sizes="(max-width: 1023px) 100vw, 33vw"
                   className="h-[180px] w-auto object-contain transition duration-300 group-hover:scale-105"
                 />
               </div>
@@ -1057,9 +1079,12 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               className="group rounded-[22px] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#f56600] hover:shadow-md"
             >
               <div className="mb-6 flex justify-center">
-                <img
-                  src="/images/catalog/filtracionalnye-rukava.webp"
+                <Image
+                  src="/images/catalog/cards/filtracionalnye-rukava.webp"
                   alt="Фильтровальные рукава"
+                  width={440}
+                  height={440}
+                  sizes="(max-width: 1023px) 100vw, 33vw"
                   className="h-[180px] w-auto object-contain transition duration-300 group-hover:scale-105"
                 />
               </div>
@@ -1079,9 +1104,12 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               className="group rounded-[22px] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#f56600] hover:shadow-md"
             >
               <div className="mb-6 flex justify-center">
-                <img
-                  src="/images/catalog/meshki-struzhkootsosa.webp"
+                <Image
+                  src="/images/catalog/cards/meshki-struzhkootsosa.webp"
                   alt="Мешки для стружкоотсоса"
+                  width={293}
+                  height={440}
+                  sizes="(max-width: 1023px) 100vw, 33vw"
                   className="h-[180px] w-auto object-contain transition duration-300 group-hover:scale-105"
                 />
               </div>
@@ -1380,6 +1408,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
       </section>
 
       <SeeAlsoLinks excludeHref="/meshki-dlya-ciklonov-i-uvp" />
+      </main>
       <FloatingContacts />
     </>
   );

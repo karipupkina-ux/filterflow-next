@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../components/Navigation";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
@@ -13,43 +14,14 @@ export const metadata: Metadata = pageMetadata({
   openGraphTitle: "Мешки для стружкоотсоса | FilterFlow",
 });
 
-const productLinks = [
-  { href: "/meshki-dlya-aspiracii", label: "Мешки для аспирации" },
-  { href: "/filtracionnye-rukava", label: "Фильтрационные рукава" },
-  { href: "/meshki-dlya-struzhkootsosa", label: "Мешки для стружкоотсоса" },
-  { href: "/meshki-dlya-ciklonov-i-uvp", label: "Мешки для циклонов и УВП" },
-  { href: "/bystrosemnye-homyty", label: "Быстросъёмные хомуты" },
-  {
-    href: "/nestandartnye-meshki-dlya-filtracii",
-    label: "Нестандартные мешки для фильтрации",
-  },
-];
-
-const articleLinks = [
-  {
-    href: "/blog/kak-vybrat-meshok-aspiracii",
-    label: "Как выбрать мешок для аспирации",
-  },
-  {
-    href: "/blog/kak-rabotaet-aspiraciya",
-    label: "Как работает аспирация",
-  },
-  {
-    href: "/blog/kogda-menyat-filtr-meshok",
-    label: "Когда менять фильтр-мешок",
-  },
-  {
-    href: "/blog/tipy-filtruyushchikh-meshkov",
-    label: "Типы фильтровальных мешков",
-  },
-];
-
 const typeCards = [
   {
     title: "Мешки для опилок",
     description:
       "Специализированные мешки для сбора мелких опилок с высокой степенью фильтрации.",
     image: "/images/catalog/meshki-struzhkootsosa.webp",
+    width: 1024,
+    height: 1536,
     link: "/meshki-dlya-opilok",
     icon: (
       <svg
@@ -72,6 +44,8 @@ const typeCards = [
     description:
       "Универсальные мешки для фрезерных, токарных и шлифовальных станков.",
     image: "/images/catalog/dust_collector_single.webp",
+    width: 1365,
+    height: 2048,
     link: "/meshki-dlya-aspiracii",
     icon: (
       <svg
@@ -95,6 +69,8 @@ const typeCards = [
     description:
       "Прочные мешки для сбора крупной стружки и отходов деревообработки.",
     image: "/images/catalog/nizhnie-meshki dlya aspiracii.webp",
+    width: 1365,
+    height: 2048,
     link: "/nizhnie-meshki",
     icon: (
       <svg
@@ -117,6 +93,8 @@ const typeCards = [
     description:
       "Фильтруют мелкую древесную пыль, обеспечивая чистоту воздуха в цеху.",
     image: "/images/catalog/verhnie-meshki.webp",
+    width: 305,
+    height: 305,
     link: "/verhnie-meshki",
     icon: (
       <svg
@@ -569,7 +547,7 @@ export default function Page() {
               </p>
 
               <div className="flex w-full flex-col items-stretch justify-center gap-3 sm:w-auto sm:flex-row sm:flex-nowrap sm:items-center sm:gap-6 lg:gap-8">
-                <a
+                <Link
                   href="/#contacts"
                   className="inline-flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] bg-[#28c4b7] px-6 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8] sm:h-[58px] sm:w-auto sm:px-8 sm:text-[16px]"
                 >
@@ -583,7 +561,7 @@ export default function Page() {
                     <path d="M16.01 3.2c-7.05 0-12.77 5.72-12.77 12.77 0 2.25.59 4.45 1.72 6.39L3.2 28.8l6.61-1.73a12.7 12.7 0 0 0 6.19 1.59h.01c7.05 0 12.78-5.72 12.78-12.77S23.06 3.2 16.01 3.2Zm0 23.31h-.01a10.5 10.5 0 0 1-5.35-1.47l-.38-.22-3.92 1.03 1.05-3.82-.25-.39a10.48 10.48 0 0 1-1.61-5.59c0-5.79 4.71-10.5 10.5-10.5 2.8 0 5.44 1.09 7.42 3.08a10.43 10.43 0 0 1 3.08 7.42c0 5.79-4.72 10.5-10.51 10.5Z" />
                   </svg>
                   Получить расчёт
-                </a>
+                </Link>
 
                 <Link
                   href="/kontakty"
@@ -684,9 +662,12 @@ export default function Page() {
               <Link key={card.title} href={card.link} className="group block h-full">
                 <article className="flex h-full flex-col overflow-hidden rounded-[24px] border border-[#e7edf4] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(15,23,42,0.08)]">
                   <div className="flex h-[210px] items-center justify-center overflow-hidden rounded-t-[24px] bg-[#f4f5f7] p-6">
-                    <img
+                    <Image
                       src={card.image}
                       alt={card.title}
+                      width={card.width}
+                      height={card.height}
+                      sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 25vw"
                       className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.03]"
                     />
                   </div>
@@ -1508,6 +1489,8 @@ export default function Page() {
           <img
             src="/images/whatsapp.svg"
             alt="WhatsApp"
+            width={24}
+            height={24}
             className="h-[44px] w-[44px] object-contain"
           />
         </a>
@@ -1521,6 +1504,8 @@ export default function Page() {
           <img
             src="/images/telegram.svg"
             alt="Telegram"
+            width={240}
+            height={240}
             className="h-[44px] w-[44px] object-contain"
           />
         </a>
@@ -1534,6 +1519,8 @@ export default function Page() {
           <img
             src="/images/max.svg"
             alt="MAX"
+            width={64}
+            height={64}
             className="h-[30px] w-[30px] object-contain"
           />
         </a>

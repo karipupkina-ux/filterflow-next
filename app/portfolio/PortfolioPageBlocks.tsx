@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import type { ReactNode } from "react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
@@ -366,6 +367,8 @@ type GalleryWorkItem = {
   title: string;
   description: string;
   image: string;
+  width: number;
+  height: number;
   categories: ("wood" | "metal")[];
 };
 
@@ -381,6 +384,8 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     description:
       "Установка системы аспирации с верхними мешками-фильтрами для цеха деревообработки.",
     image: "/images/nashi-raboti/meshki-aspirac.webp",
+    width: 1365,
+    height: 2048,
     categories: ["wood", "metal"],
   },
   {
@@ -388,18 +393,24 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     description:
       "Производство карманных фильтров для систем вентиляции и очистки воздуха.",
     image: "/images/nashi-raboti/generated_image.webp",
+    width: 1536,
+    height: 1024,
     categories: ["metal"],
   },
   {
     title: "Мешки для циклонов",
     description: "Мешки большого объема для промышленных циклонов.",
     image: "/images/nashi-raboti/meshki-ciklonov-uvp.webp",
+    width: 1365,
+    height: 2048,
     categories: ["metal"],
   },
   {
     title: "Верхние мешки-фильтры",
     description: "Верхние фильтровальные мешки для столярного оборудования.",
     image: "/images/nashi-raboti/photo_1.webp",
+    width: 1024,
+    height: 1024,
     categories: ["wood", "metal"],
   },
   {
@@ -407,6 +418,8 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     description:
       "Мешки для циклонов и стружкоотсосов в мебельном производстве.",
     image: "/images/nashi-raboti/industrial_filter_system.webp",
+    width: 1536,
+    height: 1024,
     categories: ["wood"],
   },
   {
@@ -414,60 +427,80 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     description:
       "Комплексная система рукавных фильтров для очистки воздуха от металлической пыли.",
     image: "/images/nashi-raboti/filter_bag_white.webp",
+    width: 1536,
+    height: 1024,
     categories: ["metal"],
   },
   {
     title: "Рукавные фильтры",
     description: "Система рукавных фильтров для пищевого производства.",
     image: "/images/nashi-raboti/filter_cage.webp",
+    width: 1024,
+    height: 1024,
     categories: ["metal"],
   },
   {
     title: "Нижние пылесборники",
     description: "Нижние пылесборники для деревообрабатывающих станков.",
     image: "/images/nashi-raboti/image_webp_optimized.webp",
+    width: 1365,
+    height: 2048,
     categories: ["wood", "metal"],
   },
   {
     title: "Нестандартный мешок для фильтрации",
     description: "Изготовление фильтров по индивидуальным размерам заказчика.",
     image: "/images/nashi-raboti/nestandartnye-meshki.webp",
+    width: 2048,
+    height: 2048,
     categories: ["wood", "metal"],
   },
   {
     title: "Фильтры по размерам",
     description: "Изготовление фильтров по индивидуальным размерам заказчика.",
     image: "/images/nashi-raboti/converted_image5.webp",
+    width: 2048,
+    height: 1365,
     categories: ["metal"],
   },
   {
     title: "Антистатические фильтры",
     description: "Антистатические рукавные фильтры для взрывоопасных производств.",
     image: "/images/nashi-raboti/filter_closeup.webp",
+    width: 1536,
+    height: 1024,
     categories: ["metal"],
   },
   {
     title: "Мешки для УВП",
     description: "Мешки для мобильных установок вентиляции и пылеудаления.",
     image: "/images/nashi-raboti/grow_bags_white.webp",
+    width: 1536,
+    height: 1024,
     categories: ["metal"],
   },
   {
     title: "Мешок фильтр для стружкоотсоса",
     description: "Фильтровальные мешки с металлическим кольцом для стружкоотсосов.",
     image: "/images/nashi-raboti/dust_collector_single.webp",
+    width: 1365,
+    height: 2048,
     categories: ["wood"],
   },
   {
     title: "Мешки для стружкоотсоса УВП",
     description: "Крупногабаритные фильтровальные мешки для промышленных циклонов.",
     image: "/images/nashi-raboti/filter_sleeves_hero.webp",
+    width: 1536,
+    height: 1024,
     categories: ["wood"],
   },
   {
     title: "Фильтр-мешки для аспирации",
     description: "Комплект фильтровальных мешков для промышленных пылесосов.",
     image: "/images/nashi-raboti/converted.webp",
+    width: 880,
+    height: 1184,
     categories: ["wood", "metal"],
   },
   {
@@ -475,12 +508,16 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     description:
       "Карманные фильтры для систем вентиляции и кондиционирования воздуха.",
     image: "/images/nashi-raboti/air_filter.webp",
+    width: 1200,
+    height: 799,
     categories: ["metal"],
   },
   {
     title: "Мешок для фильтрации жидкости",
     description: "Мешки для фильтрации промышленных жидкостей и водоочистки.",
     image: "/images/nashi-raboti/filter55_bag.webp",
+    width: 1536,
+    height: 1024,
     categories: ["metal"],
   },
   {
@@ -488,6 +525,8 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     description:
       "Прозрачные смотровые окна на нижних мешках для контроля уровня наполнения.",
     image: "/images/nashi-raboti/window_webp_1.webp",
+    width: 1365,
+    height: 2048,
     categories: ["wood", "metal"],
   },
   {
@@ -495,6 +534,8 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     description:
       "Геотекстильные мешки для обезвоживания осадка на очистных сооружениях.",
     image: "/images/nashi-raboti/filter_bags_table.webp",
+    width: 976,
+    height: 1056,
     categories: ["metal"],
   },
   {
@@ -502,6 +543,8 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     description:
       "Быстросъёмные хомуты для соединения воздуховодов и фильтровального оборудования.",
     image: "/images/nashi-raboti/bystrosemnye-homuty.webp",
+    width: 2048,
+    height: 1365,
     categories: ["wood", "metal"],
   },
   {
@@ -509,12 +552,16 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     description:
       "Фильтровальные мешки из полиэстера для промышленных систем пылеудаления.",
     image: "/images/nashi-raboti/filter_bags.webp",
+    width: 1200,
+    height: 799,
     categories: ["metal"],
   },
   {
     title: "Мешки для аспирации опилок и стружки",
     description: "Комплект фильтровальных мешков для промышленного оборудования.",
     image: "/images/nashi-raboti/meshki-aspiracii.webp",
+    width: 1365,
+    height: 2048,
     categories: ["wood"],
   },
   {
@@ -522,6 +569,8 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     description:
       "Фильтровальные мешки с металлическим кольцом для надежного крепления.",
     image: "/images/nashi-raboti/meshki-struzhkootsosa.webp",
+    width: 1024,
+    height: 1536,
     categories: ["wood", "metal"],
   },
   {
@@ -529,12 +578,16 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     description:
       "Фильтровальные мешки, установленные на деревообрабатывающем оборудовании.",
     image: "/images/nashi-raboti/roll_image.webp",
+    width: 2048,
+    height: 2048,
     categories: ["wood", "metal"],
   },
   {
     title: "Фильтровальная ткань",
     description: "Крупногабаритные фильтровальные мешки для циклонных сепараторов.",
     image: "/images/nashi-raboti/fabric.webp",
+    width: 1536,
+    height: 1536,
     categories: ["metal"],
   },
   {
@@ -542,18 +595,24 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     description:
       "Производство фильтровальных мешков на собственном швейном оборудовании.",
     image: "/images/nashi-raboti/fabric2.webp",
+    width: 1536,
+    height: 1536,
     categories: ["wood"],
   },
   {
     title: "Фильтр ткань",
     description: "Антистатические фильтровальные мешки для взрывоопасных производств.",
     image: "/images/nashi-raboti/fabric3.webp",
+    width: 1536,
+    height: 1536,
     categories: ["metal"],
   },
   {
     title: "Ткань для фильтрации",
     description: "Готовые фильтровальные мешки различных размеров на складе.",
     image: "/images/nashi-raboti/fabric4.webp",
+    width: 1280,
+    height: 1280,
     categories: ["metal"],
   },
   {
@@ -561,6 +620,8 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     description:
       "Фильтровальные мешки из белого полиэстера для систем пылеудаления.",
     image: "/images/nashi-raboti/converted_image.webp",
+    width: 1024,
+    height: 1024,
     categories: ["wood", "metal"],
   },
   {
@@ -568,6 +629,8 @@ const PORTFOLIO_WORKS: GalleryWorkItem[] = [
     description:
       "Петелька для подвеса на верхнем фильтровальном мешке аспирационной установки.",
     image: `/images/nashi-raboti/${encodeURIComponent("edited_image (1).webp")}`,
+    width: 1536,
+    height: 1024,
     categories: ["wood", "metal"],
   },
 ];
@@ -676,9 +739,12 @@ function PortfolioProjectsGalleryBlock() {
               >
                 <div className="relative h-[156px] overflow-hidden bg-[#eef1f4] sm:h-[178px] lg:h-[192px]">
                   <div className="absolute inset-0 flex items-center justify-center overflow-hidden p-2 md:p-3">
-                    <img
+                    <Image
                       src={item.image}
                       alt={`${item.title} — фото из портфолио FilterFlow`}
+                      width={item.width}
+                      height={item.height}
+                      sizes="(max-width: 767px) 50vw, (max-width: 1279px) 33vw, 25vw"
                       className="max-h-full max-w-full object-contain transition duration-500 ease-out group-hover:scale-[1.08]"
                     />
                   </div>
@@ -795,9 +861,12 @@ function PortfolioProjectsGalleryBlock() {
               className="max-h-full max-w-[92vw] text-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
+              <Image
                 src={PORTFOLIO_WORKS[activeIndex].image}
                 alt={`${PORTFOLIO_WORKS[activeIndex].title} — фото из портфолио FilterFlow`}
+                width={PORTFOLIO_WORKS[activeIndex].width}
+                height={PORTFOLIO_WORKS[activeIndex].height}
+                sizes="92vw"
                 className="mx-auto max-h-[78vh] w-auto max-w-full rounded-[18px] bg-white object-contain shadow-2xl"
               />
               <p className="mt-4 text-[16px] font-medium text-[#22d3c5]">

@@ -213,8 +213,9 @@ export default function Page() {
               alt="Тканевые и фильтровальные мешки для аспирации, стружкоотсоса и сбора опилок"
               width={1600}
               height={900}
+              sizes="(max-width: 1024px) 100vw, 1024px"
               className="h-auto w-full object-cover"
-              priority
+              preload
             />
           </div>
 

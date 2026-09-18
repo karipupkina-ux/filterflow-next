@@ -9,7 +9,7 @@ export const SITE_URL = "https://filterflow.ru";
 const BASE = SITE_URL.replace(/\/$/, "");
 
 const defaultOgImage = {
-  url: "/images/logo.png",
+  url: "/images/og-512.jpg",
   width: 512,
   height: 512,
   alt: "FilterFlow",

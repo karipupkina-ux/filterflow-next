@@ -3,6 +3,7 @@ import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import Footer from "../components/Footer";
 import ClampOrderForm from "../components/ClampOrderForm";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo-metadata";
 import EmailLink from "../components/EmailLink";
@@ -474,9 +475,12 @@ export default function Page() {
               <div className="flex justify-center lg:justify-end">
                 <div className="w-full max-w-[690px] rounded-[28px] bg-white p-4 shadow-[0_20px_50px_rgba(15,23,42,0.07)]">
                   <div className="flex min-h-[320px] items-center justify-center overflow-hidden rounded-[22px] bg-[#f6f7f9] md:min-h-[450px]">
-                    <img
+                    <Image
                       src="/images/catalog/bystrosemnye-homuty.webp"
                       alt="Быстросъёмные промышленные хомуты для аспирации и рукавов"
+                      width={2048}
+                      height={1365}
+                      sizes="(max-width: 1023px) 100vw, 690px"
                       className="h-auto max-h-[405px] w-auto max-w-full object-contain"
                     />
                   </div>
@@ -767,9 +771,12 @@ export default function Page() {
             <div className="grid gap-7 lg:grid-cols-2">
               <div className="group relative overflow-hidden rounded-[20px] bg-white shadow-[0_10px_28px_rgba(15,23,42,0.06)]">
                 <div className="aspect-[1.52/1] overflow-hidden bg-[#f5f6f8]">
-                  <img
+                  <Image
                     src="/images/catalog/bystrosemnye-homuty.webp"
                     alt="Быстросъёмный хомут для фильтровального мешка с рычажным замком"
+                    width={2048}
+                    height={1365}
+                    sizes="(max-width: 1023px) 100vw, 50vw"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                 </div>
@@ -785,9 +792,12 @@ export default function Page() {
 
               <div className="group relative overflow-hidden rounded-[20px] bg-white shadow-[0_10px_28px_rgba(15,23,42,0.06)]">
                 <div className="aspect-[1.52/1] overflow-hidden bg-[#f5f6f8]">
-                  <img
+                  <Image
                     src="/images/catalog/image_converted%20(1).webp"
                     alt="Быстросъёмный хомут из нержавеющей стали для крепления фильтровальных рукавов"
+                    width={1744}
+                    height={592}
+                    sizes="(max-width: 1023px) 100vw, 50vw"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                 </div>
@@ -1161,6 +1171,8 @@ export default function Page() {
           <img
             src="/images/whatsapp.svg"
             alt="WhatsApp"
+            width={24}
+            height={24}
             className="h-[44px] w-[44px] object-contain"
           />
         </a>
@@ -1174,6 +1186,8 @@ export default function Page() {
           <img
             src="/images/telegram.svg"
             alt="Telegram"
+            width={240}
+            height={240}
             className="h-[44px] w-[44px] object-contain"
           />
         </a>
@@ -1187,6 +1201,8 @@ export default function Page() {
           <img
             src="/images/max.svg"
             alt="MAX"
+            width={64}
+            height={64}
             className="h-[30px] w-[30px] object-contain"
           />
         </a>

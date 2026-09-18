@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import {
   sendApplicationEmail,
@@ -457,13 +458,14 @@ export default function VerhnieMeshkiPage() {
   return (
     <>
       <Navigation />
+      <main>
 
       <section className="bg-[#f5f3ee] pt-[118px] pb-16">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-7 flex flex-wrap items-center gap-2 text-[14px]">
-            <a href="/" className="text-teal-600 transition hover:text-teal-700 hover:underline">
+            <Link href="/" className="text-teal-600 transition hover:text-teal-700 hover:underline">
               Главная
-            </a>
+            </Link>
             <span className="text-slate-400">›</span>
             <a
               href="/meshki-dlya-aspiracii"
@@ -489,12 +491,12 @@ export default function VerhnieMeshkiPage() {
               </p>
 
               <div className="flex flex-wrap gap-3.5">
-                <a
+                <Link
                   href="/#contacts"
                   className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-5 py-3 text-[15px] font-medium text-white transition hover:bg-orange-600"
                 >
                   Заказать расчёт
-                </a>
+                </Link>
 
                 <a
                   href="#features"
@@ -506,9 +508,12 @@ export default function VerhnieMeshkiPage() {
             </div>
 
             <div className="flex h-[360px] w-full items-center justify-center overflow-hidden rounded-2xl bg-[#f3f4f6]">
-              <img
+              <Image
                 src="/images/products/verhniy-meshok.webp"
                 alt="Верхний фильтровальный мешок для стружкоотсоса и аспирации"
+                width={1184}
+                height={864}
+                sizes="(max-width: 1023px) 100vw, 50vw"
                 className="max-h-full max-w-full object-contain"
               />
             </div>
@@ -1034,6 +1039,8 @@ export default function VerhnieMeshkiPage() {
                   <img
                     src="/images/whatsapp.svg"
                     alt="WhatsApp"
+                    width={24}
+                    height={24}
                     className="h-[50px] w-[50px] object-contain"
                   />
                 </div>
@@ -1103,9 +1110,12 @@ export default function VerhnieMeshkiPage() {
               className="group overflow-hidden rounded-[22px] border border-[#d9dee7] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#f4a261] hover:bg-gradient-to-br hover:from-[#fff8f2] hover:via-[#ffffff] hover:to-[#f6fbfa] hover:shadow-[0_18px_50px_rgba(15,35,65,0.08)]"
             >
               <div className="flex h-[240px] items-center justify-center overflow-hidden bg-[#f7f8fa] px-8 py-7">
-                <img
+                <Image
                   src="/images/catalog/nizhnie-meshki.webp"
                   alt="Нижний мешок для аспирации"
+                  width={800}
+                  height={1200}
+                  sizes="(max-width: 1023px) 100vw, 33vw"
                   className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
                 />
               </div>
@@ -1133,9 +1143,12 @@ export default function VerhnieMeshkiPage() {
               className="group overflow-hidden rounded-[22px] border border-[#d9dee7] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#f4a261] hover:bg-gradient-to-br hover:from-[#fff8f2] hover:via-[#ffffff] hover:to-[#f6fbfa] hover:shadow-[0_18px_50px_rgba(15,35,65,0.08)]"
             >
               <div className="flex h-[240px] items-center justify-center overflow-hidden bg-[#f7f8fa] px-8 py-7">
-                <img
+                <Image
                   src="/images/catalog/tkanevye-meshki.webp"
                   alt="Тканевые мешки для аспирации"
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 1023px) 100vw, 33vw"
                   className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
                 />
               </div>
@@ -1163,9 +1176,12 @@ export default function VerhnieMeshkiPage() {
               className="group overflow-hidden rounded-[22px] border border-[#d9dee7] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#f4a261] hover:bg-gradient-to-br hover:from-[#fff8f2] hover:via-[#ffffff] hover:to-[#f6fbfa] hover:shadow-[0_18px_50px_rgba(15,35,65,0.08)]"
             >
               <div className="flex h-[240px] items-center justify-center overflow-hidden bg-[#f7f8fa] px-8 py-7">
-                <img
+                <Image
                   src="/images/catalog/meshki-struzhkootsosa.webp"
                   alt="Мешки для стружкоотсоса"
+                  width={1024}
+                  height={1536}
+                  sizes="(max-width: 1023px) 100vw, 33vw"
                   className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
                 />
               </div>
@@ -1495,6 +1511,7 @@ export default function VerhnieMeshkiPage() {
       </section>
 
       <SeeAlsoLinks excludeHref="/verhnie-meshki" />
+      </main>
       <FloatingContacts />
     </>
   );

@@ -298,10 +298,11 @@ export default function OKompaniiPage() {
                   <Image
                     src="/images/catalog/converted_image4.webp"
                     alt="Цех FilterFlow: производство фильтровальных мешков и рукавов для аспирации"
-                    width={900}
-                    height={1200}
+                    width={2048}
+                    height={1934}
+                    sizes="(max-width: 1023px) 100vw, 50vw"
                     className="h-full w-full object-cover"
-                    priority
+                    preload
                   />
                 </div>
               </div>
@@ -389,8 +390,9 @@ export default function OKompaniiPage() {
                 <Image
                   src="/images/catalog/conver55ted_image.webp"
                   alt="FilterFlow — производство фильтровальных мешков и рукавов для промышленных заказчиков"
-                  width={1200}
-                  height={900}
+                  width={2048}
+                  height={1364}
+                  sizes="(max-width: 1023px) 100vw, 50vw"
                   className="h-full w-full object-cover"
                 />
               </div>

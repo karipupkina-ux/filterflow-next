@@ -17,7 +17,6 @@ import CatalogGridSection from "./components/feature/CatalogGridSection";
 import BlogArticlesSection from "./components/feature/BlogArticlesSection";
 import ContactsSection from "./components/feature/ContactsSection";
 import FloatingContacts from "./components/feature/FloatingContacts";
-import CookieBanner from "./components/feature/CookieBanner";
 
 const HOME_TITLE =
   "Мешки для аспирации и стружкоотсоса, фильтровальные рукава и рукавные фильтры в наличии и под заказ";
@@ -49,23 +48,24 @@ export default function HomePage() {
   return (
     <>
       <Navigation />
-      <Hero />
-      <Products />
-      <TechnologySection />
-      <Advantages />
-      <ModernProductionSection />
-      <CooperationBenefitsSection />
-      <OurWorksSection />
-      <ReviewsSection />
-      <AboutCompanyPreviewSection />
-      <OrderFormSection />
-      <FAQSection />
-      <SeoContentSection />
-      <CatalogGridSection />
-      <BlogArticlesSection />
-      <ContactsSection />
+      <main>
+        <Hero />
+        <Products />
+        <TechnologySection />
+        <Advantages />
+        <ModernProductionSection />
+        <CooperationBenefitsSection />
+        <OurWorksSection />
+        <ReviewsSection />
+        <AboutCompanyPreviewSection />
+        <OrderFormSection />
+        <FAQSection />
+        <SeoContentSection />
+        <CatalogGridSection />
+        <BlogArticlesSection />
+        <ContactsSection />
+      </main>
       <FloatingContacts />
-      <CookieBanner />
     </>
   );
 }

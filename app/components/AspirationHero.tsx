@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function AspirationHero() {
   return (
     <section className="relative w-full h-[420px] flex items-center">
@@ -8,6 +10,8 @@ export default function AspirationHero() {
       <img
         src="https://static.readdy.ai/image/1fc75b7705226fa83728ef373a212f50/bfe6822e0e58d0dac14a91045d30d477.webp"
         alt="Мешки для аспирации"
+        width={1536}
+        height={1024}
         className="absolute inset-0 w-full h-full object-cover"
       />
 
@@ -35,12 +39,12 @@ export default function AspirationHero() {
 
         {/* КНОПКИ */}
         <div className="flex gap-4 mb-6">
-          <a
+          <Link
             href="/#contacts"
             className="bg-teal-500 hover:bg-teal-600 px-6 py-3 rounded-lg font-medium"
           >
             Получить расчет
-          </a>
+          </Link>
 
           <button className="border border-white/50 px-6 py-3 rounded-lg hover:bg-white/10">
             Связаться с нами

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutCompanyPreviewSection() {
     const stats = [
       { value: "300+", label: "Выполненных проектов" },
@@ -12,13 +14,16 @@ export default function AboutCompanyPreviewSection() {
           <div className="grid items-start gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10">
             {/* Левая колонка — изображение */}
             <div className="lg:pt-16">
-              <img
+              <Image
                 src="/images/logo_fj.webp"
                 alt="FilterFlow"
+                width={1024}
+                height={1024}
+                sizes="(max-width: 1023px) 100vw, 48vw"
                 loading="lazy"
                 decoding="async"
                 fetchPriority="low"
-                className="w-full rounded-[20px] object-cover shadow-[0_8px_24px_rgba(15,23,42,0.08)]"
+                className="h-auto w-full rounded-[20px] object-cover shadow-[0_8px_24px_rgba(15,23,42,0.08)]"
               />
             </div>
   

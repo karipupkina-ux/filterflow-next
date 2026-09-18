@@ -162,7 +162,7 @@ export default function FAQSection() {
               href="https://wa.me/79514992576"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-[44px] items-center justify-center gap-2 rounded-[12px] bg-[#25D366] px-5 text-[15px] font-medium text-white transition hover:brightness-95"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[12px] bg-[#25D366] px-5 text-[15px] font-medium text-white transition hover:brightness-95"
             >
               <svg
                 className="h-4 w-4"
@@ -199,6 +199,8 @@ export default function FAQSection() {
               <img
                 src="/images/max.svg"
                 alt="MAX"
+                width={16}
+                height={16}
                 loading="lazy"
                 decoding="async"
                 className="h-4 w-4 object-contain"

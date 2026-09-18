@@ -220,13 +220,13 @@ export default function ClampOrderForm() {
       </div>
 
       <div className="pt-1">
-        <label className="flex items-start gap-3 text-[15px] leading-[1.6] text-[#334155]">
+        <label className="flex min-h-11 cursor-pointer items-start gap-3 py-2 text-[15px] leading-[1.6] text-[#334155]">
           <input
             type="checkbox"
             checked={consent}
             onChange={(e) => setConsent(e.target.checked)}
             required
-            className="mt-1 h-[24px] w-[24px] rounded border border-[#cfd8e3] accent-[#149c94]"
+            className="mt-1 h-4 w-4 shrink-0 rounded border border-[#cfd8e3] accent-[#149c94]"
           />
           <span>
             Даю согласие на обработку персональных данных и соглашаюсь с{" "}

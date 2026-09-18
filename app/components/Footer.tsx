@@ -46,10 +46,11 @@ export default function Footer() {
           <div className="max-w-[320px]">
             <Link href="/" className="inline-flex items-center gap-3 sm:gap-4">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-64.webp"
                 alt="FilterFlow"
                 width={64}
                 height={64}
+                sizes="64px"
                 className="h-[64px] w-[64px] rounded-[14px] object-cover"
               />
               <span className="text-[24px] font-semibold tracking-[-0.02em] text-white sm:text-[30px]">

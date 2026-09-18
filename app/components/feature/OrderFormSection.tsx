@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import EmailLink from "../EmailLink";
 import {
@@ -187,10 +186,11 @@ export default function OrderFormSection() {
           <div className="rounded-[22px] border border-[#e7edf2] bg-white p-5 shadow-[0_10px_30px_rgba(15,23,42,0.06)] sm:p-6 md:p-8">
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label className="mb-2 block text-[14px] font-medium text-[#1f2937]">
+                <label htmlFor="order-name" className="mb-2 block text-[14px] font-medium text-[#1f2937]">
                   Ваше имя *
                 </label>
                 <input
+                  id="order-name"
                   type="text"
                   name="name"
                   required
@@ -202,10 +202,11 @@ export default function OrderFormSection() {
               </div>
 
               <div>
-                <label className="mb-2 block text-[14px] font-medium text-[#1f2937]">
+                <label htmlFor="order-phone" className="mb-2 block text-[14px] font-medium text-[#1f2937]">
                   Телефон *
                 </label>
                 <input
+                  id="order-phone"
                   type="tel"
                   name="phone"
                   required
@@ -217,10 +218,11 @@ export default function OrderFormSection() {
               </div>
 
               <div>
-                <label className="mb-2 block text-[14px] font-medium text-[#1f2937]">
+                <label htmlFor="order-email" className="mb-2 block text-[14px] font-medium text-[#1f2937]">
                   Email *
                 </label>
                 <input
+                  id="order-email"
                   type="email"
                   name="email"
                   required
@@ -232,10 +234,11 @@ export default function OrderFormSection() {
               </div>
 
               <div>
-                <label className="mb-2 block text-[14px] font-medium text-[#1f2937]">
+                <label htmlFor="order-product-type" className="mb-2 block text-[14px] font-medium text-[#1f2937]">
                   Тип продукции *
                 </label>
                 <select
+                  id="order-product-type"
                   name="productType"
                   required
                   value={productType}
@@ -254,10 +257,11 @@ export default function OrderFormSection() {
               </div>
 
               <div>
-                <label className="mb-2 block text-[14px] font-medium text-[#1f2937]">
+                <label htmlFor="order-comment" className="mb-2 block text-[14px] font-medium text-[#1f2937]">
                   Комментарий
                 </label>
                 <textarea
+                  id="order-comment"
                   name="comment"
                   rows={5}
                   maxLength={500}
@@ -268,7 +272,7 @@ export default function OrderFormSection() {
                 />
               </div>
 
-              <label className="flex cursor-pointer items-start gap-3">
+              <label className="flex min-h-11 cursor-pointer items-center gap-3">
                 <input
                   type="checkbox"
                   checked={agreed}
@@ -277,7 +281,7 @@ export default function OrderFormSection() {
                 />
 
                 <span
-                  className={`mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-[8px] border transition ${
+                  className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-[8px] border transition peer-focus-visible:ring-2 peer-focus-visible:ring-[#23b8ad] peer-focus-visible:ring-offset-2 ${
                     agreed
                       ? "border-[#23b8ad] bg-[#23b8ad] text-white"
                       : "border-[#cfd9e1] bg-white text-transparent"

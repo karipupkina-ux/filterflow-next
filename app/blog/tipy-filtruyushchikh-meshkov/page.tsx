@@ -296,8 +296,9 @@ export default function Page() {
               alt="Виды фильтровальных мешков для аспирации, стружкоотсоса и промышленной пылеустановки"
               width={1200}
               height={600}
+              sizes="(max-width: 1024px) 100vw, 1024px"
               className="h-auto w-full object-cover"
-              priority
+              preload
             />
           </div>
 

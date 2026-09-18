@@ -1,10 +1,13 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 type WorkItem = {
   title: string;
   image: string;
+  width: number;
+  height: number;
 };
 
 export default function OurWorksSection() {
@@ -12,34 +15,50 @@ export default function OurWorksSection() {
     {
       title: "Мешки для аспирации",
       image: "/images/nashi-raboti/meshki-aspirac.webp",
+      width: 1365,
+      height: 2048,
     },
     {
       title: "Производство карманных фильтров",
       image: "/images/nashi-raboti/generated_image.webp",
+      width: 1536,
+      height: 1024,
     },
     {
       title: "Мешки для циклонов",
       image: "/images/nashi-raboti/meshki-ciklonov-uvp.webp",
+      width: 1365,
+      height: 2048,
     },
     {
       title: "Верхние мешки-фильтры",
       image: "/images/nashi-raboti/photo_1.webp",
+      width: 1024,
+      height: 1024,
     },
     {
       title: "Мешки для стружкоотсоса",
       image: "/images/nashi-raboti/industrial_filter_system.webp",
+      width: 1536,
+      height: 1024,
     },
     {
       title: "Фильтровальные рукава",
       image: "/images/nashi-raboti/filter_bag_white.webp",
+      width: 1536,
+      height: 1024,
     },
     {
       title: "Рукавные фильтры",
       image: "/images/nashi-raboti/filter_cage.webp",
+      width: 1024,
+      height: 1024,
     },
     {
       title: "Нижние пылесборники",
       image: "/images/nashi-raboti/image_webp_optimized.webp",
+      width: 1365,
+      height: 2048,
     },
   ];
 
@@ -47,22 +66,30 @@ export default function OurWorksSection() {
     {
       title: "Нестандартный мешок для фильтрации",
       image: "/images/nashi-raboti/nestandartnye-meshki.webp",
+      width: 2048,
+      height: 2048,
     },
     {
       title: "Фильтры по размерам",
       image: "/images/nashi-raboti/converted_image5.webp",
+      width: 2048,
+      height: 1365,
     },
     {
       title: "Антистатические фильтры",
       image: "/images/nashi-raboti/filter_closeup.webp",
+      width: 1536,
+      height: 1024,
     },
     {
       title: "Мешки для УВП",
       image: "/images/nashi-raboti/optimized_image_2 (1).webp",
+      width: 1200,
+      height: 799,
     },
   ];
 
-  const allWorks = useMemo(() => [...primaryWorks, ...extraWorks], []);
+  const allWorks = [...primaryWorks, ...extraWorks];
   const [showAll, setShowAll] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -142,9 +169,12 @@ export default function OurWorksSection() {
               >
                 <div className="relative h-[156px] sm:h-[178px] lg:h-[192px] bg-[#eef1f4]">
                   <div className="absolute inset-0 flex items-center justify-center p-3 md:p-4">
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.title}
+                      width={item.width}
+                      height={item.height}
+                      sizes="(max-width: 767px) 50vw, (max-width: 1279px) 33vw, 25vw"
                       loading="lazy"
                       decoding="async"
                       fetchPriority="low"
@@ -302,9 +332,12 @@ export default function OurWorksSection() {
               className="max-h-full max-w-[92vw] text-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
+              <Image
                 src={allWorks[activeIndex].image}
                 alt={allWorks[activeIndex].title}
+                width={allWorks[activeIndex].width}
+                height={allWorks[activeIndex].height}
+                sizes="92vw"
                 className="mx-auto max-h-[78vh] w-auto max-w-full rounded-[18px] bg-white object-contain shadow-2xl"
               />
               <div className="mt-4 text-[16px] font-medium text-[#22d3c5]">

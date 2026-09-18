@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ModernProductionSection() {
     const items = [
       {
@@ -57,13 +59,16 @@ export default function ModernProductionSection() {
   
             {/* ФОТО */}
             <div>
-              <img
+              <Image
                 src="/images/catalog/nashi-tehnol.webp"
                 alt="Производство"
+                width={1200}
+                height={800}
+                sizes="(max-width: 1023px) 100vw, 50vw"
                 loading="lazy"
                 decoding="async"
                 fetchPriority="low"
-                className="w-full rounded-2xl object-cover"
+                className="h-auto w-full rounded-2xl object-cover"
               />
             </div>
   

@@ -1,10 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import { Roboto_Slab } from "next/font/google";
 import { useEffect, useState } from "react";
 
 const transitionIn =
   "transition-[opacity,transform] duration-700 ease-out";
+
+const robotoSlab = Roboto_Slab({
+  subsets: ["cyrillic", "latin"],
+  weight: "800",
+  display: "swap",
+});
 
 export default function Hero() {
   const [visible, setVisible] = useState(false);
@@ -24,8 +31,7 @@ export default function Hero() {
         src="/images/hero.webp"
         alt="Мешки для аспирации и фильтровальные рукава FilterFlow"
         fill
-        priority
-        fetchPriority="high"
+        preload
         sizes="100vw"
         className="object-cover object-[center_66%] sm:object-[center_70%]"
       />
@@ -34,23 +40,33 @@ export default function Hero() {
 
       <div className="relative z-10 flex h-full flex-col px-4 pb-7 pt-[88px] sm:px-6 sm:pb-10 sm:pt-[108px] lg:pt-[120px]">
         <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center text-center">
-        <h1
-  className={`max-w-[1200px] text-[30px] font-bold leading-[1.1] text-white sm:text-[38px] md:text-[52px] lg:text-[74px] ${transitionIn} ${enter} delay-0`}
->
-  Мешки для аспирации и стружкоотсоса
-  <br />
-  Фильтровальные рукава от производителя
-</h1>
+          <h1
+            className={`${robotoSlab.className} max-w-[1120px] text-[27px] font-extrabold leading-[1.06] tracking-[-0.025em] drop-shadow-[0_2px_5px_rgba(0,0,0,0.55)] sm:text-[36px] md:text-[46px] lg:text-[58px] ${transitionIn} ${enter} delay-0`}
+          >
+            <span className="block text-white">Мешки для аспирации</span>
+            <span className="block text-white">и стружкоотсоса</span>
+            <span className="mt-2 block text-[#19C9BE] sm:mt-3">
+              Фильтровальные рукава
+            </span>
+            <span className="mt-1 block text-[0.76em] text-[#DAE5E8]">
+              от производителя
+            </span>
+            <span
+              className="mx-auto mt-3 block h-1 w-36 rounded-full bg-[#F79D0C] shadow-[0_0_10px_rgba(247,157,12,0.35)] sm:mt-4 sm:w-56 lg:w-64"
+              aria-hidden="true"
+            />
+          </h1>
 
-<p
-  className={`mt-4 max-w-[980px] text-[14px] leading-[1.5] text-white/90 sm:text-[15px] md:text-[17px] ${transitionIn} ${enter} delay-[150ms]`}
->
-В наличии и под заказ. Производим мешки для аспирации и стружкоотсоса
-  (верхние и нижние), а также фильтровальные рукава для систем пылеулавливания,
-  циклонов и УВП. Изготавливаем фильтры для аспирации любых размеров напрямую
-  от производителя — с учетом задач вашего производства. Индивидуальные
-  размеры, быстрое изготовление и доставка по России и СНГ.
-</p>
+          <p
+            className={`mt-10 max-w-[980px] text-[14px] leading-[1.5] text-white/90 sm:mt-11 sm:text-[15px] md:mt-12 md:text-[17px] ${transitionIn} ${enter} delay-[150ms]`}
+          >
+            В наличии и под заказ. Производим мешки для аспирации и
+            стружкоотсоса (верхние и нижние), а также фильтровальные рукава для
+            систем пылеулавливания, циклонов и УВП. Изготавливаем фильтры для
+            аспирации любых размеров напрямую от производителя — с учетом задач
+            вашего производства. Индивидуальные размеры, быстрое изготовление и
+            доставка по России и СНГ.
+          </p>
           <div
             className={`mt-6 flex flex-col items-stretch justify-center gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 ${transitionIn} ${enter} delay-[300ms]`}
           >
@@ -71,7 +87,7 @@ export default function Hero() {
         </div>
 
         <div
-          className={`flex justify-center pt-3 sm:pt-4 ${transitionIn} ${enter} delay-[450ms]`}
+          className={`flex justify-center pt-5 sm:pt-6 ${transitionIn} ${enter} delay-[450ms]`}
         >
           <a
             href="#catalog"

@@ -252,8 +252,9 @@ export default function Page() {
               alt="Сравнение нового и изношенного фильтр-мешка для аспирации и пылеудаления"
               width={1600}
               height={900}
+              sizes="(max-width: 1024px) 100vw, 1024px"
               className="h-auto w-full object-cover"
-              priority
+              preload
             />
           </div>
 

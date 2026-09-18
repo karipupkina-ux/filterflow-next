@@ -114,13 +114,13 @@ export default function Page() {
               </p>
 
               <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
-                <a
+                <Link
                   href="/#contacts"
                   className="flex h-11 items-center justify-center rounded-lg bg-[#149c8d] px-6 text-[15px] font-medium text-white transition hover:bg-[#11897d] sm:h-auto sm:py-3"
                 >
                   Заказать расчёт
                   <span className="ml-2">→</span>
-                </a>
+                </Link>
 
                 <a
                   href="tel:+79514992576"
@@ -136,10 +136,11 @@ export default function Page() {
                 <Image
                   src="/images/catalog/filter_bags_table.webp"
                   alt="Нестандартные фильтровальные мешки, пошив по размерам"
-                  width={800}
-                  height={900}
+                  width={976}
+                  height={1056}
+                  sizes="(max-width: 1023px) 100vw, 520px"
                   className="h-auto w-full object-cover"
-                  priority
+                  preload
                 />
               </div>
             </div>
@@ -805,8 +806,9 @@ export default function Page() {
                   <Image
                     src="/images/catalog/nestandartnye-meshki.webp"
                     alt="Пример нестандартного фильтровального мешка 1"
-                    width={500}
-                    height={500}
+                    width={2048}
+                    height={2048}
+                    sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 25vw"
                     className="h-[220px] w-full object-cover transition duration-500 group-hover:scale-[1.04]"
                   />
                 </div>
@@ -817,8 +819,9 @@ export default function Page() {
                   <Image
                     src="/images/catalog/converted.webp"
                     alt="Пример нестандартного фильтровального мешка 2"
-                    width={500}
-                    height={500}
+                    width={880}
+                    height={1184}
+                    sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 25vw"
                     className="h-[220px] w-full object-contain bg-[#f3f4f6] p-3 transition duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
@@ -829,8 +832,9 @@ export default function Page() {
                   <Image
                     src="/images/catalog/converted_image.webp"
                     alt="Пример нестандартного фильтровального мешка 3"
-                    width={500}
-                    height={500}
+                    width={1024}
+                    height={1024}
+                    sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 25vw"
                     className="h-[220px] w-full object-cover transition duration-500 group-hover:scale-[1.04]"
                   />
                 </div>
@@ -841,8 +845,9 @@ export default function Page() {
                   <Image
                     src="/images/catalog/converted_imag5e.webp"
                     alt="Пример нестандартного фильтровального мешка 4"
-                    width={500}
-                    height={500}
+                    width={1024}
+                    height={1024}
+                    sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 25vw"
                     className="h-[220px] w-full object-cover transition duration-500 group-hover:scale-[1.04]"
                   />
                 </div>
@@ -1049,13 +1054,13 @@ export default function Page() {
               </div>
 
               <div className="mt-12 flex justify-center">
-                <a
+                <Link
                   href="/#contacts"
                   className="inline-flex items-center justify-center rounded-full bg-[#19b5a5] px-10 py-4 text-[18px] font-medium text-white transition hover:bg-[#149c8d]"
                 >
                   Заказать расчёт
                   <span className="ml-3 text-[22px] leading-none">→</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

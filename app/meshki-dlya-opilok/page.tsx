@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import { pageMetadata } from "@/lib/seo-metadata";
@@ -236,9 +237,12 @@ export default function Page() {
         <header className="border-b border-[#e9edf3] bg-white shadow-[0_2px_10px_rgba(15,23,42,0.03)]">
           <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-4">
             <Link href="/" className="flex items-center gap-4">
-              <img
-                src="/favicon.ico"
+              <Image
+                src="/images/logo-64.webp"
                 alt="FilterFlow"
+                width={128}
+                height={128}
+                sizes="58px"
                 className="h-[58px] w-[58px] rounded-[14px] object-contain"
               />
               <span className="text-[26px] font-bold tracking-[-0.02em] text-[#11233f]">
@@ -388,12 +392,12 @@ export default function Page() {
               </Link>
             </nav>
 
-            <a
+            <Link
               href="/#contacts"
               className="hidden h-[48px] items-center justify-center rounded-[14px] bg-[#28c4b7] px-8 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8] lg:flex"
             >
               Получить расчёт
-            </a>
+            </Link>
           </div>
         </header>
       </div>
@@ -418,9 +422,12 @@ export default function Page() {
 
           <div className="grid gap-8 lg:grid-cols-[540px_minmax(0,1fr)] lg:items-start">
             <div className="overflow-hidden rounded-[18px] bg-[#f1f2f4]">
-              <img
+              <Image
                 src="/images/catalog/nizhnie-meshki.webp"
                 alt="Мешки для опилок и сбора стружки для стружкоотсоса"
+                width={800}
+                height={1200}
+                sizes="(max-width: 1023px) 100vw, 540px"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -895,6 +902,8 @@ export default function Page() {
           <img
             src="/images/whatsapp.svg"
             alt="WhatsApp"
+            width={24}
+            height={24}
             className="h-[44px] w-[44px] object-contain"
           />
         </a>
@@ -908,6 +917,8 @@ export default function Page() {
           <img
             src="/images/telegram.svg"
             alt="Telegram"
+            width={240}
+            height={240}
             className="h-[44px] w-[44px] object-contain"
           />
         </a>
@@ -921,6 +932,8 @@ export default function Page() {
           <img
             src="/images/max.svg"
             alt="MAX"
+            width={64}
+            height={64}
             className="h-[30px] w-[30px] object-contain"
           />
         </a>

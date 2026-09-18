@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useRef, useState } from "react";
 import EmailLink from "../EmailLink";
 import {
@@ -232,12 +231,14 @@ export default function ContactsSection() {
                   href="https://wa.me/79514992576"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#25D366] transition-transform duration-200 hover:scale-105"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#25D366] transition-transform duration-200 hover:scale-105"
                   aria-label="WhatsApp"
                 >
                   <img
                     src="/images/whatsapp.svg"
                     alt="WhatsApp"
+                    width={40}
+                    height={40}
                     loading="lazy"
                     decoding="async"
                     className="h-10 w-10 object-contain"
@@ -249,12 +250,14 @@ export default function ContactsSection() {
                   href="https://t.me/Violetta0502"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#229ED9] transition-transform duration-200 hover:scale-105"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#229ED9] transition-transform duration-200 hover:scale-105"
                   aria-label="Telegram"
                 >
                   <img
                     src="/images/telegram.svg"
                     alt="Telegram"
+                    width={40}
+                    height={40}
                     loading="lazy"
                     decoding="async"
                     className="h-10 w-10 object-contain"
@@ -265,12 +268,14 @@ export default function ContactsSection() {
                   href="https://max.ru/u/f9LHodD0cOLehfNZxc-dfvXrRQQ-ApKrfczCjbhEa_va3lGdtndd7SgNP8U"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#8b5cf6] transition-transform duration-200 hover:scale-105"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#8b5cf6] transition-transform duration-200 hover:scale-105"
                   aria-label="MAX"
                 >
                   <img
                     src="/images/max.svg"
                     alt="MAX"
+                    width={40}
+                    height={40}
                     loading="lazy"
                     decoding="async"
                     className="h-10 w-10 object-contain"
@@ -299,10 +304,11 @@ export default function ContactsSection() {
                 className="hidden"
               />
               <div>
-                <label className="mb-2 block text-[12px] font-medium text-[#344054]">
+                <label htmlFor="home-contact-name" className="mb-2 block text-[12px] font-medium text-[#344054]">
                   Ваше имя *
                 </label>
                 <input
+                  id="home-contact-name"
                   name="name"
                   type="text"
                   required
@@ -314,10 +320,11 @@ export default function ContactsSection() {
               </div>
 
               <div>
-                <label className="mb-2 block text-[12px] font-medium text-[#344054]">
+                <label htmlFor="home-contact-email" className="mb-2 block text-[12px] font-medium text-[#344054]">
                   Email *
                 </label>
                 <input
+                  id="home-contact-email"
                   name="email"
                   type="email"
                   required
@@ -329,10 +336,11 @@ export default function ContactsSection() {
               </div>
 
               <div>
-                <label className="mb-2 block text-[12px] font-medium text-[#344054]">
+                <label htmlFor="home-contact-phone" className="mb-2 block text-[12px] font-medium text-[#344054]">
                   Телефон
                 </label>
                 <input
+                  id="home-contact-phone"
                   name="phone"
                   type="text"
                   value={form.phone}
@@ -343,10 +351,11 @@ export default function ContactsSection() {
               </div>
 
               <div>
-                <label className="mb-2 block text-[12px] font-medium text-[#344054]">
+                <label htmlFor="home-contact-message" className="mb-2 block text-[12px] font-medium text-[#344054]">
                   Сообщение *
                 </label>
                 <textarea
+                  id="home-contact-message"
                   name="message"
                   required
                   value={form.message}
@@ -361,8 +370,8 @@ export default function ContactsSection() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3">
-                <label className="relative mt-0.5 inline-flex cursor-pointer items-center">
+              <div className="flex min-h-11 items-start gap-3">
+                <label className="relative inline-flex min-h-11 cursor-pointer items-center">
                   <input
                     name="agree"
                     type="checkbox"
@@ -370,7 +379,7 @@ export default function ContactsSection() {
                     onChange={handleChange}
                     className="peer sr-only"
                   />
-                  <span className="flex h-7 w-7 items-center justify-center rounded-[8px] border border-[#98a2b3] bg-white transition peer-checked:border-[#11b3a6] peer-checked:bg-[#11b3a6]">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-[8px] border border-[#98a2b3] bg-white transition peer-focus-visible:ring-2 peer-focus-visible:ring-[#11b3a6] peer-focus-visible:ring-offset-2 peer-checked:border-[#11b3a6] peer-checked:bg-[#11b3a6]">
                     {form.agree && (
                       <svg
                         className="h-4 w-4 text-white"

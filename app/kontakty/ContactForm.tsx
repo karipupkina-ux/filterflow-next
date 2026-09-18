@@ -305,7 +305,7 @@ export default function ContactForm() {
           )}
         </div>
 
-        <label className="flex cursor-pointer gap-3 text-sm leading-snug text-[#475569]">
+        <label className="flex min-h-11 cursor-pointer items-start gap-3 py-2 text-sm leading-snug text-[#475569]">
           <input
             type="checkbox"
             checked={consent}

@@ -1,26 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-const COOKIE_KEY = "filterflow_cookie_consent";
+import { getCookieConsent, setCookieConsent } from "@/lib/cookie-consent";
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const saved = window.localStorage.getItem(COOKIE_KEY);
-    if (!saved) {
-      setVisible(true);
-    }
+    const timer = window.setTimeout(() => {
+      if (!getCookieConsent()) setVisible(true);
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, []);
 
   function acceptCookies() {
-    window.localStorage.setItem(COOKIE_KEY, "accepted");
+    setCookieConsent("accepted");
     setVisible(false);
   }
 
   function declineCookies() {
-    window.localStorage.setItem(COOKIE_KEY, "declined");
+    setCookieConsent("declined");
     setVisible(false);
   }
 
@@ -53,7 +52,7 @@ export default function CookieBanner() {
           <button
             type="button"
             onClick={moreInfo}
-            className="inline-flex h-10 items-center justify-center rounded-[10px] border border-[#e5e7eb] bg-white px-4 text-[13px] font-medium text-[#4b5563] transition hover:bg-[#f9fafb]"
+            className="inline-flex min-h-11 items-center justify-center rounded-[10px] border border-[#e5e7eb] bg-white px-4 text-[13px] font-medium text-[#4b5563] transition hover:bg-[#f9fafb]"
           >
             Подробнее
           </button>
@@ -61,7 +60,7 @@ export default function CookieBanner() {
           <button
             type="button"
             onClick={declineCookies}
-            className="inline-flex h-10 items-center justify-center rounded-[10px] border border-[#e5e7eb] bg-white px-4 text-[13px] font-medium text-[#4b5563] transition hover:bg-[#f9fafb]"
+            className="inline-flex min-h-11 items-center justify-center rounded-[10px] border border-[#e5e7eb] bg-white px-4 text-[13px] font-medium text-[#4b5563] transition hover:bg-[#f9fafb]"
           >
             Отклонить
           </button>
@@ -69,7 +68,7 @@ export default function CookieBanner() {
           <button
             type="button"
             onClick={acceptCookies}
-            className="inline-flex h-10 items-center justify-center rounded-[10px] bg-[#ff7a3d] px-5 text-[13px] font-semibold text-white transition hover:bg-[#f26d2f]"
+            className="inline-flex min-h-11 items-center justify-center rounded-[10px] bg-[#ff7a3d] px-5 text-[13px] font-semibold text-white transition hover:bg-[#f26d2f]"
           >
             Принять
           </button>

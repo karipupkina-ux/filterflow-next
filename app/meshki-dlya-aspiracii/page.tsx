@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import MeshkiAspiraciiOrderForm from "../components/MeshkiAspiraciiOrderForm";
 import Navigation from "../components/Navigation";
@@ -21,6 +22,8 @@ const cards = [
     description:
       "Фильтруют мелкую пыль и обеспечивают чистоту воздуха на выходе из системы аспирации.",
     image: "/images/catalog/verhnie-meshki.webp",
+    width: 305,
+    height: 305,
     link: "/verhnie-meshki",
   },
   {
@@ -28,6 +31,8 @@ const cards = [
     description:
       "Собирают крупную стружку и опилки, предотвращая засорение системы.",
     image: "/images/catalog/nizhnie-meshki.webp",
+    width: 800,
+    height: 1200,
     link: "/nizhnie-meshki",
   },
   {
@@ -35,6 +40,8 @@ const cards = [
     description:
       "Изготовлены из высококачественной фильтровальной ткани для максимальной эффективности очистки.",
     image: "/images/catalog/tkanevye-meshki.webp",
+    width: 1200,
+    height: 800,
     link: "/tkanevye-meshki",
   },
   {
@@ -42,6 +49,8 @@ const cards = [
     description:
       "Специализированные мешки для пылеулавливающих установок и циклонных систем.",
     image: "/images/catalog/meshki-uvp-ciklonov.webp",
+    width: 1024,
+    height: 1024,
     link: "/meshki-dlya-ciklonov-i-uvp",
   },
 ];
@@ -184,6 +193,8 @@ const applications = [
     description:
       "Мешки для стружкоотсосов, рейсмусов, фрезерных и шлифовальных станков.",
     image: "/images/catalog/derevoobrabotka.webp",
+    width: 1200,
+    height: 799,
     icon: (
       <svg
         className="h-4 w-4 text-teal-500"
@@ -205,6 +216,8 @@ const applications = [
     description:
       "Фильтрация пыли и стружки на мебельных предприятиях и столярных мастерских.",
     image: "/images/catalog/meb-proiz.webp",
+    width: 784,
+    height: 512,
     icon: (
       <svg
         className="h-4 w-4 text-teal-500"
@@ -231,6 +244,8 @@ const applications = [
     description:
       "Мешки для УВП, циклонов и промышленных систем очистки воздуха.",
     image: "/images/catalog/pileulavliv.webp",
+    width: 784,
+    height: 512,
     icon: (
       <svg
         className="h-4 w-4 text-teal-500"
@@ -252,6 +267,8 @@ const applications = [
     description:
       "Сбор строительной пыли, цемента и мелкодисперсных частиц на объектах.",
     image: "/images/catalog/stroitelstvo.webp",
+    width: 784,
+    height: 512,
     icon: (
       <svg
         className="h-4 w-4 text-teal-500"
@@ -622,6 +639,7 @@ export default function Page() {
   return (
     <>
       <Navigation />
+      <main>
       <style>{`
         details.faq-item > summary::-webkit-details-marker {
           display: none;
@@ -683,12 +701,12 @@ export default function Page() {
             </p>
 
             <div className="flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row sm:flex-nowrap sm:items-center sm:gap-6 lg:gap-8">
-              <a
+              <Link
                 href="/#contacts"
                 className="inline-flex h-12 w-full items-center justify-center rounded-xl bg-teal-500 px-6 text-[15px] font-semibold transition hover:bg-teal-600 sm:h-auto sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
               >
                 Получить расчет
-              </a>
+              </Link>
 
               <a
                 href="/kontakty"
@@ -771,9 +789,12 @@ export default function Page() {
             <Link key={card.title} href={card.link} className="group block">
               <article className="h-full rounded-2xl bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
                 <div className="mb-4 flex h-[180px] items-center justify-center overflow-hidden rounded-xl bg-[#f7f7f7]">
-                  <img
+                  <Image
                     src={card.image}
                     alt={card.title}
+                    width={card.width}
+                    height={card.height}
+                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 25vw"
                     className="max-h-[180px] w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -861,9 +882,12 @@ export default function Page() {
                 className="group overflow-hidden rounded-[22px] border border-[#e9eef3] bg-white shadow-[0_4px_14px_rgba(15,23,42,0.04)] transition hover:-translate-y-[2px] hover:shadow-[0_8px_20px_rgba(15,23,42,0.08)]"
               >
                 <div className="relative h-[220px] overflow-hidden">
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.title}
+                    width={item.width}
+                    height={item.height}
+                    sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 25vw"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                   />
                 </div>
@@ -1517,6 +1541,7 @@ export default function Page() {
       </section>
 
       <SeeAlsoLinks excludeHref="/meshki-dlya-aspiracii" />
+      </main>
     </>
   );
 }

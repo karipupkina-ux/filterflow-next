@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { pageMetadata } from "@/lib/seo-metadata";
 import Navigation from "../components/Navigation";
 import FloatingContacts from "../components/feature/FloatingContacts";
@@ -15,6 +16,7 @@ export default function PolitikaKonfidencialnostiPage() {
   return (
     <>
       <Navigation />
+      <main>
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#14233d] pt-[118px] pb-16">
@@ -31,12 +33,12 @@ export default function PolitikaKonfidencialnostiPage() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <div className="mb-6 flex flex-wrap items-center gap-2 text-[15px]">
-            <a
+            <Link
               href="/"
               className="text-white/80 transition hover:text-white hover:underline"
             >
               Главная
-            </a>
+            </Link>
 
             <span className="text-white/40">›</span>
 
@@ -287,6 +289,7 @@ export default function PolitikaKonfidencialnostiPage() {
         </div>
       </section>
 
+      </main>
       <FloatingContacts />
     </>
   );

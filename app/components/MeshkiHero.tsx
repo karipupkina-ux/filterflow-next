@@ -1,11 +1,17 @@
+import Link from "next/link";
+import Image from "next/image";
+
 export default function MeshkiHero() {
     return (
       <section className="relative w-full h-[420px] md:h-[520px] overflow-hidden">
   
         {/* ФОН */}
-        <img
+        <Image
           src="/images/hero.webp"
           alt="Мешки для аспирации"
+          width={1536}
+          height={1024}
+          sizes="100vw"
           className="absolute inset-0 w-full h-full object-cover"
         />
   
@@ -36,19 +42,19 @@ export default function MeshkiHero() {
             {/* КНОПКИ */}
             <div className="flex flex-wrap gap-4 mb-6">
   
-              <a
+              <Link
                 href="/#contacts"
                 className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold"
               >
                 Получить расчёт
-              </a>
+              </Link>
   
-              <a
+              <Link
                 href="/kontakty"
                 className="border border-white/40 hover:bg-white/10 px-6 py-3 rounded-lg"
               >
                 Связаться с нами
-              </a>
+              </Link>
   
             </div>
   

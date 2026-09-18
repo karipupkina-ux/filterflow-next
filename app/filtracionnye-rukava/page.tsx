@@ -67,7 +67,7 @@ export default function FiltracionnyeRukavaPage() {
               </p>
 
               <div className="flex w-full flex-col items-stretch justify-center gap-3 sm:w-auto sm:flex-row sm:flex-nowrap sm:items-center sm:gap-6 lg:gap-8">
-                <a
+                <Link
                   href="/#contacts"
                   className="flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] bg-[#28c7bb] px-6 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b5aa] sm:h-[60px] sm:w-auto sm:rounded-[20px] sm:px-8 sm:text-[16px] md:h-[64px] md:px-10 md:text-[17px]"
                 >
@@ -81,7 +81,7 @@ export default function FiltracionnyeRukavaPage() {
                     <path d="M16.01 3.2c-7.05 0-12.77 5.72-12.77 12.77 0 2.25.59 4.45 1.72 6.39L3.2 28.8l6.61-1.73a12.7 12.7 0 0 0 6.19 1.59h.01c7.05 0 12.78-5.72 12.78-12.77S23.06 3.2 16.01 3.2Zm0 23.31h-.01a10.5 10.5 0 0 1-5.35-1.47l-.38-.22-3.92 1.03 1.05-3.82-.25-.39a10.48 10.48 0 0 1-1.61-5.59c0-5.79 4.71-10.5 10.5-10.5 2.8 0 5.44 1.09 7.42 3.08a10.43 10.43 0 0 1 3.08 7.42c0 5.79-4.72 10.5-10.51 10.5Z" />
                   </svg>
                   Получить расчёт
-                </a>
+                </Link>
 
                 <Link
                   href="/kontakty"
@@ -140,8 +140,9 @@ export default function FiltracionnyeRukavaPage() {
                 <Image
                   src="/images/products/rukavnie-filtri.webp"
                   alt="Полиэстеровые рукава"
-                  width={420}
-                  height={260}
+                  width={1200}
+                  height={799}
+                  sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 25vw"
                   className="h-full w-full object-contain"
                 />
               </div>
@@ -186,8 +187,9 @@ export default function FiltracionnyeRukavaPage() {
                 <Image
                   src="/images/products/filter_closeup.webp"
                   alt="Тефлоновые рукава"
-                  width={420}
-                  height={260}
+                  width={1536}
+                  height={1024}
+                  sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 25vw"
                   className="h-full w-full object-contain"
                 />
               </div>
@@ -232,8 +234,9 @@ export default function FiltracionnyeRukavaPage() {
                 <Image
                   src="/images/products/filter_bag_white.webp"
                   alt="Рукава для УВП"
-                  width={420}
-                  height={260}
+                  width={1536}
+                  height={1024}
+                  sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 25vw"
                   className="h-full w-full object-contain"
                 />
               </div>
@@ -279,8 +282,9 @@ export default function FiltracionnyeRukavaPage() {
                 <Image
                   src="/images/products/meshok_uvp_cyclones.webp"
                   alt="Рукава для циклонов"
-                  width={420}
-                  height={260}
+                  width={1024}
+                  height={1260}
+                  sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 25vw"
                   className="h-full w-full object-contain"
                 />
               </div>
@@ -1496,8 +1500,9 @@ export default function FiltracionnyeRukavaPage() {
           <Image
             src="/images/whatsapp.svg"
             alt="WhatsApp"
-            width={44}
-            height={44}
+            width={24}
+            height={24}
+            sizes="44px"
             className="h-[44px] w-[44px] object-contain"
           />
         </a>
@@ -1511,21 +1516,25 @@ export default function FiltracionnyeRukavaPage() {
           <Image
             src="/images/telegram.svg"
             alt="Telegram"
-            width={44}
-            height={44}
+            width={240}
+            height={240}
+            sizes="44px"
             className="h-[44px] w-[44px] object-contain"
           />
         </a>
 
         <a
-          href="#"
+          href="https://max.ru/u/f9LHodD0cOLehfNZxc-dfvXrRQQ-ApKrfczCjbhEa_va3lGdtndd7SgNP8U"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[linear-gradient(135deg,#6d4dff_0%,#c23fff_100%)] shadow-[0_10px_30px_rgba(15,23,42,0.16)] transition-transform duration-200 hover:scale-105"
         >
           <Image
             src="/images/max.svg"
             alt="MAX"
-            width={30}
-            height={30}
+            width={64}
+            height={64}
+            sizes="30px"
             className="h-[30px] w-[30px] object-contain"
           />
         </a>

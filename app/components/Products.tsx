@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const products = [
@@ -5,42 +6,54 @@ const products = [
     title: "Мешки для аспирации",
     description:
       "Верхние и нижние мешки для систем аспирации деревообрабатывающих станков. Изготовление по индивидуальным размерам.",
-    image: "/images/catalog/meshki-aspiracii.webp",
+    image: "/images/catalog/cards/meshki-aspiracii.webp",
+    width: 293,
+    height: 440,
     link: "/meshki-dlya-aspiracii",
   },
   {
     title: "Фильтровальные рукава",
     description:
       "Рукавные фильтры для промышленных систем очистки воздуха. Полиэстер, антистатические и термостойкие материалы.",
-    image: "/images/catalog/filtracionalnye-rukava.webp",
+    image: "/images/catalog/cards/filtracionalnye-rukava.webp",
+    width: 440,
+    height: 440,
     link: "/filtracionnye-rukava",
   },
   {
     title: "Мешки для стружкоотсоса",
     description:
       "Прочные тканевые мешки для циклонов и УВП. Устойчивы к истиранию, различные типы креплений.",
-    image: "/images/catalog/meshki-struzhkootsosa.webp",
+    image: "/images/catalog/cards/meshki-struzhkootsosa.webp",
+    width: 293,
+    height: 440,
     link: "/meshki-dlya-struzhkootsosa",
   },
   {
     title: "Мешки для циклонов и УВП",
     description:
       "Специализированные мешки для циклонных установок и установок вентиляции и пылеудаления. Надёжная фильтрация и долгий срок службы.",
-    image: "/images/catalog/meshki-ciklonov-uvp.webp",
+    image: "/images/catalog/cards/meshki-ciklonov-uvp.webp",
+    width: 293,
+    height: 440,
     link: "/meshki-dlya-ciklonov-i-uvp",
   },
   {
     title: "Быстросъёмные хомуты",
     description:
       "Металлические хомуты для быстрого крепления фильтровальных мешков. Нержавеющая сталь, различные диаметры.",
-    image: "/images/catalog/bystrosemnye-homuty.webp",
+    image: "/images/catalog/cards/bystrosemnye-homuty.webp",
+    width: 440,
+    height: 293,
     link: "/bystrosemnye-homyty",
   },
   {
     title: "Нестандартные мешки для фильтрации",
     description:
       "Изготовление фильтровальных мешков по индивидуальным чертежам и размерам.",
-    image: "/images/catalog/nestandartnye-meshki.webp",
+    image: "/images/catalog/cards/nestandartnye-meshki.webp",
+    width: 440,
+    height: 440,
     link: "/nestandartnye-meshki-dlya-filtracii",
   },
 ];
@@ -64,13 +77,15 @@ export default function Products() {
             <Link key={item.title} href={item.link} className="group block">
               <article className="relative h-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                 <div className="relative flex h-[220px] items-center justify-center overflow-hidden bg-[#f3f4f6] px-7 py-7 sm:h-[260px] sm:px-9 sm:py-9 md:h-[280px]">
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.title}
+                    width={item.width}
+                    height={item.height}
+                    sizes="(max-width: 639px) 180px, 220px"
                     loading="lazy"
                     decoding="async"
-                    fetchPriority="low"
-                    className="max-h-[180px] w-auto max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 sm:max-h-[220px]"
+                    className="h-auto max-h-[180px] w-auto max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 sm:max-h-[220px]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/12 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
                 </div>

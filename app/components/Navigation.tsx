@@ -137,7 +137,7 @@ export default function Navigation() {
     >
       {/* Верхняя полоска */}
       <div className={topBarClass}>
-        <div className="mx-auto flex h-8 max-w-[1440px] items-center justify-between gap-2 px-4 text-[12px] text-white sm:h-10 sm:justify-end sm:gap-6 sm:px-6 sm:text-[13px]">
+        <div className="mx-auto flex min-h-11 max-w-[1440px] items-center justify-between gap-2 px-4 text-[12px] text-white sm:h-10 sm:min-h-10 sm:justify-end sm:gap-6 sm:px-6 sm:text-[13px]">
           <a
             href="tel:+79514992576"
             className="font-medium transition-colors duration-200 hover:text-[#28c4b7] sm:hidden"
@@ -198,8 +198,10 @@ export default function Navigation() {
           {/* Лого */}
           <Link href="/" className="flex items-center gap-3 sm:gap-4">
             <img
-              src="/favicon.ico"
+              src="/images/logo-64.webp"
               alt="FilterFlow"
+              width={56}
+              height={56}
               className="h-10 w-10 rounded-[10px] sm:h-14 sm:w-14 sm:rounded-[14px]"
             />
             <span className={`text-[21px] font-semibold sm:text-[26px] ${textColor}`}>
@@ -400,12 +402,12 @@ export default function Navigation() {
           </nav>
 
           {/* Кнопка */}
-          <a
+          <Link
             href="/#contacts"
             className="hidden h-[46px] items-center justify-center rounded-[14px] bg-[#28c4b7] px-7 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8] sm:inline-flex"
           >
             Получить расчёт
-          </a>
+          </Link>
 
           <div className="flex items-center gap-2 lg:hidden">
             <div ref={contactsMenuRef} className="relative">
@@ -437,7 +439,7 @@ export default function Navigation() {
                   onClick={() => setIsContactsOpen(false)}
                 >
                   <span className={contactsIconWrapClass}>
-                    <img src="/images/whatsapp.svg" alt="" loading="lazy" decoding="async" className="h-8 w-8 object-contain" />
+                    <img src="/images/whatsapp.svg" alt="" width={32} height={32} loading="lazy" decoding="async" className="h-8 w-8 object-contain" />
                   </span>
                   <span className={contactsTextClass}>WhatsApp</span>
                 </a>
@@ -449,7 +451,7 @@ export default function Navigation() {
                   onClick={() => setIsContactsOpen(false)}
                 >
                   <span className={contactsIconWrapClass}>
-                    <img src="/images/telegram.svg" alt="" loading="lazy" decoding="async" className="h-8 w-8 object-contain" />
+                    <img src="/images/telegram.svg" alt="" width={32} height={32} loading="lazy" decoding="async" className="h-8 w-8 object-contain" />
                   </span>
                   <span className={contactsTextClass}>Telegram</span>
                 </a>
@@ -461,7 +463,7 @@ export default function Navigation() {
                   onClick={() => setIsContactsOpen(false)}
                 >
                   <span className={contactsIconWrapClass}>
-                    <img src="/images/max.svg" alt="" loading="lazy" decoding="async" className="h-[20px] w-[20px] object-contain" />
+                    <img src="/images/max.svg" alt="" width={20} height={20} loading="lazy" decoding="async" className="h-[20px] w-[20px] object-contain" />
                   </span>
                   <span className={contactsTextClass}>MAX</span>
                 </a>
@@ -471,7 +473,7 @@ export default function Navigation() {
                   onClick={() => setIsContactsOpen(false)}
                 >
                   <span className={contactsIconWrapClass}>
-                    <img src="/images/phone.svg" alt="" loading="lazy" decoding="async" className="h-7 w-7 object-contain" />
+                    <img src="/images/phone.svg" alt="" width={28} height={28} loading="lazy" decoding="async" className="h-7 w-7 object-contain" />
                   </span>
                   <span className={contactsTextClass}>Позвонить</span>
                 </a>
@@ -481,7 +483,7 @@ export default function Navigation() {
                   onClick={() => setIsContactsOpen(false)}
                 >
                   <span className={contactsIconWrapClass}>
-                    <img src="/images/email.svg" alt="" loading="lazy" decoding="async" className="h-[20px] w-[20px] object-contain" />
+                    <img src="/images/email.svg" alt="" width={20} height={20} loading="lazy" decoding="async" className="h-[20px] w-[20px] object-contain" />
                   </span>
                   <span className={contactsTextClass}>Email</span>
                 </a>
@@ -492,7 +494,7 @@ export default function Navigation() {
               type="button"
               aria-label={isMobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
               aria-expanded={isMobileMenuOpen}
-              className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-[#dbe4ea] bg-white text-[#0f172a] shadow-sm transition hover:border-[#28c4b7] hover:text-[#28c4b7] active:bg-[#eefaf8]"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-[#dbe4ea] bg-white text-[#0f172a] shadow-sm transition hover:border-[#28c4b7] hover:text-[#28c4b7] active:bg-[#eefaf8]"
               onClick={() => {
                 const next = !isMobileMenuOpen;
                 setIsMobileMenuOpen(next);
@@ -599,12 +601,12 @@ export default function Navigation() {
             </div>
             </div>
             <div className="border-t border-[#e8edf3] px-4 py-4">
-              <a
+              <Link
                 href="/#contacts"
                 className="flex h-12 w-full items-center justify-center rounded-xl bg-[#28c4b7] text-[15px] font-semibold text-white transition hover:bg-[#20b4a8]"
               >
                 Получить расчёт
-              </a>
+              </Link>
             </div>
           </div>
         </div>

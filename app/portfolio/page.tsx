@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navigation from "../components/Navigation";
 import FloatingContacts from "../components/feature/FloatingContacts";
-import CookieBanner from "../components/feature/CookieBanner";
 import { pageMetadata } from "@/lib/seo-metadata";
 import PortfolioPageBlocks from "./PortfolioPageBlocks";
 
@@ -78,8 +77,6 @@ export default function PortfolioPage() {
 
         <PortfolioPageBlocks />
       </main>
-
-      <CookieBanner />
     </>
   );
 }
