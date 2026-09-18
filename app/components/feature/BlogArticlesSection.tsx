@@ -5,25 +5,25 @@ const articles = [
     title: "Как выбрать мешок для аспирации",
     description:
       "Полное руководство по подбору фильтровального мешка: материалы, размеры, типы крепления",
-    href: "/blog/kak-vybrat-meshok-aspiracii",
+    href: "/blog/kak-vybrat-meshok-aspiracii/",
   },
   {
     title: "Как работает система аспирации",
     description:
       "Принцип работы систем пылеудаления и роль фильтровальных мешков в очистке воздуха",
-    href: "/blog/kak-rabotaet-aspiraciya",
+    href: "/blog/kak-rabotaet-aspiraciya/",
   },
   {
     title: "Когда менять фильтровальный мешок",
     description:
       "Признаки износа, средние сроки службы и советы по продлению ресурса фильтра",
-    href: "/blog/kogda-menyat-filtr-meshok",
+    href: "/blog/kogda-menyat-filtr-meshok/",
   },
   {
     title: "Типы фильтровальных мешков",
     description:
       "Полный обзор видов фильтров для аспирации: верхние, нижние, рукавные, для циклонов",
-    href: "/blog/tipy-filtruyushchikh-meshkov",
+    href: "/blog/tipy-filtruyushchikh-meshkov/",
   },
 ];
 
@@ -86,7 +86,7 @@ export default function BlogArticlesSection() {
 
         <div className="mt-8 flex justify-center">
           <Link
-            href="/blog"
+            href="/blog/"
             className="inline-flex items-center gap-2 text-[15px] font-medium text-[#23b8ad] transition-colors duration-200 hover:text-[#169d92]"
           >
             Все статьи блога

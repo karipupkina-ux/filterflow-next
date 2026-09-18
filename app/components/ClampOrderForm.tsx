@@ -231,7 +231,7 @@ export default function ClampOrderForm() {
           <span>
             Даю согласие на обработку персональных данных и соглашаюсь с{" "}
             <Link
-              href="/politika-konfidencialnosti"
+              href="/politika-konfidencialnosti/"
               className="font-medium text-[#149c94] underline underline-offset-4 transition-colors duration-200 hover:text-[#118b84]"
             >
               политикой конфиденциальности

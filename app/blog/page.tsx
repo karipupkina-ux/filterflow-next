@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo-metadata";
 
 const posts = [
   {
-    href: "/blog/kak-vybrat-meshok-aspiracii",
+    href: "/blog/kak-vybrat-meshok-aspiracii/",
     image: "/images/products/optimized_image (4).webp",
     category: "Руководство по выбору",
     readTime: "8 мин",
@@ -16,7 +16,7 @@ const posts = [
     date: "15 марта 2026",
   },
   {
-    href: "/blog/kak-rabotaet-aspiraciya",
+    href: "/blog/kak-rabotaet-aspiraciya/",
     image: "/images/products/optimized_image_2 (2).webp",
     category: "Технические знания",
     readTime: "7 мин",
@@ -25,7 +25,7 @@ const posts = [
     date: "10 марта 2026",
   },
   {
-    href: "/blog/kogda-menyat-filtr-meshok",
+    href: "/blog/kogda-menyat-filtr-meshok/",
     image: "/images/products/clean_no_text.webp.webp",
     category: "Обслуживание",
     readTime: "6 мин",
@@ -34,7 +34,7 @@ const posts = [
     date: "5 марта 2026",
   },
   {
-    href: "/blog/tipy-filtruyushchikh-meshkov",
+    href: "/blog/tipy-filtruyushchikh-meshkov/",
     image: "/images/products/optimized_image2.webp",
     category: "Обзор продукции",
     readTime: "10 мин",
@@ -46,31 +46,31 @@ const posts = [
 
 const popularTopics = [
   {
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     title: "Мешки для аспирации",
     text: "Верхние и нижние фильтровальные мешки",
   },
   {
-    href: "/filtracionnye-rukava",
+    href: "/filtracionnye-rukava/",
     title: "Фильтровальные рукава",
     text: "Рукавные фильтры для промышленности",
   },
   {
-    href: "/meshki-dlya-struzhkootsosa",
+    href: "/meshki-dlya-struzhkootsosa/",
     title: "Стружкоотсосы",
     text: "Мешки для деревообрабатывающих станков",
   },
   {
-    href: "/meshki-dlya-ciklonov-i-uvp",
+    href: "/meshki-dlya-ciklonov-i-uvp/",
     title: "Циклоны и УВП",
     text: "Мешки для промышленных систем",
   },
 ] as const;
 
 export const metadata: Metadata = pageMetadata({
-  title: "Блог FilterFlow: статьи о мешках для аспирации и фильтрации воздуха",
+  title: "Статьи об аспирации и фильтровальных мешках",
   description:
-    "Блог о системах аспирации и фильтрации воздуха: экспертные статьи по промышленной фильтрации, выбору и замене фильтровальных мешков для стружкоотсосов.",
+    "Практические статьи о выборе и замене фильтровальных мешков, работе аспирации, материалах, размерах и обслуживании стружкоотсосов.",
   path: "/blog",
   openGraphTitle: "Статьи FilterFlow о мешках для аспирации",
 });
@@ -225,7 +225,7 @@ export default function BlogIndexPage() {
                   Написать в WhatsApp
                 </a>
                 <Link
-                  href="/kontakty"
+                  href="/kontakty/"
                   className="inline-flex w-full items-center justify-center rounded-xl bg-white/12 px-7 py-3.5 text-[15px] font-semibold text-white ring-1 ring-white/20 transition-colors hover:bg-white/20 sm:w-auto"
                 >
                   Связаться с нами

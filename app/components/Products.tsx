@@ -9,7 +9,7 @@ const products = [
     image: "/images/catalog/cards/meshki-aspiracii.webp",
     width: 293,
     height: 440,
-    link: "/meshki-dlya-aspiracii",
+    link: "/meshki-dlya-aspiracii/",
   },
   {
     title: "Фильтровальные рукава",
@@ -18,7 +18,7 @@ const products = [
     image: "/images/catalog/cards/filtracionalnye-rukava.webp",
     width: 440,
     height: 440,
-    link: "/filtracionnye-rukava",
+    link: "/filtracionnye-rukava/",
   },
   {
     title: "Мешки для стружкоотсоса",
@@ -27,7 +27,7 @@ const products = [
     image: "/images/catalog/cards/meshki-struzhkootsosa.webp",
     width: 293,
     height: 440,
-    link: "/meshki-dlya-struzhkootsosa",
+    link: "/meshki-dlya-struzhkootsosa/",
   },
   {
     title: "Мешки для циклонов и УВП",
@@ -36,7 +36,7 @@ const products = [
     image: "/images/catalog/cards/meshki-ciklonov-uvp.webp",
     width: 293,
     height: 440,
-    link: "/meshki-dlya-ciklonov-i-uvp",
+    link: "/meshki-dlya-ciklonov-i-uvp/",
   },
   {
     title: "Быстросъёмные хомуты",
@@ -45,7 +45,7 @@ const products = [
     image: "/images/catalog/cards/bystrosemnye-homuty.webp",
     width: 440,
     height: 293,
-    link: "/bystrosemnye-homyty",
+    link: "/bystrosemnye-homyty/",
   },
   {
     title: "Нестандартные мешки для фильтрации",
@@ -54,7 +54,7 @@ const products = [
     image: "/images/catalog/cards/nestandartnye-meshki.webp",
     width: 440,
     height: 440,
-    link: "/nestandartnye-meshki-dlya-filtracii",
+    link: "/nestandartnye-meshki-dlya-filtracii/",
   },
 ];
 

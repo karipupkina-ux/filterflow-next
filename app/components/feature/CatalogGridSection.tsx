@@ -12,7 +12,7 @@ const items: CatalogItem[] = [
   {
     title: "Мешки для аспирации",
     description: "Верхние и нижние фильтровальные мешки для систем пылеудаления",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: (
       <svg className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
         <rect x="7" y="4" width="10" height="16" rx="2" />
@@ -23,7 +23,7 @@ const items: CatalogItem[] = [
   {
     title: "Фильтрационные рукава",
     description: "Промышленные рукава для рукавных фильтров и УВП",
-    href: "/filtracionnye-rukava",
+    href: "/filtracionnye-rukava/",
     icon: (
       <svg className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
         <path d="M8 4h8M12 4v16M9 20h6" />
@@ -33,7 +33,7 @@ const items: CatalogItem[] = [
   {
     title: "Мешки для стружкоотсоса",
     description: "Мешки для деревообрабатывающих станков",
-    href: "/meshki-dlya-struzhkootsosa",
+    href: "/meshki-dlya-struzhkootsosa/",
     icon: (
       <svg className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
         <path d="M8 5h8M12 5v14M10 19h4" />
@@ -43,7 +43,7 @@ const items: CatalogItem[] = [
   {
     title: "Мешки для циклонов и УВП",
     description: "Для пылеулавливающих установок и циклонных систем",
-    href: "/meshki-dlya-ciklonov-i-uvp",
+    href: "/meshki-dlya-ciklonov-i-uvp/",
     icon: (
       <svg className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
         <path d="M4 7h16M7 12h10M10 17h4" />
@@ -53,7 +53,7 @@ const items: CatalogItem[] = [
   {
     title: "Быстросъёмные хомуты",
     description: "Металлические хомуты для крепления фильтровальных мешков",
-    href: "/bystrosemnye-homyty",
+    href: "/bystrosemnye-homyty/",
     icon: (
       <svg className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
         <path d="M8 12a4 4 0 1 1 8 0 4 4 0 1 1-8 0Z" />
@@ -64,7 +64,7 @@ const items: CatalogItem[] = [
   {
     title: "Верхние мешки для аспирации",
     description: "Фильтровальные мешки для очистки воздуха",
-    href: "/verhnie-meshki",
+    href: "/verhnie-meshki/",
     icon: (
       <svg className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="7" />
@@ -75,7 +75,7 @@ const items: CatalogItem[] = [
   {
     title: "Нижние мешки для аспирации",
     description: "Сборные мешки для стружки и опилок",
-    href: "/nizhnie-meshki",
+    href: "/nizhnie-meshki/",
     icon: (
       <svg className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="7" />
@@ -86,7 +86,7 @@ const items: CatalogItem[] = [
   {
     title: "Тканевые мешки для аспирации",
     description: "Универсальные тканевые фильтровальные мешки",
-    href: "/tkanevye-meshki",
+    href: "/tkanevye-meshki/",
     icon: (
       <svg className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
         <rect x="6" y="5" width="12" height="14" rx="3" />
@@ -96,7 +96,7 @@ const items: CatalogItem[] = [
   {
     title: "Мешки для опилок",
     description: "Для сбора древесных опилок и мелкой стружки",
-    href: "/meshki-dlya-struzhkootsosa",
+    href: "/meshki-dlya-struzhkootsosa/",
     icon: (
       <svg className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
         <path d="M7 17c5 0 10-5 10-10M8 8h.01M16 16h.01" />
@@ -106,7 +106,7 @@ const items: CatalogItem[] = [
   {
     title: "Мешки для циклона",
     description: "Усиленные мешки для циклонных установок",
-    href: "/meshki-dlya-ciklonov-i-uvp",
+    href: "/meshki-dlya-ciklonov-i-uvp/",
     icon: (
       <svg className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
         <path d="M12 5v4M12 15v4M8.5 8.5l2.5 2.5M13 13l2.5 2.5M5 12h4M15 12h4" />
@@ -116,7 +116,7 @@ const items: CatalogItem[] = [
   {
     title: "Нестандартные мешки",
     description: "Изготовление по чертежам и индивидуальным размерам",
-    href: "/nestandartnye-meshki-dlya-filtracii",
+    href: "/nestandartnye-meshki-dlya-filtracii/",
     icon: (
       <svg className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
         <path d="M7 7l10 10M17 7L7 17" />

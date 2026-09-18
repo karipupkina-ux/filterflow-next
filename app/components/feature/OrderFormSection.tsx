@@ -305,7 +305,7 @@ export default function OrderFormSection() {
                 <span className="text-[13px] leading-[1.6] text-slate-500">
                   Даю согласие на обработку персональных данных и соглашаюсь с{" "}
                   <a
-                    href="/politika-konfidencialnosti"
+                    href="/politika-konfidencialnosti/"
                     className="text-[#23b8ad] underline underline-offset-2"
                   >
                     политикой конфиденциальности

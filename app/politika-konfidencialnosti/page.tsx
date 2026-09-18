@@ -6,9 +6,9 @@ import FloatingContacts from "../components/feature/FloatingContacts";
 import EmailLink from "../components/EmailLink";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Политика конфиденциальности — обработка персональных данных",
+  title: "Политика обработки персональных данных",
   description:
-    "Политика обработки персональных данных сайта FilterFlow: цели, сроки хранения, права субъектов и контакты оператора. Актуальная редакция для пользователей filterflow.ru.",
+    "Правила обработки персональных данных на сайте FilterFlow: цели, сроки хранения, права пользователей и контакты оператора.",
   path: "/politika-konfidencialnosti",
 });
 

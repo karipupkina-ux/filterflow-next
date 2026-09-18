@@ -6,36 +6,36 @@ import EmailLink from "./EmailLink";
 
 export default function Footer() {
   const productLinks = [
-    { href: "/meshki-dlya-aspiracii", label: "Мешки для аспирации" },
-    { href: "/filtracionnye-rukava", label: "Фильтровальные рукава" },
-    { href: "/meshki-dlya-struzhkootsosa", label: "Мешки для стружкоотсоса" },
-    { href: "/meshki-dlya-ciklonov-i-uvp", label: "Мешки для циклонов" },
-    { href: "/verhnie-meshki", label: "Верхние мешки" },
-    { href: "/nizhnie-meshki", label: "Нижние мешки" },
-    { href: "/tkanevye-meshki", label: "Тканевые мешки" },
-    { href: "/meshki-dlya-opilok", label: "Мешки для опилок" },
+    { href: "/meshki-dlya-aspiracii/", label: "Мешки для аспирации" },
+    { href: "/filtracionnye-rukava/", label: "Фильтровальные рукава" },
+    { href: "/meshki-dlya-struzhkootsosa/", label: "Мешки для стружкоотсоса" },
+    { href: "/meshki-dlya-ciklonov-i-uvp/", label: "Мешки для циклонов" },
+    { href: "/verhnie-meshki/", label: "Верхние мешки" },
+    { href: "/nizhnie-meshki/", label: "Нижние мешки" },
+    { href: "/tkanevye-meshki/", label: "Тканевые мешки" },
+    { href: "/meshki-dlya-opilok/", label: "Мешки для опилок" },
   ];
 
   const extraProductLinks = [
-    { href: "/bystrosemnye-homyty", label: "Быстросъёмные хомуты" },
-    { href: "/nestandartnye-meshki-dlya-filtracii", label: "Нестандартные мешки" },
-    { href: "/meshki-dlya-ciklonov-i-uvp", label: "Мешки для циклона" },
-    { href: "/nestandartnye-meshki-dlya-filtracii", label: "Пошив фильтр-мешков" },
-    { href: "/nestandartnye-meshki-dlya-filtracii", label: "Производство мешков" },
+    { href: "/bystrosemnye-homyty/", label: "Быстросъёмные хомуты" },
+    {
+      href: "/nestandartnye-meshki-dlya-filtracii/",
+      label: "Пошив нестандартных фильтровальных мешков",
+    },
   ];
 
   const articleLinks = [
-    { href: "/blog", label: "Все статьи блога" },
-    { href: "/blog/kak-vybrat-meshok-aspiracii", label: "Как выбрать мешок для аспирации" },
-    { href: "/blog/kak-rabotaet-aspiraciya", label: "Как работает аспирация" },
-    { href: "/blog/kogda-menyat-filtr-meshok", label: "Когда менять фильтр-мешок" },
-    { href: "/blog/tipy-filtruyushchikh-meshkov", label: "Типы фильтровальных мешков" },
+    { href: "/blog/", label: "Все статьи блога" },
+    { href: "/blog/kak-vybrat-meshok-aspiracii/", label: "Как выбрать мешок для аспирации" },
+    { href: "/blog/kak-rabotaet-aspiraciya/", label: "Как работает аспирация" },
+    { href: "/blog/kogda-menyat-filtr-meshok/", label: "Когда менять фильтр-мешок" },
+    { href: "/blog/tipy-filtruyushchikh-meshkov/", label: "Типы фильтровальных мешков" },
   ];
 
   const companyLinks = [
-    { href: "/o-kompanii", label: "О компании" },
-    { href: "/portfolio", label: "Портфолио" },
-    { href: "/kontakty", label: "Контакты" },
+    { href: "/o-kompanii/", label: "О компании" },
+    { href: "/portfolio/", label: "Портфолио" },
+    { href: "/kontakty/", label: "Контакты" },
     { href: "/sitemap.xml", label: "Карта сайта" },
   ];
 
@@ -308,19 +308,19 @@ export default function Footer() {
                 Главная
               </Link>
               <Link
-                href="/o-kompanii"
+                href="/o-kompanii/"
                 className="text-[14px] text-white/42 transition-colors duration-200 hover:text-[#22C7BB]"
               >
                 О компании
               </Link>
               <Link
-                href="/kontakty"
+                href="/kontakty/"
                 className="text-[14px] text-white/42 transition-colors duration-200 hover:text-[#22C7BB]"
               >
                 Контакты
               </Link>
               <Link
-                href="/politika-konfidencialnosti"
+                href="/politika-konfidencialnosti/"
                 className="text-[14px] text-white/42 transition-colors duration-200 hover:text-[#22C7BB]"
               >
                 Политика конфиденциальности

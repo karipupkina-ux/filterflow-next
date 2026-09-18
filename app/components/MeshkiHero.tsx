@@ -50,7 +50,7 @@ export default function MeshkiHero() {
               </Link>
   
               <Link
-                href="/kontakty"
+                href="/kontakty/"
                 className="border border-white/40 hover:bg-white/10 px-6 py-3 rounded-lg"
               >
                 Связаться с нами

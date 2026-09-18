@@ -399,7 +399,7 @@ export default function ContactsSection() {
                 <p className="pt-0.5 text-[12px] leading-[1.5] text-[#667085]">
                   Даю согласие на обработку персональных данных и соглашаюсь с{" "}
                   <a
-                    href="/politika-konfidencialnosti"
+                    href="/politika-konfidencialnosti/"
                     className="text-[#11b3a6] underline underline-offset-2 transition hover:text-[#0f9f93]"
                   >
                     политикой конфиденциальности

@@ -2,12 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../../components/Navigation";
+import ArticleJsonLd from "../../components/ArticleJsonLd";
 import { pageMetadata } from "@/lib/seo-metadata";
 
+const PAGE_TITLE = "Как работает аспирация на производстве";
+const PAGE_DESCRIPTION =
+  "Как аспирационная система захватывает и удаляет пыль и стружку, очищает воздух и собирает отходы. Основные узлы, фильтры и обслуживание.";
+
 export const metadata: Metadata = pageMetadata({
-  title: "Как работает аспирация на производстве: принцип системы | FilterFlow",
-  description:
-    "Подробно объясняем, как работает система аспирации воздуха на производстве: принцип работы аспирации, фильтрация воздуха, удаление пыли и стружки, выбор мешков и обслуживание.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   path: "/blog/kak-rabotaet-aspiraciya",
   openGraphTitle: "Как устроена промышленная аспирация | FilterFlow",
 });
@@ -121,37 +125,37 @@ const productLinks = [
   {
     title: "Мешки для аспирации",
     description: "Верхние и нижние фильтровальные мешки для систем пылеудаления.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "bag",
   },
   {
     title: "Фильтровальные рукава",
     description: "Промышленные рукава для рукавных фильтров и установок УВП.",
-    href: "/filtracionnye-rukava",
+    href: "/filtracionnye-rukava/",
     icon: "sleeve",
   },
   {
     title: "Мешки для циклонов и УВП",
     description: "Специализированные мешки для пылеулавливающих установок.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "cyclone",
   },
   {
     title: "Мешки для стружкоотсоса",
     description: "Мешки для деревообрабатывающих станков и локальной аспирации.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "chips",
   },
   {
     title: "Верхние мешки для аспирации",
     description: "Фильтрационные мешки для чистого выхода воздуха.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "top",
   },
   {
     title: "Нижние мешки для аспирации",
     description: "Сборные мешки для стружки и опилок.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "bottom",
   },
 ];
@@ -160,19 +164,19 @@ const relatedArticles = [
   {
     title: "Как выбрать мешок для аспирации",
     description: "Материалы, размеры и крепления для разных задач.",
-    href: "/blog/kak-vybrat-meshok-aspiracii",
+    href: "/blog/kak-vybrat-meshok-aspiracii/",
     icon: "article",
   },
   {
     title: "Когда менять фильтровальный мешок",
     description: "Основные признаки износа и рекомендации по замене.",
-    href: "/blog/kogda-menyat-filtr-meshok",
+    href: "/blog/kogda-menyat-filtr-meshok/",
     icon: "article",
   },
   {
     title: "Типы фильтрующих мешков",
     description: "Сравнение конструкций и вариантов для разных условий.",
-    href: "/blog/tipy-filtruyushchikh-meshkov",
+    href: "/blog/tipy-filtruyushchikh-meshkov/",
     icon: "article",
   },
 ];
@@ -180,6 +184,13 @@ const relatedArticles = [
 export default function Page() {
   return (
     <>
+      <ArticleJsonLd
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/blog/kak-rabotaet-aspiraciya"
+        datePublished="2026-03-10"
+        dateModified="2026-09-18"
+      />
       <Navigation />
       <main className="bg-[#f8fafc] pb-20 pt-[118px]">
         <article className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -192,7 +203,7 @@ export default function Page() {
               </li>
               <li>›</li>
               <li>
-                <Link href="/blog" className="hover:text-[#0aa79d]">
+                <Link href="/blog/" className="hover:text-[#0aa79d]">
                   Блог
                 </Link>
               </li>

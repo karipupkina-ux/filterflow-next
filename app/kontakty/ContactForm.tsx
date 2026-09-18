@@ -321,7 +321,7 @@ export default function ContactForm() {
           <span>
             Даю согласие на обработку персональных данных и соглашаюсь с{" "}
             <Link
-              href="/politika-konfidencialnosti"
+              href="/politika-konfidencialnosti/"
               className="font-medium text-[#0aa79d] underline underline-offset-2 hover:text-[#088f86]"
             >
               политикой конфиденциальности

@@ -24,7 +24,7 @@ export default function CookieBanner() {
   }
 
   function moreInfo() {
-    window.location.href = "/politika-konfidencialnosti";
+    window.location.href = "/politika-konfidencialnosti/";
   }
 
   if (!visible) return null;

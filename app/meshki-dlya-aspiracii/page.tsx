@@ -7,10 +7,9 @@ import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
-  title:
-    "Мешки для аспирации — купить у производителя, верхние и нижнии мешки",
+  title: "Мешки для аспирации на заказ от производителя",
   description:
-    "Фильтровальные мешки для аспирации и пылеулавливания: сбор опилок и пыли, фильтры для аспирации, верхние и нижние тканевые мешки.Стружкоотсосы, УВП, циклоны; промышленная фильтрация. Производство FilterFlow, доставка по России.",
+    "Верхние и нижние мешки для систем аспирации: подбор ткани, размеров и крепления, изготовление по образцу или чертежу. Отправка по России.",
   path: "/meshki-dlya-aspiracii",
   openGraphTitle:
     "Мешки для аспирации — купить у производителя | FilterFlow",
@@ -24,7 +23,7 @@ const cards = [
     image: "/images/catalog/verhnie-meshki.webp",
     width: 305,
     height: 305,
-    link: "/verhnie-meshki",
+    link: "/verhnie-meshki/",
   },
   {
     title: "Нижние мешки",
@@ -33,7 +32,7 @@ const cards = [
     image: "/images/catalog/nizhnie-meshki.webp",
     width: 800,
     height: 1200,
-    link: "/nizhnie-meshki",
+    link: "/nizhnie-meshki/",
   },
   {
     title: "Тканевые мешки",
@@ -42,7 +41,7 @@ const cards = [
     image: "/images/catalog/tkanevye-meshki.webp",
     width: 1200,
     height: 800,
-    link: "/tkanevye-meshki",
+    link: "/tkanevye-meshki/",
   },
   {
     title: "Мешки для УВП и циклонов",
@@ -51,7 +50,7 @@ const cards = [
     image: "/images/catalog/meshki-uvp-ciklonov.webp",
     width: 1024,
     height: 1024,
-    link: "/meshki-dlya-ciklonov-i-uvp",
+    link: "/meshki-dlya-ciklonov-i-uvp/",
   },
 ];
 
@@ -439,7 +438,7 @@ const similarProducts = [
   {
     title: "Верхние мешки для аспирации",
     description: "Фильтруют мелкую пыль на выходе из системы аспирации.",
-    link: "/verhnie-meshki",
+    link: "/verhnie-meshki/",
     icon: (
       <svg
         className="h-5 w-5"
@@ -460,7 +459,7 @@ const similarProducts = [
   {
     title: "Нижние мешки для аспирации",
     description: "Собирают крупную стружку и опилки в нижней части установки.",
-    link: "/nizhnie-meshki",
+    link: "/nizhnie-meshki/",
     icon: (
       <svg
         className="h-5 w-5"
@@ -482,7 +481,7 @@ const similarProducts = [
     title: "Тканевые мешки для аспирации",
     description:
       "Высококачественная тканевая фильтрация для профессиональных систем.",
-    link: "/tkanevye-meshki",
+    link: "/tkanevye-meshki/",
     icon: (
       <svg
         className="h-5 w-5"
@@ -502,7 +501,7 @@ const similarProducts = [
   {
     title: "Мешки для циклонов и УВП",
     description: "Специализированные мешки для пылеулавливающих установок.",
-    link: "/meshki-dlya-ciklonov-i-uvp",
+    link: "/meshki-dlya-ciklonov-i-uvp/",
     icon: (
       <svg
         className="h-5 w-5"
@@ -522,7 +521,7 @@ const similarProducts = [
   {
     title: "Фильтровальные рукава",
     description: "Промышленные рукава для систем очистки воздуха.",
-    link: "/filtracionnye-rukava",
+    link: "/filtracionnye-rukava/",
     icon: (
       <svg
         className="h-5 w-5"
@@ -542,7 +541,7 @@ const similarProducts = [
   {
     title: "Мешки для опилок",
     description: "Мешки для сбора опилок и древесной стружки.",
-    link: "/meshki-dlya-struzhkootsosa",
+    link: "/meshki-dlya-struzhkootsosa/",
     icon: (
       <svg
         className="h-5 w-5"
@@ -566,25 +565,25 @@ const blogArticles = [
     title: "Как выбрать мешок для аспирации",
     description:
       "Полное руководство по подбору фильтровального мешка: материалы, размеры и типы крепления",
-    link: "/blog/kak-vybrat-meshok-aspiracii",
+    link: "/blog/kak-vybrat-meshok-aspiracii/",
   },
   {
     title: "Как работает система аспирации",
     description:
       "Принцип работы систем пылеудаления и роль фильтровальных мешков",
-    link: "/blog/kak-rabotaet-aspiraciya",
+    link: "/blog/kak-rabotaet-aspiraciya/",
   },
   {
     title: "Когда менять фильтровальный мешок",
     description:
       "Признаки износа, средние сроки службы и советы по продлению ресурса фильтра",
-    link: "/blog/kogda-menyat-filtr-meshok",
+    link: "/blog/kogda-menyat-filtr-meshok/",
   },
   {
     title: "Типы фильтровальных мешков",
     description:
       "Обзор видов фильтров: верхние, нижние, рукавные, для циклонов",
-    link: "/blog/tipy-filtruyushchikh-meshkov",
+    link: "/blog/tipy-filtruyushchikh-meshkov/",
   },
 ];
 
@@ -709,7 +708,7 @@ export default function Page() {
               </Link>
 
               <a
-                href="/kontakty"
+                href="/kontakty/"
                 className="inline-flex h-12 w-full items-center justify-center rounded-xl border border-white/30 bg-white/10 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-white/20 sm:h-auto sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
               >
                 Связаться с нами
@@ -1208,7 +1207,7 @@ export default function Page() {
             </div>
 
             <Link
-              href="/blog"
+              href="/blog/"
               className="inline-flex items-center gap-2 self-start text-[16px] font-semibold text-teal-600 transition hover:text-teal-700"
             >
               Все статьи
@@ -1359,14 +1358,14 @@ export default function Page() {
                 (сбор крупной фракции) мешки, а также тканевые варианты под
                 выбранную ткань и режим. Для мелкой древесной пыли подходят{" "}
                 <Link
-                  href="/meshki-dlya-opilok"
+                  href="/meshki-dlya-opilok/"
                   className="font-semibold text-[#ff6b2c] underline-offset-2 hover:underline"
                 >
                   мешки для аспирации опилок
                 </Link>
                 ; на линиях со стружкоотсосами, в{" "}
                 <Link
-                  href="/meshki-dlya-ciklonov-i-uvp"
+                  href="/meshki-dlya-ciklonov-i-uvp/"
                   className="font-semibold text-[#ff6b2c] underline-offset-2 hover:underline"
                 >
                   блоках УВП и за циклонами
@@ -1540,7 +1539,7 @@ export default function Page() {
         </div>
       </section>
 
-      <SeeAlsoLinks excludeHref="/meshki-dlya-aspiracii" />
+      <SeeAlsoLinks excludeHref="/meshki-dlya-aspiracii/" />
       </main>
     </>
   );

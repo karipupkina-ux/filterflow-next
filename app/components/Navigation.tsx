@@ -8,32 +8,32 @@ import EmailLink from "./EmailLink";
 type MenuKey = "products" | "articles" | null;
 
 const productLinks = [
-  { href: "/meshki-dlya-aspiracii", label: "Мешки для аспирации" },
-  { href: "/filtracionnye-rukava", label: "Фильтрационные рукава" },
-  { href: "/meshki-dlya-struzhkootsosa", label: "Мешки для стружкоотсоса" },
-  { href: "/meshki-dlya-ciklonov-i-uvp", label: "Мешки для циклонов и УВП" },
-  { href: "/bystrosemnye-homyty", label: "Быстросъёмные хомуты" },
+  { href: "/meshki-dlya-aspiracii/", label: "Мешки для аспирации" },
+  { href: "/filtracionnye-rukava/", label: "Фильтрационные рукава" },
+  { href: "/meshki-dlya-struzhkootsosa/", label: "Мешки для стружкоотсоса" },
+  { href: "/meshki-dlya-ciklonov-i-uvp/", label: "Мешки для циклонов и УВП" },
+  { href: "/bystrosemnye-homyty/", label: "Быстросъёмные хомуты" },
   {
-    href: "/nestandartnye-meshki-dlya-filtracii",
+    href: "/nestandartnye-meshki-dlya-filtracii/",
     label: "Нестандартные мешки для фильтрации",
   },
 ];
 
 const articleLinks = [
   {
-    href: "/blog/kak-vybrat-meshok-aspiracii",
+    href: "/blog/kak-vybrat-meshok-aspiracii/",
     label: "Как выбрать мешок для аспирации",
   },
   {
-    href: "/blog/kak-rabotaet-aspiraciya",
+    href: "/blog/kak-rabotaet-aspiraciya/",
     label: "Как работает аспирация",
   },
   {
-    href: "/blog/kogda-menyat-filtr-meshok",
+    href: "/blog/kogda-menyat-filtr-meshok/",
     label: "Когда менять фильтр-мешок",
   },
   {
-    href: "/blog/tipy-filtruyushchikh-meshkov",
+    href: "/blog/tipy-filtruyushchikh-meshkov/",
     label: "Типы фильтровальных мешков",
   },
 ];
@@ -378,7 +378,7 @@ export default function Navigation() {
                 </div>
 
                 <Link
-                  href="/blog"
+                  href="/blog/"
                   className="mt-4 flex h-[50px] items-center justify-center rounded-[14px] bg-[#28c4b7] text-[16px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8]"
                   onClick={() => setOpenMenu(null)}
                 >
@@ -388,15 +388,15 @@ export default function Navigation() {
               </div>
             </div>
 
-            <Link href="/portfolio" className={menuLinkClass}>
+            <Link href="/portfolio/" className={menuLinkClass}>
               Портфолио
             </Link>
 
-            <Link href="/o-kompanii" className={menuLinkClass}>
+            <Link href="/o-kompanii/" className={menuLinkClass}>
               О компании
             </Link>
 
-            <Link href="/kontakty" className={menuLinkClass}>
+            <Link href="/kontakty/" className={menuLinkClass}>
               Контакты
             </Link>
           </nav>
@@ -582,20 +582,20 @@ export default function Navigation() {
                         {item.label}
                       </Link>
                     ))}
-                    <Link href="/blog" className={mobileMenuLinkClass} onClick={closeMobileMenu}>
+                    <Link href="/blog/" className={mobileMenuLinkClass} onClick={closeMobileMenu}>
                       Все статьи блога
                     </Link>
                   </div>
                 )}
               </div>
 
-              <Link href="/portfolio" className={mobileMenuLinkClass} onClick={closeMobileMenu}>
+              <Link href="/portfolio/" className={mobileMenuLinkClass} onClick={closeMobileMenu}>
                 Портфолио
               </Link>
-              <Link href="/o-kompanii" className={mobileMenuLinkClass} onClick={closeMobileMenu}>
+              <Link href="/o-kompanii/" className={mobileMenuLinkClass} onClick={closeMobileMenu}>
                 О компании
               </Link>
-              <Link href="/kontakty" className={mobileMenuLinkClass} onClick={closeMobileMenu}>
+              <Link href="/kontakty/" className={mobileMenuLinkClass} onClick={closeMobileMenu}>
                 Контакты
               </Link>
             </div>

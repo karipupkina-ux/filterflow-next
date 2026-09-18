@@ -6,45 +6,44 @@ import { pageMetadata } from "@/lib/seo-metadata";
 import EmailLink from "../components/EmailLink";
 
 export const metadata: Metadata = pageMetadata({
-  title:
-    "Мешки для опилок и стружки — мешок для стружкоотсоса, сбор опилок",
+  title: "Мешки для опилок и стружки на заказ",
   description:
-    "Мешки для опилок и сбора стружки: мешок для стружкоотсоса, мешок-накопитель. Деревообработка, мебельные цеха, пилорамы. Изготовление на заказ у производителя FilterFlow, доставка по России.",
+    "Прочные мешки-накопители для сбора опилок и древесной стружки. Подберём материал, размеры и крепление, изготовим под ваше оборудование.",
   path: "/meshki-dlya-opilok",
   openGraphTitle:
     "Мешки для опилок и стружки — мешок для стружкоотсоса | FilterFlow",
 });
 
 const productLinks = [
-  { href: "/meshki-dlya-aspiracii", label: "Мешки для аспирации" },
-  { href: "/filtracionnye-rukava", label: "Фильтрационные рукава" },
-  { href: "/meshki-dlya-struzhkootsosa", label: "Мешки для стружкоотсоса" },
-  { href: "/meshki-dlya-ciklonov-i-uvp", label: "Мешки для циклонов и УВП" },
+  { href: "/meshki-dlya-aspiracii/", label: "Мешки для аспирации" },
+  { href: "/filtracionnye-rukava/", label: "Фильтрационные рукава" },
+  { href: "/meshki-dlya-struzhkootsosa/", label: "Мешки для стружкоотсоса" },
+  { href: "/meshki-dlya-ciklonov-i-uvp/", label: "Мешки для циклонов и УВП" },
   {
-    href: "/bystrosemnye-homyty",
+    href: "/bystrosemnye-homyty/",
     label: "Быстросъёмные хомуты",
   },
   {
-    href: "/nestandartnye-meshki-dlya-filtracii",
+    href: "/nestandartnye-meshki-dlya-filtracii/",
     label: "Нестандартные мешки для фильтрации",
   },
 ];
 
 const articleLinks = [
   {
-    href: "/blog/kak-vybrat-meshok-aspiracii",
+    href: "/blog/kak-vybrat-meshok-aspiracii/",
     label: "Как выбрать мешок для аспирации",
   },
   {
-    href: "/blog/kak-rabotaet-aspiraciya",
+    href: "/blog/kak-rabotaet-aspiraciya/",
     label: "Как работает аспирация",
   },
   {
-    href: "/blog/kogda-menyat-filtr-meshok",
+    href: "/blog/kogda-menyat-filtr-meshok/",
     label: "Когда менять фильтр-мешок",
   },
   {
-    href: "/blog/tipy-filtruyushchikh-meshkov",
+    href: "/blog/tipy-filtruyushchikh-meshkov/",
     label: "Типы фильтровальных мешков",
   },
 ];
@@ -62,19 +61,19 @@ const bagTypes = [
     title: "Верхние мешки",
     description:
       "Фильтровальные мешки с функцией очистки воздуха. Задерживают мелкую пыль.",
-    link: "/verhnie-meshki",
+    link: "/verhnie-meshki/",
   },
   {
     title: "Нижние мешки",
     description:
       "Мешки для сбора стружки и опилок большого объёма — мешок-накопитель для стружкоотсоса.",
-    link: "/nizhnie-meshki",
+    link: "/nizhnie-meshki/",
   },
   {
     title: "Тканевые мешки",
     description:
       "Универсальные мешки из прочной ткани для любых типов древесных отходов.",
-    link: "/tkanevye-meshki",
+    link: "/tkanevye-meshki/",
   },
 ];
 
@@ -360,7 +359,7 @@ export default function Page() {
                     </div>
 
                     <Link
-                      href="/blog"
+                      href="/blog/"
                       className="mt-4 flex h-[50px] items-center justify-center rounded-[14px] bg-[#28c4b7] text-[16px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8]"
                     >
                       Все статьи блога
@@ -371,21 +370,21 @@ export default function Page() {
               </div>
 
               <Link
-                href="/portfolio"
+                href="/portfolio/"
                 className="transition-colors duration-200 hover:text-[#28c4b7]"
               >
                 Портфолио
               </Link>
 
               <Link
-                href="/o-kompanii"
+                href="/o-kompanii/"
                 className="transition-colors duration-200 hover:text-[#28c4b7]"
               >
                 О компании
               </Link>
 
               <Link
-                href="/kontakty"
+                href="/kontakty/"
                 className="transition-colors duration-200 hover:text-[#28c4b7]"
               >
                 Контакты
@@ -673,7 +672,7 @@ export default function Page() {
                 Заказать в WhatsApp
               </a>
               <Link
-                href="/kontakty"
+                href="/kontakty/"
                 className="inline-flex h-[52px] items-center justify-center rounded-[14px] border border-[#e3e8ee] bg-[#f8fafc] px-8 text-[16px] font-semibold text-[#10233f] transition-colors duration-200 hover:border-[#28c4b7] hover:text-[#28c4b7]"
               >
                 Запросить расчёт
@@ -736,7 +735,7 @@ export default function Page() {
               <p>
                 Мешки для опилок и мешки для сбора стружки подключают к{" "}
                 <Link
-                  href="/meshki-dlya-aspiracii"
+                  href="/meshki-dlya-aspiracii/"
                   className="font-semibold text-[#ff6b2c] underline-offset-2 hover:underline"
                 >
                   аспирации
@@ -744,7 +743,7 @@ export default function Page() {
                 и к нижнему бункеру стружкоотсоса — это мешок-накопитель для
                 стружкоотсоса либо отдельный{" "}
                 <Link
-                  href="/meshki-dlya-struzhkootsosa"
+                  href="/meshki-dlya-struzhkootsosa/"
                   className="font-semibold text-[#ff6b2c] underline-offset-2 hover:underline"
                 >
                   мешок для стружкоотсоса
@@ -854,7 +853,7 @@ export default function Page() {
 
           <div className="mt-10 flex justify-center">
             <Link
-              href="/kontakty"
+              href="/kontakty/"
               className="inline-flex h-[60px] items-center justify-center gap-3 rounded-full bg-[#ff6b2c] px-10 text-[17px] font-semibold text-white transition-colors duration-200 hover:bg-[#e85e24] md:px-12 md:text-[18px]"
             >
               Заказать мешки для опилок
@@ -880,7 +879,7 @@ export default function Page() {
 
       <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 xl:flex">
         <Link
-          href="/kontakty"
+          href="/kontakty/"
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white text-[#ff7a2f] shadow-[0_10px_30px_rgba(15,23,42,0.12)] transition-transform duration-200 hover:scale-105"
         >
           <span className="text-[28px]">✉</span>

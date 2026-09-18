@@ -9,10 +9,9 @@ import { pageMetadata } from "@/lib/seo-metadata";
 import EmailLink from "../components/EmailLink";
 
 export const metadata: Metadata = pageMetadata({
-  title:
-    "Быстросъёмные хомуты для аспирации — промышленные, для рукавов и воздуховодов",
+  title: "Быстросъёмные хомуты для аспирации",
   description:
-    "Соединительные промышленные хомуты для аспирации, фильтровальных рукавов и воздуховодов. Производство FilterFlow, поставка по России; стоимость — по запросу после подбора диаметра и типа замка.",
+    "Промышленные быстросъёмные хомуты для крепления мешков, фильтровальных рукавов и воздуховодов. Подбор диаметра и типа замка, доставка по России.",
   path: "/bystrosemnye-homyty",
   openGraphTitle: "Быстросъёмные хомуты для аспирации | FilterFlow",
 });
@@ -306,7 +305,7 @@ const relatedProducts = [
   {
     title: "Мешки для аспирации",
     description: "Верхние и нижние фильтровальные мешки для систем пылеудаления",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -327,7 +326,7 @@ const relatedProducts = [
   {
     title: "Фильтрационные рукава",
     description: "Промышленные рукава для рукавных фильтров и УВП",
-    href: "/filtracionnye-rukava",
+    href: "/filtracionnye-rukava/",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -350,7 +349,7 @@ const relatedProducts = [
   {
     title: "Мешки для циклонов и УВП",
     description: "Специализированные мешки для пылеулавливающих установок",
-    href: "/meshki-dlya-ciklonov-i-uvp",
+    href: "/meshki-dlya-ciklonov-i-uvp/",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -371,7 +370,7 @@ const relatedProducts = [
   {
     title: "Мешки для стружкоотсоса",
     description: "Мешки для деревообрабатывающих станков и стружкоотсосов",
-    href: "/meshki-dlya-struzhkootsosa",
+    href: "/meshki-dlya-struzhkootsosa/",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -394,22 +393,22 @@ const blogArticles = [
   {
     title: "Как работает система аспирации",
     description: "Принцип работы систем пылеудаления и роль фильтров",
-    href: "/blog/kak-rabotaet-aspiraciya",
+    href: "/blog/kak-rabotaet-aspiraciya/",
   },
   {
     title: "Как выбрать мешок для аспирации",
     description: "Руководство по подбору фильтров и крепёжных элементов",
-    href: "/blog/kak-vybrat-meshok-aspiracii",
+    href: "/blog/kak-vybrat-meshok-aspiracii/",
   },
   {
     title: "Типы фильтровальных мешков",
     description: "Полный обзор видов фильтров для аспирации",
-    href: "/blog/tipy-filtruyushchikh-meshkov",
+    href: "/blog/tipy-filtruyushchikh-meshkov/",
   },
   {
     title: "Когда менять фильтровальный мешок",
     description: "Признаки износа фильтра и сроки замены",
-    href: "/blog/kogda-menyat-filtr-meshok",
+    href: "/blog/kogda-menyat-filtr-meshok/",
   },
 ];
 
@@ -591,14 +590,14 @@ export default function Page() {
               <p className="mt-9 border-t border-[#e2e8f0] pt-8 text-[15px] leading-[1.75] text-[#475569] md:text-[16px]">
                 К хомутам обычно комплектуют{" "}
                 <Link
-                  href="/meshki-dlya-aspiracii"
+                  href="/meshki-dlya-aspiracii/"
                   className="font-semibold text-[#149c94] underline decoration-[#149c94]/30 underline-offset-2 transition-colors hover:text-[#118b84]"
                 >
                   мешки для аспирации
                 </Link>{" "}
                 и{" "}
                 <Link
-                  href="/filtracionnye-rukava"
+                  href="/filtracionnye-rukava/"
                   className="font-semibold text-[#149c94] underline decoration-[#149c94]/30 underline-offset-2 transition-colors hover:text-[#118b84]"
                 >
                   фильтрационные рукава
@@ -1099,7 +1098,7 @@ export default function Page() {
               </div>
 
               <Link
-                href="/blog"
+                href="/blog/"
                 className="mt-1 inline-flex items-center gap-2 self-start text-[15px] font-semibold text-[#149c94] transition-colors duration-200 hover:text-[#ff7a2f]"
               >
                 Все статьи
@@ -1149,7 +1148,7 @@ export default function Page() {
 
       <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 xl:flex">
         <Link
-          href="/kontakty"
+          href="/kontakty/"
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white text-[#ff7a2f] shadow-[0_10px_30px_rgba(15,23,42,0.12)] transition-transform duration-200 hover:scale-105"
         >
           <span className="text-[28px]">✉</span>

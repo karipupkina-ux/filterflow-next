@@ -8,10 +8,9 @@ import EmailLink from "../components/EmailLink";
 import { COMPANY_EMAIL } from "@/lib/contact";
 
 export const metadata: Metadata = pageMetadata({
-  title:
-    "Контакты FilterFlow — производитель фильтровальных мешков и рукавов | телефон и email",
+  title: "Контакты производителя фильтровальных мешков",
   description:
-    "Связаться с FilterFlow: телефон производителя фильтровальных мешков +7 951 499-25-76, email FilterFlow filterflow@mail.ru. Заказать фильтровальные мешки и рукава, мешки для аспирации и стружкоотсоса. Производство в России, доставка по стране и в СНГ, форма обратной связи на сайте.",
+    "Телефон, email и мессенджеры FilterFlow. Отправьте размеры, фото или чертёж для расчёта фильтровальных мешков и рукавов на заказ.",
   path: "/kontakty",
 });
 

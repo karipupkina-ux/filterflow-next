@@ -84,7 +84,7 @@ export default function FiltracionnyeRukavaPage() {
                 </Link>
 
                 <Link
-                  href="/kontakty"
+                  href="/kontakty/"
                   className="flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] border border-white/30 bg-white/10 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-white/20 sm:h-[60px] sm:w-auto sm:rounded-[20px] sm:px-8 sm:text-[16px] md:h-[64px] md:px-10 md:text-[17px]"
                 >
                   <span className="text-[18px] sm:text-[22px]">☎</span>
@@ -133,7 +133,7 @@ export default function FiltracionnyeRukavaPage() {
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             <Link
-              href="/meshki-dlya-aspiracii"
+              href="/meshki-dlya-aspiracii/"
               className="group overflow-hidden rounded-[22px] border border-[#e7edf4] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(15,23,42,0.08)]"
             >
               <div className="flex h-[190px] items-center justify-center overflow-hidden rounded-t-[22px] bg-[#f8fafc] p-5">
@@ -180,7 +180,7 @@ export default function FiltracionnyeRukavaPage() {
             </Link>
 
             <Link
-              href="/meshki-dlya-aspiracii"
+              href="/meshki-dlya-aspiracii/"
               className="group overflow-hidden rounded-[22px] border border-[#e7edf4] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(15,23,42,0.08)]"
             >
               <div className="flex h-[190px] items-center justify-center overflow-hidden rounded-t-[22px] bg-[#f8fafc] p-5">
@@ -227,7 +227,7 @@ export default function FiltracionnyeRukavaPage() {
             </Link>
 
             <Link
-              href="/meshki-dlya-ciklonov-i-uvp"
+              href="/meshki-dlya-ciklonov-i-uvp/"
               className="group overflow-hidden rounded-[22px] border border-[#e7edf4] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(15,23,42,0.08)]"
             >
               <div className="flex h-[190px] items-center justify-center overflow-hidden rounded-t-[22px] bg-[#f8fafc] p-5">
@@ -275,7 +275,7 @@ export default function FiltracionnyeRukavaPage() {
             </Link>
 
             <Link
-              href="/meshki-dlya-ciklonnykh-filtrov"
+              href="/meshki-dlya-ciklonov-i-uvp/"
               className="group overflow-hidden rounded-[22px] border border-[#e7edf4] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(15,23,42,0.08)]"
             >
               <div className="flex h-[190px] items-center justify-center overflow-hidden rounded-t-[22px] bg-[#f8fafc] p-5">
@@ -1019,7 +1019,7 @@ export default function FiltracionnyeRukavaPage() {
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             <Link
-              href="/meshki-dlya-aspiracii"
+              href="/meshki-dlya-aspiracii/"
               className="group rounded-[24px] border border-[#edf2f7] bg-white p-7 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#bcefe9] hover:shadow-[0_16px_36px_rgba(15,23,42,0.08)]"
             >
               <div className="mb-6 flex h-[52px] w-[52px] items-center justify-center rounded-[16px] bg-[#eef7f5] text-[#28c7bb]">
@@ -1052,7 +1052,7 @@ export default function FiltracionnyeRukavaPage() {
             </Link>
 
             <Link
-              href="/meshki-dlya-struzhkootsosa"
+              href="/meshki-dlya-struzhkootsosa/"
               className="group rounded-[24px] border border-[#edf2f7] bg-white p-7 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#bcefe9] hover:shadow-[0_16px_36px_rgba(15,23,42,0.08)]"
             >
               <div className="mb-6 flex h-[52px] w-[52px] items-center justify-center rounded-[16px] bg-[#eef7f5] text-[#28c7bb]">
@@ -1086,7 +1086,7 @@ export default function FiltracionnyeRukavaPage() {
             </Link>
 
             <Link
-              href="/meshki-dlya-ciklonov-i-uvp"
+              href="/meshki-dlya-ciklonov-i-uvp/"
               className="group rounded-[24px] border border-[#edf2f7] bg-white p-7 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#bcefe9] hover:shadow-[0_16px_36px_rgba(15,23,42,0.08)]"
             >
               <div className="mb-6 flex h-[52px] w-[52px] items-center justify-center rounded-[16px] bg-[#eef7f5] text-[#28c7bb]">
@@ -1120,7 +1120,7 @@ export default function FiltracionnyeRukavaPage() {
             </Link>
 
             <Link
-              href="/meshki-dlya-ciklonnykh-filtrov"
+              href="/meshki-dlya-ciklonov-i-uvp/"
               className="group rounded-[24px] border border-[#edf2f7] bg-white p-7 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#bcefe9] hover:shadow-[0_16px_36px_rgba(15,23,42,0.08)]"
             >
               <div className="mb-6 flex h-[52px] w-[52px] items-center justify-center rounded-[16px] bg-[#eef7f5] text-[#28c7bb]">
@@ -1174,7 +1174,7 @@ export default function FiltracionnyeRukavaPage() {
             </div>
 
             <Link
-              href="/blog"
+              href="/blog/"
               className="hidden items-center gap-2 text-[18px] font-semibold text-[#28c7bb] transition-colors duration-200 hover:text-[#1fa99e] md:flex"
             >
               <span>Все статьи</span>
@@ -1184,7 +1184,7 @@ export default function FiltracionnyeRukavaPage() {
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             <Link
-              href="/blog/tipy-filtruyushchikh-meshkov"
+              href="/blog/tipy-filtruyushchikh-meshkov/"
               className="group rounded-[24px] border border-[#edf2f7] bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition-all duration-300 hover:border-[#ffd6bf] hover:bg-[#fff8f3] hover:shadow-[0_16px_36px_rgba(15,23,42,0.08)]"
             >
               <div className="mb-5 flex h-[40px] w-[40px] items-center justify-center rounded-[12px] border border-[#ffe1cf] bg-white text-[#ff7a2f]">
@@ -1212,7 +1212,7 @@ export default function FiltracionnyeRukavaPage() {
             </Link>
 
             <Link
-              href="/blog/kak-rabotaet-aspiraciya"
+              href="/blog/kak-rabotaet-aspiraciya/"
               className="group rounded-[24px] border border-[#edf2f7] bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition-all duration-300 hover:border-[#ffd6bf] hover:bg-[#fff8f3] hover:shadow-[0_16px_36px_rgba(15,23,42,0.08)]"
             >
               <div className="mb-5 flex h-[40px] w-[40px] items-center justify-center rounded-[12px] border border-[#ffe1cf] bg-[#ff7a2f] text-white">
@@ -1240,7 +1240,7 @@ export default function FiltracionnyeRukavaPage() {
             </Link>
 
             <Link
-              href="/blog/kak-vybrat-meshok-aspiracii"
+              href="/blog/kak-vybrat-meshok-aspiracii/"
               className="group rounded-[24px] border border-[#edf2f7] bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition-all duration-300 hover:border-[#ffd6bf] hover:bg-[#fff8f3] hover:shadow-[0_16px_36px_rgba(15,23,42,0.08)]"
             >
               <div className="mb-5 flex h-[40px] w-[40px] items-center justify-center rounded-[12px] border border-[#ffe1cf] bg-white text-[#ff7a2f]">
@@ -1268,7 +1268,7 @@ export default function FiltracionnyeRukavaPage() {
             </Link>
 
             <Link
-              href="/blog/kogda-menyat-filtr-meshok"
+              href="/blog/kogda-menyat-filtr-meshok/"
               className="group rounded-[24px] border border-[#edf2f7] bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition-all duration-300 hover:border-[#ffd6bf] hover:bg-[#fff8f3] hover:shadow-[0_16px_36px_rgba(15,23,42,0.08)]"
             >
               <div className="mb-5 flex h-[40px] w-[40px] items-center justify-center rounded-[12px] border border-[#ffe1cf] bg-white text-[#ff7a2f]">
@@ -1298,7 +1298,7 @@ export default function FiltracionnyeRukavaPage() {
 
           <div className="mt-8 flex justify-end md:hidden">
             <Link
-              href="/blog"
+              href="/blog/"
               className="inline-flex items-center gap-2 text-[17px] font-semibold text-[#28c7bb] transition-colors duration-200 hover:text-[#1fa99e]"
             >
               <span>Все статьи</span>
@@ -1461,7 +1461,7 @@ export default function FiltracionnyeRukavaPage() {
 
             <div className="mt-10 flex justify-center">
               <Link
-                href="/kontakty"
+                href="/kontakty/"
                 className="inline-flex h-[62px] items-center justify-center gap-3 rounded-full bg-[#149f95] px-9 text-[17px] font-semibold text-white transition-colors duration-200 hover:bg-[#118d84]"
               >
                 Заказать фильтровальные рукава
@@ -1472,12 +1472,12 @@ export default function FiltracionnyeRukavaPage() {
         </div>
       </section>
 
-      <SeeAlsoLinks excludeHref="/filtracionnye-rukava" />
+      <SeeAlsoLinks excludeHref="/filtracionnye-rukava/" />
 
       {/* Плавающие контакты */}
       <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 xl:flex">
         <Link
-          href="/kontakty"
+          href="/kontakty/"
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white text-[#ff7a2f] shadow-[0_10px_30px_rgba(15,23,42,0.12)] transition-transform duration-200 hover:scale-105"
           aria-label="Форма обратной связи FilterFlow"
         >

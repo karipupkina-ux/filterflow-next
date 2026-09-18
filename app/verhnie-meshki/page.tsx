@@ -140,73 +140,73 @@ const catalogCards: CatalogCard[] = [
   {
     title: "Мешки для аспирации",
     description: "Верхние и нижние фильтровальные мешки для систем пылеудаления",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "bag",
   },
   {
     title: "Фильтрационные рукава",
     description: "Промышленные рукава для рукавных фильтров и УВП",
-    href: "/filtracionnye-rukava",
+    href: "/filtracionnye-rukava/",
     icon: "funnel",
   },
   {
     title: "Мешки для стружкоотсоса",
     description: "Мешки для деревообрабатывающих станков",
-    href: "/meshki-dlya-struzhkootsosa",
+    href: "/meshki-dlya-struzhkootsosa/",
     icon: "tube",
   },
   {
     title: "Мешки для циклонов и УВП",
     description: "Для пылеулавливающих установок и циклонных систем",
-    href: "/meshki-dlya-ciklonov-i-uvp",
+    href: "/meshki-dlya-ciklonov-i-uvp/",
     icon: "air",
   },
   {
     title: "Быстросъёмные хомуты",
     description: "Металлические хомуты для крепления фильтровальных мешков",
-    href: "/bystrosemnye-homyty",
+    href: "/bystrosemnye-homyty/",
     icon: "clamp",
   },
   {
     title: "Верхние мешки для аспирации",
     description: "Фильтровальные мешки для очистки воздуха",
-    href: "/verhnie-meshki",
+    href: "/verhnie-meshki/",
     icon: "circle-up",
   },
   {
     title: "Нижние мешки для аспирации",
     description: "Сборные мешки для стружки и опилок",
-    href: "/nizhnie-meshki",
+    href: "/nizhnie-meshki/",
     icon: "circle-down",
   },
   {
     title: "Тканевые мешки для аспирации",
     description: "Универсальные тканевые фильтровальные мешки",
-    href: "/tkanevye-meshki",
+    href: "/tkanevye-meshki/",
     icon: "fabric",
   },
   {
     title: "Мешки для опилок",
     description: "Для сбора древесных опилок и мелкой стружки",
-    href: "/meshki-dlya-opilok",
+    href: "/meshki-dlya-opilok/",
     icon: "leaf",
   },
   {
     title: "Мешки для циклона",
     description: "Усиленные мешки для циклонных установок",
-    href: "/meshki-dlya-ciklonov-i-uvp",
+    href: "/meshki-dlya-ciklonov-i-uvp/",
     icon: "cycle",
   },
   {
     title: "Нестандартные мешки",
     description: "Изготовление по чертежам и индивидуальным размерам",
-    href: "/nestandartnye-meshki-dlya-filtracii",
+    href: "/nestandartnye-meshki-dlya-filtracii/",
     icon: "x",
   },
   {
     title: "Пошив фильтр-мешков",
     description: "Услуги пошива фильтровальных мешков под заказ",
-    href: "/nestandartnye-meshki-dlya-filtracii",
+    href: "/nestandartnye-meshki-dlya-filtracii/",
     icon: "scissors",
   },
 ];
@@ -216,25 +216,25 @@ const articleCards: ArticleCard[] = [
     title: "Как выбрать мешок для аспирации",
     description:
       "Полное руководство по подбору фильтровального мешка: материалы, размеры, типы крепления",
-    href: "/blog/kak-vybrat-meshok-aspiracii",
+    href: "/blog/kak-vybrat-meshok-aspiracii/",
   },
   {
     title: "Как работает система аспирации",
     description:
       "Принцип работы систем пылеудаления и роль фильтровальных мешков в очистке воздуха",
-    href: "/blog/kak-rabotaet-aspiraciya",
+    href: "/blog/kak-rabotaet-aspiraciya/",
   },
   {
     title: "Когда менять фильтровальный мешок",
     description:
       "Признаки износа, средние сроки службы и советы по продлению ресурса фильтра",
-    href: "/blog/kogda-menyat-filtr-meshok",
+    href: "/blog/kogda-menyat-filtr-meshok/",
   },
   {
     title: "Типы фильтровальных мешков",
     description:
       "Полный обзор видов фильтров для аспирации: верхние, нижние, рукавные, для циклонов",
-    href: "/blog/tipy-filtruyushchikh-meshkov",
+    href: "/blog/tipy-filtruyushchikh-meshkov/",
   },
 ];
 
@@ -468,7 +468,7 @@ export default function VerhnieMeshkiPage() {
             </Link>
             <span className="text-slate-400">›</span>
             <a
-              href="/meshki-dlya-aspiracii"
+              href="/meshki-dlya-aspiracii/"
               className="text-teal-600 transition hover:text-teal-700 hover:underline"
             >
               Мешки для аспирации
@@ -821,7 +821,7 @@ export default function VerhnieMeshkiPage() {
           <p className="mx-auto mt-6 max-w-4xl text-[15px] leading-7 text-[#475569] md:text-[16px]">
             Нижний слой в той же установке обычно собирает крупную стружку; для комплекта см.{" "}
             <Link
-              href="/nizhnie-meshki"
+              href="/nizhnie-meshki/"
               className="font-semibold text-[#ff6b2c] underline-offset-2 hover:underline"
             >
               нижние мешки для стружкоотсоса
@@ -1007,7 +1007,7 @@ export default function VerhnieMeshkiPage() {
 
                 <p className="text-center text-[12px] leading-6 text-slate-400">
                   Нажимая кнопку, вы соглашаетесь с{" "}
-                  <a href="/politika-konfidencialnosti" className="underline hover:text-slate-500">
+                  <a href="/politika-konfidencialnosti/" className="underline hover:text-slate-500">
                     политикой конфиденциальности
                   </a>
                 </p>
@@ -1106,7 +1106,7 @@ export default function VerhnieMeshkiPage() {
 
           <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
             <Link
-              href="/nizhnie-meshki"
+              href="/nizhnie-meshki/"
               className="group overflow-hidden rounded-[22px] border border-[#d9dee7] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#f4a261] hover:bg-gradient-to-br hover:from-[#fff8f2] hover:via-[#ffffff] hover:to-[#f6fbfa] hover:shadow-[0_18px_50px_rgba(15,35,65,0.08)]"
             >
               <div className="flex h-[240px] items-center justify-center overflow-hidden bg-[#f7f8fa] px-8 py-7">
@@ -1139,7 +1139,7 @@ export default function VerhnieMeshkiPage() {
             </Link>
 
             <Link
-              href="/tkanevye-meshki"
+              href="/tkanevye-meshki/"
               className="group overflow-hidden rounded-[22px] border border-[#d9dee7] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#f4a261] hover:bg-gradient-to-br hover:from-[#fff8f2] hover:via-[#ffffff] hover:to-[#f6fbfa] hover:shadow-[0_18px_50px_rgba(15,35,65,0.08)]"
             >
               <div className="flex h-[240px] items-center justify-center overflow-hidden bg-[#f7f8fa] px-8 py-7">
@@ -1172,7 +1172,7 @@ export default function VerhnieMeshkiPage() {
             </Link>
 
             <Link
-              href="/meshki-dlya-struzhkootsosa"
+              href="/meshki-dlya-struzhkootsosa/"
               className="group overflow-hidden rounded-[22px] border border-[#d9dee7] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#f4a261] hover:bg-gradient-to-br hover:from-[#fff8f2] hover:via-[#ffffff] hover:to-[#f6fbfa] hover:shadow-[0_18px_50px_rgba(15,35,65,0.08)]"
             >
               <div className="flex h-[240px] items-center justify-center overflow-hidden bg-[#f7f8fa] px-8 py-7">
@@ -1499,7 +1499,7 @@ export default function VerhnieMeshkiPage() {
 
             <div className="mt-7 flex justify-center">
               <a
-                href="/blog"
+                href="/blog/"
                 className="inline-flex items-center gap-3 text-[15px] font-medium text-[#0aa79d] transition hover:text-[#0b8d84]"
               >
                 <span>Все статьи блога</span>
@@ -1510,7 +1510,7 @@ export default function VerhnieMeshkiPage() {
         </div>
       </section>
 
-      <SeeAlsoLinks excludeHref="/verhnie-meshki" />
+      <SeeAlsoLinks excludeHref="/verhnie-meshki/" />
       </main>
       <FloatingContacts />
     </>

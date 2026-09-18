@@ -4,23 +4,23 @@ import Link from "next/link";
 
 const LINKS = [
   {
-    href: "/verhnie-meshki",
+    href: "/verhnie-meshki/",
     label: "Верхние мешки для стружкоотсоса",
   },
   {
-    href: "/nizhnie-meshki",
+    href: "/nizhnie-meshki/",
     label: "Нижние мешки для стружкоотсоса",
   },
   {
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     label: "Мешки для аспирации",
   },
   {
-    href: "/meshki-dlya-ciklonov-i-uvp",
+    href: "/meshki-dlya-ciklonov-i-uvp/",
     label: "Мешки для УВП и циклонов",
   },
   {
-    href: "/filtracionnye-rukava",
+    href: "/filtracionnye-rukava/",
     label: "Фильтровальные рукава",
   },
 ] as const;

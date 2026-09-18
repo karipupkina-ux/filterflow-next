@@ -50,6 +50,13 @@ export const SITEMAP_PATHS: readonly string[] = [
   "/blog/tipy-filtruyushchikh-meshkov",
 ];
 
+/**
+ * Реальная дата последнего существенного обновления контента.
+ * Не используем new Date(): поисковику нельзя сообщать ложную новую дату
+ * при каждом запросе sitemap.
+ */
+export const SITEMAP_LAST_MODIFIED = "2026-09-18";
+
 type PageMetaInput = {
   title: string;
   description: string;

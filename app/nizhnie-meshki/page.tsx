@@ -241,7 +241,7 @@ export default function NizhnieMeshkiPage() {
               </Link>
               <span className="text-slate-400">›</span>
               <a
-                href="/meshki-dlya-aspiracii"
+                href="/meshki-dlya-aspiracii/"
                 className="text-teal-600 transition hover:text-teal-700 hover:underline"
               >
                 Мешки для аспирации
@@ -460,7 +460,7 @@ export default function NizhnieMeshkiPage() {
               Нижний слой — накопитель: он работает в паре с верхним фильтровальным мешком (мелкая пыль
               задерживается сверху, крупная фракция оседает снизу). Нужны именно{" "}
               <Link
-                href="/verhnie-meshki"
+                href="/verhnie-meshki/"
                 className="font-semibold text-[#ff6b2c] underline-offset-2 hover:underline"
               >
                 верхние фильтровальные мешки для стружкоотсоса
@@ -899,7 +899,7 @@ export default function NizhnieMeshkiPage() {
 
                   <p className="text-center text-[12px] leading-6 text-slate-400">
                     Нажимая кнопку, вы соглашаетесь с{" "}
-                    <a href="/politika-konfidencialnosti" className="underline hover:text-slate-500">
+                    <a href="/politika-konfidencialnosti/" className="underline hover:text-slate-500">
                       политикой конфиденциальности
                     </a>
                   </p>
@@ -983,7 +983,7 @@ export default function NizhnieMeshkiPage() {
         </section>
       </main>
 
-      <SeeAlsoLinks excludeHref="/nizhnie-meshki" />
+      <SeeAlsoLinks excludeHref="/nizhnie-meshki/" />
       <FloatingContacts />
     </>
   );

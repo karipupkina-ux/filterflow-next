@@ -1204,7 +1204,7 @@ export default function Page() {
                   <span className="text-[14px] leading-[1.55] text-[#334155]">
                     Даю согласие на обработку персональных данных и соглашаюсь с{" "}
                     <Link
-                      href="/politika-konfidencialnosti"
+                      href="/politika-konfidencialnosti/"
                       className="text-[#149c8d] underline underline-offset-2 hover:text-[#11897d]"
                     >
                       политикой конфиденциальности

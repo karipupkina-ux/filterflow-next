@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../../components/Navigation";
+import ArticleJsonLd from "../../components/ArticleJsonLd";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 // Без «| FilterFlow» в конце: в корневом layout задан title.template — иначе бренд продублируется.
 const PAGE_TITLE =
-  "Типы и виды фильтрующих мешков для аспирации: верхние, нижние, циклоны и УВП";
+  "Виды фильтровальных мешков для аспирации";
 const PAGE_DESCRIPTION =
-  "Какие бывают фильтровальные мешки: виды для стружкоотсоса и опилок, узлы УВП и циклонов, тканевые и синтетические материалы. Фильтрация воздуха на производстве — обзор характеристик и материалов от FilterFlow.";
+  "Обзор верхних, нижних и тканевых фильтровальных мешков для стружкоотсосов, циклонов и УВП. Назначение конструкций и выбор материала.";
 
 export const metadata: Metadata = pageMetadata({
   title: PAGE_TITLE,
@@ -33,7 +34,7 @@ const appointmentCards = [
       "Циклонные установки",
       "Промышленные аспираторы",
     ],
-    href: "/verhnie-meshki",
+    href: "/verhnie-meshki/",
     linkText: "Подробнее о верхних мешках",
   },
   {
@@ -52,7 +53,7 @@ const appointmentCards = [
       "Мобильные аспираторы",
       "Небольшие производства",
     ],
-    href: "/nizhnie-meshki",
+    href: "/nizhnie-meshki/",
     linkText: "Подробнее о нижних мешках",
   },
   {
@@ -71,7 +72,7 @@ const appointmentCards = [
       "Учебные заведения",
       "Хобби-производства",
     ],
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     linkText: "Подробнее о тканевых мешках",
   },
 ];
@@ -87,7 +88,7 @@ const specializedCards = [
       "Специальные крепления",
       "Большой объём",
     ],
-    href: "/meshki-dlya-ciklonov-i-uvp",
+    href: "/meshki-dlya-ciklonov-i-uvp/",
   },
   {
     title: "Мешки для аспирации опилок",
@@ -99,7 +100,7 @@ const specializedCards = [
       "Удобная выгрузка",
       "Антистатические свойства",
     ],
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
   },
   {
     title: "Мешки для стружкоотсоса",
@@ -111,7 +112,7 @@ const specializedCards = [
       "Простая установка",
       "Доступная цена",
     ],
-    href: "/meshki-dlya-struzhkootsosa",
+    href: "/meshki-dlya-struzhkootsosa/",
   },
   {
     title: "Мешки для УВП",
@@ -123,7 +124,7 @@ const specializedCards = [
       "Автоматическая регенерация",
       "Долгий срок службы",
     ],
-    href: "/meshki-dlya-ciklonov-i-uvp",
+    href: "/meshki-dlya-ciklonov-i-uvp/",
   },
 ];
 
@@ -174,37 +175,37 @@ const recommendedProducts = [
   {
     title: "Мешки для аспирации",
     text: "Все виды фильтровальных мешков для пылеудаления в цехе",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "bag",
   },
   {
     title: "Верхние мешки для аспирации",
     text: "Фильтровальные мешки для очистки воздуха",
-    href: "/verhnie-meshki",
+    href: "/verhnie-meshki/",
     icon: "top",
   },
   {
     title: "Нижние мешки для аспирации",
     text: "Накопительные мешки для стружки и опилок",
-    href: "/nizhnie-meshki",
+    href: "/nizhnie-meshki/",
     icon: "bottom",
   },
   {
     title: "Мешки для стружкоотсоса",
     text: "Расходники под станки и локальную аспирацию",
-    href: "/meshki-dlya-struzhkootsosa",
+    href: "/meshki-dlya-struzhkootsosa/",
     icon: "chips",
   },
   {
     title: "Фильтрационные рукава",
     text: "Промышленные рукавные фильтры",
-    href: "/filtracionnye-rukava",
+    href: "/filtracionnye-rukava/",
     icon: "sleeve",
   },
   {
     title: "Мешки для циклонов и УВП",
     text: "Узлы с высокой нагрузкой после циклона и на УВП",
-    href: "/meshki-dlya-ciklonov-i-uvp",
+    href: "/meshki-dlya-ciklonov-i-uvp/",
     icon: "cyclone",
   },
 ];
@@ -213,17 +214,17 @@ const relatedArticles = [
   {
     title: "Как выбрать мешок для аспирации",
     text: "Подбор типа и материала под вашу установку",
-    href: "/blog/kak-vybrat-meshok-aspiracii",
+    href: "/blog/kak-vybrat-meshok-aspiracii/",
   },
   {
     title: "Как работает система аспирации",
     text: "База для понимания узлов и расходников",
-    href: "/blog/kak-rabotaet-aspiraciya",
+    href: "/blog/kak-rabotaet-aspiraciya/",
   },
   {
     title: "Когда менять фильтровальный мешок",
     text: "Срок службы и признаки износа фильтр-мешка",
-    href: "/blog/kogda-menyat-filtr-meshok",
+    href: "/blog/kogda-menyat-filtr-meshok/",
   },
 ];
 
@@ -253,6 +254,13 @@ function MiniIcon() {
 export default function Page() {
   return (
     <>
+      <ArticleJsonLd
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/blog/tipy-filtruyushchikh-meshkov"
+        datePublished="2026-03-01"
+        dateModified="2026-09-18"
+      />
       <Navigation />
       <main className="bg-[#f6f8fa] pb-20 pt-[118px]">
         <article className="mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
@@ -268,7 +276,7 @@ export default function Page() {
               </li>
               <li aria-hidden="true">→</li>
               <li>
-                <Link href="/blog" className="transition-colors hover:text-[#0f9f96]">
+                <Link href="/blog/" className="transition-colors hover:text-[#0f9f96]">
                   Статьи FilterFlow
                 </Link>
               </li>
@@ -448,7 +456,7 @@ export default function Page() {
             </div>
 
             <Link
-              href="/filtracionnye-rukava"
+              href="/filtracionnye-rukava/"
               className="mt-6 inline-flex items-center rounded-lg bg-[#0f9f96] px-6 py-3 text-[16px] font-semibold text-white transition-all hover:bg-[#0b847d]"
             >
               Подробнее о рукавных фильтрах <span className="ml-2">→</span>
@@ -600,7 +608,7 @@ export default function Page() {
                 Получить консультацию <span className="ml-2">→</span>
               </Link>
               <Link
-                href="/portfolio"
+                href="/portfolio/"
                 className="inline-flex items-center rounded-lg border border-[#0b6f69] bg-[#0b7f78] px-6 py-3 text-[16px] font-semibold text-white transition-all hover:bg-[#096c66]"
               >
                 Каталог продукции <span className="ml-2">→</span>

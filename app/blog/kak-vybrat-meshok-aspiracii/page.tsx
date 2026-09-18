@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../../components/Navigation";
+import ArticleJsonLd from "../../components/ArticleJsonLd";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 // Без «| FilterFlow» в конце: в корневом layout задан title.template — иначе бренд продублируется.
 const PAGE_TITLE =
-  "Как выбрать мешок для аспирации и стружкоотсоса: материалы, размеры и крепление";
+  "Как выбрать мешок для аспирации";
 const PAGE_DESCRIPTION =
-  "Подбор фильтровального мешка для аспирации, стружкоотсоса и УВП: типы мешков, ткань, размеры и крепление. Как выбрать мешок для опилок, стружки и фильтрации воздуха на производстве — рекомендации FilterFlow.";
+  "Как подобрать фильтровальный мешок для аспирации, стружкоотсоса или УВП: конструкция, материал, размеры, крепление и условия работы.";
 
 export const metadata: Metadata = pageMetadata({
   title: PAGE_TITLE,
@@ -39,19 +40,19 @@ const bagTypes = [
   {
     title: "Верхние мешки для тонкой фильтрации",
     text: "Стоят в верхней зоне рукавного фильтра или камеры и удерживают мелкую пыль после сепарации. От их качества зависит, насколько чистым будет воздух на выходе и насколько стабильно отработает вентилятор.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     cta: "Подробнее о верхних мешках",
   },
   {
     title: "Нижние мешки для сбора стружки и опилок",
     text: "Работают как мешок для сбора стружки и опилок: больший объём, усиленный шов и посадка под выпуск бункера. Удобны там, где важна быстрая выгрузка без остановки линии.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     cta: "Подробнее о нижних мешках",
   },
   {
     title: "Тканевые мешки для аспирации",
     text: "Универсальный вариант для разных узлов: подбирают по плотности, пропускной способности и стойкости к истиранию. Такие мешки для стружкоотсоса и рукавных фильтров легко адаптировать под нестандартные размеры.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     cta: "Подробнее о тканевых мешках",
   },
 ];
@@ -112,37 +113,37 @@ const productLinks = [
   {
     title: "Мешки для аспирации",
     description: "Верхние и нижние мешки для систем пылеудаления и фильтрации воздуха в цехе.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "bag",
   },
   {
     title: "Верхние мешки для аспирации",
     description: "Тонкая ступень очистки после сепарации — на выходе камеры или рукавного фильтра.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "top",
   },
   {
     title: "Нижние мешки для аспирации",
     description: "Приёмный объём под стружку и опилки: усиленный шов и посадка под выпуск бункера.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "bottom",
   },
   {
     title: "Тканевые мешки для аспирации",
     description: "Подбор по ткани и размеру под ваш стружкоотсос или рукавный фильтр.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "fabric",
   },
   {
     title: "Фильтрационные рукава",
     description: "Рукава для рукавных фильтров и мешки для УВП на промышленных линиях.",
-    href: "/filtracionnye-rukava",
+    href: "/filtracionnye-rukava/",
     icon: "sleeve",
   },
   {
     title: "Мешки для циклонов и УВП",
     description: "Усиленные решения для узлов высокой нагрузки после циклона.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "cyclone",
   },
 ];
@@ -151,19 +152,19 @@ const relatedArticles = [
   {
     title: "Как работает система аспирации",
     description: "Принцип работы систем пылеудаления.",
-    href: "/blog/kak-rabotaet-aspiraciya",
+    href: "/blog/kak-rabotaet-aspiraciya/",
     icon: "article",
   },
   {
     title: "Когда менять фильтровальный мешок",
     description: "Признаки износа и сроки замены.",
-    href: "/blog/kogda-menyat-filtr-meshok",
+    href: "/blog/kogda-menyat-filtr-meshok/",
     icon: "article",
   },
   {
     title: "Типы фильтровальных мешков",
     description: "Обзор вариантов для разных задач.",
-    href: "/blog/tipy-filtruyushchikh-meshkov",
+    href: "/blog/tipy-filtruyushchikh-meshkov/",
     icon: "article",
   },
 ];
@@ -171,6 +172,13 @@ const relatedArticles = [
 export default function Page() {
   return (
     <>
+      <ArticleJsonLd
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/blog/kak-vybrat-meshok-aspiracii"
+        datePublished="2026-03-15"
+        dateModified="2026-09-18"
+      />
       <Navigation />
       <main className="bg-[#f8fafc] pb-20 pt-[118px]">
         <article className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -186,7 +194,7 @@ export default function Page() {
               </li>
               <li aria-hidden="true">›</li>
               <li>
-                <Link href="/blog" className="hover:text-[#0aa79d]">
+                <Link href="/blog/" className="hover:text-[#0aa79d]">
                   Статьи FilterFlow
                 </Link>
               </li>
@@ -347,13 +355,13 @@ export default function Page() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
-                href="/kontakty"
+                href="/kontakty/"
                 className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-[#0d9b92] transition hover:bg-[#e7fffd]"
               >
                 Связаться с нами
               </Link>
               <Link
-                href="/portfolio"
+                href="/portfolio/"
                 className="rounded-lg bg-[#0b7f77] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#096b65]"
               >
                 Каталог мешков

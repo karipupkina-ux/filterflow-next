@@ -336,7 +336,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 </Link>
                 <span className="text-slate-400">›</span>
                 <a
-                  href="/meshki-dlya-aspiracii"
+                  href="/meshki-dlya-aspiracii/"
                   className="text-teal-600 transition hover:text-teal-700 hover:underline"
                 >
                   Мешки для аспирации
@@ -952,7 +952,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
 
                 <p className="text-center text-[12px] leading-6 text-slate-400">
                   Нажимая кнопку, вы соглашаетесь с{" "}
-                  <a href="/politika-konfidencialnosti" className="underline hover:text-slate-500">
+                  <a href="/politika-konfidencialnosti/" className="underline hover:text-slate-500">
                     политикой конфиденциальности
                   </a>
                 </p>
@@ -1050,7 +1050,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Link
-              href="/meshki-dlya-aspiracii"
+              href="/meshki-dlya-aspiracii/"
               className="group rounded-[22px] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#f56600] hover:shadow-md"
             >
               <div className="mb-6 flex justify-center">
@@ -1075,7 +1075,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
             </Link>
 
             <Link
-              href="/filtracionnye-rukava"
+              href="/filtracionnye-rukava/"
               className="group rounded-[22px] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#f56600] hover:shadow-md"
             >
               <div className="mb-6 flex justify-center">
@@ -1100,7 +1100,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
             </Link>
 
             <Link
-              href="/meshki-dlya-struzhkootsosa"
+              href="/meshki-dlya-struzhkootsosa/"
               className="group rounded-[22px] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#f56600] hover:shadow-md"
             >
               <div className="mb-6 flex justify-center">
@@ -1140,7 +1140,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
             </div>
 
             <a
-              href="/blog"
+              href="/blog/"
               className="inline-flex items-center gap-2 text-[16px] font-medium text-teal-600 transition hover:text-teal-700"
             >
               Все статьи
@@ -1150,7 +1150,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
             <a
-              href="/blog/kak-rabotaet-aspiraciya"
+              href="/blog/kak-rabotaet-aspiraciya/"
               className="group rounded-[20px] border border-[#e5e7eb] bg-white p-6 transition duration-300 hover:border-[#f2c18f] hover:bg-[#fdf7f0]"
             >
               <div className="mb-5 flex h-[40px] w-[40px] items-center justify-center rounded-[10px] border border-[#e5e7eb] text-[#f56600] transition group-hover:border-[#f56600] group-hover:bg-[#f56600] group-hover:text-white">
@@ -1165,7 +1165,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
             </a>
 
             <a
-              href="/blog/tipy-filtruyushchikh-meshkov"
+              href="/blog/tipy-filtruyushchikh-meshkov/"
               className="group rounded-[20px] border border-[#e5e7eb] bg-white p-6 transition duration-300 hover:border-[#f2c18f] hover:bg-[#fdf7f0]"
             >
               <div className="mb-5 flex h-[40px] w-[40px] items-center justify-center rounded-[10px] border border-[#e5e7eb] text-[#f56600] transition group-hover:border-[#f56600] group-hover:bg-[#f56600] group-hover:text-white">
@@ -1180,7 +1180,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
             </a>
 
             <a
-              href="/blog/kak-vybrat-meshok-aspiracii"
+              href="/blog/kak-vybrat-meshok-aspiracii/"
               className="group rounded-[20px] border border-[#e5e7eb] bg-white p-6 transition duration-300 hover:border-[#f2c18f] hover:bg-[#fdf7f0]"
             >
               <div className="mb-5 flex h-[40px] w-[40px] items-center justify-center rounded-[10px] border border-[#e5e7eb] text-[#f56600] transition group-hover:border-[#f56600] group-hover:bg-[#f56600] group-hover:text-white">
@@ -1195,7 +1195,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
             </a>
 
             <a
-              href="/blog/kogda-menyat-filtr-meshok"
+              href="/blog/kogda-menyat-filtr-meshok/"
               className="group rounded-[20px] border border-[#e5e7eb] bg-white p-6 transition duration-300 hover:border-[#f2c18f] hover:bg-[#fdf7f0]"
             >
               <div className="mb-5 flex h-[40px] w-[40px] items-center justify-center rounded-[10px] border border-[#e5e7eb] text-[#f56600] transition group-hover:border-[#f56600] group-hover:bg-[#f56600] group-hover:text-white">
@@ -1407,7 +1407,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
         </div>
       </section>
 
-      <SeeAlsoLinks excludeHref="/meshki-dlya-ciklonov-i-uvp" />
+      <SeeAlsoLinks excludeHref="/meshki-dlya-ciklonov-i-uvp/" />
       </main>
       <FloatingContacts />
     </>

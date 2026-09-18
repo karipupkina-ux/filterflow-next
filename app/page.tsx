@@ -12,19 +12,17 @@ import ReviewsSection from "./components/feature/ReviewsSection";
 import AboutCompanyPreviewSection from "./components/feature/AboutCompanyPreviewSection";
 import OrderFormSection from "./components/feature/OrderFormSection";
 import FAQSection from "./components/feature/FAQSection";
-import SeoContentSection from "./components/feature/SeoContentSection";
 import CatalogGridSection from "./components/feature/CatalogGridSection";
 import BlogArticlesSection from "./components/feature/BlogArticlesSection";
 import ContactsSection from "./components/feature/ContactsSection";
 import FloatingContacts from "./components/feature/FloatingContacts";
 
-const HOME_TITLE =
-  "Мешки для аспирации и стружкоотсоса, фильтровальные рукава и рукавные фильтры в наличии и под заказ";
+const HOME_TITLE = "Производство фильтровальных мешков и рукавов";
 export const metadata: Metadata = {
   ...pageMetadata({
     title: HOME_TITLE,
     description:
-      "Производство фильтровальных мешков и рукавов для систем аспирации и пылеулавливания: рукавные фильтры, мешки для стружкоотсоса, циклонов и УВП. Пошив на заказ, промышленная фильтрация. Доставка по России.",
+      "Изготавливаем фильтровальные мешки и рукава для аспирации, стружкоотсосов, циклонов и УВП по размерам заказчика. Доставка по России.",
     path: "/",
   }),
   keywords: [
@@ -60,7 +58,6 @@ export default function HomePage() {
         <AboutCompanyPreviewSection />
         <OrderFormSection />
         <FAQSection />
-        <SeoContentSection />
         <CatalogGridSection />
         <BlogArticlesSection />
         <ContactsSection />

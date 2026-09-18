@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { SITE_URL } from "@/lib/seo-metadata";
+import { COMPANY_EMAIL } from "@/lib/contact";
 import "./globals.css";
 import Footer from "./components/Footer";
 import CookieBanner from "./components/feature/CookieBanner";
@@ -72,12 +72,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const organizationSchema = {
+  const siteSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "FilterFlow",
-    url: SITE_URL,
-    logo: `${SITE_URL}/images/logo-64.webp`,
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#organization`,
+        name: "FilterFlow",
+        url: `${SITE_URL}/`,
+        logo: `${SITE_URL}/images/logo-64.webp`,
+        email: COMPANY_EMAIL,
+        telephone: "+7-951-499-25-76",
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: `${SITE_URL}/`,
+        name: "FilterFlow",
+        inLanguage: "ru-RU",
+        publisher: { "@id": `${SITE_URL}/#organization` },
+      },
+    ],
   };
 
   return (
@@ -86,11 +101,11 @@ export default function RootLayout({
         <meta name="theme-color" content="#0f172a" />
       </head>
       <body>
-        <Script
+        <script
           id="organization-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
+            __html: JSON.stringify(siteSchema).replace(/</g, "\\u003c"),
           }}
         />
         <YandexMetrika />

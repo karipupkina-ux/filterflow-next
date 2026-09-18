@@ -6,10 +6,9 @@ import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
-  title:
-    "Мешки для стружкоотсоса — фильтр, накопитель, мешки для опилок и стружки",
+  title: "Мешки для стружкоотсоса на заказ",
   description:
-    "Мешок для стружкоотсоса и мешок-накопитель для деревообработки: тканевые мешки, верхний и нижний мешок, узлы УВП и аспирации опилок. Изготовление по размерам, доставка по России. FilterFlow.",
+    "Верхние фильтрующие и нижние накопительные мешки для стружкоотсосов. Пошив по размерам и образцу для деревообрабатывающего оборудования.",
   path: "/meshki-dlya-struzhkootsosa",
   openGraphTitle: "Мешки для стружкоотсоса | FilterFlow",
 });
@@ -22,7 +21,7 @@ const typeCards = [
     image: "/images/catalog/meshki-struzhkootsosa.webp",
     width: 1024,
     height: 1536,
-    link: "/meshki-dlya-opilok",
+    link: "/meshki-dlya-opilok/",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -46,7 +45,7 @@ const typeCards = [
     image: "/images/catalog/dust_collector_single.webp",
     width: 1365,
     height: 2048,
-    link: "/meshki-dlya-aspiracii",
+    link: "/meshki-dlya-aspiracii/",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -71,7 +70,7 @@ const typeCards = [
     image: "/images/catalog/nizhnie-meshki dlya aspiracii.webp",
     width: 1365,
     height: 2048,
-    link: "/nizhnie-meshki",
+    link: "/nizhnie-meshki/",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -95,7 +94,7 @@ const typeCards = [
     image: "/images/catalog/verhnie-meshki.webp",
     width: 305,
     height: 305,
-    link: "/verhnie-meshki",
+    link: "/verhnie-meshki/",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -353,7 +352,7 @@ const similarProducts = [
   {
     title: "Мешки для опилок",
     description: "Специализированные мешки для сбора мелких опилок",
-    href: "/meshki-dlya-opilok",
+    href: "/meshki-dlya-opilok/",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -373,7 +372,7 @@ const similarProducts = [
   {
     title: "Верхние мешки",
     description: "Фильтровальные мешки для очистки воздуха",
-    href: "/verhnie-meshki",
+    href: "/verhnie-meshki/",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -393,7 +392,7 @@ const similarProducts = [
   {
     title: "Нижние мешки",
     description: "Мешки для сбора крупной стружки",
-    href: "/nizhnie-meshki",
+    href: "/nizhnie-meshki/",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -413,7 +412,7 @@ const similarProducts = [
   {
     title: "Фильтровальные рукава",
     description: "Промышленные рукава для систем аспирации",
-    href: "/filtracionnye-rukava",
+    href: "/filtracionnye-rukava/",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -438,24 +437,24 @@ const usefulArticles = [
     title: "Как выбрать мешок для аспирации",
     description:
       "Советы по подбору фильтровального мешка для стружкоотсоса и деревообрабатывающих станков",
-    href: "/blog/kak-vybrat-meshok-aspiracii",
+    href: "/blog/kak-vybrat-meshok-aspiracii/",
   },
   {
     title: "Как работает система аспирации",
     description: "Принцип работы аспирационных систем в деревообработке",
-    href: "/blog/kak-rabotaet-aspiraciya",
+    href: "/blog/kak-rabotaet-aspiraciya/",
   },
   {
     title: "Когда менять фильтровальный мешок",
     description:
       "Признаки износа мешка для стружкоотсоса и сроки замены",
-    href: "/blog/kogda-menyat-filtr-meshok",
+    href: "/blog/kogda-menyat-filtr-meshok/",
   },
   {
     title: "Типы фильтровальных мешков",
     description:
       "Обзор видов мешков: верхние, нижние, тканевые, для циклонов",
-    href: "/blog/tipy-filtruyushchikh-meshkov",
+    href: "/blog/tipy-filtruyushchikh-meshkov/",
   },
 ];
 
@@ -564,7 +563,7 @@ export default function Page() {
                 </Link>
 
                 <Link
-                  href="/kontakty"
+                  href="/kontakty/"
                   className="inline-flex h-[50px] w-full items-center justify-center gap-3 rounded-[16px] border border-white/30 bg-white/10 px-6 text-[15px] font-semibold text-white backdrop-blur-[6px] transition-colors duration-200 hover:bg-white/20 sm:h-[58px] sm:w-auto sm:px-8 sm:text-[16px]"
                 >
                   <svg
@@ -811,7 +810,7 @@ export default function Page() {
                   верхний фильтрующий мешок задерживает мелочь. Для чисто
                   опилочных задач смотрите также{" "}
                   <Link
-                    href="/meshki-dlya-opilok"
+                    href="/meshki-dlya-opilok/"
                     className="font-semibold text-[#22bdb0] underline decoration-[#22bdb0]/35 underline-offset-2 hover:text-[#169d92]"
                   >
                     мешки для опилок
@@ -840,14 +839,14 @@ export default function Page() {
                   Верхний мешок — фильтровальный элемент, нижний — накопитель.
                   Подробнее — в разделах{" "}
                   <Link
-                    href="/verhnie-meshki"
+                    href="/verhnie-meshki/"
                     className="font-semibold text-[#22bdb0] underline decoration-[#22bdb0]/35 underline-offset-2 hover:text-[#169d92]"
                   >
                     верхние мешки
                   </Link>{" "}
                   и{" "}
                   <Link
-                    href="/nizhnie-meshki"
+                    href="/nizhnie-meshki/"
                     className="font-semibold text-[#22bdb0] underline decoration-[#22bdb0]/35 underline-offset-2 hover:text-[#169d92]"
                   >
                     нижние мешки
@@ -1160,7 +1159,7 @@ export default function Page() {
             </div>
 
             <Link
-              href="/blog"
+              href="/blog/"
               className="hidden items-center gap-2 text-[15px] font-semibold text-[#22bdb0] transition-colors duration-200 hover:text-[#169d92] md:inline-flex"
             >
               Все статьи
@@ -1203,7 +1202,7 @@ export default function Page() {
 
           <div className="mt-8 flex justify-end md:hidden">
             <Link
-              href="/blog"
+              href="/blog/"
               className="inline-flex items-center gap-2 text-[15px] font-semibold text-[#22bdb0] transition-colors duration-200 hover:text-[#169d92]"
             >
               Все статьи
@@ -1271,7 +1270,7 @@ export default function Page() {
             </p>
 
             <Link
-              href="/kontakty"
+              href="/kontakty/"
               className="inline-flex h-[56px] items-center justify-center gap-3 rounded-[16px] bg-[#28c4b7] px-8 text-[16px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8]"
             >
               <svg
@@ -1450,7 +1449,7 @@ export default function Page() {
 
               <div className="mt-10 flex justify-center">
                 <Link
-                  href="/kontakty"
+                  href="/kontakty/"
                   className="inline-flex h-[60px] items-center justify-center gap-3 rounded-[18px] bg-[#22bdb0] px-10 text-[16px] font-semibold text-white transition-colors duration-200 hover:bg-[#1aa99d]"
                 >
                   Заказать мешки для стружкоотсоса
@@ -1467,7 +1466,7 @@ export default function Page() {
       {/* Плавающие контакты */}
       <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 lg:flex">
         <Link
-          href="/kontakty"
+          href="/kontakty/"
           className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white text-[#ff7a2f] shadow-[0_10px_30px_rgba(15,23,42,0.12)] transition-transform duration-200 hover:scale-105"
         >
           <span className="text-[28px]">✉</span>

@@ -7,10 +7,9 @@ import { pageMetadata } from "@/lib/seo-metadata";
 import EmailLink from "../components/EmailLink";
 
 export const metadata: Metadata = pageMetadata({
-  title:
-    "О компании FilterFlow — производитель фильтровальных мешков и рукавов для аспирации",
+  title: "О компании — производство фильтровальных мешков",
   description:
-    "FilterFlow — российский производитель фильтровальных мешков и рукавов: изготовление на заказ для систем аспирации и пылеулавливания, циклонов, УВП и стружкоотсосов. Собственное производство полного цикла, индивидуальные размеры, поставки промышленным предприятиям по России и СНГ.",
+    "FilterFlow изготавливает фильтровальные мешки и рукава для аспирации по размерам заказчика. Подбор материалов, пошив и поставка по России.",
   path: "/o-kompanii",
 });
 
@@ -434,7 +433,7 @@ export default function OKompaniiPage() {
                   Связаться с нами
                 </a>
                 <Link
-                  href="/portfolio"
+                  href="/portfolio/"
                   className="inline-flex items-center justify-center rounded-xl border border-white/30 px-7 py-3 text-base font-semibold text-white transition hover:bg-white/10"
                 >
                   Посмотреть портфолио

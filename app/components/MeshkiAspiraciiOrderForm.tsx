@@ -163,7 +163,7 @@ export default function MeshkiAspiraciiOrderForm() {
       <p className="mt-6 text-center text-[14px] leading-6 text-slate-400">
         Нажимая кнопку, вы соглашаетесь с{" "}
         <Link
-          href="/politika-konfidencialnosti"
+          href="/politika-konfidencialnosti/"
           className="font-medium text-teal-600 transition hover:text-teal-700"
         >
           политикой конфиденциальности

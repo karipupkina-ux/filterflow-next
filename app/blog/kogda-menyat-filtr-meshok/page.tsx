@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../../components/Navigation";
+import ArticleJsonLd from "../../components/ArticleJsonLd";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 // Без «| FilterFlow» в конце: в корневом layout задан title.template — иначе бренд продублируется.
 const PAGE_TITLE =
-  "Когда менять фильтр-мешок и мешок для аспирации: признаки износа и срок службы";
+  "Когда менять фильтровальный мешок";
 const PAGE_DESCRIPTION =
-  "Как часто менять фильтр-мешок на производстве: признаки износа, рост перепада, пыль в цеху, повреждения ткани. Замена мешка для стружкоотсоса и УВП, обслуживание аспирации и фильтрация воздуха — практика от FilterFlow.";
+  "Признаки износа фильтровального мешка: падение тяги, рост сопротивления, пыль в цеху и повреждения ткани. Проверка и плановая замена.";
 
 export const metadata: Metadata = pageMetadata({
   title: PAGE_TITLE,
@@ -153,37 +154,37 @@ const productLinks = [
   {
     title: "Мешки для аспирации",
     description: "Верхние и нижние фильтровальные мешки для замены в работающей системе.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "bag",
   },
   {
     title: "Мешки для стружкоотсоса",
     description: "Расходники под замену мешка для стружкоотсоса и станочные линии.",
-    href: "/meshki-dlya-struzhkootsosa",
+    href: "/meshki-dlya-struzhkootsosa/",
     icon: "chips",
   },
   {
     title: "Фильтрационные рукава",
     description: "Рукава для рукавных фильтров и крупных узлов пылеудаления.",
-    href: "/filtracionnye-rukava",
+    href: "/filtracionnye-rukava/",
     icon: "sleeve",
   },
   {
     title: "Мешки для циклонов и УВП",
     description: "Мешки для УВП и узлов после циклона с повышенной механической нагрузкой.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "cyclone",
   },
   {
     title: "Быстросъёмные хомуты",
     description: "Металлические хомуты для надёжного крепления.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "clamp",
   },
   {
     title: "Нестандартные мешки",
     description: "Изготовление по чертежам и индивидуальным размерам.",
-    href: "/meshki-dlya-aspiracii",
+    href: "/meshki-dlya-aspiracii/",
     icon: "custom",
   },
 ];
@@ -192,23 +193,30 @@ const relatedArticles = [
   {
     title: "Как выбрать мешок для аспирации",
     description: "Подбор фильтровального мешка под вашу установку.",
-    href: "/blog/kak-vybrat-meshok-aspiracii",
+    href: "/blog/kak-vybrat-meshok-aspiracii/",
   },
   {
     title: "Как работает система аспирации",
     description: "База для обслуживания аспирации и графика осмотров.",
-    href: "/blog/kak-rabotaet-aspiraciya",
+    href: "/blog/kak-rabotaet-aspiraciya/",
   },
   {
     title: "Типы фильтровальных мешков",
     description: "Сравнение конструкций до плановой замены расходника.",
-    href: "/blog/tipy-filtruyushchikh-meshkov",
+    href: "/blog/tipy-filtruyushchikh-meshkov/",
   },
 ];
 
 export default function Page() {
   return (
     <>
+      <ArticleJsonLd
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/blog/kogda-menyat-filtr-meshok"
+        datePublished="2026-03-05"
+        dateModified="2026-09-18"
+      />
       <Navigation />
       <main className="bg-[#f8fafc] pb-20 pt-[118px]">
         <article className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -224,7 +232,7 @@ export default function Page() {
               </li>
               <li aria-hidden="true">›</li>
               <li>
-                <Link href="/blog" className="hover:text-[#0aa79d]">
+                <Link href="/blog/" className="hover:text-[#0aa79d]">
                   Статьи FilterFlow
                 </Link>
               </li>
@@ -483,13 +491,13 @@ export default function Page() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
-                href="/portfolio"
+                href="/portfolio/"
                 className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-[#0d9b92] transition hover:bg-[#e7fffd]"
               >
                 Каталог мешков
               </Link>
               <Link
-                href="/kontakty"
+                href="/kontakty/"
                 className="rounded-lg bg-[#0b7f77] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#096b65]"
               >
                 Получить консультацию
