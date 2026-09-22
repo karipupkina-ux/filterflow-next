@@ -171,7 +171,7 @@ export default function ContactsSection() {
                   filterflow@mail.ru
                 </div>
                 <div className="text-[14px] leading-[1.55] text-[#667085]">
-                  Ответим в течение 24 часов
+                  Отвечаем быстро
                 </div>
               </div>
             </EmailLink>

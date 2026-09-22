@@ -136,7 +136,7 @@ export default function KontaktyPage() {
                         <EmailLink className="mt-0.5 inline-block text-base font-semibold text-[#0aa79d] break-all">
                           {MAIL_DISPLAY}
                         </EmailLink>
-                        <p className="mt-1 text-sm text-[#64748b]">Ответим в течение 24 часов</p>
+                        <p className="mt-1 text-sm text-[#64748b]">Отвечаем быстро</p>
                       </div>
                     </li>
                   </ul>
