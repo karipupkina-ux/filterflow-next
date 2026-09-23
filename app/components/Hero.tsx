@@ -38,7 +38,7 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-black/40" />
 
-      <div className="relative z-10 flex h-full flex-col px-4 pb-7 pt-[144px] sm:px-6 sm:pb-10 sm:pt-[108px] lg:pt-[120px]">
+      <div className="relative z-10 flex h-full flex-col px-4 pb-7 pt-[112px] sm:px-6 sm:pb-10 sm:pt-[108px] lg:pt-[120px]">
         <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center text-center">
           <h1
             className={`${robotoSlab.className} max-w-[1120px] text-[27px] font-extrabold leading-[1.06] tracking-[-0.025em] drop-shadow-[0_2px_5px_rgba(0,0,0,0.55)] sm:text-[36px] md:text-[46px] lg:text-[58px] ${transitionIn} ${enter} delay-0`}
