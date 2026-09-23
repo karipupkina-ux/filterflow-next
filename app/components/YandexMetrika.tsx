@@ -1,26 +1,8 @@
-"use client";
-
 import Script from "next/script";
-import { useEffect, useState } from "react";
-import { COOKIE_CONSENT_EVENT, getCookieConsent } from "@/lib/cookie-consent";
 
 export default function YandexMetrika() {
-  const [allowed, setAllowed] = useState(false);
-
-  useEffect(() => {
-    const syncConsent = () => {
-      setAllowed(getCookieConsent() === "accepted");
-    };
-
-    syncConsent();
-    window.addEventListener(COOKIE_CONSENT_EVENT, syncConsent);
-    return () => window.removeEventListener(COOKIE_CONSENT_EVENT, syncConsent);
-  }, []);
-
-  if (!allowed) return null;
-
   return (
-    <Script id="yandex-metrika" strategy="lazyOnload">
+    <Script id="yandex-metrika" strategy="beforeInteractive">
       {`
         (function(m,e,t,r,i,k,a){
           m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
