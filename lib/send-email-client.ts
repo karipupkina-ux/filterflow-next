@@ -32,12 +32,24 @@ export async function sendApplicationEmail(
   }
 
   let data: { error?: string } = {};
-  try {
-    const text = await response.text();
-    if (text) data = JSON.parse(text) as { error?: string };
-  } catch (parseErr) {
-    console.error("send-email: response is not valid JSON", parseErr);
-    throw new Error(SEND_EMAIL_USER_ERROR);
+  const contentType = response.headers.get("content-type") ?? "";
+
+  if (contentType.includes("application/json")) {
+    try {
+      data = (await response.json()) as { error?: string };
+    } catch (parseErr) {
+      console.error("send-email: invalid JSON response", parseErr);
+    }
+  } else if (!response.ok) {
+    // Например, dev-сервер может вернуть HTML/текст при внутренней ошибке сборщика.
+    // Не пытаемся разбирать такой ответ через JSON.parse — пользователь всё равно
+    // получит нормальное понятное сообщение ниже.
+    const text = await response.text().catch(() => "");
+    console.error("send-email API returned non-JSON response:", {
+      status: response.status,
+      statusText: response.statusText,
+      preview: text.slice(0, 200),
+    });
   }
 
   if (!response.ok) {

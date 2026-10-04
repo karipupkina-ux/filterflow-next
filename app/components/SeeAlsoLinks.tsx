@@ -23,6 +23,18 @@ const LINKS = [
     href: "/filtracionnye-rukava/",
     label: "Фильтровальные рукава",
   },
+  {
+    href: "/karmannye-filtry/",
+    label: "Карманные фильтры для вентиляции",
+  },
+  {
+    href: "/kassetnye-filtry/",
+    label: "Кассетные фильтры для вентиляции",
+  },
+  {
+    href: "/vozduhovody-dlya-aspiracii/",
+    label: "Гибкие воздуховоды для аспирации",
+  },
 ] as const;
 
 type SeeAlsoLinksProps = {

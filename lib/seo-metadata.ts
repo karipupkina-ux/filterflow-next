@@ -35,6 +35,9 @@ export const SITEMAP_PATHS: readonly string[] = [
   "/meshki-dlya-struzhkootsosa",
   "/meshki-dlya-ciklonov-i-uvp",
   "/filtracionnye-rukava",
+  "/karmannye-filtry",
+  "/kassetnye-filtry",
+  "/vozduhovody-dlya-aspiracii",
   "/verhnie-meshki",
   "/nizhnie-meshki",
   "/tkanevye-meshki",
@@ -56,6 +59,16 @@ export const SITEMAP_PATHS: readonly string[] = [
  * при каждом запросе sitemap.
  */
 export const SITEMAP_LAST_MODIFIED = "2026-09-18";
+
+/** Страницы, которые существенно обновлены при расширении каталога 01.10.2026. */
+export const SITEMAP_RECENT_PATHS: readonly string[] = [
+  "/",
+  "/meshki-dlya-aspiracii",
+  "/meshki-dlya-struzhkootsosa",
+  "/karmannye-filtry",
+  "/kassetnye-filtry",
+  "/vozduhovody-dlya-aspiracii",
+];
 
 type PageMetaInput = {
   title: string;

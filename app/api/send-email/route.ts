@@ -10,12 +10,13 @@ const EMAIL_PASS = process.env.EMAIL_PASS;
 const RECEIVER_EMAIL = "filterflow@mail.ru";
 
 const SMTP_HOST = "smtp.mail.ru";
-const SMTP_PORT = 587;
-const SMTP_SECURE = false;
+const SMTP_PORT = 465;
+const SMTP_SECURE = true;
 
-const SMTP_CONNECTION_TIMEOUT_MS = 20_000;
-const SMTP_GREETING_TIMEOUT_MS = 20_000;
-const SMTP_SOCKET_TIMEOUT_MS = 30_000;
+// Таймауты нужны, чтобы форма не могла зависнуть надолго при проблемах с SMTP.
+const SMTP_CONNECTION_TIMEOUT_MS = 12_000;
+const SMTP_GREETING_TIMEOUT_MS = 12_000;
+const SMTP_SOCKET_TIMEOUT_MS = 20_000;
 
 const RATE_LIMIT_WINDOW_MS = 60_000;
 const RATE_LIMIT_MAX_REQUESTS = 5;
@@ -125,7 +126,6 @@ function createMailTransporter(): Transporter<SMTPTransport.SentMessageInfo> {
     host: SMTP_HOST,
     port: SMTP_PORT,
     secure: SMTP_SECURE,
-    requireTLS: true,
     auth: {
       user: EMAIL_USER,
       pass: EMAIL_PASS,
@@ -158,7 +158,6 @@ export async function POST(request: Request) {
       host: SMTP_HOST,
       port: SMTP_PORT,
       secure: SMTP_SECURE,
-      requireTLS: true,
       connectionTimeout: SMTP_CONNECTION_TIMEOUT_MS,
       greetingTimeout: SMTP_GREETING_TIMEOUT_MS,
       socketTimeout: SMTP_SOCKET_TIMEOUT_MS,
@@ -219,36 +218,6 @@ export async function POST(request: Request) {
       timeZone: "Europe/Moscow",
     }).format(new Date());
 
-    const transporter = createMailTransporter();
-
-    try {
-      await transporter.verify();
-      console.log("[send-email] SMTP verify OK", {
-        host: SMTP_HOST,
-        port: SMTP_PORT,
-        secure: SMTP_SECURE,
-        ms: Date.now() - started,
-      });
-    } catch (verifyErr) {
-      const details = smtpErrDetails(verifyErr);
-      console.error("[send-email] SMTP verify FAILED", details);
-
-      if (isSmtpTimeout(verifyErr)) {
-        console.error(
-          "[send-email] SMTP timeout hint: Timeweb Cloud по умолчанию блокирует исходящие порты 25/465/587. " +
-            "Разблокируйте порт 587 в панели Timeweb или обратитесь в поддержку. " +
-            "Документация: https://timeweb.cloud/docs/cloud-servers/limitations"
-        );
-      } else {
-        console.error(
-          "[send-email] SMTP auth hint: Mail.ru требует пароль приложения (не пароль от ящика). " +
-            "См. https://help.mail.ru/mail/security/protection/external"
-        );
-      }
-
-      return NextResponse.json({ error: USER_ERROR }, { status: 500 });
-    }
-
     const textBody = [
       `Имя: ${name}`,
       `Email: ${email}`,
@@ -276,7 +245,12 @@ export async function POST(request: Request) {
       <p><strong>Дата и время отправки (МСК):</strong> ${escapeHtml(sentAt)}</p>
     `;
 
+    const transporter = createMailTransporter();
+
     try {
+      // Важно: не вызываем transporter.verify() перед каждым письмом.
+      // verify() создавал отдельное SMTP-соединение, а затем sendMail() — ещё одно,
+      // из-за чего форма могла долго оставаться в состоянии «Отправка...». 
       const info = await transporter.sendMail({
         from: `"FilterFlow" <${EMAIL_USER}>`,
         to: RECEIVER_EMAIL,
@@ -298,7 +272,7 @@ export async function POST(request: Request) {
 
       if (isSmtpTimeout(sendErr)) {
         console.error(
-          "[send-email] sendMail timeout hint: проверьте разблокировку SMTP-портов на Timeweb Cloud"
+          "[send-email] SMTP timeout: проверьте доступ исходящего SMTP-порта у хостинг-провайдера."
         );
       }
 

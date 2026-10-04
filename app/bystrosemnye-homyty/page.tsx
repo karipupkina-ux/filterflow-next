@@ -761,54 +761,78 @@ export default function Page() {
 
         <section className="px-6 pb-20 md:pb-24">
           <div className="mx-auto max-w-[1280px]">
-            <div className="mb-12 text-center">
+            <div className="mx-auto mb-12 max-w-[980px] text-center">
               <h2 className="text-[28px] font-bold leading-[1.15] tracking-[-0.03em] text-[#10233f] md:text-[40px]">
-                Фото быстросъёмных хомутов — наша продукция
+                Стяжные, червячные и хомуты для воздуховодов — фото продукции
               </h2>
+              <p className="mx-auto mt-4 max-w-[820px] text-[15px] leading-[1.7] text-[#64748b] md:text-[16px]">
+                Хомуты для крепления фильтровальных мешков, рукавов, гибких воздуховодов и аспирационных шлангов.
+              </p>
             </div>
 
-            <div className="grid gap-7 lg:grid-cols-2">
-              <div className="group relative overflow-hidden rounded-[20px] bg-white shadow-[0_10px_28px_rgba(15,23,42,0.06)]">
+            <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+              <figure className="group relative overflow-hidden rounded-[20px] bg-white shadow-[0_10px_28px_rgba(15,23,42,0.06)]">
                 <div className="aspect-[1.52/1] overflow-hidden bg-[#f5f6f8]">
                   <Image
                     src="/images/catalog/bystrosemnye-homuty.webp"
-                    alt="Быстросъёмный хомут для фильтровального мешка с рычажным замком"
+                    alt="Стяжной хомут для фильтровального мешка с рычажным замком"
                     width={2048}
                     height={1365}
-                    sizes="(max-width: 1023px) 100vw, 50vw"
+                    sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                 </div>
 
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.58)] via-[rgba(0,0,0,0.18)] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.62)] via-[rgba(0,0,0,0.18)] to-transparent" />
 
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 p-5 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                  <p className="max-w-[95%] text-[14px] font-semibold leading-[1.45] text-white md:text-[15px]">
-                    Быстросъёмный хомут для фильтровального мешка с рычажным замком
+                <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 p-5">
+                  <p className="max-w-[96%] text-[14px] font-semibold leading-[1.45] text-white md:text-[15px]">
+                    Стяжной хомут для фильтровального мешка с рычажным замком
                   </p>
-                </div>
-              </div>
+                </figcaption>
+              </figure>
 
-              <div className="group relative overflow-hidden rounded-[20px] bg-white shadow-[0_10px_28px_rgba(15,23,42,0.06)]">
+              <figure className="group relative overflow-hidden rounded-[20px] bg-white shadow-[0_10px_28px_rgba(15,23,42,0.06)]">
                 <div className="aspect-[1.52/1] overflow-hidden bg-[#f5f6f8]">
                   <Image
                     src="/images/catalog/image_converted%20(1).webp"
-                    alt="Быстросъёмный хомут из нержавеющей стали для крепления фильтровальных рукавов"
+                    alt="Червячный хомут из нержавеющей стали для фильтровального рукава"
                     width={1744}
                     height={592}
-                    sizes="(max-width: 1023px) 100vw, 50vw"
+                    sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                 </div>
 
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.58)] via-[rgba(0,0,0,0.18)] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.62)] via-[rgba(0,0,0,0.18)] to-transparent" />
 
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 p-5 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 p-5">
                   <p className="max-w-[96%] text-[14px] font-semibold leading-[1.45] text-white md:text-[15px]">
-                    Быстросъёмный хомут из нержавеющей стали для крепления фильтровальных рукавов
+                    Червячный хомут из нержавеющей стали для фильтровальных рукавов
                   </p>
+                </figcaption>
+              </figure>
+
+              <figure className="group relative overflow-hidden rounded-[20px] bg-white shadow-[0_10px_28px_rgba(15,23,42,0.06)] md:col-span-2 xl:col-span-1">
+                <div className="aspect-[1.52/1] overflow-hidden bg-[#f5f6f8]">
+                  <Image
+                    src="/images/new-products/clamps-light-graphite.webp"
+                    alt="Хомут для воздуховода и аспирационного шланга"
+                    width={1538}
+                    height={1022}
+                    sizes="(max-width: 767px) 100vw, (max-width: 1279px) 100vw, 33vw"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
                 </div>
-              </div>
+
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.62)] via-[rgba(0,0,0,0.18)] to-transparent" />
+
+                <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 p-5">
+                  <p className="max-w-[96%] text-[14px] font-semibold leading-[1.45] text-white md:text-[15px]">
+                    Хомут для воздуховодов и аспирационных шлангов
+                  </p>
+                </figcaption>
+              </figure>
             </div>
           </div>
         </section>

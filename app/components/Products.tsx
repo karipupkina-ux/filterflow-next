@@ -21,6 +21,33 @@ const products = [
     link: "/filtracionnye-rukava/",
   },
   {
+    title: "Карманные фильтры",
+    description:
+      "Воздушные фильтры для вентиляционных установок. Изготовление по размерам, подбор глубины и количества карманов.",
+    image: "/images/new-products/pocket-filter-clean.webp",
+    width: 1586,
+    height: 992,
+    link: "/karmannye-filtry/",
+  },
+  {
+    title: "Кассетные фильтры",
+    description:
+      "Компактные сменные воздушные фильтры в жёсткой рамке для вентиляции и систем очистки воздуха.",
+    image: "/images/new-products/cassette-filter.webp",
+    width: 1254,
+    height: 1254,
+    link: "/kassetnye-filtry/",
+  },
+  {
+    title: "Воздуховоды для аспирации",
+    description:
+      "Гибкие ПВХ, PO и PUR шланги для подключения станков, стружкоотсосов, циклонов и аспирационных линий.",
+    image: "/images/new-products/aspiration-hoses.webp",
+    width: 1417,
+    height: 1110,
+    link: "/vozduhovody-dlya-aspiracii/",
+  },
+  {
     title: "Мешки для стружкоотсоса",
     description:
       "Прочные тканевые мешки для циклонов и УВП. Устойчивы к истиранию, различные типы креплений.",
@@ -67,9 +94,9 @@ export default function Products() {
         </h2>
 
         <p className="mx-auto mb-10 max-w-4xl text-center text-[14px] leading-relaxed text-[#475569] md:mb-14 md:text-[16px]">
-          Промышленная фильтрация пылевых частиц и аэрозолей: фильтровальные
-          материалы, рукавные фильтры и мешки под аспирационную систему и задачи
-          пылеулавливания
+          Фильтровальные мешки и рукава, карманные и кассетные воздушные фильтры,
+          гибкие воздуховоды и комплектующие для систем вентиляции, аспирации и
+          промышленного пылеулавливания
         </p>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 xl:grid-cols-3">

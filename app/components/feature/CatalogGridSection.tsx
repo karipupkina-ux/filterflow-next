@@ -31,6 +31,37 @@ const items: CatalogItem[] = [
     ),
   },
   {
+    title: "Карманные фильтры",
+    description: "Воздушные фильтры для вентиляции по стандартным и индивидуальным размерам",
+    href: "/karmannye-filtry/",
+    icon: (
+      <svg className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
+        <path d="M5 6h14v12H5zM9 6v12M15 6v12" />
+      </svg>
+    ),
+  },
+  {
+    title: "Кассетные фильтры",
+    description: "Компактные сменные фильтры в рамке для вентиляционных установок",
+    href: "/kassetnye-filtry/",
+    icon: (
+      <svg className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
+        <rect x="5" y="5" width="14" height="14" rx="1" />
+        <path d="M8 8h8M8 12h8M8 16h8" />
+      </svg>
+    ),
+  },
+  {
+    title: "Воздуховоды для аспирации",
+    description: "Гибкие шланги для воздуха, пыли, стружки и опилок",
+    href: "/vozduhovody-dlya-aspiracii/",
+    icon: (
+      <svg className="h-[15px] w-[15px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
+        <path d="M4 8c4-3 12-3 16 0M4 12c4-3 12-3 16 0M4 16c4-3 12-3 16 0" />
+      </svg>
+    ),
+  },
+  {
     title: "Мешки для стружкоотсоса",
     description: "Мешки для деревообрабатывающих станков",
     href: "/meshki-dlya-struzhkootsosa/",
@@ -141,12 +172,12 @@ export default function CatalogGridSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-8">
           <h2 className="text-[34px] font-bold leading-[1.08] tracking-[-0.02em] text-[#1f2937] md:text-[52px]">
-            Каталог фильтровальных мешков и рукавов
+            Каталог продукции FilterFlow
           </h2>
 
           <p className="mt-3 text-[16px] leading-[1.7] text-slate-500 md:text-[17px]">
-            Рукавные фильтры, мешки для аспирации и фильтровальные материалы —
-            производство под заказ, доставка по России
+            Фильтровальные мешки и рукава, воздушные фильтры, гибкие воздуховоды и
+            комплектующие для вентиляции и аспирации — подбор и поставка по России
           </p>
         </div>
 

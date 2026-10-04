@@ -1461,6 +1461,23 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="bg-white py-10 md:py-12">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="rounded-[24px] border border-[#dfe7ec] bg-[#eefaf8] px-6 py-7 md:px-9 md:py-8">
+            <h2 className="text-[24px] font-bold leading-tight text-[#10233f] md:text-[30px]">
+              Комплектующие для аспирационной системы
+            </h2>
+            <p className="mt-3 max-w-[980px] text-[15px] leading-[1.75] text-[#526174] md:text-[16px]">
+              Для подключения станка, стружкоотсоса или циклона можно подобрать {" "}
+              <Link href="/vozduhovody-dlya-aspiracii/" className="font-semibold text-[#149c94] underline underline-offset-4">
+                гибкий воздуховод для аспирации
+              </Link>
+              . На странице собраны ПВХ, PO и PUR шланги, а также хомуты для их крепления.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <SeeAlsoLinks />
 
       {/* Плавающие контакты */}

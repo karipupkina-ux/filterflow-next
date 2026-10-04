@@ -8,6 +8,9 @@ export default function Footer() {
   const productLinks = [
     { href: "/meshki-dlya-aspiracii/", label: "Мешки для аспирации" },
     { href: "/filtracionnye-rukava/", label: "Фильтровальные рукава" },
+    { href: "/karmannye-filtry/", label: "Карманные фильтры" },
+    { href: "/kassetnye-filtry/", label: "Кассетные фильтры" },
+    { href: "/vozduhovody-dlya-aspiracii/", label: "Воздуховоды для аспирации" },
     { href: "/meshki-dlya-struzhkootsosa/", label: "Мешки для стружкоотсоса" },
     { href: "/meshki-dlya-ciklonov-i-uvp/", label: "Мешки для циклонов" },
     { href: "/verhnie-meshki/", label: "Верхние мешки" },
