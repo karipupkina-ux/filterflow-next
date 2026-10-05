@@ -8,9 +8,9 @@ import { pageMetadata, SITE_URL } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = {
   ...pageMetadata({
-    title: "Карманные фильтры для вентиляции на заказ",
+    title: "Карманные фильтры для вентиляции — изготовление на заказ",
     description:
-      "Карманные воздушные фильтры для вентиляции и очистки воздуха. Изготовление по размерам заказчика, подбор конструкции, глубины и количества карманов.",
+      "Карманные воздушные фильтры для вентиляции. Изготовление от 1 шт. по размерам заказчика: рамка, глубина и количество карманов, подбор по маркировке и ТЗ.",
     path: "/karmannye-filtry",
     openGraphTitle: "Карманные фильтры для вентиляции | FilterFlow",
   }),
@@ -97,9 +97,9 @@ export default function PocketFiltersPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }}
         />
 
-        <section className="relative overflow-hidden bg-[#0f2341] pt-[132px] text-white sm:pt-[122px]">
+        <section className="relative overflow-hidden bg-[#0f2341] pt-[112px] text-white sm:pt-[102px]">
           <div className="absolute inset-0 opacity-20 [background:radial-gradient(circle_at_78%_20%,#2dd4bf_0,transparent_34%)]" />
-          <div className="relative mx-auto grid max-w-7xl gap-8 px-5 pb-10 pt-7 sm:px-6 md:pb-12 md:pt-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-14">
+          <div className="relative mx-auto grid max-w-7xl gap-8 px-5 pb-10 pt-5 sm:px-6 md:pb-12 md:pt-6 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-14">
             <div>
               <div className="mb-4 flex flex-wrap items-center gap-2 text-[13px] text-white/70">
                 <Link href="/" className="transition hover:text-white">Главная</Link>

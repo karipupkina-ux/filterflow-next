@@ -8,9 +8,9 @@ import { pageMetadata, SITE_URL } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = {
   ...pageMetadata({
-    title: "Гибкие воздуховоды и шланги для аспирации",
+    title: "Шланги и гибкие воздуховоды для аспирации",
     description:
-      "Гибкие воздуховоды и аспирационные шланги для отвода воздуха, пыли, стружки и опилок. ПВХ, полиолефиновые и полиуретановые рукава, хомуты для соединения.",
+      "Аспирационные шланги и гибкие воздуховоды для стружкоотсосов, пыли, стружки и опилок. ПВХ, PO и PUR, подбор по диаметру, хомуты для соединения.",
     path: "/vozduhovody-dlya-aspiracii",
     openGraphTitle: "Гибкие воздуховоды для аспирации | FilterFlow",
   }),
@@ -117,9 +117,9 @@ export default function AirDuctsPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }}
         />
 
-        <section className="relative overflow-hidden bg-[#0f2341] pt-[132px] text-white sm:pt-[122px]">
+        <section className="relative overflow-hidden bg-[#0f2341] pt-[112px] text-white sm:pt-[102px]">
           <div className="absolute inset-0 opacity-20 [background:radial-gradient(circle_at_78%_20%,#2dd4bf_0,transparent_34%)]" />
-          <div className="relative mx-auto grid max-w-7xl gap-8 px-5 pb-10 pt-7 sm:px-6 md:pb-12 md:pt-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-14">
+          <div className="relative mx-auto grid max-w-7xl gap-8 px-5 pb-10 pt-5 sm:px-6 md:pb-12 md:pt-6 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-14">
             <div>
               <div className="mb-4 flex flex-wrap items-center gap-2 text-[13px] text-white/70">
                 <Link href="/" className="transition hover:text-white">Главная</Link>
