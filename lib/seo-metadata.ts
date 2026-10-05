@@ -68,6 +68,7 @@ export const SITEMAP_RECENT_PATHS: readonly string[] = [
   "/karmannye-filtry",
   "/kassetnye-filtry",
   "/vozduhovody-dlya-aspiracii",
+  "/bystrosemnye-homyty",
 ];
 
 type PageMetaInput = {
