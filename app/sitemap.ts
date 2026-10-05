@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return SITEMAP_PATHS.map((path) => ({
     url: absoluteCanonicalUrl(path),
     lastModified: SITEMAP_RECENT_PATHS.includes(path)
-      ? "2026-10-01"
+      ? "2026-10-05"
       : SITEMAP_LAST_MODIFIED,
     changeFrequency: "weekly",
     priority: path === "/" ? 1 : 0.75,
