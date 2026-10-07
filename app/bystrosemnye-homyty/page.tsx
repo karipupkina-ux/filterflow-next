@@ -440,6 +440,7 @@ export default function Page() {
                       alt="Стяжной хомут с рычажным замком для фильтровального мешка"
                       width={2048}
                       height={1365}
+                      priority
                       sizes="(max-width: 1023px) 100vw, 690px"
                       className="h-auto max-h-[405px] w-auto max-w-full object-contain"
                     />
@@ -460,9 +461,16 @@ export default function Page() {
               <div className="mt-7 max-w-[670px] space-y-7 text-[15px] leading-[1.78] text-[#475569] md:text-[16px]">
                 <p>
                   Хомуты для аспирации используют для фиксации фильтровальных
-                  мешков, рукавов, гибких воздуховодов и шлангов на патрубках
-                  оборудования. Стяжное, червячное или быстросъёмное исполнение
-                  выбирают под конкретный узел и способ обслуживания.
+                  мешков, рукавов,{" "}
+                  <Link
+                    href="/vozduhovody-dlya-aspiracii/"
+                    className="font-semibold text-[#149c94] underline underline-offset-4 transition-colors hover:text-[#118b84]"
+                  >
+                    гибких воздуховодов для аспирации
+                  </Link>{" "}
+                  и шлангов на патрубках оборудования. Стяжное, червячное или
+                  быстросъёмное исполнение выбирают под конкретный узел и способ
+                  обслуживания.
                 </p>
 
                 <p>
