@@ -64,4 +64,23 @@ export async function sendApplicationEmail(
     });
     throw new Error(userMessage);
   }
+
+  // Фиксируем конверсию только после успешной отправки письма.
+  // Если Метрика не загружена (например, пользователь не дал согласие на аналитику),
+  // отправка формы всё равно считается успешной и не ломается.
+  if (typeof window !== "undefined") {
+    try {
+      const ym = (
+        window as Window & {
+          ym?: (...args: unknown[]) => void;
+        }
+      ).ym;
+
+      if (typeof ym === "function") {
+        ym(109113581, "reachGoal", "form_success");
+      }
+    } catch (err) {
+      console.error("Yandex Metrika reachGoal failed:", err);
+    }
+  }
 }
