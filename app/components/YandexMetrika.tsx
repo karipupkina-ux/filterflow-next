@@ -2,7 +2,7 @@ import Script from "next/script";
 
 export default function YandexMetrika() {
   return (
-    <Script id="yandex-metrika" strategy="beforeInteractive">
+    <Script id="yandex-metrika" strategy="afterInteractive">
       {`
         (function(m,e,t,r,i,k,a){
           m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
