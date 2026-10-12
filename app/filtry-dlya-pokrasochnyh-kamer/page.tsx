@@ -107,8 +107,8 @@ export default function PaintBoothFiltersPage() {
                 <a href="#vidy" className="inline-flex h-[56px] items-center justify-center rounded-[15px] border border-white/25 px-7 font-semibold">Смотреть виды</a>
               </div>
             </div>
-            <div className="overflow-hidden rounded-[28px] border border-white/10 bg-[#d8dadd] shadow-[0_30px_80px_rgba(0,0,0,0.28)]">
-              <Image src="/images/new-products/paint-booth-filters-hero.webp" alt="Фильтры для покрасочных и окрасочных камер" width={900} height={511} priority sizes="(max-width:1023px) 92vw,48vw" className="h-auto w-full object-cover" />
+            <div className="relative aspect-[750/563] overflow-hidden rounded-[28px] border border-white/10 bg-[#d8dadd] shadow-[0_30px_80px_rgba(0,0,0,0.28)]">
+              <Image src="/images/new-products/paint-booth-filters-hero.webp" alt="Фильтры для покрасочных и окрасочных камер" fill priority sizes="(max-width:1023px) 92vw,48vw" className="object-cover object-center" />
             </div>
           </div>
         </section>
