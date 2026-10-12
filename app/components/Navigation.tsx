@@ -525,11 +525,14 @@ export default function Navigation() {
         <div
           className="fixed inset-0 z-[70] bg-[#0f172a]/45 backdrop-blur-[1px] lg:hidden"
           onClick={closeMobileMenu}
-          aria-hidden
+          role="presentation"
         >
           <div
             className="ml-auto flex h-full w-[min(92vw,380px)] flex-col border-l border-[#dbe4ea] bg-white shadow-[0_20px_50px_rgba(15,23,42,0.22)] transition-transform duration-200"
             onClick={(event) => event.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Мобильное меню"
           >
             <div className="flex items-center justify-between border-b border-[#e8edf3] px-4 py-4">
               <span className="text-[17px] font-semibold text-[#0f172a]">Меню</span>
@@ -609,6 +612,7 @@ export default function Navigation() {
               <Link
                 href="/#contacts"
                 className="flex h-12 w-full items-center justify-center rounded-xl bg-[#28c4b7] text-[15px] font-semibold text-white transition hover:bg-[#20b4a8]"
+                onClick={closeMobileMenu}
               >
                 Получить расчёт
               </Link>
