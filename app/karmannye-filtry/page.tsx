@@ -187,7 +187,7 @@ export default function PocketFiltersPage() {
           <div className="mx-auto max-w-7xl px-5 sm:px-6">
             <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-16">
               <div className="overflow-hidden rounded-[24px] border border-[#e2e8f0] bg-white p-3 shadow-sm">
-                <Image src="/images/new-products/filter-dimensions.webp" alt="Схема размеров карманного фильтра: ширина A, высота B и глубина C" width={1450} height={1085} sizes="(max-width: 1023px) 92vw, 52vw" className="h-auto w-full rounded-[18px] object-contain" />
+                <Image src="/images/new-products/filter-dimensions-clean.svg" alt="Схема размеров карманного фильтра: ширина A, высота B и глубина C" width={1000} height={750} sizes="(max-width: 1023px) 92vw, 52vw" className="h-auto w-full rounded-[18px] object-contain" />
               </div>
               <div>
                 <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-[#149c94]">Параметры заказа</p>
