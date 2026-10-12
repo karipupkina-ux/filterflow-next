@@ -33,9 +33,9 @@ const products = [
     title: "Фильтры для покрасочных камер",
     description:
       "Потолочные, напольные Paint Stop, картонные лабиринтные и кокосово-волокнистые фильтры для окрасочных камер.",
-    image: "/images/new-products/paint-booth-filters-hero.webp",
-    width: 900,
-    height: 511,
+    image: "/images/new-products/paint-booth-filters-catalog.svg",
+    width: 600,
+    height: 450,
     link: "/filtry-dlya-pokrasochnyh-kamer/",
   },
   {
@@ -130,6 +130,7 @@ export default function Products() {
                     sizes="(max-width: 639px) 180px, 220px"
                     loading="lazy"
                     decoding="async"
+                    unoptimized={item.image.endsWith(".svg")}
                     className="h-auto max-h-[180px] w-auto max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 sm:max-h-[220px]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/12 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
