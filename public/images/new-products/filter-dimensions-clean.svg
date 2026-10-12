@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" role="img" aria-labelledby="title desc">
+  <title id="title">Схема размеров карманного фильтра</title>
+  <desc id="desc">Ширина A, высота B и глубина C карманного фильтра</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="750" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M245 210 L650 305 L650 620 L245 505 Z"/>
+    <path d="M258 224 L635 312 L635 602 L258 494 Z"/>
+    <path d="M650 305 L825 235 L825 535 L650 620"/>
+    <path d="M635 312 L805 250"/>
+    <path d="M635 602 L805 520"/>
+    <path d="M285 212 L440 150 L440 255"/>
+    <path d="M365 232 L520 170 L520 275"/>
+    <path d="M445 251 L600 190 L600 294"/>
+    <path d="M525 270 L680 210 L680 292"/>
+    <path d="M600 288 L760 228 L805 250"/>
+    <path d="M340 244 L340 516"/>
+    <path d="M430 265 L430 542"/>
+    <path d="M520 286 L520 568"/>
+    <path d="M610 307 L610 592"/>
+    <path d="M258 448 L340 431 L340 516"/>
+    <path d="M340 458 L430 441 L430 542"/>
+    <path d="M430 475 L520 458 L520 568"/>
+    <path d="M520 494 L610 476 L610 592"/>
+    <path d="M805 250 L805 520"/>
+    <path d="M190 225 L190 500" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <path d="M210 210 L245 220"/>
+    <path d="M210 500 L245 490"/>
+    <path d="M260 560 L635 665" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <path d="M245 505 L245 550"/>
+    <path d="M650 620 L650 662"/>
+    <path d="M670 668 L825 590" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <path d="M650 620 L665 670"/>
+    <path d="M825 535 L825 585"/>
+  </g>
+  <g fill="#111" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="600">
+    <text x="145" y="380">B</text>
+    <text x="425" y="705">A</text>
+    <text x="790" y="650">C</text>
+  </g>
+</svg>

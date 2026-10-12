@@ -21,6 +21,24 @@ const products = [
     link: "/filtracionnye-rukava/",
   },
   {
+    title: "Каркасы для фильтровальных рукавов",
+    description:
+      "Металлические круглые и плоские каркасы для рукавных фильтров. Изготовление по чертежу, образцу или ТЗ.",
+    image: "/images/new-products/filter-cages-round.webp",
+    width: 1000,
+    height: 567,
+    link: "/karkasy-dlya-filtrovalnyh-rukavov/",
+  },
+  {
+    title: "Фильтры для покрасочных камер",
+    description:
+      "Потолочные, напольные Paint Stop, картонные лабиринтные и кокосово-волокнистые фильтры для окрасочных камер.",
+    image: "/images/new-products/paint-booth-filters-hero.webp",
+    width: 900,
+    height: 511,
+    link: "/filtry-dlya-pokrasochnyh-kamer/",
+  },
+  {
     title: "Карманные фильтры",
     description:
       "Воздушные фильтры для вентиляционных установок. Изготовление по размерам, подбор глубины и количества карманов.",

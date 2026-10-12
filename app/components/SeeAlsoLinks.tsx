@@ -24,6 +24,14 @@ const LINKS = [
     label: "Фильтровальные рукава",
   },
   {
+    href: "/karkasy-dlya-filtrovalnyh-rukavov/",
+    label: "Каркасы для фильтровальных рукавов",
+  },
+  {
+    href: "/filtry-dlya-pokrasochnyh-kamer/",
+    label: "Фильтры для покрасочных камер",
+  },
+  {
     href: "/karmannye-filtry/",
     label: "Карманные фильтры для вентиляции",
   },

@@ -1356,7 +1356,14 @@ export default function FiltracionnyeRukavaPage() {
                     Наличия влаги и химически активных веществ
                   </li>
                   <li className="list-disc">
-                    Конструкции рукавного фильтра и способа регенерации
+                    Конструкции рукавного фильтра,{" "}
+                    <Link
+                      href="/karkasy-dlya-filtrovalnyh-rukavov/"
+                      className="font-semibold text-[#149c94] underline underline-offset-4"
+                    >
+                      каркаса фильтровального рукава
+                    </Link>{" "}
+                    и способа регенерации
                   </li>
                   <li className="list-disc">
                     Требуемой степени очистки воздуха

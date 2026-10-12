@@ -314,7 +314,7 @@ export default function CassetteFiltersPage() {
                 Укажите ширину, высоту и толщину кассеты, класс или маркировку старого фильтра и количество. Если данных не хватает, опишите оборудование — подскажем, что нужно уточнить.
               </p>
               <div className="mt-7 rounded-[20px] bg-white p-5 text-[14px] leading-[1.7] text-[#64748b]">
-                Для большой рабочей поверхности посмотрите <Link href="/karmannye-filtry/" className="font-semibold text-[#149c94] underline underline-offset-4">карманные фильтры</Link>. Для промышленных систем пылеулавливания — <Link href="/filtracionnye-rukava/" className="font-semibold text-[#149c94] underline underline-offset-4">фильтровальные рукава</Link>.
+                Для большой рабочей поверхности посмотрите <Link href="/karmannye-filtry/" className="font-semibold text-[#149c94] underline underline-offset-4">карманные фильтры</Link>. Для окрасочных и покрасочных камер — <Link href="/filtry-dlya-pokrasochnyh-kamer/" className="font-semibold text-[#149c94] underline underline-offset-4">специализированные фильтры</Link>. Для промышленных систем пылеулавливания — <Link href="/filtracionnye-rukava/" className="font-semibold text-[#149c94] underline underline-offset-4">фильтровальные рукава</Link>.
               </div>
             </div>
             <div className="rounded-[24px] border border-[#e2e8f0] bg-white p-6 shadow-[0_18px_60px_rgba(15,35,65,0.08)] md:p-8">

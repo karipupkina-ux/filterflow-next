@@ -187,7 +187,7 @@ export default function PocketFiltersPage() {
           <div className="mx-auto max-w-7xl px-5 sm:px-6">
             <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-16">
               <div className="overflow-hidden rounded-[24px] border border-[#e2e8f0] bg-white p-3 shadow-sm">
-                <Image src="/images/new-products/filter-dimensions.webp" alt="Схема размеров карманного фильтра: ширина A, высота B и глубина C" width={1450} height={1085} sizes="(max-width: 1023px) 92vw, 52vw" className="h-auto w-full rounded-[18px] object-contain" />
+                <Image src="/images/new-products/filter-dimensions-clean.svg" alt="Схема размеров карманного фильтра: ширина A, высота B и глубина C" width={1000} height={750} sizes="(max-width: 1023px) 92vw, 52vw" className="h-auto w-full rounded-[18px] object-contain" />
               </div>
               <div>
                 <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-[#149c94]">Параметры заказа</p>
@@ -287,7 +287,7 @@ export default function PocketFiltersPage() {
                 Пришлите размеры рамки, глубину и количество карманов, класс фильтрации и необходимое количество изделий. Если данных нет — укажите модель оборудования или приложите описание старого фильтра в комментарии.
               </p>
               <div className="mt-7 rounded-[20px] bg-[#f8fafc] p-5 text-[14px] leading-[1.7] text-[#64748b]">
-                Нужна другая конструкция? Посмотрите также <Link href="/kassetnye-filtry/" className="font-semibold text-[#149c94] underline underline-offset-4">кассетные фильтры</Link> и <Link href="/filtracionnye-rukava/" className="font-semibold text-[#149c94] underline underline-offset-4">фильтровальные рукава</Link>.
+                Нужна другая конструкция? Посмотрите также <Link href="/kassetnye-filtry/" className="font-semibold text-[#149c94] underline underline-offset-4">кассетные фильтры</Link>, <Link href="/filtry-dlya-pokrasochnyh-kamer/" className="font-semibold text-[#149c94] underline underline-offset-4">фильтры для покрасочных камер</Link> и <Link href="/filtracionnye-rukava/" className="font-semibold text-[#149c94] underline underline-offset-4">фильтровальные рукава</Link>.
               </div>
             </div>
             <div className="rounded-[24px] border border-[#e2e8f0] bg-white p-6 shadow-[0_18px_60px_rgba(15,35,65,0.08)] md:p-8">
