@@ -287,7 +287,7 @@ export default function PocketFiltersPage() {
                 Пришлите размеры рамки, глубину и количество карманов, класс фильтрации и необходимое количество изделий. Если данных нет — укажите модель оборудования или приложите описание старого фильтра в комментарии.
               </p>
               <div className="mt-7 rounded-[20px] bg-[#f8fafc] p-5 text-[14px] leading-[1.7] text-[#64748b]">
-                Нужна другая конструкция? Посмотрите также <Link href="/kassetnye-filtry/" className="font-semibold text-[#149c94] underline underline-offset-4">кассетные фильтры</Link> и <Link href="/filtracionnye-rukava/" className="font-semibold text-[#149c94] underline underline-offset-4">фильтровальные рукава</Link>.
+                Нужна другая конструкция? Посмотрите также <Link href="/kassetnye-filtry/" className="font-semibold text-[#149c94] underline underline-offset-4">кассетные фильтры</Link>, <Link href="/filtry-dlya-pokrasochnyh-kamer/" className="font-semibold text-[#149c94] underline underline-offset-4">фильтры для покрасочных камер</Link> и <Link href="/filtracionnye-rukava/" className="font-semibold text-[#149c94] underline underline-offset-4">фильтровальные рукава</Link>.
               </div>
             </div>
             <div className="rounded-[24px] border border-[#e2e8f0] bg-white p-6 shadow-[0_18px_60px_rgba(15,35,65,0.08)] md:p-8">
