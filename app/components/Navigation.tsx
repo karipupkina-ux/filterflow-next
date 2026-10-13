@@ -296,7 +296,23 @@ export default function Navigation() {
                 <Link
                   href="/#catalog"
                   className="mt-4 flex h-[50px] items-center justify-center rounded-[14px] bg-[#28c4b7] text-[16px] font-semibold text-white transition-colors duration-200 hover:bg-[#20b4a8]"
-                  onClick={() => setOpenMenu(null)}
+                  onClick={(event) => {
+                    setOpenMenu(null);
+
+                    if (pathname === "/") {
+                      event.preventDefault();
+
+                      const catalog = document.getElementById("catalog");
+                      if (catalog) {
+                        catalog.scrollIntoView({ behavior: "smooth", block: "start" });
+                        window.history.replaceState(
+                          null,
+                          "",
+                          `${window.location.pathname}${window.location.search}#catalog`,
+                        );
+                      }
+                    }
+                  }}
                 >
                   Весь каталог
                   <span className="ml-2 text-[18px]">→</span>
