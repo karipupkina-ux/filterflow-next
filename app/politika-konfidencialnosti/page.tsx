@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo-metadata";
 import Navigation from "../components/Navigation";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import EmailLink from "../components/EmailLink";
 
@@ -16,6 +17,7 @@ export default function PolitikaKonfidencialnostiPage() {
   return (
     <>
       <Navigation />
+      <BreadcrumbJsonLd currentName="Политика обработки персональных данных" currentPath="/politika-konfidencialnosti/" />
       <main>
 
       {/* HERO */}
