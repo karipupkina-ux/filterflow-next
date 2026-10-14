@@ -10,32 +10,21 @@ type SolutionItem = {
 
 const items: SolutionItem[] = [
   {
-    title: "Аспирация и пылеулавливание",
+    title: "Деревообработка и аспирация",
     description:
-      "Мешки, фильтровальные рукава и нестандартные решения для циклонов, УВП и промышленных установок.",
-    href: "/meshki-dlya-aspiracii/",
+      "Мешки для стружкоотсосов, циклонов и УВП, а также воздуховоды и крепёж для удаления стружки, опилок и древесной пыли.",
+    href: "/meshki-dlya-struzhkootsosa/",
     icon: (
       <svg className="h-[17px] w-[17px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
-        <path d="M6 5h12v5H6zM8 10v9m8-9v9M5 19h14" />
+        <path d="M6 7h12M8 11h8M10 15h4M12 15v5" />
       </svg>
     ),
   },
   {
-    title: "Фильтровальные материалы",
+    title: "Рукавные фильтры",
     description:
-      "Полиэстер, полипропилен, полиамид, мета-арамид, PPS, P84, PTFE, стекловолокно и специальные исполнения.",
-    href: "/filtrovalnye-tkani/",
-    icon: (
-      <svg className="h-[17px] w-[17px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
-        <path d="M4 7c4-2 12-2 16 0M4 12c4-2 12-2 16 0M4 17c4-2 12-2 16 0" />
-      </svg>
-    ),
-  },
-  {
-    title: "Рукавные фильтры и каркасы",
-    description:
-      "Фильтровальные рукава, круглые и плоские металлические каркасы, подбор конструкции по ТЗ, чертежу или образцу.",
-    href: "/karkasy-dlya-filtrovalnyh-rukavov/",
+      "Фильтровальные рукава, ткани и металлические каркасы для промышленных систем пылеулавливания.",
+    href: "/filtracionnye-rukava/",
     icon: (
       <svg className="h-[17px] w-[17px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
         <path d="M8 4h8M7 8h10M7 16h10M8 20h8M9 4v16m6-16v16" />
@@ -43,9 +32,9 @@ const items: SolutionItem[] = [
     ),
   },
   {
-    title: "Вентиляционные фильтры",
+    title: "Вентиляция",
     description:
-      "Карманные и кассетные воздушные фильтры для вентиляционных установок по стандартным и индивидуальным размерам.",
+      "Карманные и кассетные воздушные фильтры по стандартным и индивидуальным размерам для вентиляционных установок.",
     href: "/karmannye-filtry/",
     icon: (
       <svg className="h-[17px] w-[17px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
@@ -55,9 +44,9 @@ const items: SolutionItem[] = [
     ),
   },
   {
-    title: "Фильтры для покрасочных камер",
+    title: "Покрасочные камеры",
     description:
-      "Лабиринтные, напольные Paint Stop, потолочные и кокосово-волокнистые фильтры для окрасочных и сушильных камер.",
+      "Напольные, потолочные, лабиринтные и кокосово-волокнистые фильтры для окрасочных и сушильных камер.",
     href: "/filtry-dlya-pokrasochnyh-kamer/",
     icon: (
       <svg className="h-[17px] w-[17px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
@@ -66,31 +55,20 @@ const items: SolutionItem[] = [
     ),
   },
   {
-    title: "Стружкоотсосы и деревообработка",
+    title: "Подбор фильтровального материала",
     description:
-      "Фильтрующие и сборные мешки для стружки, опилок и древесной пыли, а также воздуховоды и крепёж.",
-    href: "/meshki-dlya-struzhkootsosa/",
+      "Подбор ткани по типу пыли, температуре, влажности, химической среде и способу регенерации.",
+    href: "/filtrovalnye-tkani/",
     icon: (
       <svg className="h-[17px] w-[17px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
-        <path d="M6 7h12M8 11h8M10 15h4M12 15v5" />
+        <path d="M4 7c4-2 12-2 16 0M4 12c4-2 12-2 16 0M4 17c4-2 12-2 16 0" />
       </svg>
     ),
   },
   {
-    title: "Гибкие воздуховоды и хомуты",
+    title: "Нестандартное оборудование",
     description:
-      "Шланги и воздуховоды для аспирации, транспортировки пыли, стружки и опилок; стяжные и червячные хомуты.",
-    href: "/vozduhovody-dlya-aspiracii/",
-    icon: (
-      <svg className="h-[17px] w-[17px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
-        <path d="M4 8c4-3 12-3 16 0M4 12c4-3 12-3 16 0M4 16c4-3 12-3 16 0" />
-      </svg>
-    ),
-  },
-  {
-    title: "Изготовление по образцу и размерам",
-    description:
-      "Нестандартные мешки и фильтрующие элементы по чертежу, фотографии, образцу или исходным размерам оборудования.",
+      "Подбор и изготовление по размерам, чертежу, фотографии или образцу, если точная модель фильтра неизвестна.",
     href: "/nestandartnye-meshki-dlya-filtracii/",
     icon: (
       <svg className="h-[17px] w-[17px]" fill="none" stroke="currentColor" strokeWidth="1.9" viewBox="0 0 24 24">
@@ -102,30 +80,29 @@ const items: SolutionItem[] = [
 
 export default function CatalogGridSection() {
   return (
-    <section className="bg-[#f8fafc] py-16 md:py-20">
+    <section className="bg-[#f8fafc] py-12 md:py-16">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="mb-9 max-w-4xl">
+        <div className="mb-7 max-w-4xl">
           <p className="text-sm font-medium uppercase tracking-[0.18em] text-[#0aa79d]">
-            Решения FilterFlow
+            Решения по задаче
           </p>
-          <h2 className="mt-3 text-[34px] font-bold leading-[1.08] tracking-[-0.02em] text-[#1f2937] md:text-[52px]">
-            Подбор фильтрации под оборудование и условия работы
+          <h2 className="mt-3 text-[30px] font-bold leading-[1.08] tracking-[-0.02em] text-[#1f2937] md:text-[44px]">
+            Что подобрать для вашего оборудования
           </h2>
-          <p className="mt-4 text-[16px] leading-[1.7] text-slate-500 md:text-[17px]">
-            Продукция сгруппирована по производственным задачам: аспирация и пылеулавливание,
-            вентиляция, покрасочные камеры, рукавные фильтры, деревообработка и подбор
-            фильтровальных материалов.
+          <p className="mt-4 text-[15px] leading-[1.7] text-slate-500 md:text-[16px]">
+            Это не повтор каталога, а быстрый выбор по производственной задаче.
+            Если точное название изделия неизвестно, начните с области применения.
           </p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => (
             <Link
               key={item.title}
               href={item.href}
               className="group rounded-[18px] border border-[#e8edf2] bg-white px-5 py-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-[#9fded7] hover:bg-[#eaf8f6] hover:shadow-[0_12px_28px_rgba(15,23,42,0.07)]"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#dfe6ea] bg-white text-[#1fb5a8] transition-all duration-200 group-hover:border-[#1fb5a8] group-hover:bg-[#23b8ad] group-hover:text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#dfe6ea] bg-white text-[#1fb5a8] transition-all duration-200 group-hover:border-[#1fb5a8] group-hover:bg-[#23b8ad] group-hover:text-white">
                 {item.icon}
               </div>
               <h3 className="mt-4 text-[17px] font-semibold leading-[1.35] text-[#1f2937]">
@@ -135,7 +112,7 @@ export default function CatalogGridSection() {
                 {item.description}
               </p>
               <span className="mt-4 inline-flex text-[14px] font-medium text-[#0aa79d]">
-                Подробнее →
+                Перейти →
               </span>
             </Link>
           ))}
