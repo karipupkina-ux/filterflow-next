@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Navigation from "../components/Navigation";
 import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
+import ServiceJsonLd from "../components/ServiceJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 
 export default function FiltracionnyeRukavaPage() {
@@ -41,6 +42,12 @@ export default function FiltracionnyeRukavaPage() {
   return (
     <main id="top" className="min-h-screen bg-[#f8fafc] text-slate-900">
       <Navigation />
+      <ServiceJsonLd
+        name="Фильтровальные рукава на заказ"
+        description="Изготовление и подбор фильтровальных рукавов для промышленных систем аспирации и пылеулавливания."
+        path="/filtracionnye-rukava/"
+        serviceType="Изготовление фильтровальных рукавов"
+      />
       <BreadcrumbJsonLd currentName="Фильтровальные рукава" currentPath="/filtracionnye-rukava/" />
       {/* Hero */}
       <section className="relative overflow-hidden pt-[105px] lg:pt-0">
