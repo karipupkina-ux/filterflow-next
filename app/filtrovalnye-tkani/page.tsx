@@ -85,7 +85,7 @@ const materials = [
       "Стекловолокно чувствительнее к механическому перегибу и абразивному воздействию, поэтому конструкцию рукава и режим очистки подбирают особенно внимательно.",
     images: [
       ["/images/filter-fabrics/Фильтрующая ткань из иглопробивного войлока из стекловолокна.webp", "Стекловолоконная фильтровальная ткань"],
-      ["/images/filter-fabrics/стекловолокно (FG);.webp", "Фильтровальный рукав из стекловолоконной ткани"],
+      ["/images/filter-fabrics/fiberglass-fg.webp", "Фильтровальный рукав из стекловолоконной ткани"],
     ],
   },
   {
@@ -97,7 +97,7 @@ const materials = [
       "При подборе учитывают влажность, возможность конденсации и химический состав газа. Для сложных процессов доступны специальные пропитки и комбинированные исполнения.",
     images: [
       ["/images/filter-fabrics/P84-Needle-Felt-Filter-Cloth-03-clean.webp", "Полиимидная фильтровальная ткань P84"],
-      ["/images/filter-fabrics/полиимид (P84,PL).webp", "Фильтрующая ткань из полиимида"],
+      ["/images/filter-fabrics/polyimide-p84.webp", "Фильтрующая ткань из полиимида"],
       ["/images/filter-fabrics/полиимид Impregnation-P84-Needle-Felt-clean.webp", "Полиимидная фильтровальная ткань со специальной обработкой"],
     ],
   },
@@ -270,8 +270,8 @@ export default function FilterFabricsPage() {
             </div>
             <div className="overflow-hidden rounded-[28px] border border-white/10 bg-[#d8dadd] shadow-[0_30px_80px_rgba(0,0,0,0.28)]">
               <Image
-                src="/images/filter-fabrics/Белый фильтрующий материал и образцы.webp"
-                alt="Фильтровальные ткани для промышленных рукавов и мешков"
+                src="/images/filter-fabrics/FMS-needle-punched-felt-03-clean.webp"
+                alt="Фильтровальная ткань FMS для промышленных рукавов и мешков"
                 width={512}
                 height={384}
                 priority
@@ -312,7 +312,7 @@ export default function FilterFabricsPage() {
             <div className="grid grid-cols-2 gap-4">
               <Image src="/images/filter-fabrics/Рукава фильтровальные светло-графитовый фон.webp" alt="Фильтровальные рукава из разных тканей" width={1000} height={750} className="h-full w-full rounded-[22px] object-cover" />
               <Image src="/images/filter-fabrics/Фильтровальные манжеты WebP.webp" alt="Фильтровальные манжеты из промышленной ткани" width={1000} height={574} className="h-full w-full rounded-[22px] object-cover" />
-              <Image src="/images/filter-fabrics/Фильтровальные рукава светло-графитовый фон.webp" alt="Фильтровальные рукава из промышленных тканей" width={980} height={980} className="col-span-2 h-[260px] w-full rounded-[22px] object-cover sm:h-[320px]" />
+              <Image src="/images/filter-fabrics/Фильтровальные рукава светло-графитовый фон.webp" alt="Фильтровальные рукава из промышленных тканей" width={980} height={980} className="col-span-2 h-[260px] w-full rounded-[22px] bg-[#eef0f1] object-contain p-3 sm:h-[320px] sm:p-4" />
             </div>
           </div>
         </section>
