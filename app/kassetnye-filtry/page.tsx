@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import ServiceJsonLd from "../components/ServiceJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import ProductInquiryForm from "../components/ProductInquiryForm";
 import FloatingContacts from "../components/feature/FloatingContacts";
@@ -88,6 +89,12 @@ export default function CassetteFiltersPage() {
   return (
     <>
       <Navigation />
+      <ServiceJsonLd
+        name="Кассетные фильтры на заказ"
+        description="Подбор и изготовление кассетных воздушных фильтров по размерам и требованиям вентиляционной установки."
+        path="/kassetnye-filtry/"
+        serviceType="Изготовление кассетных фильтров"
+      />
       <main className="bg-white">
         <script
           type="application/ld+json"
