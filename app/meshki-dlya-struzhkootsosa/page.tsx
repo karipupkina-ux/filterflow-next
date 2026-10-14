@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import { pageMetadata } from "@/lib/seo-metadata";
 
@@ -490,6 +491,7 @@ export default function Page() {
   return (
     <main id="top" className="min-h-screen bg-[#f8fafc] text-slate-900">
       <Navigation />
+      <BreadcrumbJsonLd currentName="Мешки для стружкоотсоса" currentPath="/meshki-dlya-struzhkootsosa/" />
       <style>{`
         details.ff-faq > summary::-webkit-details-marker {
           display: none;
