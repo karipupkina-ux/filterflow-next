@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import { pageMetadata } from "@/lib/seo-metadata";
 import PortfolioPageBlocks from "./PortfolioPageBlocks";
@@ -37,6 +38,7 @@ export default function PortfolioPage() {
   return (
     <>
       <Navigation />
+      <BreadcrumbJsonLd currentName="Портфолио" currentPath="/portfolio/" />
       <FloatingContacts />
 
       <main className="bg-[#f8fafc] pt-[118px] md:pt-[124px]">
