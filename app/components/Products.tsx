@@ -28,6 +28,7 @@ const products = [
     width: 1000,
     height: 746,
     link: "/filtrovalnye-tkani/",
+    enlargedImage: true,
   },
   {
     title: "Каркасы для фильтровальных рукавов",
@@ -37,6 +38,7 @@ const products = [
     width: 1000,
     height: 567,
     link: "/karkasy-dlya-filtrovalnyh-rukavov/",
+    enlargedImage: true,
   },
   {
     title: "Фильтры для покрасочных камер",
@@ -121,9 +123,9 @@ export default function Products() {
         </h2>
 
         <p className="mx-auto mb-10 max-w-4xl text-center text-[14px] leading-relaxed text-[#475569] md:mb-14 md:text-[16px]">
-          Фильтровальные мешки, рукава и ткани, карманные и кассетные воздушные фильтры,
-          гибкие воздуховоды и комплектующие для систем вентиляции, аспирации и
-          промышленного пылеулавливания
+          Фильтровальные мешки и рукава, технические фильтровальные ткани, каркасы,
+          карманные и кассетные воздушные фильтры, фильтры для покрасочных камер,
+          гибкие воздуховоды и крепёж для аспирации, вентиляции и промышленного пылеулавливания
         </p>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 xl:grid-cols-3">
@@ -140,7 +142,11 @@ export default function Products() {
                     loading="lazy"
                     decoding="async"
                     unoptimized={item.image.endsWith(".svg")}
-                    className="h-auto max-h-[180px] w-auto max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 sm:max-h-[220px]"
+                    className={
+                      item.enlargedImage
+                        ? "h-auto max-h-[205px] w-auto max-w-full scale-[1.08] object-contain transition-transform duration-700 ease-out group-hover:scale-[1.14] sm:max-h-[245px] md:max-h-[260px]"
+                        : "h-auto max-h-[180px] w-auto max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 sm:max-h-[220px]"
+                    }
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/12 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
                 </div>
