@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../components/Navigation";
 import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
+import ServiceJsonLd from "../components/ServiceJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import { pageMetadata } from "@/lib/seo-metadata";
 
@@ -491,6 +492,12 @@ export default function Page() {
   return (
     <main id="top" className="min-h-screen bg-[#f8fafc] text-slate-900">
       <Navigation />
+      <ServiceJsonLd
+        name="Мешки для стружкоотсоса на заказ"
+        description="Изготовление верхних фильтрующих и нижних накопительных мешков для стружкоотсосов по размерам и образцу."
+        path="/meshki-dlya-struzhkootsosa/"
+        serviceType="Изготовление мешков для стружкоотсосов"
+      />
       <BreadcrumbJsonLd currentName="Мешки для стружкоотсоса" currentPath="/meshki-dlya-struzhkootsosa/" />
       <style>{`
         details.ff-faq > summary::-webkit-details-marker {
