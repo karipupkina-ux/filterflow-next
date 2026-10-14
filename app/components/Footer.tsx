@@ -8,6 +8,7 @@ export default function Footer() {
   const productLinks = [
     { href: "/meshki-dlya-aspiracii/", label: "Мешки для аспирации" },
     { href: "/filtracionnye-rukava/", label: "Фильтровальные рукава" },
+    { href: "/filtrovalnye-tkani/", label: "Фильтровальные ткани" },
     { href: "/karmannye-filtry/", label: "Карманные фильтры" },
     { href: "/kassetnye-filtry/", label: "Кассетные фильтры" },
     { href: "/vozduhovody-dlya-aspiracii/", label: "Воздуховоды для аспирации" },
