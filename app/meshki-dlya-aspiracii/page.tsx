@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MeshkiAspiraciiOrderForm from "../components/MeshkiAspiraciiOrderForm";
 import Navigation from "../components/Navigation";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import { pageMetadata } from "@/lib/seo-metadata";
 
@@ -638,6 +639,7 @@ export default function Page() {
   return (
     <>
       <Navigation />
+      <BreadcrumbJsonLd currentName="Мешки для аспирации" currentPath="/meshki-dlya-aspiracii/" />
       <main>
       <style>{`
         details.faq-item > summary::-webkit-details-marker {
