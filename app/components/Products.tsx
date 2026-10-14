@@ -129,20 +129,26 @@ export default function Products() {
     <section id="catalog" className="bg-[#f8f9fb] py-14 md:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <h2 className="mb-4 text-center text-[30px] font-bold text-[#0f172a] md:text-[44px] lg:text-[56px]">
-          Каталог продукции
+          Каталог промышленной фильтрации и аспирации
         </h2>
 
         <p className="mx-auto mb-10 max-w-4xl text-center text-[14px] leading-relaxed text-[#475569] md:mb-14 md:text-[16px]">
-          Фильтровальные мешки и рукава, технические фильтровальные ткани, каркасы,
-          карманные и кассетные воздушные фильтры, фильтры для покрасочных камер,
-          гибкие воздуховоды и крепёж для аспирации, вентиляции и промышленного пылеулавливания
+          Фильтровальные мешки и рукава, фильтровальные ткани, воздушные фильтры,
+          каркасы, воздуховоды и комплектующие для аспирации, вентиляции и
+          промышленной очистки воздуха
         </p>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 xl:grid-cols-3">
           {products.map((item) => (
             <Link key={item.title} href={item.link} className="group block">
               <article className="relative h-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-                <div className="relative flex h-[220px] items-center justify-center overflow-hidden bg-[#f3f4f6] px-7 py-7 sm:h-[260px] sm:px-9 sm:py-9 md:h-[280px]">
+                <div
+                  className={
+                    item.enlargedImage
+                      ? "relative flex h-[220px] items-center justify-center overflow-hidden bg-[#f3f4f6] px-2 py-2 sm:h-[260px] sm:px-3 sm:py-3 md:h-[280px]"
+                      : "relative flex h-[220px] items-center justify-center overflow-hidden bg-[#f3f4f6] px-7 py-7 sm:h-[260px] sm:px-9 sm:py-9 md:h-[280px]"
+                  }
+                >
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -154,7 +160,7 @@ export default function Products() {
                     unoptimized={item.image.endsWith(".svg")}
                     className={
                       item.enlargedImage
-                        ? "h-auto max-h-[205px] w-auto max-w-full scale-[1.08] object-contain transition-transform duration-700 ease-out group-hover:scale-[1.14] sm:max-h-[245px] md:max-h-[260px]"
+                        ? "h-auto max-h-[230px] w-auto max-w-[96%] scale-[1.22] object-contain transition-transform duration-700 ease-out group-hover:scale-[1.28] sm:max-h-[270px] md:max-h-[292px]"
                         : "h-auto max-h-[180px] w-auto max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 sm:max-h-[220px]"
                     }
                   />
