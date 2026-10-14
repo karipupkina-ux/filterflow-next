@@ -37,9 +37,9 @@ const materials = [
     note:
       "Подходит для изготовления фильтровальных рукавов, мешков аспирации и стружкоотсосов. При повышенной влажности и риске конденсации материал подбирают с учётом режима работы.",
     images: [
-      ["/images/filter-fabrics/polyester-filter-fabric-roll.webp", "Полиэстеровая фильтровальная ткань в рулоне"],
-      ["/images/filter-fabrics/polyester-filter-fabric-sheet.webp", "Полиэстеровое фильтровальное полотно"],
-      ["/images/filter-fabrics/woven-polyester-filter-fabric.webp", "Полиэстеровая ткань для промышленной фильтрации"],
+      ["/images/filter-fabrics/Фильтровальное полотно светло-графитовый фон.webp", "Полиэстеровая фильтровальная ткань в рулоне"],
+      ["/images/filter-fabrics/Фильтровальное полотно без пальцев светло-графитовый фон.webp", "Полиэстеровое фильтровальное полотно"],
+      ["/images/filter-fabrics/ChatGPT_Image_7_iyun_2026.webp", "Полиэстеровая ткань для промышленной фильтрации"],
     ],
   },
   {
@@ -50,8 +50,8 @@ const materials = [
     note:
       "Возможны исполнения с дополнительной водо- и маслоотталкивающей обработкой. Антистатический материал является частью комплекса мер безопасности и подбирается вместе с конструкцией оборудования.",
     images: [
-      ["/images/filter-fabrics/polyester-antistatic-treated-filter-fabric.webp", "Антистатическая полиэстеровая фильтровальная ткань"],
-      ["/images/filter-fabrics/antistatic-filter-fabric-closeup.webp", "Антистатическая фильтрующая ткань крупным планом"],
+      ["/images/filter-fabrics/полиэстер антистатик с пропиткой масловодооталкивмбшей.webp", "Антистатическая полиэстеровая фильтровальная ткань"],
+      ["/images/filter-fabrics/filter_closeup.webp", "Антистатическая фильтрующая ткань крупным планом"],
     ],
   },
   {
@@ -62,7 +62,7 @@ const materials = [
     note:
       "Выбор полипропилена зависит от температуры, состава газа или жидкости и характера загрязнений. Для рукавной фильтрации материал согласуют с режимом регенерации.",
     images: [
-      ["/images/filter-fabrics/polypropylene-filter-fabric.webp", "Полипропиленовая фильтровальная ткань"],
+      ["/images/filter-fabrics/Polypropylene-Needle-Felt-Filter-Cloth-03-clean.webp", "Полипропиленовая фильтровальная ткань"],
     ],
   },
   {
@@ -73,7 +73,7 @@ const materials = [
     note:
       "PTFE используют как основной материал, а также в виде мембран и специальных обработок на других фильтрующих основах. Конкретное исполнение выбирают по составу газов и условиям регенерации.",
     images: [
-      ["/images/filter-fabrics/ptfe-filter-fabric.webp", "Фильтровальная ткань PTFE"],
+      ["/images/filter-fabrics/PTFE-Needle-Felt-Filter-Cloth-04-clean.webp", "Фильтровальная ткань PTFE"],
     ],
   },
   {
@@ -84,8 +84,8 @@ const materials = [
     note:
       "Стекловолокно чувствительнее к механическому перегибу и абразивному воздействию, поэтому конструкцию рукава и режим очистки подбирают особенно внимательно.",
     images: [
-      ["/images/filter-fabrics/fiberglass-filter-fabric.webp", "Стекловолоконная фильтровальная ткань"],
-      ["/images/filter-fabrics/fiberglass-filter-sleeve.webp", "Фильтровальный рукав из стекловолоконной ткани"],
+      ["/images/filter-fabrics/Фильтрующая ткань из иглопробивного войлока из стекловолокна.webp", "Стекловолоконная фильтровальная ткань"],
+      ["/images/filter-fabrics/стекловолокно (FG);.webp", "Фильтровальный рукав из стекловолоконной ткани"],
     ],
   },
   {
@@ -96,9 +96,9 @@ const materials = [
     note:
       "При подборе учитывают влажность, возможность конденсации и химический состав газа. Для сложных процессов доступны специальные пропитки и комбинированные исполнения.",
     images: [
-      ["/images/filter-fabrics/p84-filter-fabric.webp", "Полиимидная фильтровальная ткань P84"],
-      ["/images/filter-fabrics/p84-polyimide-filter-fabric.webp", "Фильтрующая ткань из полиимида"],
-      ["/images/filter-fabrics/p84-impregnated-filter-fabric.webp", "Полиимидная фильтровальная ткань со специальной обработкой"],
+      ["/images/filter-fabrics/P84-Needle-Felt-Filter-Cloth-03-clean.webp", "Полиимидная фильтровальная ткань P84"],
+      ["/images/filter-fabrics/полиимид (P84,PL).webp", "Фильтрующая ткань из полиимида"],
+      ["/images/filter-fabrics/полиимид Impregnation-P84-Needle-Felt-clean.webp", "Полиимидная фильтровальная ткань со специальной обработкой"],
     ],
   },
   {
@@ -109,8 +109,8 @@ const materials = [
     note:
       "Для влажных газов и процессов с возможной кислой конденсацией необходим отдельный подбор. Возможны специальные поверхностные обработки и антистатические исполнения.",
     images: [
-      ["/images/filter-fabrics/aramid-nomex-filter-fabric.webp", "Мета-арамидная фильтровальная ткань"],
-      ["/images/filter-fabrics/nomex-filter-bag.webp", "Фильтровальный рукав из мета-арамидной ткани"],
+      ["/images/filter-fabrics/Nomex-Aramid-Needle-Punched-Felt-04-clean.webp", "Мета-арамидная фильтровальная ткань"],
+      ["/images/filter-fabrics/Filter-bag-Nomex.webp", "Фильтровальный рукав из мета-арамидной ткани"],
     ],
   },
   {
@@ -121,7 +121,7 @@ const materials = [
     note:
       "Для PPS важно учитывать окислительную составляющую газового потока, поэтому материал выбирают не только по температуре, но и по полному составу среды.",
     images: [
-      ["/images/filter-fabrics/pps-filter-fabric.webp", "Фильтровальная ткань PPS"],
+      ["/images/filter-fabrics/PPS.webp", "Фильтровальная ткань PPS"],
     ],
   },
   {
@@ -132,7 +132,7 @@ const materials = [
     note:
       "FMS применяют в тяжёлых промышленных системах пылегазоочистки. Состав конкретной ткани обязательно уточняется перед подбором под оборудование.",
     images: [
-      ["/images/filter-fabrics/fms-filter-fabric.webp", "Композитная фильтровальная ткань FMS"],
+      ["/images/filter-fabrics/FMS-needle-punched-felt-03-clean.webp", "Композитная фильтровальная ткань FMS"],
     ],
   },
   {
@@ -143,7 +143,7 @@ const materials = [
     note:
       "Акрил может быть полезен в условиях повышенной влажности и ряда кислотных сред, но химическую совместимость всегда проверяют по конкретному технологическому процессу.",
     images: [
-      ["/images/filter-fabrics/acrylic-filter-fabric.webp", "Акриловая фильтровальная ткань"],
+      ["/images/filter-fabrics/Акриловый иглопробивной войлок.webp", "Акриловая фильтровальная ткань"],
     ],
   },
   {
@@ -154,7 +154,7 @@ const materials = [
     note:
       "Назначение полиамидной ткани зависит от химического состава среды, температуры и конструкции фильтра. Для рукавов и мешков материал подбирается по условиям конкретной установки.",
     images: [
-      ["/images/filter-fabrics/polyamide-filter-fabric.webp", "Полиамидная фильтровальная ткань"],
+      ["/images/filter-fabrics/Три слоя белого фильтровального полотна(5).webp", "Полиамидная фильтровальная ткань"],
     ],
   },
   {
@@ -165,8 +165,8 @@ const materials = [
     note:
       "Тканые материалы российского и импортного производства подбираются под конкретный тип фильтра, пыль, способ регенерации и условия эксплуатации.",
     images: [
-      ["/images/filter-fabrics/woven-polyester-filter-fabric.webp", "Полиэфирная тканая фильтровальная ткань"],
-      ["/images/filter-fabrics/filter-fabric-generic-sheet.webp", "Тканое фильтровальное полотно"],
+      ["/images/filter-fabrics/Полиэфирный игольчатый войлок.webp", "Полиэфирная тканая фильтровальная ткань"],
+      ["/images/filter-fabrics/ChatGPT_Image_7_iyun_2026.webp", "Тканое фильтровальное полотно"],
     ],
   },
 ] as const;
@@ -239,7 +239,7 @@ export default function FilterFabricsPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }}
         />
 
-        <section className="relative overflow-hidden bg-[#0f2341] pt-[112px] text-white sm:pt-[102px]">
+        <section className="relative overflow-hidden bg-[#0f2341] pt-[112px] text-white sm:pt-[102px] lg:pt-[76px]">
           <div className="absolute inset-0 opacity-20 [background:radial-gradient(circle_at_78%_20%,#2dd4bf_0,transparent_34%)]" />
           <div className="relative mx-auto grid max-w-7xl gap-9 px-5 pb-12 pt-6 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-14">
             <div>
@@ -270,10 +270,10 @@ export default function FilterFabricsPage() {
             </div>
             <div className="overflow-hidden rounded-[28px] border border-white/10 bg-[#d8dadd] shadow-[0_30px_80px_rgba(0,0,0,0.28)]">
               <Image
-                src="/images/filter-fabrics/filter-fabrics-rolls.webp"
+                src="/images/filter-fabrics/Белый фильтрующий материал и образцы.webp"
                 alt="Фильтровальные ткани для промышленных рукавов и мешков"
-                width={1000}
-                height={1000}
+                width={512}
+                height={384}
                 priority
                 sizes="(max-width:1023px) 92vw,48vw"
                 className="h-auto w-full object-cover"
@@ -310,9 +310,9 @@ export default function FilterFabricsPage() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <Image src="/images/filter-fabrics/filter-sleeves-assortment.webp" alt="Фильтровальные рукава из разных тканей" width={1000} height={750} className="h-full w-full rounded-[22px] object-cover" />
-              <Image src="/images/filter-fabrics/filter-cuffs.webp" alt="Фильтровальные манжеты из промышленной ткани" width={1000} height={574} className="h-full w-full rounded-[22px] object-cover" />
-              <Image src="/images/filter-fabrics/filter-sleeves-fabrics.webp" alt="Фильтровальные рукава из промышленных тканей" width={980} height={980} className="col-span-2 h-[260px] w-full rounded-[22px] object-cover sm:h-[320px]" />
+              <Image src="/images/filter-fabrics/Рукава фильтровальные светло-графитовый фон.webp" alt="Фильтровальные рукава из разных тканей" width={1000} height={750} className="h-full w-full rounded-[22px] object-cover" />
+              <Image src="/images/filter-fabrics/Фильтровальные манжеты WebP.webp" alt="Фильтровальные манжеты из промышленной ткани" width={1000} height={574} className="h-full w-full rounded-[22px] object-cover" />
+              <Image src="/images/filter-fabrics/Фильтровальные рукава светло-графитовый фон.webp" alt="Фильтровальные рукава из промышленных тканей" width={980} height={980} className="col-span-2 h-[260px] w-full rounded-[22px] object-cover sm:h-[320px]" />
             </div>
           </div>
         </section>
@@ -403,7 +403,7 @@ export default function FilterFabricsPage() {
             </div>
             <div className="rounded-[24px] bg-white/10 p-6 ring-1 ring-white/15 md:p-8">
               <Image
-                src="/images/filter-fabrics/filter-fabric-generic-sheet.webp"
+                src="/images/filter-fabrics/ChatGPT_Image_3_iyun_2026.webp"
                 alt="Фильтровальная ткань для изготовления промышленных фильтров"
                 width={760}
                 height={506}
