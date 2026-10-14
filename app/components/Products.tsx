@@ -1,7 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const products = [
+type ProductCard = {
+  title: string;
+  description: string;
+  image: string;
+  width: number;
+  height: number;
+  link: string;
+  enlargedImage?: boolean;
+};
+
+const products: ProductCard[] = [
   {
     title: "Мешки для аспирации",
     description:
