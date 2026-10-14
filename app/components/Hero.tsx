@@ -29,7 +29,7 @@ export default function Hero() {
     <section className="relative min-h-[500px] w-full overflow-hidden bg-[#9aa8b4] sm:min-h-[580px] lg:min-h-[760px]">
       <Image
         src="/images/hero.webp"
-        alt="Мешки для аспирации и фильтровальные рукава FilterFlow"
+        alt="Промышленная фильтрация, аспирация и воздушные фильтры FilterFlow"
         fill
         preload
         sizes="100vw"
@@ -43,13 +43,13 @@ export default function Hero() {
           <h1
             className={`${robotoSlab.className} max-w-[1120px] text-[27px] font-extrabold leading-[1.06] tracking-[-0.025em] drop-shadow-[0_2px_5px_rgba(0,0,0,0.55)] sm:text-[36px] md:text-[46px] lg:text-[58px] ${transitionIn} ${enter} delay-0`}
           >
-            <span className="block text-white">Мешки для аспирации</span>
-            <span className="block text-white">и стружкоотсоса</span>
+            <span className="block text-white">Промышленная фильтрация</span>
+            <span className="block text-white">и аспирация</span>
             <span className="mt-2 block text-[#19C9BE] sm:mt-3">
-              Фильтровальные рукава
+              Мешки, рукава, ткани и фильтры
             </span>
             <span className="mt-1 block text-[0.76em] text-[#DAE5E8]">
-              от производителя
+              производство и поставка
             </span>
             <span
               className="mx-auto mt-3 block h-1 w-36 rounded-full bg-[#F79D0C] shadow-[0_0_10px_rgba(247,157,12,0.35)] sm:mt-4 sm:w-56 lg:w-64"
@@ -60,12 +60,11 @@ export default function Hero() {
           <p
             className={`mt-10 max-w-[980px] text-[14px] leading-[1.5] text-white/90 sm:mt-11 sm:text-[15px] md:mt-12 md:text-[17px] ${transitionIn} ${enter} delay-[150ms]`}
           >
-            В наличии и под заказ. Производим мешки для аспирации и
-            стружкоотсоса (верхние и нижние), а также фильтровальные рукава для
-            систем пылеулавливания, циклонов и УВП. Изготавливаем фильтры для
-            аспирации любых размеров напрямую от производителя — с учетом задач
-            вашего производства. Индивидуальные размеры, быстрое изготовление и
-            доставка по России и СНГ.
+            Производим и поставляем фильтровальные мешки и рукава, технические
+            фильтровальные ткани, каркасы, карманные и кассетные воздушные фильтры,
+            фильтры для покрасочных камер, гибкие воздуховоды и хомуты. Подбираем
+            решение под оборудование, размеры, тип загрязнений и условия эксплуатации.
+            Работаем с единичными и серийными заказами, отправляем по России и СНГ.
           </p>
           <div
             className={`mt-6 flex flex-col items-stretch justify-center gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 ${transitionIn} ${enter} delay-[300ms]`}
