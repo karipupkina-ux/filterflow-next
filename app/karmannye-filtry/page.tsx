@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import ServiceJsonLd from "../components/ServiceJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import ProductInquiryForm from "../components/ProductInquiryForm";
 import FloatingContacts from "../components/feature/FloatingContacts";
@@ -92,6 +93,12 @@ export default function PocketFiltersPage() {
   return (
     <>
       <Navigation />
+      <ServiceJsonLd
+        name="Карманные фильтры на заказ"
+        description="Подбор и изготовление карманных воздушных фильтров по размерам и требованиям вентиляционной установки."
+        path="/karmannye-filtry/"
+        serviceType="Изготовление карманных фильтров"
+      />
       <main className="bg-white">
         <script
           type="application/ld+json"
