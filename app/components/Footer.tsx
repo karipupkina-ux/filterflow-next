@@ -9,6 +9,8 @@ export default function Footer() {
     { href: "/meshki-dlya-aspiracii/", label: "Мешки для аспирации" },
     { href: "/filtracionnye-rukava/", label: "Фильтровальные рукава" },
     { href: "/filtrovalnye-tkani/", label: "Фильтровальные ткани" },
+    { href: "/karkasy-dlya-filtrovalnyh-rukavov/", label: "Каркасы для рукавов" },
+    { href: "/filtry-dlya-pokrasochnyh-kamer/", label: "Фильтры для покрасочных камер" },
     { href: "/karmannye-filtry/", label: "Карманные фильтры" },
     { href: "/kassetnye-filtry/", label: "Кассетные фильтры" },
     { href: "/vozduhovody-dlya-aspiracii/", label: "Воздуховоды для аспирации" },
@@ -63,8 +65,9 @@ export default function Footer() {
             </Link>
 
             <p className="mt-6 max-w-[295px] text-[15px] leading-[1.65] text-white/82 sm:mt-8 sm:text-[16px]">
-              Российский производитель фильтровальных мешков и рукавов для систем
-              аспирации, стружкоотсосов и промышленных систем очистки воздуха с 2020 года.
+              FilterFlow — решения для аспирации, вентиляции и промышленной очистки воздуха:
+              фильтровальные мешки и рукава, ткани, воздушные фильтры, каркасы,
+              воздуховоды и комплектующие.
             </p>
 
             <div className="mt-8 flex items-center gap-3">
