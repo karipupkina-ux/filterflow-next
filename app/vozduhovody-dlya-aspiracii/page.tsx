@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import ProductInquiryForm from "../components/ProductInquiryForm";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import { pageMetadata, SITE_URL } from "@/lib/seo-metadata";
@@ -389,6 +390,7 @@ export default function AirDuctsPage() {
           </div>
         </section>
       </main>
+      <SeeAlsoLinks excludeHref="/vozduhovody-dlya-aspiracii/" />
       <FloatingContacts />
     </>
   );
