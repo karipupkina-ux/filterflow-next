@@ -52,11 +52,11 @@ export default function BlogArticlesSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-10 md:mb-12">
           <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#1f2937] md:text-[44px]">
-            Полезные статьи о фильтрации и аспирации
+            Полезные статьи о фильтрации, аспирации и вентиляции
           </h2>
 
           <p className="mt-3 text-[15px] leading-[1.7] text-slate-500 md:text-[17px]">
-            Руководства, советы и обзоры от специалистов FilterFlow
+            Практические материалы о подборе фильтров, тканей, рукавов и комплектующих для промышленной очистки воздуха
           </p>
         </div>
 
