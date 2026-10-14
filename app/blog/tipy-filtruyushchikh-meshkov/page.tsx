@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../../components/Navigation";
+import BreadcrumbJsonLd from "../../components/BreadcrumbJsonLd";
 import ArticleJsonLd from "../../components/ArticleJsonLd";
 import { pageMetadata } from "@/lib/seo-metadata";
 
@@ -262,6 +263,7 @@ export default function Page() {
         dateModified="2026-09-18"
       />
       <Navigation />
+      <BreadcrumbJsonLd currentName="Виды фильтровальных мешков" currentPath="/blog/tipy-filtruyushchikh-meshkov/" />
       <main className="bg-[#f6f8fa] pb-20 pt-[118px]">
         <article className="mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
           <nav
