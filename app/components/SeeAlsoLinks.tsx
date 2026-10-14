@@ -24,6 +24,10 @@ const LINKS = [
     label: "Фильтровальные рукава",
   },
   {
+    href: "/filtrovalnye-tkani/",
+    label: "Фильтровальные ткани",
+  },
+  {
     href: "/karkasy-dlya-filtrovalnyh-rukavov/",
     label: "Каркасы для фильтровальных рукавов",
   },
