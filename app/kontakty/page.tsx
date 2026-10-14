@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo-metadata";
 import Navigation from "../components/Navigation";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import ContactForm from "./ContactForm";
 import EmailLink from "../components/EmailLink";
@@ -67,6 +68,7 @@ export default function KontaktyPage() {
   return (
     <>
       <Navigation />
+      <BreadcrumbJsonLd currentName="Контакты" currentPath="/kontakty/" />
       <FloatingContacts />
 
       <main className="bg-[#f8fafc] pt-[105px] md:pt-[116px]">
