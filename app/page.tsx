@@ -12,17 +12,16 @@ import ReviewsSection from "./components/feature/ReviewsSection";
 import AboutCompanyPreviewSection from "./components/feature/AboutCompanyPreviewSection";
 import OrderFormSection from "./components/feature/OrderFormSection";
 import FAQSection from "./components/feature/FAQSection";
-import CatalogGridSection from "./components/feature/CatalogGridSection";
 import BlogArticlesSection from "./components/feature/BlogArticlesSection";
 import ContactsSection from "./components/feature/ContactsSection";
 import FloatingContacts from "./components/feature/FloatingContacts";
 
-const HOME_TITLE = "Производство фильтровальных мешков и рукавов";
+const HOME_TITLE = "Промышленная фильтрация и аспирация — фильтры, рукава и ткани";
 export const metadata: Metadata = {
   ...pageMetadata({
     title: HOME_TITLE,
     description:
-      "Фильтровальные мешки и рукава, карманные и кассетные фильтры, воздуховоды для аспирации. Подбор и изготовление по размерам заказчика, доставка по России.",
+      "FilterFlow: фильтровальные мешки и рукава, фильтровальные ткани, каркасы, воздушные фильтры, фильтры для покрасочных камер, воздуховоды и хомуты. Подбор под оборудование и поставка по России.",
     path: "/",
   }),
   keywords: [
@@ -39,6 +38,11 @@ export const metadata: Metadata = {
     "карманные фильтры",
     "кассетные фильтры",
     "воздуховоды для аспирации",
+    "фильтровальные ткани",
+    "каркасы для фильтровальных рукавов",
+    "фильтры для покрасочных камер",
+    "карманные фильтры для вентиляции",
+    "кассетные фильтры для вентиляции",
     "мешки для стружкоотсоса",
     "мешки для циклонов",
     "мешки для УВП",
@@ -61,7 +65,6 @@ export default function HomePage() {
         <AboutCompanyPreviewSection />
         <OrderFormSection />
         <FAQSection />
-        <CatalogGridSection />
         <BlogArticlesSection />
         <ContactsSection />
       </main>
