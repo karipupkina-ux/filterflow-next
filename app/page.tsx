@@ -12,6 +12,7 @@ import ReviewsSection from "./components/feature/ReviewsSection";
 import AboutCompanyPreviewSection from "./components/feature/AboutCompanyPreviewSection";
 import OrderFormSection from "./components/feature/OrderFormSection";
 import FAQSection from "./components/feature/FAQSection";
+import CatalogGridSection from "./components/feature/CatalogGridSection";
 import BlogArticlesSection from "./components/feature/BlogArticlesSection";
 import ContactsSection from "./components/feature/ContactsSection";
 import FloatingContacts from "./components/feature/FloatingContacts";
@@ -65,6 +66,7 @@ export default function HomePage() {
         <AboutCompanyPreviewSection />
         <OrderFormSection />
         <FAQSection />
+        <CatalogGridSection />
         <BlogArticlesSection />
         <ContactsSection />
       </main>
