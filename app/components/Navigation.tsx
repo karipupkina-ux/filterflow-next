@@ -9,7 +9,7 @@ type MenuKey = "products" | "articles" | null;
 
 const productLinks = [
   { href: "/meshki-dlya-aspiracii/", label: "Мешки для аспирации" },
-  { href: "/filtracionnye-rukava/", label: "Фильтрационные рукава" },
+  { href: "/filtracionnye-rukava/", label: "Фильтровальные рукава" },
   { href: "/filtrovalnye-tkani/", label: "Фильтровальные ткани" },
   { href: "/karkasy-dlya-filtrovalnyh-rukavov/", label: "Каркасы для фильтровальных рукавов" },
   { href: "/filtry-dlya-pokrasochnyh-kamer/", label: "Фильтры для покрасочных камер" },
