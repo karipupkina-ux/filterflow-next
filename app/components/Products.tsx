@@ -24,7 +24,7 @@ const products = [
     title: "Фильтровальные ткани",
     description:
       "Ткани для фильтровальных рукавов, мешков аспирации и стружкоотсосов. Материал, цена и доступный метраж — по запросу.",
-    image: "/images/filter-fabrics/filter-fabric-samples.webp",
+    image: "/images/filter-fabrics/Белый фильтрующий материал и образцы.webp",
     width: 1000,
     height: 746,
     link: "/filtrovalnye-tkani/",
