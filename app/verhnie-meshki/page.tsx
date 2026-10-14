@@ -8,6 +8,7 @@ import {
   SEND_EMAIL_USER_ERROR,
 } from "@/lib/send-email-client";
 import Navigation from "../components/Navigation";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import EmailLink from "../components/EmailLink";
@@ -458,6 +459,7 @@ export default function VerhnieMeshkiPage() {
   return (
     <>
       <Navigation />
+      <BreadcrumbJsonLd currentName="Верхние фильтровальные мешки" currentPath="/verhnie-meshki/" />
       <main>
 
       <section className="bg-[#f5f3ee] pt-[118px] pb-16">
