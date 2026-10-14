@@ -526,6 +526,14 @@ export default function Page() {
               "linear-gradient(90deg, rgba(7,18,35,0.72) 0%, rgba(9,24,44,0.58) 32%, rgba(10,29,48,0.42) 55%, rgba(10,29,48,0.18) 100%), linear-gradient(180deg, rgba(4,12,24,0.34) 0%, rgba(4,12,24,0.16) 28%, rgba(4,12,24,0.18) 72%, rgba(4,12,24,0.42) 100%), url('/images/hero.webp')",
           }}
         >
+          <div className="absolute left-0 right-0 top-5 z-10 lg:top-[124px]">
+            <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-6 text-[13px] text-white/75">
+              <Link href="/#top" className="transition hover:text-[#28c4b7]">Главная</Link>
+              <span>/</span>
+              <span>Мешки для стружкоотсоса</span>
+            </div>
+          </div>
+
           <div className="mx-auto flex min-h-[600px] max-w-[1440px] flex-col items-center justify-start px-4 pb-16 pt-20 sm:min-h-[680px] sm:px-6 sm:pb-20 sm:pt-24 md:pt-28 lg:min-h-[760px] lg:pb-24 lg:pt-40 xl:pt-44">
             <div className="flex w-full max-w-[980px] flex-col items-center gap-6 text-center text-white lg:gap-8">
               <div className="inline-flex rounded-full border border-[#28c4b7]/40 bg-[#28c4b7]/15 px-4 py-1.5 text-[13px] font-semibold text-[#28c4b7] backdrop-blur-[4px] sm:px-7 sm:py-3 sm:text-[15px]">
