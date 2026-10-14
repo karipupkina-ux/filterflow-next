@@ -4,6 +4,7 @@ import Link from "next/link";
 import MeshkiAspiraciiOrderForm from "../components/MeshkiAspiraciiOrderForm";
 import Navigation from "../components/Navigation";
 import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
+import ServiceJsonLd from "../components/ServiceJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import { pageMetadata } from "@/lib/seo-metadata";
 
@@ -639,6 +640,12 @@ export default function Page() {
   return (
     <>
       <Navigation />
+      <ServiceJsonLd
+        name="Мешки для аспирации на заказ"
+        description="Изготовление и подбор фильтровальных мешков для аспирации по размерам, чертежу, образцу или оборудованию заказчика."
+        path="/meshki-dlya-aspiracii/"
+        serviceType="Изготовление фильтровальных мешков для аспирации"
+      />
       <BreadcrumbJsonLd currentName="Мешки для аспирации" currentPath="/meshki-dlya-aspiracii/" />
       <main>
       <style>{`
