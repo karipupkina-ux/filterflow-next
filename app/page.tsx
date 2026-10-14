@@ -17,12 +17,12 @@ import BlogArticlesSection from "./components/feature/BlogArticlesSection";
 import ContactsSection from "./components/feature/ContactsSection";
 import FloatingContacts from "./components/feature/FloatingContacts";
 
-const HOME_TITLE = "Промышленная фильтрация и аспирация — фильтры, рукава и ткани";
+const HOME_TITLE = "Фильтровальные мешки, рукава и промышленные фильтры";
 export const metadata: Metadata = {
   ...pageMetadata({
     title: HOME_TITLE,
     description:
-      "FilterFlow: фильтровальные мешки и рукава, фильтровальные ткани, каркасы, воздушные фильтры, фильтры для покрасочных камер, воздуховоды и хомуты. Подбор под оборудование и поставка по России.",
+      "Фильтровальные мешки и рукава, ткани, каркасы, воздушные фильтры, фильтры для покрасочных камер и воздуховоды. Производство и поставка по России. Подбор по размерам, оборудованию, чертежу или образцу.",
     path: "/",
   }),
   keywords: [
