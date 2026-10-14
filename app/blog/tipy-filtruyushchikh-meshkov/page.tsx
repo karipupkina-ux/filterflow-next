@@ -263,7 +263,12 @@ export default function Page() {
         dateModified="2026-09-18"
       />
       <Navigation />
-      <BreadcrumbJsonLd currentName="Виды фильтровальных мешков" currentPath="/blog/tipy-filtruyushchikh-meshkov/" />
+      <BreadcrumbJsonLd
+        currentName="Виды фильтровальных мешков"
+        currentPath="/blog/tipy-filtruyushchikh-meshkov/"
+        parentName="Статьи"
+        parentPath="/blog/"
+      />
       <main className="bg-[#f6f8fa] pb-20 pt-[118px]">
         <article className="mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
           <nav
