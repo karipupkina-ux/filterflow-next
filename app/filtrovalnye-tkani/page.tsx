@@ -241,7 +241,7 @@ export default function FilterFabricsPage() {
 
         <section className="relative overflow-hidden bg-[#0f2341] pt-[112px] text-white sm:pt-[102px] lg:pt-[76px]">
           <div className="absolute inset-0 opacity-20 [background:radial-gradient(circle_at_78%_20%,#2dd4bf_0,transparent_34%)]" />
-          <div className="relative mx-auto grid max-w-7xl gap-9 px-5 pb-12 pt-6 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-14">
+          <div className="relative mx-auto grid max-w-7xl gap-9 px-5 pb-8 pt-10 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-14">
             <div>
               <div className="mb-4 flex gap-2 text-[13px] text-white/70">
                 <Link href="/">Главная</Link><span>/</span><span>Фильтровальные ткани</span>
