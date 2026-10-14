@@ -193,7 +193,12 @@ export default function Page() {
         dateModified="2026-09-18"
       />
       <Navigation />
-      <BreadcrumbJsonLd currentName="Как работает аспирация" currentPath="/blog/kak-rabotaet-aspiraciya/" />
+      <BreadcrumbJsonLd
+        currentName="Как работает аспирация"
+        currentPath="/blog/kak-rabotaet-aspiraciya/"
+        parentName="Статьи"
+        parentPath="/blog/"
+      />
       <main className="bg-[#f8fafc] pb-20 pt-[118px]">
         <article className="mx-auto max-w-6xl px-4 sm:px-6">
           <nav className="text-sm text-[#64748b]">
