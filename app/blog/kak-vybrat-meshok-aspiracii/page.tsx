@@ -181,7 +181,12 @@ export default function Page() {
         dateModified="2026-09-18"
       />
       <Navigation />
-      <BreadcrumbJsonLd currentName="Как выбрать мешок для аспирации" currentPath="/blog/kak-vybrat-meshok-aspiracii/" />
+      <BreadcrumbJsonLd
+        currentName="Как выбрать мешок для аспирации"
+        currentPath="/blog/kak-vybrat-meshok-aspiracii/"
+        parentName="Статьи"
+        parentPath="/blog/"
+      />
       <main className="bg-[#f8fafc] pb-20 pt-[118px]">
         <article className="mx-auto max-w-6xl px-4 sm:px-6">
           <nav
