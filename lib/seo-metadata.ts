@@ -35,6 +35,7 @@ export const SITEMAP_PATHS: readonly string[] = [
   "/meshki-dlya-struzhkootsosa",
   "/meshki-dlya-ciklonov-i-uvp",
   "/filtracionnye-rukava",
+  "/filtrovalnye-tkani",
   "/karkasy-dlya-filtrovalnyh-rukavov",
   "/filtry-dlya-pokrasochnyh-kamer",
   "/karmannye-filtry",
@@ -64,6 +65,7 @@ export const SITEMAP_LAST_MODIFIED = "2026-09-18";
 
 /** Точечные даты существенных обновлений отдельных страниц. */
 export const SITEMAP_PATH_LAST_MODIFIED: Readonly<Record<string, string>> = {
+  "/filtrovalnye-tkani": "2026-10-14",
   "/karkasy-dlya-filtrovalnyh-rukavov": "2026-10-12",
   "/filtry-dlya-pokrasochnyh-kamer": "2026-10-12",
 };
