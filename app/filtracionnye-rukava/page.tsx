@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Navigation from "../components/Navigation";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 
 export default function FiltracionnyeRukavaPage() {
@@ -40,6 +41,7 @@ export default function FiltracionnyeRukavaPage() {
   return (
     <main id="top" className="min-h-screen bg-[#f8fafc] text-slate-900">
       <Navigation />
+      <BreadcrumbJsonLd currentName="Фильтровальные рукава" currentPath="/filtracionnye-rukava/" />
       {/* Hero */}
       <section className="relative overflow-hidden pt-[105px] lg:pt-0">
         <div
