@@ -27,6 +27,38 @@ const productLinks = [
 
 const articleLinks = [
   {
+    href: "/blog/kak-vybrat-filtrovalnuyu-tkan/",
+    label: "Как выбрать фильтровальную ткань",
+  },
+  {
+    href: "/blog/kogda-nuzhna-antistaticheskaya-tkan/",
+    label: "Когда нужна антистатическая ткань",
+  },
+  {
+    href: "/blog/kak-podobrat-karkas-filtrovalnogo-rukava/",
+    label: "Как подобрать каркас для рукава",
+  },
+  {
+    href: "/blog/dlya-chego-nuzhna-truba-venturi/",
+    label: "Для чего нужна труба Вентури",
+  },
+  {
+    href: "/blog/karmannyj-ili-kassetnyj-filtr/",
+    label: "Карманный или кассетный фильтр",
+  },
+  {
+    href: "/blog/kakie-filtry-nuzhny-dlya-pokrasochnoj-kamery/",
+    label: "Фильтры для покрасочной камеры",
+  },
+  {
+    href: "/blog/chto-takoe-paint-stop/",
+    label: "Paint Stop: что это и где используется",
+  },
+  {
+    href: "/blog/kak-podobrat-diametr-vozduhovoda-aspiracii/",
+    label: "Как подобрать диаметр воздуховода",
+  },
+  {
     href: "/blog/kak-vybrat-meshok-aspiracii/",
     label: "Как выбрать мешок для аспирации",
   },
@@ -385,18 +417,18 @@ export default function Navigation() {
 
               {/* Мостик между кнопкой и меню */}
               {openMenu === "articles" && (
-                <div className="absolute left-1/2 top-full z-30 h-4 w-[340px] -translate-x-1/2" />
+                <div className="absolute left-1/2 top-full z-30 h-4 w-[720px] max-w-[calc(100vw-2rem)] -translate-x-1/2" />
               )}
 
               <div
-                className={`absolute left-1/2 top-full z-40 mt-3 w-[340px] -translate-x-1/2 rounded-[22px] bg-white p-4 shadow-[0_20px_60px_rgba(0,0,0,0.14)] transition-all duration-200 ${
+                className={`absolute left-1/2 top-full z-40 mt-3 w-[720px] max-w-[calc(100vw-2rem)] max-h-[calc(100vh-150px)] -translate-x-1/2 overflow-y-auto rounded-[22px] bg-white p-4 shadow-[0_20px_60px_rgba(0,0,0,0.14)] transition-all duration-200 ${
                   openMenu === "articles"
                     ? "visible opacity-100 pointer-events-auto"
                     : "invisible opacity-0 pointer-events-none"
                 }`}
                 onMouseEnter={() => setOpenMenu("articles")}
               >
-                <div className="space-y-1.5">
+                <div className="grid grid-cols-2 gap-x-2 gap-y-1.5">
                   {articleLinks.map((item) => {
                     const isActive = pathname === item.href;
 
