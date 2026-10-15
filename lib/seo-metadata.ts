@@ -54,6 +54,14 @@ export const SITEMAP_PATHS: readonly string[] = [
   "/blog/kak-rabotaet-aspiraciya",
   "/blog/kogda-menyat-filtr-meshok",
   "/blog/tipy-filtruyushchikh-meshkov",
+  "/blog/kak-vybrat-filtrovalnuyu-tkan",
+  "/blog/kogda-nuzhna-antistaticheskaya-tkan",
+  "/blog/kak-podobrat-karkas-filtrovalnogo-rukava",
+  "/blog/dlya-chego-nuzhna-truba-venturi",
+  "/blog/karmannyj-ili-kassetnyj-filtr",
+  "/blog/kakie-filtry-nuzhny-dlya-pokrasochnoj-kamery",
+  "/blog/chto-takoe-paint-stop",
+  "/blog/kak-podobrat-diametr-vozduhovoda-aspiracii",
 ];
 
 /**
@@ -67,10 +75,21 @@ export const SITEMAP_LAST_MODIFIED = "2026-09-18";
 export const SITEMAP_PATH_LAST_MODIFIED: Readonly<Record<string, string>> = {
   "/": "2026-10-14",
   "/o-kompanii": "2026-10-14",
-  "/blog": "2026-10-14",
-  "/filtrovalnye-tkani": "2026-10-14",
-  "/karkasy-dlya-filtrovalnyh-rukavov": "2026-10-12",
-  "/filtry-dlya-pokrasochnyh-kamer": "2026-10-12",
+  "/blog": "2026-10-15",
+  "/filtrovalnye-tkani": "2026-10-15",
+  "/karkasy-dlya-filtrovalnyh-rukavov": "2026-10-15",
+  "/filtry-dlya-pokrasochnyh-kamer": "2026-10-15",
+  "/karmannye-filtry": "2026-10-15",
+  "/kassetnye-filtry": "2026-10-15",
+  "/vozduhovody-dlya-aspiracii": "2026-10-15",
+  "/blog/kak-vybrat-filtrovalnuyu-tkan": "2026-10-15",
+  "/blog/kogda-nuzhna-antistaticheskaya-tkan": "2026-10-15",
+  "/blog/kak-podobrat-karkas-filtrovalnogo-rukava": "2026-10-15",
+  "/blog/dlya-chego-nuzhna-truba-venturi": "2026-10-15",
+  "/blog/karmannyj-ili-kassetnyj-filtr": "2026-10-15",
+  "/blog/kakie-filtry-nuzhny-dlya-pokrasochnoj-kamery": "2026-10-15",
+  "/blog/chto-takoe-paint-stop": "2026-10-15",
+  "/blog/kak-podobrat-diametr-vozduhovoda-aspiracii": "2026-10-15",
 };
 
 /** Страницы, которые существенно обновлены при расширении каталога 01.10.2026. */

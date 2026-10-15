@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navigation from "../components/Navigation";
 import ProductInquiryForm from "../components/ProductInquiryForm";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
+import ProductGuides from "../components/ProductGuides";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import { pageMetadata, SITE_URL } from "@/lib/seo-metadata";
 
@@ -181,6 +182,18 @@ export default function PaintBoothFiltersPage() {
 
         <section className="py-14 md:py-20"><div className="mx-auto max-w-5xl px-5 sm:px-6"><h2 className="text-center text-[32px] font-bold text-[#10233f] md:text-[46px]">Частые вопросы о фильтрах окрасочных камер</h2><div className="mt-9 grid gap-4">{faq.map((item)=><details key={item.question} className="rounded-[20px] border border-[#e2e8f0] bg-white p-5"><summary className="cursor-pointer list-none text-[17px] font-semibold text-[#10233f]">{item.question}</summary><p className="mt-4 text-[15px] leading-[1.75] text-[#64748b]">{item.answer}</p></details>)}</div></div></section>
 
+        <ProductGuides items={[
+          {
+            title: "Какие фильтры нужны для покрасочной камеры",
+            href: "/blog/kakie-filtry-nuzhny-dlya-pokrasochnoj-kamery/",
+            text: "Приточная, потолочная и вытяжная фильтрация в одной схеме.",
+          },
+          {
+            title: "Paint Stop: что это и где используется",
+            href: "/blog/chto-takoe-paint-stop/",
+            text: "Как работает напольный стекловолоконный фильтр красочного тумана.",
+          },
+        ]} />
         <SeeAlsoLinks excludeHref="/filtry-dlya-pokrasochnyh-kamer/" />
         <FloatingContacts />
       </main>
