@@ -57,7 +57,7 @@ export default function TechnologySection() {
           <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 items-start">
 
             <div className="rounded-2xl border border-gray-200 bg-[#FAFAFA] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] sm:p-7">
-              <div className="mb-2 text-3xl font-bold text-[#F97316] md:text-4xl">От 1 шт.</div>
+              <div className="mb-2 text-[24px] font-semibold tracking-[-0.02em] text-[#F97316] md:text-[28px]">От 1 шт.</div>
               <div className="mb-2 font-semibold text-[#111827]">Единичные и серийные заказы</div>
               <p className="text-sm text-gray-400 leading-relaxed">
                 Изготавливаем фильтровальные мешки и рукава как единично, так и партиями.
@@ -65,7 +65,7 @@ export default function TechnologySection() {
             </div>
 
             <div className="rounded-2xl border border-gray-200 bg-[#FAFAFA] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] sm:p-7">
-              <div className="mb-2 text-3xl font-bold text-[#F97316] md:text-4xl">По ТЗ</div>
+              <div className="mb-2 text-[24px] font-semibold tracking-[-0.02em] text-[#F97316] md:text-[28px]">По ТЗ</div>
               <div className="mb-2 font-semibold text-[#111827]">Подбор под оборудование</div>
               <p className="text-sm text-gray-400 leading-relaxed">
                 Работаем по размерам, чертежу, модели оборудования, фотографии или образцу.
@@ -73,7 +73,7 @@ export default function TechnologySection() {
             </div>
 
             <div className="rounded-2xl border border-gray-200 bg-[#FAFAFA] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] sm:p-7">
-              <div className="mb-2 text-3xl font-bold text-[#F97316] md:text-4xl">РФ + СНГ</div>
+              <div className="mb-2 text-[24px] font-semibold tracking-[-0.02em] text-[#F97316] md:text-[28px]">РФ + СНГ</div>
               <div className="mb-2 font-semibold text-[#111827]">Отправка заказов</div>
               <p className="text-sm text-gray-400 leading-relaxed">
                 Организуем отправку готовой продукции транспортными компаниями.
@@ -81,7 +81,7 @@ export default function TechnologySection() {
             </div>
 
             <div className="rounded-2xl border border-gray-200 bg-[#FAFAFA] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] sm:p-7">
-              <div className="mb-2 text-3xl font-bold text-[#F97316] md:text-4xl">Комплексно</div>
+              <div className="mb-2 text-[24px] font-semibold tracking-[-0.02em] text-[#F97316] md:text-[28px]">Под задачу</div>
               <div className="mb-2 font-semibold text-[#111827]">Фильтры и комплектующие</div>
               <p className="text-sm text-gray-400 leading-relaxed">
                 Подбираем ткани, каркасы, воздушные фильтры, воздуховоды и крепёж под задачу.

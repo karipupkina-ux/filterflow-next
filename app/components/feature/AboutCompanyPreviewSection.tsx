@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function AboutCompanyPreviewSection() {
     const stats = [
-      { value: "От 1 шт.", label: "Пошив фильтровальных изделий" },
-      { value: "По ТЗ", label: "Подбор по размерам и оборудованию" },
-      { value: "РФ + СНГ", label: "Отправка заказов" },
-      { value: "Под ключ", label: "Материалы и комплектующие" },
+      { value: "Более 5 лет", label: "Опыт в промышленной фильтрации" },
+      { value: "Специализация", label: "Аспирация и пылеулавливание" },
+      { value: "Контроль", label: "Проверка изделий перед отгрузкой" },
+      { value: "На связи", label: "Помогаем уточнить конструкцию до запуска" },
     ];
   
     return (
@@ -54,7 +54,7 @@ export default function AboutCompanyPreviewSection() {
                     key={item.label}
                     className="rounded-[16px] bg-white px-6 py-5 shadow-[0_8px_20px_rgba(15,23,42,0.06)] ring-1 ring-[#edf1f4]"
                   >
-                    <div className="text-[24px] font-bold text-[#0f9f93] md:text-[26px]">
+                    <div className="text-[19px] font-semibold leading-[1.2] tracking-[-0.015em] text-[#0f9f93] sm:text-[20px] md:text-[22px]">
                       {item.value}
                     </div>
                     <div className="mt-2 text-[14px] leading-[1.45] text-slate-500 md:text-[15px]">
