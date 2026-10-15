@@ -380,26 +380,26 @@ export default function Page() {
       <Navigation />
       <BreadcrumbJsonLd currentName="Хомуты для аспирации" currentPath="/bystrosemnye-homyty/" />
 
-      <main id="top" className="bg-[#f8fafc]">
+      <main id="top" className="bg-[#f8fafc] pt-[118px]">
         <section className="border-b border-[#e8edf3] bg-white">
           <div className="mx-auto max-w-[1440px] px-6 py-4">
             <div className="flex items-center gap-3 text-[14px]">
               <Link
-                href="/"
+                href="/#top"
                 className="font-medium text-[#28c4b7] transition-colors duration-200 hover:text-[#1ea89d]"
               >
                 Главная
               </Link>
-              <span className="text-[#9aa8b7]">›</span>
-              <span className="text-[#475569]">Хомуты для аспирации</span>
+              <span className="text-[#9aa8b7]">/</span>
+              <span className="text-[#475569]">Быстросъёмные хомуты</span>
             </div>
           </div>
         </section>
 
-        <section className="px-6 pt-12 pb-24 md:pt-14 md:pb-28">
+        <section className="px-6 pt-10 pb-24 md:pt-12 md:pb-28">
           <div className="mx-auto max-w-[1280px]">
             <div className="grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
-              <div className="max-w-[560px] pt-[94px] md:pt-[108px]">
+              <div className="max-w-[560px] pt-8 md:pt-12">
                 <h1 className="text-[30px] font-bold leading-[0.98] tracking-[-0.04em] text-[#0f172a] md:text-[42px] xl:text-[52px]">
                   Стяжные и червячные
                   <br />
