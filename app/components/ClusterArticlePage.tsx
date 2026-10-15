@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "./Navigation";
-import BreadcrumbJsonLd from "./BreadcrumbJsonLd";
 import ArticleJsonLd from "./ArticleJsonLd";
 import FloatingContacts from "./feature/FloatingContacts";
 
@@ -58,12 +57,6 @@ export default function ClusterArticlePage({
         dateModified={dateModified}
       />
       <Navigation />
-      <BreadcrumbJsonLd
-        currentName={title}
-        currentPath={path}
-        parentName="Статьи"
-        parentPath="/blog/"
-      />
       <FloatingContacts />
 
       <main className="bg-[#f8fafc] pb-20 pt-[118px]">
