@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navigation from "../components/Navigation";
 import ProductInquiryForm from "../components/ProductInquiryForm";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
+import ProductGuides from "../components/ProductGuides";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import { pageMetadata, SITE_URL } from "@/lib/seo-metadata";
 
@@ -454,6 +455,18 @@ export default function FilterFabricsPage() {
           </div>
         </section>
 
+        <ProductGuides items={[
+          {
+            title: "Как выбрать фильтровальную ткань для промышленной аспирации",
+            href: "/blog/kak-vybrat-filtrovalnuyu-tkan/",
+            text: "Какие параметры процесса и материала нужно учесть до заказа.",
+          },
+          {
+            title: "Когда нужна антистатическая фильтровальная ткань",
+            href: "/blog/kogda-nuzhna-antistaticheskaya-tkan/",
+            text: "Антистатик, заземление и условия, при которых обычного материала недостаточно.",
+          },
+        ]} />
         <SeeAlsoLinks excludeHref="/filtrovalnye-tkani/" />
         <FloatingContacts />
       </main>
