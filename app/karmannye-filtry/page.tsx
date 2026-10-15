@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navigation from "../components/Navigation";
 import ServiceJsonLd from "../components/ServiceJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
+import ProductGuides from "../components/ProductGuides";
 import ProductInquiryForm from "../components/ProductInquiryForm";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import { pageMetadata, SITE_URL } from "@/lib/seo-metadata";
@@ -324,6 +325,13 @@ export default function PocketFiltersPage() {
           </div>
         </section>
       </main>
+      <ProductGuides items={[
+        {
+          title: "Карманный или кассетный фильтр: в чём разница",
+          href: "/blog/karmannyj-ili-kassetnyj-filtr/",
+          text: "Сравнение конструкции, площади фильтрации и монтажной глубины.",
+        },
+      ]} />
       <SeeAlsoLinks excludeHref="/karmannye-filtry/" />
       <FloatingContacts />
     </>
