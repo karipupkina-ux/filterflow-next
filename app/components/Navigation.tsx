@@ -213,7 +213,18 @@ export default function Navigation() {
       <div className={headerBgClass}>
         <div className="mx-auto flex h-[66px] max-w-[1440px] items-center justify-between px-4 sm:h-[78px] sm:px-6">
           {/* Лого */}
-          <Link href="/#top" className="flex items-center gap-3 sm:gap-4" aria-label="FilterFlow — на главную">
+          <Link
+            href="/#top"
+            className="flex items-center gap-3 sm:gap-4"
+            aria-label="FilterFlow — на главную"
+            onClick={(event) => {
+              if (pathname === "/") {
+                event.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                window.history.replaceState(null, "", "/#top");
+              }
+            }}
+          >
             <img
               src="/images/logo-64.webp"
               alt="FilterFlow"
@@ -228,7 +239,17 @@ export default function Navigation() {
 
           {/* Меню */}
           <nav className="hidden items-center gap-10 lg:flex">
-            <Link href="/#top" className={menuLinkClass}>
+            <Link
+              href="/#top"
+              className={menuLinkClass}
+              onClick={(event) => {
+                if (pathname === "/") {
+                  event.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.history.replaceState(null, "", "/#top");
+                }
+              }}
+            >
               Главная
             </Link>
 
