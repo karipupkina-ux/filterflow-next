@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Navigation from "../components/Navigation";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
+import ServiceJsonLd from "../components/ServiceJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 
 export default function FiltracionnyeRukavaPage() {
@@ -13,7 +15,7 @@ export default function FiltracionnyeRukavaPage() {
     {
       question: "Как часто нужно менять фильтровальные рукава?",
       answer:
-        "Срок службы рукавов зависит от условий эксплуатации и составляет в среднем 1,5-3 года. Признаки необходимости замены: снижение производительности системы, повышенное сопротивление воздушному потоку, видимые повреждения ткани.",
+        "Срок службы рукавов зависит от материала, пыли, температуры, режима регенерации и нагрузки. О необходимости замены могут говорить снижение производительности системы, рост сопротивления и видимые повреждения ткани.",
     },
     {
       question: "Можно ли очищать рукава от пыли?",
@@ -23,12 +25,12 @@ export default function FiltracionnyeRukavaPage() {
     {
       question: "Какой материал выбрать для высоких температур?",
       answer:
-        "Для температур до 200°C подойдёт Номекс, до 260°C — Тефлон (PTFE), для экстремальных условий до 280°C — стекловолокно. Мы поможем подобрать оптимальный вариант под ваши условия.",
+        "Материал для повышенных температур выбирают по техническому паспорту конкретной ткани и условиям процесса. Помимо температуры учитывают влажность, химический состав газа, пыль и способ регенерации.",
     },
     {
       question: "Изготавливаете ли рукава нестандартных размеров?",
       answer:
-        "Да, мы производим рукава любых диаметров (от 100 до 300 мм) и длин (от 1 до 8 метров) по вашим чертежам и размерам. Срок изготовления — 5-7 рабочих дней.",
+        "Да, изготавливаем рукава по индивидуальным размерам и чертежам. Возможный диапазон размеров и срок изготовления зависят от конструкции, материала, количества и требований заказа.",
     },
     {
       question: "Как рассчитать необходимое количество рукавов?",
@@ -40,6 +42,13 @@ export default function FiltracionnyeRukavaPage() {
   return (
     <main id="top" className="min-h-screen bg-[#f8fafc] text-slate-900">
       <Navigation />
+      <ServiceJsonLd
+        name="Фильтровальные рукава на заказ"
+        description="Изготовление и подбор фильтровальных рукавов для промышленных систем аспирации и пылеулавливания."
+        path="/filtracionnye-rukava/"
+        serviceType="Изготовление фильтровальных рукавов"
+      />
+      <BreadcrumbJsonLd currentName="Фильтровальные рукава" currentPath="/filtracionnye-rukava/" />
       {/* Hero */}
       <section className="relative overflow-hidden pt-[105px] lg:pt-0">
         <div
@@ -49,6 +58,14 @@ export default function FiltracionnyeRukavaPage() {
               "linear-gradient(90deg, rgba(7,18,35,0.72) 0%, rgba(9,24,44,0.58) 32%, rgba(10,29,48,0.42) 55%, rgba(10,29,48,0.18) 100%), linear-gradient(180deg, rgba(4,12,24,0.34) 0%, rgba(4,12,24,0.16) 28%, rgba(4,12,24,0.18) 72%, rgba(4,12,24,0.42) 100%), url('/images/hero.webp')",
           }}
         >
+          <div className="absolute left-0 right-0 top-5 z-10 lg:top-[124px]">
+            <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-6 text-[13px] text-white/75">
+              <Link href="/#top" className="transition hover:text-[#28c4b7]">Главная</Link>
+              <span>/</span>
+              <span>Фильтровальные рукава</span>
+            </div>
+          </div>
+
           <div className="mx-auto flex min-h-[600px] max-w-[1440px] flex-col items-center justify-start px-4 pb-16 pt-20 sm:min-h-[680px] sm:px-6 sm:pb-20 sm:pt-24 md:pt-28 lg:min-h-[760px] lg:pb-24 lg:pt-40 xl:pt-44">
             <div className="flex w-full max-w-[980px] flex-col items-center gap-6 text-center text-white lg:gap-8">
               <div className="inline-flex rounded-full border border-[#28c7bb]/40 bg-[#28c7bb]/15 px-4 py-1.5 text-[12px] font-semibold text-[#28c7bb] backdrop-blur-[4px] sm:px-7 sm:py-3 sm:text-[15px]">
@@ -215,8 +232,8 @@ export default function FiltracionnyeRukavaPage() {
                 </h3>
 
                 <p className="mt-3 text-[15px] leading-[1.65] text-[#64748b]">
-                  Устойчивы к высоким температурам (до 260°C) и агрессивным
-                  химическим веществам.
+                  Применяются в условиях повышенных температур и химически активных
+                  сред в пределах характеристик конкретного материала.
                 </p>
 
                 <div className="mt-6 flex items-center gap-2 text-[15px] font-semibold text-[#28c7bb]">

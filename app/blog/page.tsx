@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import { pageMetadata } from "@/lib/seo-metadata";
 
@@ -79,6 +80,7 @@ export default function BlogIndexPage() {
   return (
     <>
       <Navigation />
+      <BreadcrumbJsonLd currentName="Статьи" currentPath="/blog/" />
       <FloatingContacts />
 
       <main className="bg-[#f8fafc] pt-[118px] md:pt-[124px]">

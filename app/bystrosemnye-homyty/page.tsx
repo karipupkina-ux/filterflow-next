@@ -1,4 +1,5 @@
 import Navigation from "../components/Navigation";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import Footer from "../components/Footer";
 import ClampOrderForm from "../components/ClampOrderForm";
@@ -377,6 +378,7 @@ export default function Page() {
   return (
     <>
       <Navigation />
+      <BreadcrumbJsonLd currentName="Хомуты для аспирации" currentPath="/bystrosemnye-homyty/" />
 
       <main id="top" className="bg-[#f8fafc]">
         <section className="border-b border-[#e8edf3] bg-white">

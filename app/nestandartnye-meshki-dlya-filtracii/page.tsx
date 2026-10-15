@@ -5,6 +5,8 @@ import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { sendApplicationEmail } from "@/lib/send-email-client";
 import Navigation from "../components/Navigation";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
+import ServiceJsonLd from "../components/ServiceJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import EmailLink from "../components/EmailLink";
@@ -77,6 +79,13 @@ export default function Page() {
   return (
     <>
       <Navigation />
+      <ServiceJsonLd
+        name="Нестандартные фильтровальные мешки"
+        description="Изготовление нестандартных фильтровальных мешков по чертежу, фотографии, образцу или размерам оборудования."
+        path="/nestandartnye-meshki-dlya-filtracii/"
+        serviceType="Изготовление нестандартных фильтровальных изделий"
+      />
+      <BreadcrumbJsonLd currentName="Нестандартные фильтровальные мешки" currentPath="/nestandartnye-meshki-dlya-filtracii/" />
       <FloatingContacts />
 
       <main className="bg-[#f6f7f7]">

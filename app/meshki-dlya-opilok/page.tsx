@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import { pageMetadata } from "@/lib/seo-metadata";
 import EmailLink from "../components/EmailLink";
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = pageMetadata({
 
 const productLinks = [
   { href: "/meshki-dlya-aspiracii/", label: "Мешки для аспирации" },
-  { href: "/filtracionnye-rukava/", label: "Фильтрационные рукава" },
+  { href: "/filtracionnye-rukava/", label: "Фильтровальные рукава" },
   { href: "/meshki-dlya-struzhkootsosa/", label: "Мешки для стружкоотсоса" },
   { href: "/meshki-dlya-ciklonov-i-uvp/", label: "Мешки для циклонов и УВП" },
   {
@@ -49,7 +50,7 @@ const articleLinks = [
 ];
 
 const features = [
-  "Большой объем от 50 до 300 литров",
+  "Объём под задачу и конструкцию оборудования",
   "Прочная ткань с усиленными швами",
   "Удобная система крепления и снятия",
   "Устойчивость к влаге и истиранию",
@@ -154,7 +155,7 @@ const equipmentBullets = [
   },
   {
     strong: "Циклонные установки",
-    text: "мешки диаметром от 300 до 800 мм, высотой до 2000 мм",
+    text: "мешки по размерам патрубка и конкретной установки",
   },
   {
     strong: "Промышленные аспирационные системы",
@@ -165,6 +166,7 @@ const equipmentBullets = [
 export default function Page() {
   return (
     <main id="top" className="min-h-screen bg-[#f6f7f9] text-slate-900">
+      <BreadcrumbJsonLd currentName="Мешки для опилок и стружки" currentPath="/meshki-dlya-opilok/" />
       <style>{`
         details.faq-item > summary::-webkit-details-marker {
           display: none;
@@ -235,7 +237,7 @@ export default function Page() {
 
         <header className="border-b border-[#e9edf3] bg-white shadow-[0_2px_10px_rgba(15,23,42,0.03)]">
           <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-4">
-            <Link href="/" className="flex items-center gap-4">
+            <Link href="/#top" className="flex items-center gap-4">
               <Image
                 src="/images/logo-64.webp"
                 alt="FilterFlow"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../../components/Navigation";
+import BreadcrumbJsonLd from "../../components/BreadcrumbJsonLd";
 import ArticleJsonLd from "../../components/ArticleJsonLd";
 import { pageMetadata } from "@/lib/seo-metadata";
 
@@ -192,6 +193,12 @@ export default function Page() {
         dateModified="2026-09-18"
       />
       <Navigation />
+      <BreadcrumbJsonLd
+        currentName="Как работает аспирация"
+        currentPath="/blog/kak-rabotaet-aspiraciya/"
+        parentName="Статьи"
+        parentPath="/blog/"
+      />
       <main className="bg-[#f8fafc] pb-20 pt-[118px]">
         <article className="mx-auto max-w-6xl px-4 sm:px-6">
           <nav className="text-sm text-[#64748b]">

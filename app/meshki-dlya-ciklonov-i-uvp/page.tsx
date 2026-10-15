@@ -8,6 +8,7 @@ import {
   SEND_EMAIL_USER_ERROR,
 } from "@/lib/send-email-client";
 import Navigation from "../components/Navigation";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import EmailLink from "../components/EmailLink";
@@ -324,6 +325,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
   return (
     <>
       <Navigation />
+      <BreadcrumbJsonLd currentName="Мешки для циклонов и УВП" currentPath="/meshki-dlya-ciklonov-i-uvp/" />
       <main>
 
       <section className="bg-[#f5f3ee] pb-12 pt-[105px] sm:pb-14 lg:pb-20">

@@ -54,7 +54,7 @@ export default function HomePage() {
   return (
     <>
       <Navigation />
-      <main>
+      <main id="top">
         <Hero />
         <Products />
         <TechnologySection />

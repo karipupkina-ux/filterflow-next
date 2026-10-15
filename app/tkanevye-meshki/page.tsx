@@ -8,6 +8,7 @@ import {
   SEND_EMAIL_USER_ERROR,
 } from "@/lib/send-email-client";
 import Navigation from "../components/Navigation";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import EmailLink from "../components/EmailLink";
@@ -85,6 +86,7 @@ export default function TkanevyeMeshkiPage() {
   return (
     <>
       <Navigation />
+      <BreadcrumbJsonLd currentName="Тканевые фильтровальные мешки" currentPath="/tkanevye-meshki/" />
       <main>
 
       <section className="bg-[#f8fafc] pt-[118px] pb-16">

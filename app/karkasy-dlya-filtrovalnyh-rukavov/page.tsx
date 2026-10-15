@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import ServiceJsonLd from "../components/ServiceJsonLd";
 import ProductInquiryForm from "../components/ProductInquiryForm";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import FloatingContacts from "../components/feature/FloatingContacts";
@@ -90,6 +91,12 @@ export default function FilterCagesPage() {
   return (
     <>
       <Navigation />
+      <ServiceJsonLd
+        name="Каркасы для фильтровальных рукавов"
+        description="Подбор и изготовление каркасов для фильтровальных рукавов по размерам, чертежу или техническому заданию."
+        path="/karkasy-dlya-filtrovalnyh-rukavov/"
+        serviceType="Подбор и изготовление каркасов для фильтровальных рукавов"
+      />
       <main id="top" className="bg-white">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
 

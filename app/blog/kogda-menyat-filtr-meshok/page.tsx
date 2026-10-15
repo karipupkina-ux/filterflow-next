@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../../components/Navigation";
+import BreadcrumbJsonLd from "../../components/BreadcrumbJsonLd";
 import ArticleJsonLd from "../../components/ArticleJsonLd";
 import { pageMetadata } from "@/lib/seo-metadata";
 
@@ -42,19 +43,19 @@ const replaceSigns = [
 
 const serviceLife = [
   {
-    period: "6-12 мес",
+    period: "Проверять чаще",
     title: "Интенсивная эксплуатация",
-    text: "Производства с непрерывным циклом работы, большим объёмом пыли и агрессивными условиями среды.",
+    text: "При непрерывной работе, высокой пылевой нагрузке и абразивной среде состояние мешка контролируют чаще.",
   },
   {
-    period: "12-18 мес",
+    period: "По состоянию",
     title: "Средняя эксплуатация",
-    text: "Стандартный режим работы с регулярными перерывами и умеренной нагрузкой на фильтрующую систему.",
+    text: "Ориентируются на перепад давления, производительность системы, состояние ткани и рекомендации производителя оборудования.",
   },
   {
-    period: "18-24 мес",
-    title: "Легкая эксплуатация",
-    text: "Небольшие объёмы работ, периодическое использование и аккуратное соблюдение регламента обслуживания.",
+    period: "Регулярный осмотр",
+    title: "Периодическая эксплуатация",
+    text: "Даже при редкой работе мешок осматривают на повреждения, загрязнение, состояние швов и крепления.",
   },
 ];
 
@@ -80,7 +81,7 @@ const lifetimeCards = [
   },
   {
     title: "Регулярный осмотр",
-    text: "Проводите визуальный контроль минимум 1 раз в месяц, чтобы заранее выявлять износ и предотвращать аварийные остановки.",
+    text: "Проводите визуальный контроль с периодичностью, подходящей вашему режиму работы и рекомендациям производителя оборудования.",
     points: [
       "Проверяйте целостность ткани и швов",
       "Осматривайте зоны крепления на износ",
@@ -218,6 +219,12 @@ export default function Page() {
         dateModified="2026-09-18"
       />
       <Navigation />
+      <BreadcrumbJsonLd
+        currentName="Когда менять фильтровальный мешок"
+        currentPath="/blog/kogda-menyat-filtr-meshok/"
+        parentName="Статьи"
+        parentPath="/blog/"
+      />
       <main className="bg-[#f8fafc] pb-20 pt-[118px]">
         <article className="mx-auto max-w-6xl px-4 sm:px-6">
           <nav

@@ -25,7 +25,7 @@ export default function TechnologySection() {
             </h3>
 
             <p className="mb-8 text-[15px] leading-relaxed text-gray-600 sm:mb-10 sm:text-base">
-              Мы используем передовое швейное оборудование и современные технологии раскроя для производства фильтровальных мешков высочайшего качества. Автоматизированный раскрой ткани обеспечивает точность до миллиметра и минимальные отходы материала, что позволяет нам предлагать конкурентные цены без ущерба для качества.
+              Для пошива используем оборудование, рассчитанное на работу с техническими тканями. Раскрой выполняется по размерам и лекалам изделия с учётом конструкции, припусков и способа крепления, чтобы готовый мешок или рукав соответствовал заданным параметрам.
             </p>
 
             <h3 className="text-xl font-semibold text-[#1F2937] mb-4">
@@ -41,7 +41,7 @@ export default function TechnologySection() {
             </h3>
 
             <p className="mb-8 text-[15px] leading-relaxed text-gray-600 sm:mb-10 sm:text-base">
-              Каждое изделие проходит многоступенчатый контроль качества на всех этапах производства: от входного контроля материалов до финальной проверки готового изделия. Мы проверяем прочность швов, герметичность соединений и соответствие размеров техническому заданию заказчика. Только после прохождения всех этапов контроля продукция отправляется клиенту.
+              Перед отгрузкой проверяем соответствие изделия заданным размерам, конструкции, швам и комплектности. Для нестандартных заказов дополнительно сверяем исполнение с техническим заданием, чертежом или образцом.
             </p>
 
             <p className="text-[15px] leading-relaxed text-gray-600 sm:text-base">
@@ -57,34 +57,34 @@ export default function TechnologySection() {
           <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 items-start">
 
             <div className="rounded-2xl border border-gray-200 bg-[#FAFAFA] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] sm:p-7">
-              <div className="mb-2 text-3xl font-bold text-[#F97316] md:text-4xl">300+</div>
-              <div className="mb-2 font-semibold text-[#111827]">Выполненных проектов</div>
+              <div className="mb-2 text-3xl font-bold text-[#F97316] md:text-4xl">От 1 шт.</div>
+              <div className="mb-2 font-semibold text-[#111827]">Единичные и серийные заказы</div>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Успешно реализованных заказов для предприятий деревообработки, металлообработки и пищевой промышленности
+                Изготавливаем фильтровальные мешки и рукава как единично, так и партиями.
               </p>
             </div>
 
             <div className="rounded-2xl border border-gray-200 bg-[#FAFAFA] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] sm:p-7">
-              <div className="mb-2 text-3xl font-bold text-[#F97316] md:text-4xl">5</div>
-              <div className="mb-2 font-semibold text-[#111827]">Лет на рынке</div>
+              <div className="mb-2 text-3xl font-bold text-[#F97316] md:text-4xl">По ТЗ</div>
+              <div className="mb-2 font-semibold text-[#111827]">Подбор под оборудование</div>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Пять лет производим мешки для аспирации и фильтровальные рукава для промышленных предприятий по всей России
+                Работаем по размерам, чертежу, модели оборудования, фотографии или образцу.
               </p>
             </div>
 
             <div className="rounded-2xl border border-gray-200 bg-[#FAFAFA] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] sm:p-7">
-              <div className="mb-2 text-3xl font-bold text-[#F97316] md:text-4xl">120+</div>
-              <div className="mb-2 font-semibold text-[#111827]">Постоянных клиентов</div>
+              <div className="mb-2 text-3xl font-bold text-[#F97316] md:text-4xl">РФ + СНГ</div>
+              <div className="mb-2 font-semibold text-[#111827]">Отправка заказов</div>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Компании из разных отраслей регулярно заказывают у нас мешки для стружкоотсосов и систем аспирации
+                Организуем отправку готовой продукции транспортными компаниями.
               </p>
             </div>
 
             <div className="rounded-2xl border border-gray-200 bg-[#FAFAFA] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] sm:p-7">
-              <div className="mb-2 text-3xl font-bold text-[#F97316] md:text-4xl">100%</div>
-              <div className="mb-2 font-semibold text-[#111827]">Соблюдение сроков</div>
+              <div className="mb-2 text-3xl font-bold text-[#F97316] md:text-4xl">Комплексно</div>
+              <div className="mb-2 font-semibold text-[#111827]">Фильтры и комплектующие</div>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Чёткое планирование производства и контроль на каждом этапе гарантируют своевременную поставку заказа
+                Подбираем ткани, каркасы, воздушные фильтры, воздуховоды и крепёж под задачу.
               </p>
             </div>
 

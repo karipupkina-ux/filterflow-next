@@ -8,6 +8,7 @@ import {
   SEND_EMAIL_USER_ERROR,
 } from "@/lib/send-email-client";
 import Navigation from "../components/Navigation";
+import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import EmailLink from "../components/EmailLink";
@@ -231,6 +232,7 @@ export default function NizhnieMeshkiPage() {
   return (
     <>
       <Navigation />
+      <BreadcrumbJsonLd currentName="Нижние мешки" currentPath="/nizhnie-meshki/" />
 
       <main className="min-h-screen bg-[#f8fafc]">
         <section className="pt-[118px] pb-16">

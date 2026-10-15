@@ -9,7 +9,7 @@ type MenuKey = "products" | "articles" | null;
 
 const productLinks = [
   { href: "/meshki-dlya-aspiracii/", label: "Мешки для аспирации" },
-  { href: "/filtracionnye-rukava/", label: "Фильтрационные рукава" },
+  { href: "/filtracionnye-rukava/", label: "Фильтровальные рукава" },
   { href: "/filtrovalnye-tkani/", label: "Фильтровальные ткани" },
   { href: "/karkasy-dlya-filtrovalnyh-rukavov/", label: "Каркасы для фильтровальных рукавов" },
   { href: "/filtry-dlya-pokrasochnyh-kamer/", label: "Фильтры для покрасочных камер" },
@@ -50,16 +50,20 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState<MenuKey>(null);
   const [isContactsOpen, setIsContactsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const contactsMenuRef = useRef<HTMLDivElement | null>(null);
 
   const isHome = pathname === "/";
+  const useHeroHeader = isHome && !isScrolled;
 
-  const textColor = isHome ? "text-white" : "text-[#0f172a]";
+  const textColor = useHeroHeader ? "text-white" : "text-[#0f172a]";
   const hoverColor = "hover:text-[#28c4b7]";
-  const topBarClass = isHome
+  const topBarClass = useHeroHeader
     ? "border-b border-white/10 bg-black/25 backdrop-blur-md"
     : "border-b border-[#e8edf3] bg-[#bdbdbd]";
-  const headerBgClass = isHome ? "bg-transparent" : "bg-white shadow-sm";
+  const headerBgClass = useHeroHeader
+    ? "bg-transparent"
+    : "bg-white shadow-sm transition-colors duration-200";
 
   const menuLinkClass = `text-[15px] font-medium transition-colors duration-200 ${textColor} ${hoverColor}`;
   const mobileMenuLinkClass =
@@ -100,6 +104,13 @@ export default function Navigation() {
       body.style.paddingRight = previousBodyPaddingRight;
     };
   }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 48);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -202,7 +213,7 @@ export default function Navigation() {
       <div className={headerBgClass}>
         <div className="mx-auto flex h-[66px] max-w-[1440px] items-center justify-between px-4 sm:h-[78px] sm:px-6">
           {/* Лого */}
-          <Link href="/" className="flex items-center gap-3 sm:gap-4">
+          <Link href="/#top" className="flex items-center gap-3 sm:gap-4" aria-label="FilterFlow — на главную">
             <img
               src="/images/logo-64.webp"
               alt="FilterFlow"
@@ -217,7 +228,7 @@ export default function Navigation() {
 
           {/* Меню */}
           <nav className="hidden items-center gap-10 lg:flex">
-            <Link href="/" className={menuLinkClass}>
+            <Link href="/#top" className={menuLinkClass}>
               Главная
             </Link>
 

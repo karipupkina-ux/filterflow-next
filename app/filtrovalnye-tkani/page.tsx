@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   ...pageMetadata({
     title: "Фильтровальные ткани для рукавов и аспирации — метражом",
     description:
-      "Фильтровальные ткани для рукавов, мешков аспирации и стружкоотсосов: полиэстер, полипропилен, PTFE, PPS, P84, мета-арамид, стекловолокно, FMS, акрил и полиамид. Цена и доступный метраж — по запросу.",
+      "Фильтровальные ткани для рукавов и аспирации: полиэстер, PTFE, PPS, P84, мета-арамид и другие материалы. Продажа метражом и подбор под условия работы.",
     path: "/filtrovalnye-tkani",
     openGraphTitle: "Фильтровальные ткани для промышленной фильтрации | FilterFlow",
   }),
@@ -239,7 +239,7 @@ export default function FilterFabricsPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }}
         />
 
-        <section className="relative overflow-hidden bg-[#0f2341] pt-[112px] text-white sm:pt-[102px] lg:pt-[76px]">
+        <section className="relative overflow-hidden bg-[#0f2341] pt-[124px] text-white sm:pt-[116px] lg:pt-[94px]">
           <div className="absolute inset-0 opacity-20 [background:radial-gradient(circle_at_78%_20%,#2dd4bf_0,transparent_34%)]" />
           <div className="relative mx-auto grid max-w-7xl gap-9 px-5 pb-12 pt-6 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-14">
             <div>

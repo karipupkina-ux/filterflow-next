@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function AboutCompanyPreviewSection() {
     const stats = [
-      { value: "300+", label: "Выполненных проектов" },
-      { value: "5", label: "Лет на рынке" },
-      { value: "120+", label: "Постоянных клиентов" },
-      { value: "100%", label: "Соблюдение сроков" },
+      { value: "От 1 шт.", label: "Пошив фильтровальных изделий" },
+      { value: "По ТЗ", label: "Подбор по размерам и оборудованию" },
+      { value: "РФ + СНГ", label: "Отправка заказов" },
+      { value: "Под ключ", label: "Материалы и комплектующие" },
     ];
   
     return (
