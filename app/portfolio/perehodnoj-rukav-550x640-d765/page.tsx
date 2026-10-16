@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PortfolioCasePage from "../../../components/PortfolioCasePage";
+import PortfolioCasePage from "../../components/PortfolioCasePage";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 const PAGE_TITLE = "Переходной рукав 550×640 → Ø765 мм по чертежу";
