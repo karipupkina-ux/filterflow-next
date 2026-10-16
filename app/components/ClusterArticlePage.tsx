@@ -71,25 +71,27 @@ export default function ClusterArticlePage({
             </ol>
           </nav>
 
-          <header className="mt-6">
-            <h1 className="max-w-5xl text-3xl font-bold leading-[1.1] tracking-[-0.03em] text-[#0f172a] sm:text-4xl lg:text-[52px]">
-              {title}
-            </h1>
-            <p className="mt-5 max-w-4xl text-[16px] leading-[1.75] text-[#475569] sm:text-[18px]">
-              {intro}
-            </p>
-          </header>
+          <header className="mt-6 grid items-center gap-7 rounded-[26px] bg-white p-6 shadow-[0_10px_28px_rgba(15,23,42,0.06)] sm:p-8 lg:grid-cols-[1.45fr_0.55fr] lg:gap-10">
+            <div>
+              <h1 className="max-w-4xl text-3xl font-bold leading-[1.1] tracking-[-0.03em] text-[#0f172a] sm:text-4xl lg:text-[48px]">
+                {title}
+              </h1>
+              <p className="mt-5 max-w-3xl text-[16px] leading-[1.75] text-[#475569] sm:text-[17px]">
+                {intro}
+              </p>
+            </div>
 
-          <div className="relative mt-8 aspect-[16/8.5] overflow-hidden rounded-[24px] bg-white shadow-[0_12px_32px_rgba(15,23,42,0.08)]">
-            <Image
-              src={image}
-              alt={imageAlt}
-              fill
-              sizes="(max-width: 1024px) 100vw, 1152px"
-              className="object-cover"
-              priority
-            />
-          </div>
+            <div className="relative mx-auto aspect-[4/3] w-full max-w-[360px] overflow-hidden rounded-[20px] border border-[#e2e8f0] bg-[#f8fafc]">
+              <Image
+                src={image}
+                alt={imageAlt}
+                fill
+                sizes="(max-width: 1024px) 360px, 32vw"
+                className="object-contain p-3"
+                priority
+              />
+            </div>
+          </header>
 
           <div className="mt-12 space-y-12">
             {sections.map((section) => (
