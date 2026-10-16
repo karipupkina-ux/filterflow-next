@@ -90,7 +90,7 @@ export const SITEMAP_PATH_LAST_MODIFIED: Readonly<Record<string, string>> = {
   "/o-kompanii": "2026-10-14",
   "/blog": "2026-10-16",
   "/filtrovalnye-tkani": "2026-10-15",
-  "/karkasy-dlya-filtrovalnyh-rukavov": "2026-10-15",
+  "/karkasy-dlya-filtrovalnyh-rukavov": "2026-10-16",
   "/filtry-dlya-pokrasochnyh-kamer": "2026-10-16",
   "/karmannye-filtry": "2026-10-16",
   "/kassetnye-filtry": "2026-10-16",
