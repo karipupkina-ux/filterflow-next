@@ -1,5 +1,3 @@
-"use client";
-
 export default function TechnologySection() {
   return (
     <section className="w-full bg-white py-14 md:py-20 lg:py-24">
