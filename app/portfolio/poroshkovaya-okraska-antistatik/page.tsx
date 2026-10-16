@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PortfolioCasePage from "../../../components/PortfolioCasePage";
+import PortfolioCasePage from "../../components/PortfolioCasePage";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 const PAGE_TITLE = "Порошковая окраска: обычный PES 500 или антистатик";
