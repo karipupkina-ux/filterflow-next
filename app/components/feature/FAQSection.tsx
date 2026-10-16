@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import EmailLink from "../EmailLink";
 
 type FaqItem = {
@@ -73,12 +70,6 @@ export default function FAQSection() {
     },
   ];
 
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleItem = (index: number) => {
-    setOpenIndex((prev) => (prev === index ? null : index));
-  };
-
   function renderAnswer(answer: string) {
     if (!answer.includes(emailText)) {
       return answer;
@@ -113,68 +104,38 @@ export default function FAQSection() {
         </div>
 
         <div className="space-y-3">
-          {faqs.map((item, index) => {
-            const isOpen = openIndex === index;
+          {faqs.map((item) => (
+            <details
+              key={item.question}
+              className="group overflow-hidden rounded-[16px] border border-[#e8edf2] bg-white transition open:border-[#9be3db] open:shadow-[0_8px_24px_rgba(15,23,42,0.06)]"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-4 text-left sm:px-5 sm:py-5 md:px-6">
+                <span className="text-[15px] font-medium leading-[1.45] text-[#1f2937] transition sm:text-[17px] md:text-[18px]">
+                  {item.question}
+                </span>
 
-            return (
-              <div
-                key={item.question}
-                className={`overflow-hidden rounded-[16px] border bg-white transition ${
-                  isOpen
-                    ? "border-[#9be3db] shadow-[0_8px_24px_rgba(15,23,42,0.06)]"
-                    : "border-[#e8edf2]"
-                }`}
-              >
-                <button
-                  type="button"
-                  onClick={() => toggleItem(index)}
-                  className="flex w-full items-center justify-between gap-3 px-4 py-4 text-left sm:px-5 sm:py-5 md:px-6"
-                >
-                  <span className="text-[15px] font-medium leading-[1.45] text-[#1f2937] transition sm:text-[17px] md:text-[18px]">
-                    {item.question}
-                  </span>
-
-                  <span
-                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition ${
-                      isOpen
-                        ? "bg-[#23b8ad] text-white"
-                        : "bg-[#f3f6f8] text-slate-400"
-                    }`}
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f3f6f8] text-slate-400 transition group-open:bg-[#23b8ad] group-open:text-white">
+                  <svg
+                    className="h-4 w-4 transition-transform duration-300 group-open:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.4"
+                    viewBox="0 0 24 24"
                   >
-                    <svg
-                      className={`h-4 w-4 transition-transform duration-300 ${
-                        isOpen ? "rotate-180" : "rotate-0"
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.4"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M6 9l6 6 6-6"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 9l6 6 6-6"
+                    />
+                  </svg>
+                </span>
+              </summary>
 
-                <div
-                  className={`grid transition-all duration-300 ease-in-out ${
-                    isOpen
-                      ? "grid-rows-[1fr] opacity-100"
-                      : "grid-rows-[0fr] opacity-0"
-                  }`}
-                >
-                  <div className="overflow-hidden">
-                    <div className="border-t border-[#eef2f5] px-4 pb-4 pt-3 text-[14px] leading-[1.7] text-slate-600 sm:px-5 sm:pb-5 sm:pt-4 sm:text-[15px] md:px-6 md:text-[16px]">
-                      {renderAnswer(item.answer)}
-                    </div>
-                  </div>
-                </div>
+              <div className="border-t border-[#eef2f5] px-4 pb-4 pt-3 text-[14px] leading-[1.7] text-slate-600 sm:px-5 sm:pb-5 sm:pt-4 sm:text-[15px] md:px-6 md:text-[16px]">
+                {renderAnswer(item.answer)}
               </div>
-            );
-          })}
+            </details>
+          ))}
         </div>
 
         <div className="mt-10 text-center">
