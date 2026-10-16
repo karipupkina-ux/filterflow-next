@@ -6,6 +6,7 @@ import ServiceJsonLd from "../components/ServiceJsonLd";
 import ProductInquiryForm from "../components/ProductInquiryForm";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import ProductGuides from "../components/ProductGuides";
+import RequestChecklist from "../components/RequestChecklist";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import { pageMetadata, SITE_URL } from "@/lib/seo-metadata";
 
@@ -187,6 +188,21 @@ export default function FilterCagesPage() {
             </div>
           </div>
         </section>
+
+        <RequestChecklist
+          title="Что прислать для расчёта каркаса"
+          items={[
+            "Форма каркаса: круглая, плоская или фото старого образца",
+            "Длина и наружный диаметр либо ширина и высота",
+            "Количество продольных прутков и диаметр проволоки",
+            "Шаг и количество поперечных колец или перемычек",
+            "Фото верхней и нижней части каркаса",
+            "Нужен ли Вентури и секционное соединение",
+            "Материал или требования к коррозионной стойкости",
+            "Количество каркасов",
+          ]}
+          note="Если точные размеры неизвестны, пришлите несколько фото каркаса с рулеткой, маркировку фильтра и модель оборудования — подскажем, какие размеры нужно снять."
+        />
 
         <section id="zakaz" className="py-14 md:py-20">
           <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-[0.88fr_1.12fr] lg:gap-14">
