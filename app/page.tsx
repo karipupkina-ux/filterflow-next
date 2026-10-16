@@ -8,7 +8,6 @@ import Advantages from "./components/Advantages";
 import ModernProductionSection from "./components/feature/ModernProductionSection";
 import CooperationBenefitsSection from "./components/feature/CooperationBenefitsSection";
 import OurWorksSection from "./components/feature/OurWorksSection";
-import ReviewsSection from "./components/feature/ReviewsSection";
 import AboutCompanyPreviewSection from "./components/feature/AboutCompanyPreviewSection";
 import OrderFormSection from "./components/feature/OrderFormSection";
 import FAQSection from "./components/feature/FAQSection";
@@ -62,7 +61,6 @@ export default function HomePage() {
         <ModernProductionSection />
         <CooperationBenefitsSection />
         <OurWorksSection />
-        <ReviewsSection />
         <AboutCompanyPreviewSection />
         <OrderFormSection />
         <FAQSection />
