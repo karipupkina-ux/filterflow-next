@@ -5,6 +5,7 @@ import Navigation from "../components/Navigation";
 import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import ServiceJsonLd from "../components/ServiceJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
+import CalculationChecklist from "../components/CalculationChecklist";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
@@ -875,6 +876,19 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <CalculationChecklist
+        intro="Для стружкоотсоса особенно важно подтвердить посадочный размер и понять, какой мешок требуется — верхний фильтрующий или нижний для сбора стружки и опилок."
+        href="/kontakty/"
+        items={[
+          { title: "Модель стружкоотсоса", text: "Напишите модель оборудования или пришлите фото шильдика." },
+          { title: "Посадочный диаметр", text: "Лучше измерить фактический патрубок или старый мешок, а не ориентироваться только на название модели." },
+          { title: "Высота мешка", text: "Укажите полную рабочую высоту изделия в миллиметрах." },
+          { title: "Верхний или нижний", text: "Для верхнего важна фильтрация, для нижнего — накопление стружки и удобство выгрузки." },
+          { title: "Тип крепления", text: "Хомут, затяжка, кольцо, петли или другое штатное исполнение." },
+          { title: "Количество", text: "Укажите число мешков и требуется ли комплект верх + низ." },
+        ]}
+      />
 
       {/* Купить / изготовление по размерам */}
       <section className="bg-[#f8fafc] pb-14 md:pb-16">
