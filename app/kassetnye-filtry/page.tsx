@@ -5,6 +5,7 @@ import Navigation from "../components/Navigation";
 import ServiceJsonLd from "../components/ServiceJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import ProductGuides from "../components/ProductGuides";
+import RequestChecklist from "../components/RequestChecklist";
 import ProductInquiryForm from "../components/ProductInquiryForm";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import { pageMetadata, SITE_URL } from "@/lib/seo-metadata";
@@ -311,6 +312,21 @@ export default function CassetteFiltersPage() {
             </div>
           </div>
         </section>
+
+        <RequestChecklist
+          title="Что прислать для расчёта кассетного фильтра"
+          items={[
+            "Ширина кассеты",
+            "Высота кассеты",
+            "Толщина или глубина рамки",
+            "Класс фильтрации или полная маркировка",
+            "Материал и тип рамки, если это важно",
+            "Фото лицевой и боковой стороны старого фильтра",
+            "Модель вентиляционной установки",
+            "Количество фильтров",
+          ]}
+          note="Если на старом фильтре сохранилась маркировка G3, G4, M5, F5, F7 и т. п., пришлите её полностью — она помогает корректно подобрать замену."
+        />
 
         <section id="zakaz" className="bg-[#f8fafc] py-14 md:py-20">
           <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-start lg:gap-14">
