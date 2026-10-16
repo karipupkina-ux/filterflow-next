@@ -5,6 +5,7 @@ import Navigation from "../components/Navigation";
 import ServiceJsonLd from "../components/ServiceJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import ProductGuides from "../components/ProductGuides";
+import RequestChecklist from "../components/RequestChecklist";
 import ProductInquiryForm from "../components/ProductInquiryForm";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import { pageMetadata, SITE_URL } from "@/lib/seo-metadata";
@@ -284,6 +285,21 @@ export default function PocketFiltersPage() {
             </div>
           </div>
         </section>
+
+        <RequestChecklist
+          title="Что прислать для расчёта карманного фильтра"
+          items={[
+            "Ширина рамки A",
+            "Высота рамки B",
+            "Глубина или длина карманов C",
+            "Количество карманов",
+            "Толщина и материал рамки",
+            "Класс фильтрации или маркировка старого фильтра",
+            "Фото старого фильтра и шильдика установки",
+            "Необходимое количество",
+          ]}
+          note="Если фильтр уже снят, лучше измерять именно фактическую рамку, а не проём установки. Фото с рулеткой помогает исключить ошибку в ориентации ширины и высоты."
+        />
 
         <section id="zakaz" className="py-14 md:py-20">
           <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-start lg:gap-14">
