@@ -1,11 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import { Roboto_Slab } from "next/font/google";
-import { useEffect, useState } from "react";
-
-const transitionIn =
-  "transition-[opacity,transform] duration-700 ease-out";
 
 const robotoSlab = Roboto_Slab({
   subsets: ["cyrillic", "latin"],
@@ -14,17 +8,6 @@ const robotoSlab = Roboto_Slab({
 });
 
 export default function Hero() {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), 120);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const enter = visible
-    ? "translate-y-0 opacity-100"
-    : "translate-y-[30px] opacity-0";
-
   return (
     <section className="relative min-h-[500px] w-full overflow-hidden bg-[#9aa8b4] sm:min-h-[580px] lg:min-h-[760px]">
       <Image
@@ -41,7 +24,7 @@ export default function Hero() {
       <div className="relative z-10 flex h-full flex-col px-4 pb-7 pt-[112px] sm:px-6 sm:pb-10 sm:pt-[108px] lg:pt-[120px]">
         <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center text-center">
           <h1
-            className={`${robotoSlab.className} max-w-[1120px] text-[27px] font-extrabold leading-[1.06] tracking-[-0.025em] drop-shadow-[0_2px_5px_rgba(0,0,0,0.55)] sm:text-[36px] md:text-[46px] lg:text-[58px] ${transitionIn} ${enter} delay-0`}
+            className={`${robotoSlab.className} max-w-[1120px] text-[27px] font-extrabold leading-[1.06] tracking-[-0.025em] drop-shadow-[0_2px_5px_rgba(0,0,0,0.55)] sm:text-[36px] md:text-[46px] lg:text-[58px]`}
           >
             <span className="block text-white">
               Фильтровальные мешки, рукава
@@ -62,7 +45,7 @@ export default function Hero() {
           </h1>
 
           <p
-            className={`mt-10 max-w-[980px] text-[14px] leading-[1.5] text-white/90 sm:mt-11 sm:text-[15px] md:mt-12 md:text-[17px] ${transitionIn} ${enter} delay-[150ms]`}
+            className={`mt-10 max-w-[980px] text-[14px] leading-[1.5] text-white/90 sm:mt-11 sm:text-[15px] md:mt-12 md:text-[17px]`}
           >
             Изготавливаем фильтровальные мешки и рукава по стандартным и индивидуальным
             размерам. Поставляем фильтровальные ткани, каркасы для рукавных фильтров,
@@ -72,7 +55,7 @@ export default function Hero() {
             или фотографии.
           </p>
           <div
-            className={`mt-6 flex flex-col items-stretch justify-center gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 ${transitionIn} ${enter} delay-[300ms]`}
+            className={`mt-6 flex flex-col items-stretch justify-center gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4`}
           >
             <a
               href="#contacts"
@@ -91,11 +74,11 @@ export default function Hero() {
         </div>
 
         <div
-          className={`flex justify-center pt-5 sm:pt-6 ${transitionIn} ${enter} delay-[450ms]`}
+          className={`flex justify-center pt-5 sm:pt-6`}
         >
           <a
             href="#catalog"
-            className={`inline-flex text-white ${visible ? "animate-bounce" : ""}`}
+            className="inline-flex animate-bounce text-white"
             aria-label="Прокрутить к каталогу"
           >
             <svg
