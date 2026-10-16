@@ -1,6 +1,7 @@
 import Navigation from "../components/Navigation";
 import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
+import ProductGuides from "../components/ProductGuides";
 import Footer from "../components/Footer";
 import ClampOrderForm from "../components/ClampOrderForm";
 import type { Metadata } from "next";
@@ -1101,6 +1102,18 @@ export default function Page() {
           </div>
         </section>
 
+        <ProductGuides items={[
+          {
+            title: "Как подобрать хомут для аспирационного шланга",
+            href: "/blog/kak-podobrat-homut-dlya-aspiracionnogo-shlanga/",
+            text: "Размер, диапазон зажима, тип замка и правильная фиксация гибкого воздуховода.",
+          },
+          {
+            title: "ПВХ или PUR воздуховод для аспирации",
+            href: "/blog/pvh-ili-pur-vozduhovod/",
+            text: "Как материал шланга влияет на износ и условия эксплуатации.",
+          },
+        ]} />
         <SeeAlsoLinks />
       </main>
 

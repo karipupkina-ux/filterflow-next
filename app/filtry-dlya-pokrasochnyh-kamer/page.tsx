@@ -193,6 +193,21 @@ export default function PaintBoothFiltersPage() {
             href: "/blog/chto-takoe-paint-stop/",
             text: "Как работает напольный стекловолоконный фильтр красочного тумана.",
           },
+          {
+            title: "Потолочный фильтр для покрасочной камеры",
+            href: "/blog/potolochnyj-filtr-pokrasochnoj-kamery/",
+            text: "Как подобрать приточный потолочный материал по камере.",
+          },
+          {
+            title: "Лабиринтный фильтр Andreae",
+            href: "/blog/labirintnyj-filtr-andreae/",
+            text: "Принцип работы картонного фильтра красочного тумана.",
+          },
+          {
+            title: "Кокосовый фильтр для покрасочной камеры",
+            href: "/blog/kokosovyj-filtr-pokrasochnoj-kamery/",
+            text: "Где применяется кокосово-волокнистый фильтрующий материал.",
+          },
         ]} />
         <SeeAlsoLinks excludeHref="/filtry-dlya-pokrasochnyh-kamer/" />
         <FloatingContacts />

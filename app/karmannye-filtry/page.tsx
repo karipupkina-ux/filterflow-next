@@ -331,6 +331,16 @@ export default function PocketFiltersPage() {
           href: "/blog/karmannyj-ili-kassetnyj-filtr/",
           text: "Сравнение конструкции, площади фильтрации и монтажной глубины.",
         },
+        {
+          title: "Как определить размер карманного фильтра",
+          href: "/blog/kak-opredelit-razmer-karmannogo-filtra/",
+          text: "Ширина, высота рамки, длина и количество карманов.",
+        },
+        {
+          title: "Что означают G4, M5, F7 и F9",
+          href: "/blog/klassy-g4-m5-f7-f9/",
+          text: "Как читать старую маркировку и корректно подбирать замену.",
+        },
       ]} />
       <SeeAlsoLinks excludeHref="/karmannye-filtry/" />
       <FloatingContacts />

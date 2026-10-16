@@ -59,6 +59,38 @@ const articleLinks = [
     label: "Как подобрать диаметр воздуховода",
   },
   {
+    href: "/blog/klassy-g4-m5-f7-f9/",
+    label: "Что означают G4, M5, F7 и F9",
+  },
+  {
+    href: "/blog/kak-opredelit-razmer-karmannogo-filtra/",
+    label: "Как определить размер карманного фильтра",
+  },
+  {
+    href: "/blog/kak-podobrat-kassetnyj-filtr/",
+    label: "Как подобрать кассетный фильтр",
+  },
+  {
+    href: "/blog/potolochnyj-filtr-pokrasochnoj-kamery/",
+    label: "Потолочный фильтр покрасочной камеры",
+  },
+  {
+    href: "/blog/labirintnyj-filtr-andreae/",
+    label: "Лабиринтный фильтр Andreae",
+  },
+  {
+    href: "/blog/kokosovyj-filtr-pokrasochnoj-kamery/",
+    label: "Кокосовый фильтр покрасочной камеры",
+  },
+  {
+    href: "/blog/pvh-ili-pur-vozduhovod/",
+    label: "ПВХ или PUR воздуховод",
+  },
+  {
+    href: "/blog/kak-podobrat-homut-dlya-aspiracionnogo-shlanga/",
+    label: "Как подобрать хомут для шланга",
+  },
+  {
     href: "/blog/kak-vybrat-meshok-aspiracii/",
     label: "Как выбрать мешок для аспирации",
   },

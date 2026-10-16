@@ -67,6 +67,14 @@ export const SITEMAP_PATHS: readonly string[] = [
   "/blog/kakie-filtry-nuzhny-dlya-pokrasochnoj-kamery",
   "/blog/chto-takoe-paint-stop",
   "/blog/kak-podobrat-diametr-vozduhovoda-aspiracii",
+  "/blog/klassy-g4-m5-f7-f9",
+  "/blog/kak-opredelit-razmer-karmannogo-filtra",
+  "/blog/kak-podobrat-kassetnyj-filtr",
+  "/blog/potolochnyj-filtr-pokrasochnoj-kamery",
+  "/blog/labirintnyj-filtr-andreae",
+  "/blog/kokosovyj-filtr-pokrasochnoj-kamery",
+  "/blog/pvh-ili-pur-vozduhovod",
+  "/blog/kak-podobrat-homut-dlya-aspiracionnogo-shlanga",
 ];
 
 /**
@@ -80,13 +88,14 @@ export const SITEMAP_LAST_MODIFIED = "2026-09-18";
 export const SITEMAP_PATH_LAST_MODIFIED: Readonly<Record<string, string>> = {
   "/": "2026-10-14",
   "/o-kompanii": "2026-10-14",
-  "/blog": "2026-10-15",
+  "/blog": "2026-10-16",
   "/filtrovalnye-tkani": "2026-10-15",
   "/karkasy-dlya-filtrovalnyh-rukavov": "2026-10-15",
-  "/filtry-dlya-pokrasochnyh-kamer": "2026-10-15",
-  "/karmannye-filtry": "2026-10-15",
-  "/kassetnye-filtry": "2026-10-15",
-  "/vozduhovody-dlya-aspiracii": "2026-10-15",
+  "/filtry-dlya-pokrasochnyh-kamer": "2026-10-16",
+  "/karmannye-filtry": "2026-10-16",
+  "/kassetnye-filtry": "2026-10-16",
+  "/vozduhovody-dlya-aspiracii": "2026-10-16",
+  "/bystrosemnye-homyty": "2026-10-16",
   "/portfolio": "2026-10-16",
   "/portfolio/donaldson-1a31392319-analog": "2026-10-16",
   "/portfolio/perehodnoj-rukav-550x640-d765": "2026-10-16",
@@ -101,6 +110,14 @@ export const SITEMAP_PATH_LAST_MODIFIED: Readonly<Record<string, string>> = {
   "/blog/kakie-filtry-nuzhny-dlya-pokrasochnoj-kamery": "2026-10-15",
   "/blog/chto-takoe-paint-stop": "2026-10-15",
   "/blog/kak-podobrat-diametr-vozduhovoda-aspiracii": "2026-10-15",
+  "/blog/klassy-g4-m5-f7-f9": "2026-10-16",
+  "/blog/kak-opredelit-razmer-karmannogo-filtra": "2026-10-16",
+  "/blog/kak-podobrat-kassetnyj-filtr": "2026-10-16",
+  "/blog/potolochnyj-filtr-pokrasochnoj-kamery": "2026-10-16",
+  "/blog/labirintnyj-filtr-andreae": "2026-10-16",
+  "/blog/kokosovyj-filtr-pokrasochnoj-kamery": "2026-10-16",
+  "/blog/pvh-ili-pur-vozduhovod": "2026-10-16",
+  "/blog/kak-podobrat-homut-dlya-aspiracionnogo-shlanga": "2026-10-16",
 };
 
 /** Страницы, которые существенно обновлены при расширении каталога 01.10.2026. */
