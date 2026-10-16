@@ -358,6 +358,16 @@ export default function CassetteFiltersPage() {
           href: "/blog/karmannyj-ili-kassetnyj-filtr/",
           text: "Когда выбирать компактную кассету, а когда карманную конструкцию.",
         },
+        {
+          title: "Как подобрать кассетный фильтр для вентиляции",
+          href: "/blog/kak-podobrat-kassetnyj-filtr/",
+          text: "Размер рамки, толщина, маркировка и посадочное место.",
+        },
+        {
+          title: "Что означают G4, M5, F7 и F9",
+          href: "/blog/klassy-g4-m5-f7-f9/",
+          text: "Как работать со старой маркировкой воздушных фильтров.",
+        },
       ]} />
       <SeeAlsoLinks excludeHref="/kassetnye-filtry/" />
       <FloatingContacts />
