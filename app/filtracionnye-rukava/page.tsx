@@ -7,6 +7,7 @@ import Navigation from "../components/Navigation";
 import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import ServiceJsonLd from "../components/ServiceJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
+import CalculationChecklist from "../components/CalculationChecklist";
 
 export default function FiltracionnyeRukavaPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -1495,6 +1496,19 @@ export default function FiltracionnyeRukavaPage() {
           </div>
         </div>
       </section>
+
+      <CalculationChecklist
+        intro="Для рукавного фильтра важно согласовать не только размер рукава, но и условия процесса. Эти данные позволяют подобрать материал и конструкцию без универсальных предположений."
+        href="/kontakty/"
+        items={[
+          { title: "Диаметр и длина", text: "Фактические размеры рукава или данные из чертежа оборудования." },
+          { title: "Посадка и крепление", text: "Snap-band, кольцо, манжета, хомут или другое исполнение верхней и нижней части." },
+          { title: "Тип пыли", text: "Древесная, цементная, металлическая, порошковая краска или другой продукт." },
+          { title: "Температура и влажность", text: "Рабочая и пиковая температура, наличие конденсата или влажной среды." },
+          { title: "Регенерация", text: "Импульсная продувка, встряхивание или другой способ очистки рукавов." },
+          { title: "Количество и образец", text: "Число рукавов; при наличии приложите фото, старый образец или маркировку." },
+        ]}
+      />
 
       <SeeAlsoLinks excludeHref="/filtracionnye-rukava/" />
 
