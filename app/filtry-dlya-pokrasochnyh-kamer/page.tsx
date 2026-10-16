@@ -5,6 +5,7 @@ import Navigation from "../components/Navigation";
 import ProductInquiryForm from "../components/ProductInquiryForm";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import ProductGuides from "../components/ProductGuides";
+import RequestChecklist from "../components/RequestChecklist";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import { pageMetadata, SITE_URL } from "@/lib/seo-metadata";
 
@@ -172,6 +173,21 @@ export default function PaintBoothFiltersPage() {
         <section className="py-14 md:py-20">
           <div className="mx-auto max-w-7xl px-5 sm:px-6"><h2 className="text-[32px] font-bold text-[#10233f] md:text-[48px]">Что прислать для подбора</h2><div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{["модель и производитель камеры","место установки: потолок, пол, стенка или водяная ступень","ширина, длина, толщина и количество","фото старого фильтра и маркировка","тип ЛКМ и интенсивность окраски","нужен рулон, мат или готовая заготовка"].map((item)=><div key={item} className="rounded-[18px] border border-[#e2e8f0] bg-[#f8fafc] p-5 text-[15px] leading-[1.65] text-[#475569]"><span className="mr-2 font-bold text-[#149c94]">✓</span>{item}</div>)}</div></div>
         </section>
+
+        <RequestChecklist
+          title="Что прислать для расчёта фильтров покрасочной камеры"
+          items={[
+            "Модель покрасочной или окрасочно-сушильной камеры",
+            "Тип фильтра: потолочный, Paint Stop, лабиринтный или другой",
+            "Размер фильтрующей секции или требуемого полотна",
+            "Фото старого фильтра и места установки",
+            "Маркировка материала, если сохранилась",
+            "Тип ЛКМ или характер красочного тумана",
+            "Нужен рулон, листы или готовые элементы",
+            "Количество или требуемый метраж",
+          ]}
+          note="Если тип фильтра неизвестен, пришлите фото его расположения в камере и размеры секции. Потолочный, напольный и вытяжной материалы выполняют разные задачи и не являются взаимозаменяемыми."
+        />
 
         <section id="zakaz" className="bg-[#f8fafc] py-14 md:py-20">
           <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-[0.88fr_1.12fr] lg:gap-14">
