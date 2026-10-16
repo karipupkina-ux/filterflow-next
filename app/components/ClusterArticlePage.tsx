@@ -81,13 +81,13 @@ export default function ClusterArticlePage({
               </p>
             </div>
 
-            <div className="relative mx-auto aspect-[4/3] w-full max-w-[360px] overflow-hidden rounded-[20px] border border-[#e2e8f0] bg-[#f8fafc]">
+            <div className="relative mx-auto aspect-[4/3] w-full max-w-[360px] overflow-hidden rounded-[20px] border border-[#e2e8f0] bg-white">
               <Image
                 src={image}
                 alt={imageAlt}
                 fill
                 sizes="(max-width: 1024px) 360px, 32vw"
-                className="object-contain p-3"
+                className="object-cover"
                 priority
               />
             </div>
