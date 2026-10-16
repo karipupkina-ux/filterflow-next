@@ -2,6 +2,7 @@ import Navigation from "../components/Navigation";
 import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import ProductGuides from "../components/ProductGuides";
+import RequestChecklist from "../components/RequestChecklist";
 import Footer from "../components/Footer";
 import ClampOrderForm from "../components/ClampOrderForm";
 import type { Metadata } from "next";
@@ -934,6 +935,21 @@ export default function Page() {
             </div>
           </div>
         </section>
+
+        <RequestChecklist
+          title="Что прислать для расчёта хомута"
+          items={[
+            "Наружный диаметр мешка, рукава или шланга в месте крепления",
+            "Диаметр патрубка или посадочного узла",
+            "Тип хомута: быстросъёмный, стяжной или червячный",
+            "Фото существующего крепления или узла",
+            "Ширина ленты, если она известна",
+            "Материал: оцинкованная или нержавеющая сталь",
+            "Условия работы: влага, температура, коррозионная среда",
+            "Необходимое количество",
+          ]}
+          note="Для нестандартного большого диаметра лучше приложить фото соединения и указать, как часто хомут должен сниматься — это влияет на выбор типа замка."
+        />
 
         <section id="order-clamps" className="px-6 pb-24 md:pb-28">
           <div className="mx-auto max-w-[1280px]">
