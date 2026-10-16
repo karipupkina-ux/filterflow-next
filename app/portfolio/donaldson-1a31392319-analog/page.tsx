@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PortfolioCasePage from "../../../components/PortfolioCasePage";
+import PortfolioCasePage from "../../components/PortfolioCasePage";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 const PAGE_TITLE = "Аналог Donaldson 1A31392319 1.5M — подбор на 50 шт.";
