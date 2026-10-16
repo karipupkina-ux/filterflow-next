@@ -11,53 +11,52 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 
 type CaseStudy = {
   title: string;
-  category: string;
-  status: string;
   href: string;
-  task: string;
+  status: string;
   summary: string;
+  image: string;
 };
 
 const CASES: CaseStudy[] = [
   {
     title: "Аналог Donaldson 1A31392319 1.5M — подбор на 50 шт.",
-    category: "Импортозамещение и подбор аналога",
-    status: "Технический подбор",
     href: "/portfolio/donaldson-1a31392319-analog/",
-    task: "Подготовить технически корректный аналог импортного фильтрующего элемента на партию 50 шт.",
-    summary: "Разобрали геометрию, материал оригинала и перечень параметров, которые нужно подтвердить перед изготовлением аналога.",
+    status: "Технический подбор аналога",
+    summary:
+      "Разбор референса Donaldson, проверка геометрии и материала оригинала и перечень параметров, которые нужно подтвердить перед изготовлением.",
+    image: "/images/nashi-raboti/filter_sleeves_hero.webp",
   },
   {
-    title: "Переходной рукав 550×640 → Ø765 мм",
-    category: "Нестандартное изделие по размерам",
-    status: "Согласованная конструкция",
+    title: "Мешки для КОНСАР-2000 — выполненный заказ",
+    href: "/portfolio/konsar-2000-meshki/",
+    status: "Выполненный заказ",
+    summary:
+      "Комплект из двух нижних накопительных мешков и одного верхнего фильтровального мешка высотой 1000 мм с уплотнением под штатный хомут.",
+    image: "/images/nashi-raboti/meshki-struzhkootsosa.webp",
+  },
+  {
+    title: "Переходной рукав 550×640 → Ø765 мм по чертежу",
     href: "/portfolio/perehodnoj-rukav-550x640-d765/",
-    task: "Соединить прямоугольное и круглое присоединение одним гибким переходным элементом.",
-    summary: "Согласована геометрия перехода, длина 1140 мм и технологические юбки по 40 мм с обеих сторон.",
+    status: "Согласованная нестандартная конструкция",
+    summary:
+      "Переходное тканевое изделие от прямоугольного сечения к круглому, длиной 1140 мм и с юбками по 40 мм.",
+    image: "/images/nashi-raboti/nestandartnye-meshki.webp",
   },
   {
-    title: "Фильтры G2 560×150 мм — пробная партия",
-    category: "Фильтры по индивидуальным размерам",
-    status: "Запрос и расчёт",
+    title: "Фильтры G2 560×150 мм — пробный расчёт на 2 шт.",
     href: "/portfolio/filtry-g2-560x150/",
-    task: "Рассчитать два пробных многоразовых фильтра для действующей установки со строительной пылью.",
-    summary: "Зафиксированы размер 560×150 мм, нетканый полиэстер 400 г/м², класс G2 и крепление хомутом.",
+    status: "Запрос и расчёт пробной партии",
+    summary:
+      "Два многоразовых фильтра из нетканого полиэстера 400 г/м² с креплением хомутом для проверки посадки на действующей установке.",
+    image: "/images/nashi-raboti/filter_bag_white.webp",
   },
   {
     title: "Порошковая окраска: PES 500 или антистатик",
-    category: "Подбор фильтровального материала",
-    status: "Техническая консультация",
     href: "/portfolio/poroshkovaya-okraska-antistatik/",
-    task: "Определить, допустим ли обычный полиэстер для аспирации порошковой краски.",
-    summary: "Разобрали, когда нужен антистатический материал и какие данные по процессу и заземлению необходимо учитывать.",
-  },
-  {
-    title: "Комплект мешков для КОНСАР-2000",
-    category: "Мешки для аспирационной установки",
-    status: "Выполненный заказ",
-    href: "/portfolio/konsar-2000-meshki/",
-    task: "Изготовить комплект мешков высотой 1000 мм под существующую установку.",
-    summary: "Изготовлены и поставлены два нижних накопительных мешка и один верхний фильтровальный мешок без петель, с уплотнением под хомут.",
+    status: "Техническая консультация",
+    summary:
+      "Разбор необходимости антистатического фильтровального материала для аспирации порошковой краски и факторов безопасности.",
+    image: "/images/filter-fabrics/полиэстер антистатик с пропиткой масловодооталкивмбшей.webp",
   },
 ];
 
@@ -68,9 +67,9 @@ function PortfolioClientCasesBlock() {
         <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0f172a] md:text-[36px] lg:text-[40px]">
           Кейсы подбора и изготовления FilterFlow
         </h2>
-        <p className="mx-auto mt-4 max-w-[760px] text-center text-[15px] leading-[1.65] text-[#64748b] md:text-[16px] md:leading-[1.7]">
-          Реальные задачи из работы FilterFlow: выполненные заказы, нестандартные конструкции,
-          технические подборы и расчёты. Для каждого кейса указан фактический статус.
+        <p className="mx-auto mt-4 max-w-[780px] text-center text-[15px] leading-[1.65] text-[#64748b] md:text-[16px] md:leading-[1.7]">
+          Реальные задачи из практики: выполненные заказы, нестандартные конструкции,
+          подбор аналогов и технические консультации. Статус каждого кейса указан отдельно.
         </p>
 
         <div className="mx-auto mt-10 grid max-w-[1120px] gap-5 md:mt-12 md:grid-cols-2">
@@ -78,25 +77,31 @@ function PortfolioClientCasesBlock() {
             <Link
               key={item.href}
               href={item.href}
-              className="group rounded-[24px] border border-slate-200 bg-white p-7 shadow-[0_4px_20px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-0.5 hover:border-[#9fded7] hover:shadow-[0_16px_40px_rgba(15,23,42,0.09)]"
+              className="group overflow-hidden rounded-[24px] border border-[#e2e8f0] bg-white shadow-[0_6px_22px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:border-[#a7e5de] hover:shadow-[0_16px_40px_rgba(15,23,42,0.10)]"
             >
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="rounded-full bg-[#e8f8f6] px-3 py-1 text-[12px] font-semibold text-[#0a8d85]">
+              <div className="relative h-[220px] overflow-hidden bg-[#eef1f4]">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-contain p-4 transition duration-500 group-hover:scale-[1.03]"
+                />
+              </div>
+              <div className="p-6">
+                <span className="inline-flex rounded-full bg-[#ecf8f5] px-3 py-1.5 text-[12px] font-semibold text-[#0d9488]">
                   {item.status}
                 </span>
-                <span className="text-[13px] text-[#64748b]">{item.category}</span>
+                <h3 className="mt-4 text-[20px] font-bold leading-[1.3] text-[#0f172a] md:text-[22px]">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-[14px] leading-[1.7] text-[#64748b] md:text-[15px]">
+                  {item.summary}
+                </p>
+                <span className="mt-5 inline-flex text-[14px] font-semibold text-[#0aa79d]">
+                  Открыть кейс →
+                </span>
               </div>
-              <h3 className="mt-4 text-[21px] font-bold leading-[1.3] text-[#0f172a] transition group-hover:text-[#0a8d85]">
-                {item.title}
-              </h3>
-              <p className="mt-4 text-[14px] leading-[1.7] text-[#475569]">
-                <span className="font-semibold text-[#334155]">Задача: </span>
-                {item.task}
-              </p>
-              <p className="mt-3 text-[14px] leading-[1.7] text-[#64748b]">{item.summary}</p>
-              <span className="mt-5 inline-flex text-[14px] font-semibold text-[#0aa79d]">
-                Смотреть кейс →
-              </span>
             </Link>
           ))}
         </div>
