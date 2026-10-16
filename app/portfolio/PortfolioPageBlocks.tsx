@@ -12,190 +12,92 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 type CaseStudy = {
   title: string;
   category: string;
-  categoryClassName: string;
+  status: string;
+  href: string;
   task: string;
-  solution: string;
-  result: string;
+  summary: string;
 };
 
 const CASES: CaseStudy[] = [
   {
-    title: "Модернизация системы аспирации на мебельной фабрике",
-    category: "Деревообрабатывающая промышленность",
-    categoryClassName: "text-[#14b8a6]",
-    task: "Старая система фильтрации не справлялась с объемом древесной пыли, что приводило к загрязнению цеха и снижению производительности.",
-    solution:
-      "Установили 12 верхних мешков-фильтров из полиэстера с антистатической обработкой и 8 нижних пылесборников увеличенного объёма — типовое решение для деревообрабатывающей аспирации.",
-    result:
-      "Эффективность пылеулавливания и очистки воздуха выросла до 99,5%, производительность цеха — на 15%, срок службы фильтровальных мешков удвоился.",
+    title: "Аналог Donaldson 1A31392319 1.5M — подбор на 50 шт.",
+    category: "Импортозамещение и подбор аналога",
+    status: "Технический подбор",
+    href: "/portfolio/donaldson-1a31392319-analog/",
+    task: "Подготовить технически корректный аналог импортного фильтрующего элемента на партию 50 шт.",
+    summary: "Разобрали геометрию, материал оригинала и перечень параметров, которые нужно подтвердить перед изготовлением аналога.",
   },
   {
-    title: "Комплексная система фильтрации для металлообрабатывающего завода",
-    category: "Металлообработка",
-    categoryClassName: "text-[#14b8a6]",
-    task: "Высокая концентрация металлической стружки и абразивной пыли выводила из строя стандартные фильтры и нарушала нормы охраны труда.",
-    solution:
-      "Смонтировали рукавные фильтры и фильтровальные рукава из износостойкого полиэстера, верхние мешки для УВП с увеличенной площадью фильтрации.",
-    result:
-      "Снижение выбросов до ПДК, стабильная работа промышленной аспирации, межсервисный интервал вырос примерно на 40%.",
+    title: "Переходной рукав 550×640 → Ø765 мм",
+    category: "Нестандартное изделие по размерам",
+    status: "Согласованная конструкция",
+    href: "/portfolio/perehodnoj-rukav-550x640-d765/",
+    task: "Соединить прямоугольное и круглое присоединение одним гибким переходным элементом.",
+    summary: "Согласована геометрия перехода, длина 1140 мм и технологические юбки по 40 мм с обеих сторон.",
   },
   {
-    title: "Фильтрация для пищевого производства",
-    category: "Пищевая промышленность",
-    categoryClassName: "text-[#10b981]",
-    task: "Требовались фильтры, соответствующие санитарным нормам пищевой промышленности для очистки воздуха от мучной пыли.",
-    solution:
-      "Изготовили на заказ фильтровальные рукава из пищевого полиэстера с гладкой поверхностью для лёгкой мойки и санитарных норм.",
-    result:
-      "Получено разрешение Роспотребнадзора, концентрация пыли снижена до нормативных значений, простота обслуживания системы.",
+    title: "Фильтры G2 560×150 мм — пробная партия",
+    category: "Фильтры по индивидуальным размерам",
+    status: "Запрос и расчёт",
+    href: "/portfolio/filtry-g2-560x150/",
+    task: "Рассчитать два пробных многоразовых фильтра для действующей установки со строительной пылью.",
+    summary: "Зафиксированы размер 560×150 мм, нетканый полиэстер 400 г/м², класс G2 и крепление хомутом.",
+  },
+  {
+    title: "Порошковая окраска: PES 500 или антистатик",
+    category: "Подбор фильтровального материала",
+    status: "Техническая консультация",
+    href: "/portfolio/poroshkovaya-okraska-antistatik/",
+    task: "Определить, допустим ли обычный полиэстер для аспирации порошковой краски.",
+    summary: "Разобрали, когда нужен антистатический материал и какие данные по процессу и заземлению необходимо учитывать.",
+  },
+  {
+    title: "Комплект мешков для КОНСАР-2000",
+    category: "Мешки для аспирационной установки",
+    status: "Выполненный заказ",
+    href: "/portfolio/konsar-2000-meshki/",
+    task: "Изготовить комплект мешков высотой 1000 мм под существующую установку.",
+    summary: "Изготовлены и поставлены два нижних накопительных мешка и один верхний фильтровальный мешок без петель, с уплотнением под хомут.",
   },
 ];
-
-function CasesBriefcaseIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.75"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden
-    >
-      <rect x="3" y="7" width="18" height="13" rx="2" />
-      <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-      <path d="M12 12v.01" />
-    </svg>
-  );
-}
-
-function CasesTaskIcon() {
-  return (
-    <div
-      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#fee2e2]"
-      aria-hidden
-    >
-      <span className="text-[17px] font-bold leading-none text-[#dc2626]">
-        !
-      </span>
-    </div>
-  );
-}
-
-function CasesSolutionIcon() {
-  return (
-    <div
-      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#dbeafe]"
-      aria-hidden
-    >
-      <svg
-        className="h-[19px] w-[19px] text-[#2563eb]"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M9 21h6M12 3a4 4 0 0 0-4 4c0 2 1.5 3.5 2 5h4c.5-1.5 2-3 2-5a4 4 0 0 0-4-4Z" />
-        <path d="M10 14h4" />
-      </svg>
-    </div>
-  );
-}
-
-function CasesResultIcon() {
-  return (
-    <div
-      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#d1fae5]"
-      aria-hidden
-    >
-      <svg
-        className="h-[18px] w-[18px] text-[#059669]"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M5 13l4 4L19 7" />
-      </svg>
-    </div>
-  );
-}
 
 function PortfolioClientCasesBlock() {
   return (
     <section className="border-b border-slate-200/80 bg-[#f9fafb] pb-14 pt-10 md:pb-20 md:pt-14">
       <div className="mx-auto max-w-[1200px] px-6 md:px-8">
         <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0f172a] md:text-[36px] lg:text-[40px]">
-          Реализованные проекты FilterFlow — кейсы клиентов
+          Кейсы подбора и изготовления FilterFlow
         </h2>
-        <p className="mx-auto mt-4 max-w-[720px] text-center text-[15px] leading-[1.65] text-[#64748b] md:text-[16px] md:leading-[1.7]">
-          Решения для пылеулавливания: мешки и рукава на заказ для
-          деревообработки, металла и пищевой отрасли.
+        <p className="mx-auto mt-4 max-w-[760px] text-center text-[15px] leading-[1.65] text-[#64748b] md:text-[16px] md:leading-[1.7]">
+          Реальные задачи из работы FilterFlow: выполненные заказы, нестандартные конструкции,
+          технические подборы и расчёты. Для каждого кейса указан фактический статус.
         </p>
 
-        <div className="mx-auto mt-10 max-w-[1120px] space-y-8 md:mt-12 md:space-y-10">
+        <div className="mx-auto mt-10 grid max-w-[1120px] gap-5 md:mt-12 md:grid-cols-2">
           {CASES.map((item) => (
-            <article
-              key={item.title}
-              className="rounded-[24px] bg-white p-9 shadow-[0_4px_24px_rgba(15,23,42,0.07)] transition-[box-shadow,transform] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_48px_rgba(15,23,42,0.11)] md:p-11 lg:p-12"
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group rounded-[24px] border border-slate-200 bg-white p-7 shadow-[0_4px_20px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-0.5 hover:border-[#9fded7] hover:shadow-[0_16px_40px_rgba(15,23,42,0.09)]"
             >
-              <header className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
-                <div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[14px] bg-[#e6f7f5] md:h-14 md:w-14 md:rounded-2xl">
-                  <CasesBriefcaseIcon className="h-6 w-6 text-[#0d9488] md:h-7 md:w-7" />
-                </div>
-                <div className="min-w-0 flex-1 pt-0.5">
-                  <h3 className="text-[20px] font-bold leading-snug text-[#0f172a] md:text-[22px] lg:text-[24px]">
-                    {item.title}
-                  </h3>
-                  <p
-                    className={`mt-2 text-[14px] font-medium leading-snug md:text-[15px] ${item.categoryClassName}`}
-                  >
-                    {item.category}
-                  </p>
-                </div>
-              </header>
-
-              <div className="mt-9 grid gap-10 border-t border-slate-100 pt-9 md:mt-10 md:grid-cols-3 md:gap-12 md:pt-10 lg:gap-14">
-                <div>
-                  <div className="mb-3 flex items-center gap-3">
-                    <CasesTaskIcon />
-                    <h4 className="text-[15px] font-bold text-[#0f172a] md:text-[16px]">
-                      Задача
-                    </h4>
-                  </div>
-                  <p className="text-[14px] leading-[1.7] text-[#475569] md:text-[15px] md:leading-[1.75]">
-                    {item.task}
-                  </p>
-                </div>
-                <div>
-                  <div className="mb-3 flex items-center gap-3">
-                    <CasesSolutionIcon />
-                    <h4 className="text-[15px] font-bold text-[#0f172a] md:text-[16px]">
-                      Решение
-                    </h4>
-                  </div>
-                  <p className="text-[14px] leading-[1.7] text-[#475569] md:text-[15px] md:leading-[1.75]">
-                    {item.solution}
-                  </p>
-                </div>
-                <div>
-                  <div className="mb-3 flex items-center gap-3">
-                    <CasesResultIcon />
-                    <h4 className="text-[15px] font-bold text-[#0f172a] md:text-[16px]">
-                      Результат
-                    </h4>
-                  </div>
-                  <p className="text-[14px] leading-[1.7] text-[#475569] md:text-[15px] md:leading-[1.75]">
-                    {item.result}
-                  </p>
-                </div>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded-full bg-[#e8f8f6] px-3 py-1 text-[12px] font-semibold text-[#0a8d85]">
+                  {item.status}
+                </span>
+                <span className="text-[13px] text-[#64748b]">{item.category}</span>
               </div>
-            </article>
+              <h3 className="mt-4 text-[21px] font-bold leading-[1.3] text-[#0f172a] transition group-hover:text-[#0a8d85]">
+                {item.title}
+              </h3>
+              <p className="mt-4 text-[14px] leading-[1.7] text-[#475569]">
+                <span className="font-semibold text-[#334155]">Задача: </span>
+                {item.task}
+              </p>
+              <p className="mt-3 text-[14px] leading-[1.7] text-[#64748b]">{item.summary}</p>
+              <span className="mt-5 inline-flex text-[14px] font-semibold text-[#0aa79d]">
+                Смотреть кейс →
+              </span>
+            </Link>
           ))}
         </div>
       </div>
