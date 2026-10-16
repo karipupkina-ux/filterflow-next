@@ -362,12 +362,19 @@ export default function FilterFabricsPage() {
               <div>
                 <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-[#149c94]">Подбор материала</p>
                 <h2 className="mt-3 text-[32px] font-bold leading-[1.12] text-[#10233f] md:text-[48px]">
-                  Что сообщить для правильного подбора
+                  Что нужно прислать для расчёта и подбора
                 </h2>
                 <p className="mt-5 text-[16px] leading-[1.8] text-[#475569]">
-                  Чем точнее исходные данные, тем меньше риск выбрать материал,
-                  который быстро потеряет свойства в конкретной установке.
+                  Для цены и корректного подбора достаточно описать условия работы и нужный объём.
+                  Если марка материала неизвестна, отправьте фото старой ткани или фильтрующего элемента.
                 </p>
+              <a
+                href="#zakaz"
+                className="mt-6 inline-flex min-h-[50px] items-center justify-center rounded-[14px] bg-[#149c94] px-7 text-[15px] font-semibold text-white transition hover:bg-[#118b84]"
+              >
+                Отправить параметры
+                <span className="ml-2 text-[18px] leading-none">→</span>
+              </a>
               </div>
               <div className="overflow-hidden rounded-[20px] border border-[#dfe6ec] bg-white">
                 {selectionFactors.map(([name, value], index) => (

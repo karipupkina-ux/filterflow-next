@@ -6,6 +6,7 @@ import Navigation from "../components/Navigation";
 import BreadcrumbJsonLd from "../components/BreadcrumbJsonLd";
 import ServiceJsonLd from "../components/ServiceJsonLd";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
+import CalculationChecklist from "../components/CalculationChecklist";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
@@ -1108,6 +1109,20 @@ export default function Page() {
           </p>
         </div>
       </section>
+
+      <CalculationChecklist
+        intro="Чтобы рассчитать стоимость без лишних уточнений, пришлите основные размеры и данные по оборудованию. Если часть параметров неизвестна, достаточно фото старого мешка, патрубка или шильдика установки."
+        href="#zakaz-meshki-form"
+        buttonLabel="Перейти к расчёту"
+        items={[
+          { title: "Тип мешка", text: "Укажите, нужен верхний фильтровальный, нижний накопительный мешок или комплект." },
+          { title: "Размеры", text: "Диаметр или ширина/высота посадки, а также рабочая высота мешка." },
+          { title: "Крепление", text: "Хомут, кольцо, резинка, фланец или другое исполнение. Фото крепления очень помогает." },
+          { title: "Оборудование", text: "Модель аспирационной установки, циклона, УВП или станка, если она известна." },
+          { title: "Материал и пыль", text: "Тип пыли, температура и материал старого мешка, если эти данные есть." },
+          { title: "Количество", text: "Количество мешков или комплектов, которое требуется изготовить." },
+        ]}
+      />
 
       {/* ЗЕЛЕНЫЙ БЛОК ЗАЯВКИ */}
       <section
