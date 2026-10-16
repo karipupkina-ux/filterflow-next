@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navigation from "../components/Navigation";
 import SeeAlsoLinks from "../components/SeeAlsoLinks";
 import ProductGuides from "../components/ProductGuides";
+import RequestChecklist from "../components/RequestChecklist";
 import ProductInquiryForm from "../components/ProductInquiryForm";
 import FloatingContacts from "../components/feature/FloatingContacts";
 import { pageMetadata, SITE_URL } from "@/lib/seo-metadata";
@@ -354,6 +355,21 @@ export default function AirDuctsPage() {
             </div>
           </div>
         </section>
+
+        <RequestChecklist
+          title="Что прислать для расчёта воздуховода"
+          items={[
+            "Внутренний или посадочный диаметр патрубка",
+            "Требуемая длина гибкого участка",
+            "Что транспортируется: пыль, опилки, стружка или другой материал",
+            "Температура воздуха и продукта",
+            "Есть ли абразивная нагрузка",
+            "Нужно ли антистатическое исполнение",
+            "Количество шлангов или общая длина",
+            "Фото патрубка и старого воздуховода, если он есть",
+          ]}
+          note="Если известна только модель станка или стружкоотсоса, пришлите её вместе с фото патрубка — это поможет быстрее определить подходящий диаметр и тип шланга."
+        />
 
         <section id="zakaz" className="bg-[#f8fafc] py-14 md:py-20">
           <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-start lg:gap-14">
