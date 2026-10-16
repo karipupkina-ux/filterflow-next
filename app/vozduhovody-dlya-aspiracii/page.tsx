@@ -397,6 +397,16 @@ export default function AirDuctsPage() {
           href: "/blog/kak-podobrat-diametr-vozduhovoda-aspiracii/",
           text: "Расход воздуха, сопротивление, длина трассы и риск оседания стружки.",
         },
+        {
+          title: "ПВХ или PUR воздуховод для аспирации",
+          href: "/blog/pvh-ili-pur-vozduhovod/",
+          text: "Как выбрать материал шланга под пыль, стружку и абразивную нагрузку.",
+        },
+        {
+          title: "Как подобрать хомут для аспирационного шланга",
+          href: "/blog/kak-podobrat-homut-dlya-aspiracionnogo-shlanga/",
+          text: "Наружный диаметр, тип замка и условия эксплуатации соединения.",
+        },
       ]} />
       <SeeAlsoLinks excludeHref="/vozduhovody-dlya-aspiracii/" />
       <FloatingContacts />
