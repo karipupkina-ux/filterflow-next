@@ -35,7 +35,7 @@ export default function ContactsSection() {
                   +7 951 499-25-76
                 </div>
                 <div className="text-[14px] leading-[1.55] text-[#667085]">
-                  Прием звонков 24/7
+                  Телефон для связи и консультации
                 </div>
               </div>
             </a>
@@ -56,7 +56,7 @@ export default function ContactsSection() {
                   filterflow@mail.ru
                 </div>
                 <div className="text-[14px] leading-[1.55] text-[#667085]">
-                  Отвечаем быстро
+                  Запросы и технические вопросы
                 </div>
               </div>
             </EmailLink>
