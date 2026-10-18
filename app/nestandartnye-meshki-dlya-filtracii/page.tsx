@@ -642,25 +642,25 @@ export default function Page() {
               <div className="grid gap-4 md:grid-cols-3">
                 <div className="rounded-[18px] bg-white/10 px-5 py-5 backdrop-blur-[1px]">
                   <div className="mb-2 text-[34px] font-semibold leading-none text-white sm:text-[38px]">
-                    -40°C до +150°C
+                    По материалу
                   </div>
                   <p className="text-[15px] leading-[1.45] text-white/85">
-                    Диапазон температур
+                    Рабочая температура
                   </p>
                 </div>
 
                 <div className="rounded-[18px] bg-white/10 px-5 py-5 backdrop-blur-[1px]">
                   <div className="mb-2 text-[34px] font-semibold leading-none text-white sm:text-[38px]">
-                    99.9%
+                    По задаче
                   </div>
                   <p className="text-[15px] leading-[1.45] text-white/85">
-                    Эффективность фильтрации
+                    Степень фильтрации
                   </p>
                 </div>
 
                 <div className="rounded-[18px] bg-white/10 px-5 py-5 backdrop-blur-[1px]">
                   <div className="mb-2 text-[34px] font-semibold leading-none text-white sm:text-[38px]">
-                    От 1 дня
+                    По согласованию
                   </div>
                   <p className="text-[15px] leading-[1.45] text-white/85">
                     Срок изготовления
@@ -1261,7 +1261,7 @@ export default function Page() {
 
             <p className="mx-auto mb-10 max-w-[860px] text-[16px] leading-[1.7] text-white/95 sm:text-[17px]">
               Свяжитесь с нами для консультации. Наши специалисты помогут
-              подобрать оптимальное решение для вашего оборудования и рассчитают
+              подобрать подходящее решение для вашего оборудования и рассчитают
               стоимость изготовления.
             </p>
 
