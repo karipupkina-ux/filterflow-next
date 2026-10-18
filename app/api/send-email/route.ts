@@ -22,6 +22,14 @@ const RATE_LIMIT_WINDOW_MS = 60_000;
 const RATE_LIMIT_MAX_REQUESTS = 5;
 const rateLimitStore = new Map<string, number[]>();
 
+const MAX_NAME_LENGTH = 120;
+const MAX_EMAIL_LENGTH = 254;
+const MAX_PHONE_LENGTH = 80;
+const MAX_MESSAGE_LENGTH = 5_000;
+const MAX_REQUEST_BYTES = 16_384;
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const USER_ERROR =
   "Не удалось отправить заявку. Попробуйте позже или свяжитесь с нами по телефону.";
 
@@ -164,6 +172,14 @@ export async function POST(request: Request) {
       receiver: RECEIVER_EMAIL,
     });
 
+    const contentLength = Number(request.headers.get("content-length") ?? 0);
+    if (Number.isFinite(contentLength) && contentLength > MAX_REQUEST_BYTES) {
+      return NextResponse.json(
+        { error: "Слишком большой объём данных формы." },
+        { status: 413 }
+      );
+    }
+
     let body: unknown;
     try {
       body = await request.json();
@@ -208,6 +224,32 @@ export async function POST(request: Request) {
       });
       return NextResponse.json(
         { error: "Заполните имя, email и сообщение." },
+        { status: 400 }
+      );
+    }
+
+    if (
+      name.length > MAX_NAME_LENGTH ||
+      email.length > MAX_EMAIL_LENGTH ||
+      phone.length > MAX_PHONE_LENGTH ||
+      message.length > MAX_MESSAGE_LENGTH
+    ) {
+      console.warn("[send-email] field length validation failed", {
+        nameLength: name.length,
+        emailLength: email.length,
+        phoneLength: phone.length,
+        messageLength: message.length,
+      });
+      return NextResponse.json(
+        { error: "Проверьте длину заполненных полей." },
+        { status: 400 }
+      );
+    }
+
+    if (!EMAIL_PATTERN.test(email)) {
+      console.warn("[send-email] invalid email format");
+      return NextResponse.json(
+        { error: "Укажите корректный email." },
         { status: 400 }
       );
     }
