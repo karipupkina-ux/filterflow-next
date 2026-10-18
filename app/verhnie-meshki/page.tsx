@@ -400,7 +400,7 @@ export default function VerhnieMeshkiPage() {
     {
       question: "Какой срок службы верхнего мешка для аспирации?",
       answer:
-        "При аккуратной эксплуатации и своевременной очистке верхний мешок обычно служит около 2–3 лет. На срок влияют пыль древесины, влажность и режим работы оборудования.",
+        "Срок службы верхнего мешка зависит от материала, типа пыли, влажности, нагрузки и способа очистки. Менять мешок стоит при повреждении ткани или швов, росте сопротивления либо заметном ухудшении работы системы.",
     },
     {
       question: "Можно ли заказать нестандартный размер верхнего мешка?",
@@ -561,7 +561,7 @@ export default function VerhnieMeshkiPage() {
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-orange-100 text-[22px] text-orange-500">🔥</div>
               <h3 className="mb-3 text-[18px] font-semibold leading-snug text-[#0f172a]">Термостойкость</h3>
               <p className="text-[15px] leading-8 text-[#475569]">
-                Выдерживает температуру до 150°C без потери фильтрующих свойств и
+                Рабочая температура зависит от выбранного материала и его технического паспорта, а
                 прочности.
               </p>
             </div>
@@ -639,10 +639,10 @@ export default function VerhnieMeshkiPage() {
               <div>
                 <div className="flex items-center justify-between gap-6 border-b border-slate-200 py-4">
                   <span className="text-[16px] text-[#475569]">Температура</span>
-                  <span className="text-right text-[16px] font-semibold text-[#0f172a]">До 150°C</span>
+                  <span className="text-right text-[16px] font-semibold text-[#0f172a]">По паспорту материала</span>
                 </div>
                 <div className="flex items-center justify-between gap-6 border-b border-slate-200 py-4">
-                  <span className="text-[16px] text-[#475569]">Эффективность</span>
+                  <span className="text-[16px] text-[#475569]">Степень фильтрации</span>
                   <span className="text-right text-[16px] font-semibold text-[#0f172a]">95-98%</span>
                 </div>
                 <div className="flex items-center justify-between gap-6 border-b border-slate-200 py-4">
@@ -651,7 +651,7 @@ export default function VerhnieMeshkiPage() {
                 </div>
                 <div className="flex items-center justify-between gap-6 py-4">
                   <span className="text-[16px] text-[#475569]">Размер частиц</span>
-                  <span className="text-right text-[16px] font-semibold text-[#0f172a]">&gt; 50 мкм</span>
+                  <span className="text-right text-[16px] font-semibold text-[#0f172a]">Подбирается под задачу</span>
                 </div>
               </div>
             </div>
