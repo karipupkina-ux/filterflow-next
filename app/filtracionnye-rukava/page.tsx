@@ -118,7 +118,7 @@ export default function FiltracionnyeRukavaPage() {
 
                 <div className="flex items-center gap-2">
                   <span className="text-[#28c7bb]">◌</span>
-                  <span>Долгий срок службы</span>
+                  <span>Ресурс зависит от условий</span>
                 </div>
 
                 <div className="flex items-center gap-2">
@@ -971,7 +971,7 @@ export default function FiltracionnyeRukavaPage() {
                     </svg>
                   </div>
                   <p className="mt-4 text-[16px] font-semibold text-white">
-                    Изготовление от 1 дня
+                    Срок по согласованию
                   </p>
                 </div>
 
@@ -1410,16 +1410,13 @@ export default function FiltracionnyeRukavaPage() {
               <p>
                 Выбор материала фильтровального рукава напрямую влияет на
                 эффективность очистки воздуха и срок службы оборудования. Для
-                стандартных условий при температуре до 130°C и нейтральной пыли
-                оптимален <strong className="font-bold text-[#10233f]">полиэстер</strong>.
-                При повышенной влажности или химически активной среде
-                рекомендуется <strong className="font-bold text-[#10233f]">полипропилен</strong>.
-                Для высокотемпературных процессов (до 200°C) применяется{" "}
-                <strong className="font-bold text-[#10233f]">Номекс</strong>, а
-                для экстремальных условий (до 260–280°C) —{" "}
-                <strong className="font-bold text-[#10233f]">
-                  Тефлон или стекловолокно
-                </strong>.
+                стандартных условий часто рассматривают <strong className="font-bold text-[#10233f]">полиэстер</strong>.
+                При повышенной влажности или химически активной среде может применяться
+                <strong className="font-bold text-[#10233f]"> полипропилен</strong>.
+                Для повышенных температур используют специальные материалы, включая
+                <strong className="font-bold text-[#10233f]"> мета-арамид, PTFE и стекловолокно</strong>.
+                Конкретную марку выбирают по рабочей температуре, химической среде,
+                типу пыли и паспорту материала.
               </p>
 
               <div className="space-y-5">
