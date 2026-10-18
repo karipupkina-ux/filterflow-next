@@ -182,14 +182,21 @@ export default function ContactFormClient() {
         </div>
 
         <div className="flex min-h-11 items-start gap-3">
-          <label className="relative inline-flex min-h-11 cursor-pointer items-center">
+          <label
+            htmlFor="home-contact-agree"
+            className="relative inline-flex min-h-11 cursor-pointer items-center"
+          >
             <input
+              id="home-contact-agree"
               name="agree"
               type="checkbox"
               checked={form.agree}
               onChange={handleChange}
               className="peer sr-only"
             />
+            <span className="sr-only">
+              Согласие на обработку персональных данных
+            </span>
             <span className="flex h-7 w-7 items-center justify-center rounded-[8px] border border-[#98a2b3] bg-white transition peer-focus-visible:ring-2 peer-focus-visible:ring-[#11b3a6] peer-focus-visible:ring-offset-2 peer-checked:border-[#11b3a6] peer-checked:bg-[#11b3a6]">
               {form.agree && (
                 <svg
