@@ -272,7 +272,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
     {
       question: "Как часто нужно менять фильтровальные мешки?",
       answer:
-        "Срок службы зависит от интенсивности работы, типа пыли и материала мешка. В среднем мешки служат от 1 до 5 лет. Рекомендуется проверять состояние мешков каждые 6 месяцев и менять при снижении эффективности фильтрации или видимых повреждениях.",
+        "Срок службы зависит от интенсивности работы, типа пыли, материала, температуры и способа очистки. Состояние мешка нужно контролировать в рамках регламента обслуживания оборудования и менять при повреждении ткани, швов или ухудшении работы системы.",
     },
     {
       question: "Можно ли заказать мешки нестандартных размеров?",
@@ -282,7 +282,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
     {
       question: "Какой материал лучше выбрать для деревообработки?",
       answer:
-        "Для деревообрабатывающих производств оптимально подходит полиэстер. Он обеспечивает высокую степень фильтрации древесной пыли, выдерживает температуру до 150°C и имеет хороший срок службы 2-3 года.",
+        "Для деревообработки часто используют полиэстер, но конкретную ткань выбирают по типу древесной пыли, температуре, влажности, воздухопроницаемости и характеристикам установки.",
     },
     {
       question: "Как происходит доставка?",
@@ -568,7 +568,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 Высокая эффективность
               </h3>
               <p className="text-[16px] leading-8 text-[#475569]">
-                Степень очистки воздуха до 99,9% от пыли и мелких частиц
+                Степень очистки зависит от выбранного материала и параметров процесса
               </p>
             </div>
 
@@ -580,7 +580,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 Термостойкость
               </h3>
               <p className="text-[16px] leading-8 text-[#475569]">
-                Выдерживают температуру до 200°C без потери свойств
+                Рабочая температура определяется паспортом выбранного материала
               </p>
             </div>
 
@@ -592,7 +592,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 Долгий срок службы
               </h3>
               <p className="text-[16px] leading-8 text-[#475569]">
-                Служат от 2 до 5 лет в зависимости от условий эксплуатации
+                Срок службы зависит от материала, нагрузки и условий эксплуатации
               </p>
             </div>
 
@@ -739,7 +739,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 <p className="text-sm font-semibold text-[#0f172a]">Полиэстер</p>
                 <div className="mt-2 space-y-1 text-[13px] leading-6 text-[#475569]">
                   <p><span className="font-medium text-[#0f172a]">Температура:</span> До 150°C</p>
-                  <p><span className="font-medium text-[#0f172a]">Эффективность:</span> 99%</p>
+                  <p><span className="font-medium text-[#0f172a]">Степень фильтрации:</span> Подбирается под процесс</p>
                   <p><span className="font-medium text-[#0f172a]">Применение:</span> Деревообработка, металлообработка</p>
                   <p><span className="font-medium text-[#0f172a]">Срок службы:</span> 2-3 года</p>
                 </div>
@@ -748,7 +748,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 <p className="text-sm font-semibold text-[#0f172a]">Полипропилен</p>
                 <div className="mt-2 space-y-1 text-[13px] leading-6 text-[#475569]">
                   <p><span className="font-medium text-[#0f172a]">Температура:</span> До 90°C</p>
-                  <p><span className="font-medium text-[#0f172a]">Эффективность:</span> 98%</p>
+                  <p><span className="font-medium text-[#0f172a]">Степень фильтрации:</span> Подбирается под процесс</p>
                   <p><span className="font-medium text-[#0f172a]">Применение:</span> Пищевая промышленность</p>
                   <p><span className="font-medium text-[#0f172a]">Срок службы:</span> 1-2 года</p>
                 </div>
@@ -757,16 +757,16 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 <p className="text-sm font-semibold text-[#0f172a]">Номекс</p>
                 <div className="mt-2 space-y-1 text-[13px] leading-6 text-[#475569]">
                   <p><span className="font-medium text-[#0f172a]">Температура:</span> До 200°C</p>
-                  <p><span className="font-medium text-[#0f172a]">Эффективность:</span> 99,9%</p>
+                  <p><span className="font-medium text-[#0f172a]">Степень фильтрации:</span> Подбирается под процесс</p>
                   <p><span className="font-medium text-[#0f172a]">Применение:</span> Химическая промышленность</p>
-                  <p><span className="font-medium text-[#0f172a]">Срок службы:</span> 4-5 лет</p>
+                  <p><span className="font-medium text-[#0f172a]">Срок службы:</span> Зависит от условий эксплуатации</p>
                 </div>
               </div>
               <div className="px-4 py-4">
                 <p className="text-sm font-semibold text-[#0f172a]">Стекловолокно</p>
                 <div className="mt-2 space-y-1 text-[13px] leading-6 text-[#475569]">
                   <p><span className="font-medium text-[#0f172a]">Температура:</span> До 260°C</p>
-                  <p><span className="font-medium text-[#0f172a]">Эффективность:</span> 99,9%</p>
+                  <p><span className="font-medium text-[#0f172a]">Степень фильтрации:</span> Подбирается под процесс</p>
                   <p><span className="font-medium text-[#0f172a]">Применение:</span> Цементные заводы</p>
                   <p><span className="font-medium text-[#0f172a]">Срок службы:</span> 3-4 года</p>
                 </div>
@@ -775,9 +775,9 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 <p className="text-sm font-semibold text-[#0f172a]">ПТФЭ (Тефлон)</p>
                 <div className="mt-2 space-y-1 text-[13px] leading-6 text-[#475569]">
                   <p><span className="font-medium text-[#0f172a]">Температура:</span> До 260°C</p>
-                  <p><span className="font-medium text-[#0f172a]">Эффективность:</span> 99,99%</p>
+                  <p><span className="font-medium text-[#0f172a]">Степень фильтрации:</span> Подбирается под процесс</p>
                   <p><span className="font-medium text-[#0f172a]">Применение:</span> Агрессивные среды</p>
-                  <p><span className="font-medium text-[#0f172a]">Срок службы:</span> 5+ лет</p>
+                  <p><span className="font-medium text-[#0f172a]">Срок службы:</span> Зависит от условий эксплуатации</p>
                 </div>
               </div>
             </div>
@@ -801,7 +801,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                   <tr className="border-b border-slate-200 bg-white">
                     <td className="px-6 py-5 text-[16px] font-medium text-[#0f172a]">Полиэстер</td>
                     <td className="px-6 py-5 text-[16px] text-[#475569]">До 150°C</td>
-                    <td className="px-6 py-5 text-[16px] text-[#475569]">99%</td>
+                    <td className="px-6 py-5 text-[16px] text-[#475569]">По задаче</td>
                     <td className="px-6 py-5 text-[16px] text-[#475569]">Деревообработка, металлообработка</td>
                     <td className="px-6 py-5 text-[16px] text-[#475569]">2-3 года</td>
                   </tr>
@@ -817,15 +817,15 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                   <tr className="border-b border-slate-200 bg-white">
                     <td className="px-6 py-5 text-[16px] font-medium text-[#0f172a]">Номекс</td>
                     <td className="px-6 py-5 text-[16px] text-[#475569]">До 200°C</td>
-                    <td className="px-6 py-5 text-[16px] text-[#475569]">99,9%</td>
+                    <td className="px-6 py-5 text-[16px] text-[#475569]">По задаче</td>
                     <td className="px-6 py-5 text-[16px] text-[#475569]">Химическая промышленность</td>
-                    <td className="px-6 py-5 text-[16px] text-[#475569]">4-5 лет</td>
+                    <td className="px-6 py-5 text-[16px] text-[#475569]">Зависит от условий</td>
                   </tr>
 
                   <tr className="border-b border-slate-200 bg-[#fafafa]">
                     <td className="px-6 py-5 text-[16px] font-medium text-[#0f172a]">Стекловолокно</td>
                     <td className="px-6 py-5 text-[16px] text-[#475569]">До 260°C</td>
-                    <td className="px-6 py-5 text-[16px] text-[#475569]">99,9%</td>
+                    <td className="px-6 py-5 text-[16px] text-[#475569]">По задаче</td>
                     <td className="px-6 py-5 text-[16px] text-[#475569]">Цементные заводы</td>
                     <td className="px-6 py-5 text-[16px] text-[#475569]">3-4 года</td>
                   </tr>
@@ -833,9 +833,9 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                   <tr className="bg-white">
                     <td className="px-6 py-5 text-[16px] font-medium text-[#0f172a]">ПТФЭ (Тефлон)</td>
                     <td className="px-6 py-5 text-[16px] text-[#475569]">До 260°C</td>
-                    <td className="px-6 py-5 text-[16px] text-[#475569]">99,99%</td>
+                    <td className="px-6 py-5 text-[16px] text-[#475569]">По задаче</td>
                     <td className="px-6 py-5 text-[16px] text-[#475569]">Агрессивные среды</td>
-                    <td className="px-6 py-5 text-[16px] text-[#475569]">5+ лет</td>
+                    <td className="px-6 py-5 text-[16px] text-[#475569]">Зависит от условий</td>
                   </tr>
                 </tbody>
               </table>
@@ -1345,13 +1345,13 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                   технические параметры: диаметр патрубка, высоту камеры, объём
                   воздушного потока (м³/ч) и тип улавливаемой пыли. Если параметры
                   неизвестны — пришлите фотографию или паспорт оборудования, и наши
-                  специалисты бесплатно подберут подходящий вариант.
+                  специалисты помогут подобрать подходящий вариант.
                 </p>
 
                 <ul className="space-y-2.5">
                   <li className="flex items-start gap-4">
                     <span className="mt-[7px] text-[18px] font-semibold leading-none text-[#ff6b2c]">•</span>
-                    <span>Для деревообработки — полиэстеровые мешки, степень фильтрации 99,5%, температура до 130°C</span>
+                    <span>Для деревообработки часто рассматривают полиэстер; конкретную марку ткани подбирают по пыли, температуре и параметрам установки</span>
                   </li>
                   <li className="flex items-start gap-4">
                     <span className="mt-[7px] text-[18px] font-semibold leading-none text-[#ff6b2c]">•</span>
@@ -1369,7 +1369,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
 
                 <p className="mt-4">
                   Срок службы мешков для УВП при правильном подборе материала составляет
-                  от 1 до 5 лет. Регулярная очистка и своевременная замена обеспечивают
+                  зависит от материала и условий эксплуатации. Регулярная очистка и своевременная замена помогают поддерживать
                   стабильную работу системы и снижают затраты на обслуживание.
                 </p>
               </div>
