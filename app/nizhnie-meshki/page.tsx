@@ -29,8 +29,8 @@ const guideRows: GuideRow[] = [
   { brand: "КОНСАР", model: "УВП-2500", slug: "konsar-uvp-2500", power: "2,5 кВт", upper: "Размер уточняется", lower: "Размер уточняется", type: "УВП" },
   { brand: "CONSAR", model: "2000", slug: "consar-2000", power: "2,0 кВт", upper: "Размер уточняется", lower: "Размер уточняется", type: "УВП" },
 
-  { brand: "JET", model: "DC-1200", slug: "jet-dc-1200", power: "1,2 кВт", upper: "Ø380 × 720 мм", lower: "Ø380 × 620 мм", type: "Однофазный" },
-  { brand: "JET", model: "DC-1900A", slug: "jet-dc-1900a", power: "1,5 кВт", upper: "Ø450 × 900 мм", lower: "Ø450 × 820 мм", type: "Промышленный" },
+  { brand: "JET", model: "DC-1200", slug: "jet-dc-1200", power: "1,2 кВт", upper: "Размер уточняется", lower: "Размер уточняется", type: "Однофазный" },
+  { brand: "JET", model: "DC-1900A", slug: "jet-dc-1900a", power: "1,5 кВт", upper: "Размер уточняется", lower: "Размер уточняется", type: "Промышленный" },
   { brand: "JET", model: "DC-1100", slug: "jet-dc-1100", power: "1,1 кВт", upper: "Размер уточняется", lower: "Размер уточняется", type: "Стружкоотсос" },
   { brand: "JET", model: "DC-2300", slug: "jet-dc-2300", power: "2,3 кВт", upper: "Размер уточняется", lower: "Размер уточняется", type: "Стружкоотсос" },
   { brand: "JET", model: "DC-3000", slug: "jet-dc-3000", power: "3,0 кВт", upper: "Размер уточняется", lower: "Размер уточняется", type: "Стружкоотсос" },
