@@ -429,15 +429,15 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-4">
                   <span className="mt-[8px] text-[18px] font-semibold leading-none text-[#ff6b2c]">✓</span>
-                  <span className="text-[15px] leading-6 text-[#334155] sm:text-[16px] sm:leading-7">Эффективность до 99%</span>
+                  <span className="text-[15px] leading-6 text-[#334155] sm:text-[16px] sm:leading-7">Степень фильтрации подбирается под задачу</span>
                 </li>
                 <li className="flex items-start gap-4">
                   <span className="mt-[8px] text-[18px] font-semibold leading-none text-[#ff6b2c]">✓</span>
-                  <span className="text-[16px] leading-7 text-[#334155]">Термостойкость до 150°C</span>
+                  <span className="text-[16px] leading-7 text-[#334155]">Рабочая температура — по паспорту материала</span>
                 </li>
                 <li className="flex items-start gap-4">
                   <span className="mt-[8px] text-[18px] font-semibold leading-none text-[#ff6b2c]">✓</span>
-                  <span className="text-[16px] leading-7 text-[#334155]">Долгий срок службы</span>
+                  <span className="text-[16px] leading-7 text-[#334155]">Ресурс зависит от условий эксплуатации</span>
                 </li>
               </ul>
             </div>
@@ -498,7 +498,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-4">
                   <span className="mt-[8px] text-[18px] font-semibold leading-none text-[#ff6b2c]">✓</span>
-                  <span className="text-[16px] leading-7 text-[#334155]">Максимальная фильтрация</span>
+                  <span className="text-[16px] leading-7 text-[#334155]">Подбор фильтрации под процесс</span>
                 </li>
                 <li className="flex items-start gap-4">
                   <span className="mt-[8px] text-[18px] font-semibold leading-none text-[#ff6b2c]">✓</span>
@@ -536,7 +536,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 </li>
                 <li className="flex items-start gap-4">
                   <span className="mt-[8px] text-[18px] font-semibold leading-none text-[#ff6b2c]">✓</span>
-                  <span className="text-[16px] leading-7 text-[#334155]">Высокая эффективность</span>
+                  <span className="text-[16px] leading-7 text-[#334155]">Подбор материала под пыль и режим</span>
                 </li>
                 <li className="flex items-start gap-4">
                   <span className="mt-[8px] text-[18px] font-semibold leading-none text-[#ff6b2c]">✓</span>
@@ -565,7 +565,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 <AdvantageIcon type="shield" />
               </div>
               <h3 className="mb-4 text-[22px] font-bold leading-tight text-[#0f172a]">
-                Высокая эффективность
+                Подбор под условия процесса
               </h3>
               <p className="text-[16px] leading-8 text-[#475569]">
                 Степень очистки зависит от выбранного материала и параметров процесса
@@ -589,7 +589,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                 <AdvantageIcon type="clock" />
               </div>
               <h3 className="mb-4 text-[22px] font-bold leading-tight text-[#0f172a]">
-                Долгий срок службы
+                Ресурс под условия эксплуатации
               </h3>
               <p className="text-[16px] leading-8 text-[#475569]">
                 Срок службы зависит от материала, нагрузки и условий эксплуатации
@@ -853,7 +853,7 @@ export default function MeshkiDlyaCiklonovIUVPPage() {
                   Подбор материала
                 </h3>
                 <p className="max-w-[1120px] text-[14px] leading-7 text-[#334155] sm:text-[16px] sm:leading-8">
-                  Наши специалисты помогут подобрать оптимальный материал фильтровального
+                  Наши специалисты помогут подобрать подходящий материал фильтровального
                   мешка в зависимости от типа пыли, температуры, влажности и других
                   условий эксплуатации. Свяжитесь с нами для консультации.
                 </p>
