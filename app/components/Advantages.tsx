@@ -10,8 +10,8 @@ export default function Advantages() {
         ),
       },
       {
-        title: "Быстрое производство",
-        text: "Соблюдаем сроки изготовления и оперативно отгружаем заказы",
+        title: "Согласование сроков",
+        text: "Срок изготовления согласовываем с учётом типа изделия, материала, объёма и сложности заказа",
         icon: (
           <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="9" stroke="#0f766e" strokeWidth="2"/>
@@ -20,7 +20,7 @@ export default function Advantages() {
         ),
       },
       {
-        title: "Гарантия качества",
+        title: "Контроль качества",
         text: "Используем проверенные материалы и контролируем каждый этап",
         icon: (
           <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
