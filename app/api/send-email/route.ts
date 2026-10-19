@@ -288,6 +288,7 @@ export async function POST(request: Request) {
       <p><strong>Дата и время отправки (МСК):</strong> ${escapeHtml(sentAt)}</p>
     `;
 
+    const receiptId = crypto.randomUUID().slice(0, 8).toUpperCase();
     const transporter = createMailTransporter();
 
     try {
@@ -298,12 +299,18 @@ export async function POST(request: Request) {
         from: `"FilterFlow" <${EMAIL_USER}>`,
         to: RECEIVER_EMAIL,
         replyTo: email,
-        subject: "Новая заявка с сайта FilterFlow",
+        subject: `Новая заявка с сайта FilterFlow №${receiptId}`,
         text: textBody,
         html: htmlBody,
       });
 
+      if (!info.accepted.some((address) => address.toLowerCase() === RECEIVER_EMAIL.toLowerCase())) {
+        console.error("[send-email] recipient not accepted", { receiptId, rejected: info.rejected });
+        return NextResponse.json({ error: USER_ERROR }, { status: 502 });
+      }
+
       console.log("[send-email] sendMail OK", {
+        receiptId,
         messageId: info.messageId,
         accepted: info.accepted,
         rejected: info.rejected,
@@ -322,7 +329,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: USER_ERROR }, { status: 500 });
     }
 
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, receiptId });
   } catch (error) {
     console.error("[send-email] unexpected error", smtpErrDetails(error));
     return NextResponse.json({ error: USER_ERROR }, { status: 500 });

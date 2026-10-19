@@ -18,6 +18,7 @@ export default function ContactFormClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
   const [errorText, setErrorText] = useState("");
+  const [receiptId, setReceiptId] = useState("");
   const lastSubmitAtRef = useRef(0);
 
   const MIN_SUBMIT_INTERVAL_MS = 10_000;
@@ -78,9 +79,10 @@ export default function ContactFormClient() {
     setIsSubmitting(true);
     setSubmitStatus(null);
     setErrorText("");
+    setReceiptId("");
 
     try {
-      await sendApplicationEmail({
+      const result = await sendApplicationEmail({
         name,
         email,
         phone,
@@ -96,6 +98,7 @@ export default function ContactFormClient() {
         website: "",
         agree: false,
       });
+      setReceiptId(result.receiptId);
       setSubmitStatus("success");
     } catch (error) {
       console.error("ContactFormClient:", error);
@@ -252,8 +255,8 @@ export default function ContactFormClient() {
         </button>
 
         {submitStatus === "success" && (
-          <p className="text-sm font-medium text-[#11b3a6]">
-            Спасибо! Мы получили заявку и свяжемся с вами в ближайшее время.
+          <p className="text-sm font-semibold text-[#17365d]" role="status">
+            Заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.
           </p>
         )}
 
