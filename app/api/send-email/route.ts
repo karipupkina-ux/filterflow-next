@@ -304,7 +304,7 @@ export async function POST(request: Request) {
         html: htmlBody,
       });
 
-      if (!info.accepted.some((address) => address.toLowerCase() === RECEIVER_EMAIL.toLowerCase())) {
+      if (!info.accepted.some((address) => (typeof address === "string" ? address : address.address).toLowerCase() === RECEIVER_EMAIL.toLowerCase())) {
         console.error("[send-email] recipient not accepted", { receiptId, rejected: info.rejected });
         return NextResponse.json({ error: USER_ERROR }, { status: 502 });
       }
