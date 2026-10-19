@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo-metadata";
 import EmailLink from "../components/EmailLink";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Мешки для опилок и стружки на заказ",
+  title: "Мешки-накопители для опилок и древесной стружки",
   description:
     "Прочные мешки-накопители для сбора опилок и древесной стружки. Подберём материал, размеры и крепление, изготовим под ваше оборудование.",
   path: "/meshki-dlya-opilok",
