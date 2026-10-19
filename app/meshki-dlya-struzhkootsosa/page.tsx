@@ -11,9 +11,9 @@ import { pageMetadata } from "@/lib/seo-metadata";
 export const metadata: Metadata = pageMetadata({
   title: "Мешки для стружкоотсоса — фильтр и накопитель",
   description:
-    "Верхние фильтрующие и нижние накопительные мешки для стружкоотсосов. Пошив по размерам и образцу для деревообрабатывающего оборудования.",
+    "Верхние фильтрующие и нижние накопительные мешки для стружкоотсосов. Подбор комплекта по модели оборудования, размерам, фото или старому мешку.",
   path: "/meshki-dlya-struzhkootsosa",
-  openGraphTitle: "Мешки для стружкоотсоса | FilterFlow",
+  openGraphTitle: "Мешки для стружкоотсоса — фильтр и накопитель | FilterFlow",
 });
 
 const typeCards = [
