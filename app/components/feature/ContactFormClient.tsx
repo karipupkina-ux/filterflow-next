@@ -255,8 +255,8 @@ export default function ContactFormClient() {
         </button>
 
         {submitStatus === "success" && (
-          <p className="text-sm font-medium text-[#17365d]" role="status">
-            Заявка принята почтовым сервером. Номер: {receiptId}. Если мы не ответим, сообщите этот номер по телефону.
+          <p className="text-sm font-semibold text-[#17365d]" role="status">
+            Заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.
           </p>
         )}
 
