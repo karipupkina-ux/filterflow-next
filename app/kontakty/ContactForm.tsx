@@ -101,10 +101,17 @@ export default function ContactForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
-    // Honeypot антиспам: если автозаполнитель заполнил скрытое поле — не отправляем.
-    if (website.trim().length > 0) {
-      setSubmitStatus("success");
-      setErrorText("");
+    // Honeypot must never claim success without sending an email.
+    const formElement = e.currentTarget as HTMLFormElement;
+    const submitted = new FormData(formElement);
+    const actualName = String(submitted.get("name") ?? "").trim();
+    const actualEmail = String(submitted.get("email") ?? "").trim();
+    const actualPhone = String(submitted.get("phone") ?? "").trim();
+    const actualMessage = String(submitted.get("message") ?? "").trim();
+    const actualWebsite = String(submitted.get("website") ?? "").trim();
+    if (actualWebsite) {
+      setSubmitStatus("error");
+      setErrorText("Не удалось отправить заявку. Попробуйте заполнить поля вручную.");
       return;
     }
 
@@ -112,7 +119,7 @@ export default function ContactForm() {
       return;
     }
 
-    const nextErrors = validateForm({ name, email, phone, message, consent });
+    const nextErrors = validateForm({ name: actualName, email: actualEmail, phone: actualPhone, message: actualMessage, consent });
     if (Object.keys(nextErrors).length > 0) {
       setFieldErrors(nextErrors);
       setSubmitStatus(null);
@@ -135,11 +142,11 @@ export default function ContactForm() {
     setErrorText("");
 
     const payload = {
-      name: name.trim(),
-      email: email.trim(),
-      phone: phone.trim(),
-      message: message.trim(),
-      website: website.trim(),
+      name: actualName,
+      email: actualEmail,
+      phone: actualPhone,
+      message: actualMessage,
+      website: actualWebsite,
     };
 
     try {
@@ -184,6 +191,7 @@ export default function ContactForm() {
           value={website}
           onChange={(e) => setWebsite(e.target.value)}
           autoComplete="off"
+          readOnly
           tabIndex={-1}
           aria-hidden="true"
           className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden opacity-0"
@@ -342,13 +350,13 @@ export default function ContactForm() {
         >
           {isSubmitting ? "Отправляем..." : "Отправить сообщение"}
         </button>
-        {!isSubmitting && !canSubmit && Object.keys(fieldErrors).length === 0 && (
+        {!isSubmitting && submitStatus !== "success" && !canSubmit && Object.keys(fieldErrors).length === 0 && (
           <p className="text-sm text-[#64748b]">
             Заполните обязательные поля и подтвердите согласие на обработку данных.
           </p>
         )}
         {submitStatus === "success" && (
-          <p className="text-sm font-medium text-[#0aa79d]" role="status">
+          <p className="text-sm font-semibold text-[#17365d]" role="status">
             Заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.
           </p>
         )}
