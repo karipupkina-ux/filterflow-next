@@ -9,7 +9,7 @@ import CalculationChecklist from "../components/CalculationChecklist";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Мешки для стружкоотсоса на заказ",
+  title: "Мешки для стружкоотсоса — фильтр и накопитель",
   description:
     "Верхние фильтрующие и нижние накопительные мешки для стружкоотсосов. Пошив по размерам и образцу для деревообрабатывающего оборудования.",
   path: "/meshki-dlya-struzhkootsosa",
