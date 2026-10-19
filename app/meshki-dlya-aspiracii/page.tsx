@@ -10,7 +10,7 @@ import CalculationChecklist from "../components/CalculationChecklist";
 import { pageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Мешки для аспирации на заказ от производителя",
+  title: "Мешки для систем аспирации — верхние и нижние",
   description:
     "Верхние и нижние мешки для систем аспирации: подбор ткани, размеров и крепления, изготовление по образцу или чертежу. Отправка по России.",
   path: "/meshki-dlya-aspiracii",
@@ -707,7 +707,7 @@ export default function Page() {
             </div>
 
             <h1 className="max-w-[920px] text-[26px] font-bold leading-[1.12] [text-shadow:0_2px_28px_rgba(0,0,0,0.55)] sm:text-[34px] md:text-[44px] lg:text-[58px] lg:leading-[1.08]">
-              Фильтровальные мешки для аспирации и пылеулавливания
+              Верхние и нижние мешки для систем аспирации
             </h1>
 
             <p className="text-[15px] leading-7 text-white antialiased sm:text-[17px] sm:leading-8 md:text-xl [text-shadow:0_1px_14px_rgba(0,0,0,0.65)]">
