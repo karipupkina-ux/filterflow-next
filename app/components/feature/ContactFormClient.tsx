@@ -50,12 +50,22 @@ export default function ContactFormClient() {
 
     if (!formElement.reportValidity()) return;
 
-    if (form.website.trim().length > 0) {
-      console.log("[ContactFormClient] honeypot filled; blocking submission");
+    // Autofill can update visible inputs without triggering React onChange.
+    // Read the actual browser form values at submission time.
+    const submitted = new FormData(formElement);
+    const name = String(submitted.get("name") ?? "").trim();
+    const email = String(submitted.get("email") ?? "").trim();
+    const phone = String(submitted.get("phone") ?? "").trim();
+    const message = String(submitted.get("message") ?? "").trim();
+    const website = String(submitted.get("website") ?? "").trim();
+
+    if (website) {
+      setSubmitStatus("error");
+      setErrorText("Не удалось отправить заявку. Проверьте заполненные поля.");
       return;
     }
 
-    if (!form.agree || isSubmitting) return;
+    if (!formElement.elements.namedItem("agree") || !(formElement.elements.namedItem("agree") as HTMLInputElement).checked || isSubmitting) return;
 
     const now = Date.now();
     if (now - lastSubmitAtRef.current < MIN_SUBMIT_INTERVAL_MS) {
@@ -71,11 +81,11 @@ export default function ContactFormClient() {
 
     try {
       await sendApplicationEmail({
-        name: form.name.trim(),
-        email: form.email.trim(),
-        phone: form.phone.trim(),
-        message: form.message.trim(),
-        website: form.website.trim(),
+        name,
+        email,
+        phone,
+        message,
+        website,
       });
 
       setForm({
@@ -109,6 +119,7 @@ export default function ContactFormClient() {
           value={form.website}
           onChange={handleChange}
           autoComplete="off"
+          readOnly
           tabIndex={-1}
           aria-hidden="true"
           className="hidden"
@@ -121,6 +132,7 @@ export default function ContactFormClient() {
           <input
             id="home-contact-name"
             name="name"
+            autoComplete="name"
             type="text"
             required
             value={form.name}
@@ -137,6 +149,7 @@ export default function ContactFormClient() {
           <input
             id="home-contact-email"
             name="email"
+            autoComplete="email"
             type="email"
             required
             value={form.email}
@@ -153,6 +166,7 @@ export default function ContactFormClient() {
           <input
             id="home-contact-phone"
             name="phone"
+            autoComplete="tel"
             type="text"
             value={form.phone}
             onChange={handleChange}

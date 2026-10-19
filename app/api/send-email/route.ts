@@ -202,7 +202,8 @@ export async function POST(request: Request) {
 
     if (website) {
       console.warn("[send-email] honeypot triggered", { clientIp });
-      return NextResponse.json({ ok: true });
+      // Never return HTTP success when an application email was not sent.
+      return NextResponse.json({ error: USER_ERROR }, { status: 422 });
     }
 
     if (isRateLimited(clientIp)) {
