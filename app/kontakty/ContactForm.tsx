@@ -345,8 +345,10 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          disabled={isSubmitting}
-          className="w-full rounded-full bg-[#0aa79d] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#088f86] disabled:cursor-not-allowed disabled:bg-[#94a3b8] disabled:opacity-90"
+          disabled={!canSubmit}
+          className={`w-full rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm transition ${
+            canSubmit ? "bg-[#0aa79d] hover:bg-[#088f86]" : "cursor-not-allowed bg-[#94a3b8]"
+          }`}
         >
           {isSubmitting ? "Отправляем..." : "Отправить сообщение"}
         </button>
