@@ -110,7 +110,7 @@ export default function TkanevyeMeshkiPage() {
           </div>
 
           <h1 className="mb-8 text-[34px] font-bold leading-[1.08] text-[#0f172a] md:text-[42px]">
-            Тканевые мешки для аспирации и стружкоотсоса
+            Тканевые фильтровальные мешки по материалу и размерам
           </h1>
 
           <div className="grid items-start gap-10 lg:grid-cols-[1.02fr_0.98fr]">
