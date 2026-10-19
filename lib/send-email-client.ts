@@ -18,7 +18,7 @@ export const SEND_EMAIL_USER_ERROR =
 
 export async function sendApplicationEmail(
   payload: ApplicationPayload
-): Promise<void> {
+): Promise<{ receiptId: string }> {
   let response: Response;
   try {
     response = await fetch(SEND_EMAIL_API, {
@@ -31,7 +31,7 @@ export async function sendApplicationEmail(
     throw new Error(SEND_EMAIL_USER_ERROR);
   }
 
-  let data: { error?: string } = {};
+  let data: { error?: string; ok?: boolean; receiptId?: string } = {};
   const contentType = response.headers.get("content-type") ?? "";
 
   if (contentType.includes("application/json")) {
@@ -65,6 +65,12 @@ export async function sendApplicationEmail(
     throw new Error(userMessage);
   }
 
+  // A 2xx HTTP status alone is not proof that the SMTP server accepted mail.
+  if (data.ok !== true || typeof data.receiptId !== "string" || !data.receiptId) {
+    console.error("send-email: missing delivery receipt in server response", data);
+    throw new Error(SEND_EMAIL_USER_ERROR);
+  }
+
   // Фиксируем конверсию только после успешной отправки письма.
   // Если Метрика не загружена (например, пользователь не дал согласие на аналитику),
   // отправка формы всё равно считается успешной и не ломается.
@@ -83,4 +89,5 @@ export async function sendApplicationEmail(
       console.error("Yandex Metrika reachGoal failed:", err);
     }
   }
+  return { receiptId: data.receiptId };
 }
