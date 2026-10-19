@@ -9,10 +9,10 @@ import EmailLink from "../components/EmailLink";
 export const metadata: Metadata = pageMetadata({
   title: "Мешки-накопители для опилок и древесной стружки",
   description:
-    "Прочные мешки-накопители для сбора опилок и древесной стружки. Подберём материал, размеры и крепление, изготовим под ваше оборудование.",
+    "Мешки-накопители для сбора опилок и древесной стружки после стружкоотсоса или аспирации. Изготовление по размерам, патрубку или образцу.",
   path: "/meshki-dlya-opilok",
   openGraphTitle:
-    "Мешки для опилок и стружки — мешок для стружкоотсоса | FilterFlow",
+    "Мешки-накопители для опилок и древесной стружки | FilterFlow",
 });
 
 const productLinks = [
@@ -417,8 +417,7 @@ export default function Page() {
           </div>
 
           <h1 className="mb-6 max-w-[920px] text-[34px] font-bold leading-[1.12] tracking-[-0.03em] text-[#1f2937] md:text-[56px]">
-            Мешки для опилок и сбора стружки — для стружкоотсоса и
-            деревообработки
+            Мешки-накопители для опилок и древесной стружки
           </h1>
 
           <div className="grid gap-8 lg:grid-cols-[540px_minmax(0,1fr)] lg:items-start">
