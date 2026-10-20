@@ -186,8 +186,8 @@ export default function FiltracionnyeRukavaPage() {
                 </h3>
 
                 <p className="mt-3 text-[15px] leading-[1.65] text-[#64748b]">
-                  Универсальные фильтрующие рукава для аспирационных систем с
-                  с рабочей температурой по паспорту выбранного материала.
+                  Фильтрующие рукава для аспирационных систем. Допустимая
+                  рабочая температура зависит от выбранного материала.
                 </p>
 
                 <div className="mt-6 flex items-center gap-2 text-[15px] font-semibold text-[#28c7bb]">
